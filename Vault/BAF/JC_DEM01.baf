@@ -1,0 +1,73 @@
+IF
+	Detect([PC])
+	!GlobalTimerNotExpired("RanthisDispel","LOCALS")
+	!GlobalTimerNotExpired("RanthisBehave","LOCALS")
+THEN
+	RESPONSE #100
+		UseItem("POTN14",Myself) // Potion of Speed
+		SetGlobalTimer("RanthisDispel","LOCALS",60)
+		ForceSpell([PC],WIZARD_TRUE_DISPEL_MAGIC)
+		SetGlobalTimer("RanthisBehave","LOCALS",6)
+		ForceSpell([PC],WIZARD_FIREBALL)
+		SetGlobal("Dem2Behave","LOCALS",1)
+		AttackReevaluate(NearestEnemyOf(Myself),90)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	Global("Dem2Behave","LOCALS",1)
+	!GlobalTimerNotExpired("RanthisBehave","LOCALS")
+THEN
+	RESPONSE #50
+		SetGlobalTimer("RanthisBehave","LOCALS",6)
+		ForceSpell(Myself,CLERIC_CLOAK_OF_FEAR)
+		Wait(2)
+		ForceSpell([PC],WIZARD_FIREBALL)
+		SetGlobal("Dem2Behave","LOCALS",2)
+		AttackReevaluate(NearestEnemyOf(Myself),90)
+	RESPONSE #50
+		SetGlobalTimer("RanthisBehave","LOCALS",6)
+		ForceSpell([PC],WIZARD_POWER_WORD_STUN)
+		Wait(2)
+		ForceSpell([PC],WIZARD_FIREBALL)
+		SetGlobal("Dem2Behave","LOCALS",2)
+		AttackReevaluate(NearestEnemyOf(Myself),90)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	Global("Dem2Behave","LOCALS",2)
+	!GlobalTimerNotExpired("RanthisBehave","LOCALS")
+THEN
+	RESPONSE #50
+		SetGlobalTimer("RanthisBehave","LOCALS",6)
+		ForceSpell([PC],WIZARD_FIREBALL)
+		SetGlobal("Dem2Behave","LOCALS",3)
+		AttackReevaluate(NearestEnemyOf(Myself),90)
+	RESPONSE #50
+		SetGlobalTimer("RanthisBehave","LOCALS",6)
+		ForceSpell(NearestEnemyOf(Myself),WIZARD_POWER_WORD_STUN)
+		SetGlobal("Dem2Behave","LOCALS",3)
+		AttackReevaluate(NearestEnemyOf(Myself),90)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	Global("Dem2Behave","LOCALS",3)
+	!GlobalTimerNotExpired("RanthisBehave","LOCALS")
+THEN
+	RESPONSE #50
+		SetGlobalTimer("RanthisBehave","LOCALS",6)
+		ForceSpell([PC],FEAR)
+		SetGlobal("Dem2Behave","LOCALS",1)
+		AttackReevaluate(NearestEnemyOf(Myself),90)
+	RESPONSE #50
+		SetGlobalTimer("RanthisBehave","LOCALS",6)
+		ForceSpell([PC],FEAR)
+		Wait(2)
+		ForceSpell([PC],WIZARD_FIREBALL)
+		SetGlobal("Dem2Behave","LOCALS",1)
+		AttackReevaluate(NearestEnemyOf(Myself),90)
+END
+
+

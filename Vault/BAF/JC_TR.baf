@@ -1,0 +1,10 @@
+IF
+  OnCreation()
+THEN
+  RESPONSE #100
+    DropInventory()
+    ForceSpell(Myself,DRYAD_TELEPORT)
+    Wait(1)
+    DestroySelf()
+END
+

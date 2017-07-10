@@ -1,0 +1,192 @@
+// Vault Translation File
+
+@0   = ~¿Hmm?... Artesanía drow, sin duda. Sí, puede ser útil, pero no para mí. Mi aprendiz estudió una vez esos materiales, pero tras el desafortunado incidente de su transformación, no creo que quiera retomar ese tipo de experimentos.~
+@1   = ~No necesito tocarlo para decir que está maldito... Esperad... No es probable, pero... ¡No esperaba volver a ver ese condenado artefacto en toda mi vida! La Venganza del Vampiro, si no me falla la memoria. Sí... ¿y qué era lo que abría?~
+@2   = ~Creo que es la llave de algo.~
+@3   = ~No importa.~
+@4   = ~¡Sí! ¡ES una llave! Pero no puedo recordar de qué. Algún depósito de magia oculta... Tendréis que buscar a alguien más docto en estos artefactos del mal forjados en el pasado. Tal vez el sacerdote de Gond de Puerta de Baldur o un adivino sepan algo. ¡Yo no quiero saber NADA de ese objeto!~
+@5   = ~No pretendía alteraros. Perdón...~
+@6   = ~La Venganza del Vampiro ha evocado otro recuerdo incompleto en uno de los sujetos más poderosos de la Costa de la Espada. El mago Thalantyr la ha reconocido como una llave no recuerda para qué. Ha sugerido que busque a alguien con más conocimientos sobre estos artefactos ancestrales como el sacerdote de Gond o un adivino para resolver este misterio.~
+@7   = ~Hola de nuevo, <CHARNAME>. ¿Cómo puedo ayudaros?~
+@8   = ~He conseguido un objeto de gran poder mágico... Sin embargo, no está a la venta. Me preguntaba si podríais decirme si tiene alguna utilidad.~
+@9   = ~Tengo una espada muy extraña. Sin embargo, no está a la venta. ¿Podríais echarle un vistazo?~
+@10  = ~¿Qué pasa con estas minas? ¡Hace nada acabasteis con esos perritos y ahora están infestadas de arañas!~
+@11  = ~Parece ser que he llegado a las Minas de Nashkel justo a tiempo. El guardia me ha informado de que ahora están infestadas de arañas. Tal vez no tenga nada que ver con mi búsqueda del tomo antiguo. O tal vez sí.~
+@12  = ~¡Gracias por acabar con todas las arañas! Esperemos que ahora todo vuelva a la normalidad de verdad.~
+@13  = ~El mal... cada vez es más fuerte... ¡VOS! ¡No, el mal emana de otra parte!~
+@14  = ~¡Una presencia maligna amenaza la santidad del vestíbulo! ¡Pretende destruir el templo Canción de la Mañana! No queda más tiempo... ¡Ya viene! ¡A las armas!~
+@15  = ~¡No, por favor, esperad! Los dioses os han enviado con un propósito... Un mal se alza a través de un portal sacrílego en el muro este del vestíbulo y debe ser detenido. Dos sacerdotes del amanecer sólo pueden frenarlo, pero con vuestra ayuda...~
+@16  = ~Muy bien.~
+@17  = ~Ni hablar. ¡Me largo de aquí!~
+@18  = ~No queda más tiempo... ¡Ya viene! ¡A las armas!~
+@19  = ~Gracias por vuestra ayuda, pero presiento que esto no ha acabado aquí. Por favor, hablad con Keldath... él es más sabio que Bran o yo.~
+@20  = ~Saludos, <CHARNAME>. Espero que viajéis bajo la guía de Lathander. ¿Cómo puedo ayudaros?~
+@21  = ~Necesito curación y bendiciones.~
+@22  = ~Ahora mismo no necesito nada.~
+@23  = ~¡MAGO ROJO! ¡Así que habéis venido a comprobar por vos mismo vuestra obra! ¡El mal llega, pero vos caeréis antes de que atraviese ese portal sacrílego!~ 
+@24  = ~¡Allí, al otro lado! ¡Bran, rápido, preparad las protecciones!~
+@25  = ~¿Pero qué está pasando aquí?~
+@26  = ~¡Ya está bien! ¡Ya he tenido suficiente de clérigos locos!~
+@27  = ~Calmaos, buen hombre, yo NO soy el mal. Decidme qué sucede.~
+@28  = ~¡A las armas! ¡Nadie profanará la santidad de este lugar!~
+@29  = ~Tenéis la gratitud de Lathander, pero esto es sólo el principio...~
+@30  = ~Regresad cuando el mal haya sido destruido. Tengo algo que podría seros de ayuda... si vuestro corazón es puro.~
+@31  = ~Keldath nos ha informado de vuestra heroica hazaña. Tenéis nuestra gratitud. Estoy seguro de que Keldath os habrá recompensado con creces. Nosotros sólo os podemos ofrecer una simple bendición. Si encontráis un martillo con encantamientos menores y el obsequio de una sirina, traédmelos. Hasta entonces, que os vaya bien.~
+@32  = ~Tras la derrota del demonio menor Lestraubimat, el sacerdote del amanecer Bran me dijo que me ofrecería algo si le traía un martillo con encantamientos menores y el obsequio de una sirina. Puedo encontrarlo en el vestíbulo, justo al norte del templo Canción de la Mañana.~
+@33  = ~Veo que tenéis una perla - el mayor obsequio de una sirina. Por desgracia, no tenéis un martillo con alquimo menores. Volved entonces y os daré mi bendición.~
+@34  = ~Veo que tenéis un martillo con encantamientos mágicos. Por desgracia, aún no habéis conseguido el obsequio de una sirina. Volved entonces y os daré mi bendición.~
+@35  = ~Saludos, <CHARNAME>. Veo que seguís buscando los objetos necesarios para que os pueda dar mi bendición. Que os vaya bien y si los encontráis, estaré en el vestíbulo, esperando.~
+@36  = ~¡Excelente! Un martillo con propiedades mágicas y una valiosa perla de una sirina... Dejádmelos un momento...~
+@37  = ~Ojalá nunca tengáis que alzar Influencia de Lathander. Caminad bajo su luz, <CHARNAME>.~
+@38  = ~Capítulo Siete: Retorno a Candelero
+
+Vuestro viaje ha llegado a un círculo completo. El duque Eltan ha pedido que regreséis a Candelero, donde debéis espiar a los jefes del Trono de Hierro. Aunque os moleste el hecho de que tan malvados hombres hagan ahora uso de la gran biblioteca y desearais que las circunstancias de vuestra visita fuesen diferentes, seguirá siendo un placer regresar al que una vez fue vuestro hogar.~
+@39  = ~¡<CHARNAME>! ¡Son tiempos nefastos para Gullykin! ¡Una tribu de ogros despiadados al mando de un ogro mago llamado Kharaz nos está acosando! ¡Exigen que desalojemos la aldea ya que será el emplazamiento de su nuevo campamento! Hemos enviado a dos mensajeros para pedir ayuda, pero los han interceptado y asesinado. ¡Por favor, debéis ayudarnos! Llegan continuamente en grandes cantidades, atacando a la gente y destruyendo nuestras propiedades...~
+@40  = ~Veré qué puedo hacer.~
+@41  = ~La aldea de Gullykin está siendo asediada por un ejército de ogros dirigidos por un mago llamado Kharaz. Parece haber cientos de ellos, y van enviando grupos invasores que devastan la aldea y sus habitantes. Le he dicho a Gandolar que veré qué puedo hacer para remediar la situación.~
+@42  = ~¡<CHARNAME>! ¿Qué? ¿Decís que la horda de ogros no parece tener fin? La situación es muy grave. ¿Qué podemos hacer? No duraremos mucho...~
+@43  = ~No hay esperanza. Deberíamos marcharnos antes de que todo esté perdido.~
+@44  = ~Sí, sería imposible acabar con todos. Seguiré rechazándolos para que vuestra gente pueda escapar.~
+@45  = ~¿Habéis visto a ese Kharaz del que habéis hablado, Gandolar?~
+@46  = ~Huyamos por ahora, Gandolar. Lo mejor será planear otro modo de derrotar a esos ogros.~
+@47  = ~¿Qué? No... No estoy seguro. ¿Qué sugerís que hagamos?~
+@48  = ~Sería imposible acabar con todos. Seguiré rechazándolos para que vuestra gente pueda escapar.~
+@49  = ~Nada, por ahora. Pero tened a vuestra gente preparada por si acaso.~
+@50  = ~Tal vez, sólo tal vez, podamos desmembrar su ejército si acabamos con él.~
+@51  = ~No hay esperanza. Marchémonos antes de que todo esté perdido.~
+@52  = ~Huyamos por ahora, Gandolar. Lo mejor será planear otro modo de derrotar a esos ogros.~
+@53  = ~Hmm... Entiendo. He visto un ogro sobre las colinas que parece estar al mando de todo el ataque. ¡Si tenéis razón, bastaría con enviar un grupo pequeño para matar a su líder! Parece desesperado, pero podría ser nuestra única esperanza.~
+@54  = ~La gente desesperada recurre a medidas desesperadas. Partiré con mi grupo en cuanto pueda. ¡Qué los dioses nos asistan!~
+@55  = ~La situación de Gullykin es cada vez peor. La horda sigue haciendo presión... Gandolar y yo hemos ideado una posible solución, aunque no sé si es fruto de una meticulosa planificación o de la desesperación: he propuesto enviar una pequeña unidad para matar a ese Kharaz y, con un poco de suerte, mermar la moral de todo el ejército. Gandolar tiene sus dudas, pero nos quedan pocas opciones. Me dijo que vio un ogro al mando de los grupos invasores sobre la colina de las afueras de Gullykin.~
+@56  = ~¡<CHARNAME>! ¡Los ogros se retiraron nada más ver la muerte de Kharaz en la ladera! ¡Lo habéis vuelto a hacer! ¡Por favor, aceptad estas pequeñas muestras de nuestro agradecimiento!~
+@57  = ~Tras la muerte del ogro mago Kharaz, la horda de ogros ha huido de la ladera y los pocos que quedaban en la aldea se deberían dispersar dentro de poco. Gandolar y los aldeanos de Gullykin están aliviados ahora que sus hogares vuelven a estar a salvo.~
+@58  = ~Espero que os sintáis a gusto en nuestra pequeña aldea. ¡Los héroes de Gullykin siempre son bienvenidos!~
+@59  = ~Espero que os sintáis a gusto en nuestra pequeña aldea. ¡Han sido tiempos de paz desde que os deshicisteis de los kóbolds!~
+@60  = ~Investigar las Ruinas de Vinoardiente
+
+El puente de Vinoardiente es todo lo que queda de una ciudad comercial elfa que fue destruida hace unos doscientos años.~
+@61  = ~Investigar las Ruinas de Vinoardiente
+
+Hay kóbolds en Gullykin, pero parecen más organizados de lo habitual en su raza.~
+@62  = ~Investigar las Ruinas de Vinoardiente
+
+Según un granjero, el puente de Vinoardiente entraña montones de tesoros.~
+@63  = ~Investigar las Ruinas de Vinoardiente
+
+Gandolar Pieafortunado dijo que hay una entrada secreta a las ruinas del puente de Vinoardiente en una de las viviendas de Gullykin.~
+@64  = ~Investigar las Ruinas de Vinoardiente
+
+Hay kóbolds en las ruinas de Vinoardiente.~
+@65  = ~Investigar las Ruinas de Vinoardiente
+
+Un mediano de Gullykin llamado Gandolar me pidió que acabara con la amenaza de los kóbolds de las ruinas de Vinoardiente. Debería tener cuidado, ya que quién sabe qué cosas misteriosas podría despertar de su descanso.~
+@66  = ~Investigar las Ruinas de Vinoardiente
+
+He conocido a un cazador que sugirió que las ruinas del puente de Vinoardiente es el lugar indicado para quien busque aventuras.~
+@67  = ~Tengo mucho que aprender, pero al menos viviré para poder hacerlo. Bien, ¿cómo puedo ayudaros, <CHARNAME>?~
+@68  = ~No se me ocurre nada, Melicamp. Gracias.~
+@69  = ~Hablando de aprender, ¿os habéis topado con algo sobre artefactos drow durante vuestros estudios?~
+@70  = ~Tengo estas túnicas de resistencia. ¿Podríais usarlas con la armadura drow?~
+@71  = ~He encontrado varias túnicas usadas por magos. ¿Podríais usarlas con la armadura drow?~
+@72  = ~Aquí están todas las túnicas con encantamientos menores que he podido encontrar. ¿Podríais usarlas con la armadura drow?~
+@73  = ~En otras condiciones, no admitiría que tengo acceso a tales conocimientos, ya que Thalantyr me echaría de este lugar, pero como estoy en deuda con vos por haberme salvado... sí, he leído sobre ciertos productos de la Infraoscuridad.~
+@74  = ~Hace poco he adquirido esta armadura que se está deteriorando. ¿Qué podéis hacer con ella?~
+@75  = ~Hmm... Metales drow, si no me equivoco. Aún conservan algunas propiedades mágicas, pero están disminuyendo, me temo. Veréis, armas, armaduras y casi todo lo fabricado en la Infraoscuridad desaparece en contacto con la luz solar... No obstante...~
+@76  = ~¿Sí?~
+@77  = ~Creo que podría, um, recuperar algo de la magia que queda en la armadura, si tuviera los componentes adecuados para trabajar... como ropas con encantamientos menores. Sí... ¡sí! ¡Creo que es posible! ¡Volved cuando tengáis túnicas y crearé algo para vos!~
+@78  = ~De acuerdo. Veré qué puedo hacer.~
+@79  = ~Parece ser que el aprendiz de Thalantyr, Melicamp, aún promete como mago. En cuanto le enseñé la armadura que adquirí del drow de las minas de Nashkel, sugirió que podría crear algún objeto mágico para mí. Lo único que tengo que hacer es llevarle varias túnicas con encantamientos menores.~
+@80  = ~¡Sí, sí! ¡Las túnicas de resistencia son materiales excelentes para nuestra creación! Um, no obstante, necesitaré una pequeña cantidad de dinero, digamos, 7000 monedas de oro... Mi mentor no sabe nada de nuestros planes, y se enfadará mucho al descubrir que hemos usado sus componentes de hechizos para algo así. Je, je. *cloc*~
+@81  = ~De acuerdo, tengo el dinero. Adelante.~
+@82  = ~Debo pensármelo antes, Melicamp.~
+@83  = ~Muy bien. Haceos a un lado mientras lanzo el conjuro.~
+@84  = ~¡Bien! ¡Será una túnica espectacular! Um, no obstante, hay otro pequeño requisito... ¿8000 monedas de oro? Mi mentor no sabe nada de nuestros planes, y se enfadará mucho al descubrir que hemos usado sus componentes de hechizos para algo así. Je, je. *cloc*~
+@85  = ~De acuerdo, aquí tenéis el dinero por los componentes. Adelante.~
+@86  = ~¿¡8000 monedas de oro!? Tengo que pensármelo, Melicamp.~
+@87  = ~Muy bien. Por favor, poned la túnica aquí. Ahora haceos a un lado mientras lanzo el conjuro.~
+@88  = ~¡Sí, bien! ¡Os debe haber costado bastante encontrar todo esto, pero ya veréis cómo ha valido la pena! Um, no obstante, hay otro requisito de, um, 10000 monedas de oro, y un pequeño detalle. Mi mentor no sabe nada de nuestros planes, y se enfadará mucho al descubrir que hemos usado sus componentes de hechizos para algo así. El oro debería compensar cualquier otro componente que usemos. Je, je. *cloc* Respecto al pequeño detalle, hay una ínfima posibilidad de que el hechizo, um, destruya todos los componentes en vez de unirlos. *cloc*~
+@89  = ~Creo que merece la pena correr el riesgo, Melicamp. Adelante.~
+@90  = ~¿10000 monedas de oro y la posibilidad de perderlo todo? Dejad que me lo piense antes, Melicamp.~
+@91  = ~Muy bien. Poned la túnica aquí y haceos a un lado mientras lanzo el conjuro.~
+@92  = ~Entiendo. ¿Qué más puedo hacer por ayudaros?~
+@93  = ~¿Sabéis algo de artefactos drow?~
+@94  = ~¡Ya está! ¡Esta ha sido, de lejos, mi mejor y, sinceramente, mi única creación mágica! Espero que os ayude en vuestros viajes, <CHARNAME>.~
+@95  = ~Tengo una espada muy extraña. ¿Podríais echarle un vistazo?~
+@96  = ~¿Os importaría echar un vistazo a este casco mágico? Me preguntaba si podríais mejorar de algún modo la protección que otorga.~
+@97  = ~¿Os importaría echar un vistazo a este casco de infravisión? Me preguntaba si podríais mejorar de algún modo la protección que otorga.~
+@98  = ~¿Os importaría echar un vistazo a este casco? Concede inmunidad a la magia de influencia, pero esperaba que pudierais mejorar la protección que otorga.~
+@99  = ~¿Eso de ahí es una cabeza de draco? Sí... SÍ, de calidad excelente y cantidad adecuada también. Creo que podría crear una armadura muy útil para vos, una que os conceda protección contra los elementos de rigor y resistencia contra algunos venenos... En total costará 9000 monedas de oro. Bien, ¿qué decís?~
+@100 = ~Suena prometedor.~
+@101 = ~Me gustaría pensarme vuestra generosa oferta. Mientras tanto, ¿puedo ver qué tenéis en venta?~
+@102 = ~Entonces dadlo por hecho. Estará en unos momentos... Tengo un molde de armadura que ansía ser usado con un material especial... ¡Listo!~
+@103 = ~Sí, tenéis un magnífico casco de defensa. Un diseño excelente, sin duda. ¿Decís que queréis más protección? Creo que es posible, pero necesitaría un Anillo de los Príncipes, un ópalo y, por supuesto, 3000 monedas de oro por las molestias.~
+@104 = ~Me parece bien. Aquí tenéis un ópalo negro, el anillo que me pedisteis y el casco.~
+@105 = ~Me parece bien. Aquí tenéis un ópalo negro, un anillo especial como me pedisteis y el casco.~
+@106 = ~Me parece bien. Aquí tenéis un ópalo de agua, el anillo que me pedisteis y el casco.~
+@107 = ~Me parece bien. Aquí tenéis un ópalo de agua, un anillo especial como me pedisteis y el casco.~
+@108 = ~Suena prometedor, pero prefiero pensármelo un poco más.~
+@109 = ~¡Bien! ¡Manos a la obra!~
+@110 = ~¿Um? ¡Esta espada está maldita! ¡Os aconsejo que os deshagáis de ella, no sea que la desenfundéis por accidente en el fragor de la batalla!~
+@111 = ~Entonces debería venderla.~
+@112 = ~Preocupación anotada, señor. Gracias. ¿Puedo pediros otra cosa?~
+@113 = ~Gracias por vuestra preocupación, pero esperaba obtener información sobre los orígenes de esta espada.~
+@114 = ~Me temo que no puedo deciros nada que no sepáis ya... pero si tanto os interesa saber más sobre la espada, creo que los artesanos del templo de Gond podrían seros de ayuda.~
+@115 = ~El herrero Taerom “Martillo Atronador” reconoció la espada maldita que me entregó el fantasma de Ulcaster, pero no me pudo decir nada más. No obstante, me sugirió que preguntara a los sacerdotes de Gond en Puerta de Baldur, ya que podrían tener más información sobre la espada.~
+@116 = ~Por supuesto. ¿Cómo puedo ayudaros?~
+@117 = ~¿Podríais enseñarnos qué tenéis en venta?~
+@118 = ~Tengo una espada muy extraña. ¿Podríais echarle un vistazo?~
+@119 = ~Nada, por ahora.~
+@120 = ~Los "Ojos de la Verdad", como otros lo llamarían. Un buen objeto, aunque la protección que ofrece sea modesta. ¿Decís que queréis mejorarlo? Creo que es posible, pero necesitaría algunos objetos más. Un Anillo de los Príncipes, un ópalo y 3000 monedas de oro para cubrir los costes.~
+@121 = ~De acuerdo, todo parece ser correcto. ¡Manos a la obra!~
+@122 = ~Ah, sí, un casco de protección contra hechizos, ¿verdad? De buena calidad, por cierto. ¿Decís que queréis que ofrezca más protección? Es posible, pero necesitaría algunos objetos más. Un Anillo de los Príncipes, un ópalo y 3000 monedas de oro para cubrir los costes. ¿Qué decís?~
+@123 = ~Los sacerdotes del amanecer me han informado de lo sucedido... Gracias por vuestra ayuda, pero debo pediros algo más. Ranthis... no es más que un mensajero.~
+@124 = ~De acuerdo, pero antes necesito respuestas.~
+@125 = ~Si implica derrotar a otro de esos demonios, dadlo por hecho.~
+@126 = ~¡Olvidadlo! ¡Me topé con vuestros sacerdotes por accidente y no tengo la más mínima intención de arriesgar mi vida por vuestra causa!~
+@127 = ~En realidad no fue mi grupo. Sólo estoy aquí para recibir curación.~
+@128 = ~Por supuesto. Intentaré responder a lo que pueda. Pero por favor, entended que nos queda poco tiempo.~
+@129 = ~La urgencia pesa más que la necesidad de explicaciones. Sois un hombre noble con una causa noble. Decidme qué debo hacer.~
+@130 = ~¿A qué criatura me he enfrentado?~
+@131 = ~Mi magia de adivinación me ha mostrado que se está abriendo otro... portal mucho más grande en algunas ruinas desérticas al este de Beregost. Creo que es el demonio menor, el propio Lestraubimat, intentando acceder a este mundo por un portal abierto por los magos rojos de Thay...~
+@132 = ~Debemos darnos prisa. Un último consejo: Lestraubimat nunca viaja por los planos solo. Un séquito de criaturas lo escoltará... sierpes de fuego y basiliscos. Coged esto, os ayudará en vuestra misión.~
+@133 = ~Keldath Ormlyr me ha encargado destruir al demonio menor Lestraubimat, diciéndome que el caballeo demoníaco Ranthis con el que he luchado no era más que un mensajero suyo. No sé si tendré la experiencia suficiente como para cazar demonios, pero parece ser que no tengo mucha elección.~
+@134 = ~El caballero demoníaco Ranthis al que os habéis enfrentado es el mensajero del demonio menor Lestraubimat, una criatura despiadada del plano material negativo cuyo único objetivo es saciar su sed de sangre.~
+@135 = ~Los escritos antiguos dicen que Lestraubimat promete conceder un deseo a quienes abran un portal para él. Esa debe ser la razón por la que los magos rojos han tramado traerlo a nuestro mundo. Las consecuencias serían catastróficas.~
+@136 = ~La situación es grave, sin duda. ¿Qué debo hacer?~
+@137 = ~¡Agentes de los Magos Rojos! ¡No liberaréis a Lestraubimat en este plano!~
+@138 = ~Lestraubimat ha caído... Sentí que su presencia desaparecía... Gracias. Por favor, aceptad esto. Es una pequeña suma de parte del templo Canción de la Mañana. Además, el sacerdote del amanecer Bran podría tener algo que ofreceros.~
+@139 = ~¡Esperad un momento! No os molestaremos, sólo dejadnos seguir nuestro camino... y nunca más nos volveréis a ver.~
+@140 = ~¡No nos asusta una panda de locos amanerados con túnicas rojas!~
+@141 = ~Por favor, no nos matéis. No queremos morir.~
+@142 = ~¡Sabemos por qué estáis aquí y hemos venido a deteneros! ¡Lestraubimat se quedará encerrado en su mundo!~
+@143 = ~¡Nobles palabras, pero es demasiado tarde! ¡Observad, Lestraubimat entra!~
+@144 = ~Buenos días, viajeros. Mmm... Edwin, no esperaba veros tan pronto. Espero que os hayáis ocupado de los... asuntos de vuestros acompañantes, ya que de no ser así, os aconsejo que lo hagáis cuanto antes. Creo que el zulkir Nevron no estaría satisfecho si se enterara de que habéis fracasado. No hay nada más que decir. Ya hemos acabado... muy pronto será liberado.~
+@145 = ~¡Un grupo de mocosos arrogantes! ¡Enviados por Keldath, sin duda! ¡Bien, vuestras muertes harán que la liberación de Lestraubimat sea aún más gloriosa!~
+@146 = ~Lo siento, pero no creo que estéis diciendo la verdad y, además, los Magos Rojos de Thay no son conocidos por su magnanimidad. Vamos a tener que mataros.~
+@147 = ~¿Para qué podría servir esta espada maldita conocida como la Venganza del Vampiro?~
+@148 = ~¿Dónde se encuentra exactamente esa Bóveda?~
+@149 = ~Un sacerdote de Gond me ha hablado de un depósito llamado la Bóveda. ¿Dónde podría estar?~
+@150 = ~La espada fue forjada por un nosferatu para castigar a sus enemigos. También sirve como llave del depósito de sus tesoros, conocido como la Bóveda.~ 
+@151 = ~El adivino Haspur ha demostrado una vez más su habilidad con la magia. Me ha dicho que la espada maldita es la llave de la Bóveda.~
+@152 = ~En el lejano sur y al oeste. No muy lejos de una fortaleza en la que residen gnolls y bajo un río, por lo que sólo puede verse cuando el caudal es bajo.~ 
+@153 = ~Según el adivino Haspur, la Bóveda se encuentra cerca de un baluarte gnoll y bajo un río. Qué extraño que esos muertos vivientes hayan situado el santuario en un lugar en el que ellos mismos no puedan entrar cuando quieran.~
+@154 = ~Tengo el libro que pedisteis.~
+@155 = ~Os pido humildemente que examinéis esta espada que adquirí hace poco.~
+@156 = ~Ah, sí, por supuesto. ¡El dios del artificio y la invención puede ayudaros con cualquier objeto mágico! Sin embargo, este requiere una donación más sustancial, digamos, ¿10000 monedas de oro?~ 
+@157 = ~Ya veo. Entonces haré esa donación a Gond. Aquí está el dinero.~ 
+@158 = ~Ya veo. Bueno, debo admitir que no sentía TANTA curiosidad por la espada. Gracias de todos modos.~
+@159 = ~¿En serio? ¿10000 monedas de oro? Y tan sustancial... Um, ¿qué servicios dijisteis que ofrecíais?~
+@160 = ~Lamento no disponer de esa cantidad ahora mismo. Volveré cuando sea así.~
+@161 = ~La Venganza del Vampiro... una herramienta antigua y malvada... de una época antigua y malvada. Fue forjada por nada menos que el nosferatu de un antiguo conciliábulo en una tierra mítica occidental. Tenía dos propósitos. El primero, como ya sabréis, es engañar a sus enemigos para que usen la espada, maldiciéndolos para herirse con cada golpe y afectando a su juicio para que se la entregaran a otras personas...~ 
+@162 = ~El segundo uso, menos conocido, es que la espada es una llave... mejor dicho, LA llave... de la Bóveda, un depósito de enormes riquezas y tesoros que esos vampiros usaban para sus tratos con mortales. Pero a día de hoy, nadie ha sido capaz de encontrar esa Bóveda, o ha vivido lo suficiente para documentar su localización. Se rumorea que está en una islita desierta rodeada por aguas enfurecidas, y que sólo se puede acceder a ella cuando las aguas se calmen... Aunque estamos en la Costa de la Espada, por lo que dar con su localización exacta puede ser bastante complicado, camarada... A no ser, por supuesto, que dispongáis de magia de adivinación poderosa.~ 
+@163 = ~El sacerdote de Gond de la Gran Sala de las Maravillas me ha ayudado a descifrar otra parte del misterio y, de hecho, me ha dado un nombre. Debo buscar la Bóveda, un depósito de riquezas y tesoros oculto en algún lugar de la Costa de la Espada, rodeado de agua y, por lo visto, sólo accesible cuando las aguas se calmen. Lo mejor será empezar a buscar en el oeste, ya que el Mar de las Espadas es el lugar más lógico por el que empezar. Si tuviera magia de adivinación como dijo el clérigo...~
+@164 = ~Por lo visto, no me equivoqué con los textos descifrados del tomo antiguo que me entregó el duque Eltan. Entregué la estatua del dios olvidado, Kozah, que obtuve de una excavación arqueológica custodiada por un agorero y la armadura antigua que conseguí en el puente de Vinoardiente al fantasma de Ulcaster el cual, a cambio, me entregó una misteriosa espada diciendo "venganza... es... la llave... de... la Bóveda..." Creo que es algo que merece la pena investigar.~
+@165 = ~... la estatua... y la armadura... a cambio...~
+@166 = ~El mostrar el libro del conocimiento antiguo que me entregó el Duque Eltan al fantasma de Ulcaster parece haber despertado algo de su subconsciente. Hizo alusión a una estatua y una armadura y algo a cambio. Quizás deba buscar otras reliquias para ayudar a esta alma torturada a encontrar la paz... y quizás haya algún secreto oculto en los textos de los Pergaminos Sombríos.~
+@167 = ~Gracias de nuevo por recuperar mis botas. ¿Qué lleváis hoy en la mochila?~
+@168 = ~Hora de devolverme el favor, Zhurlong. Un hombre llamado Zernan os preguntó el otro día por un grupo de gente que le ayudara a descifrar textos antiguos. ¿Qué es lo que sabéis?~
+@169 = ~Oh, ¿ese tipo? Era un rufián, os lo aseguro. Le dije que fuera a las minas de Nashkel. Oí que un grupo quería el libro... ¡y no, no le robé nada! ¡Sólo un ladrón astuto puede pillar a otro ladrón astuto! Esperad, ¿no es ese tipo de allí?~
+@170 = ~Zhurlong admitió contactar con Zernan y dijo que envió al erudito a las minas de Nashkel. Es extraño, también insinuó que Zernan era algo más que un simple erudito, y que sólo un ladrón puede pillar a otro ladrón. Muy extraño.~
+@171 = ~Venganza... es... la llave... de... la Bóveda...~
+@172 = ~Gracias por vuestro ofrecimiento pero paso. ¿Puedo ofreceros algo más?~
+@173 = ~Me interesa la armadura de wyvern de la que hablasteis. Aquí está la cabeza de wyvern y las 9000 piezas de oro que pedisteis~

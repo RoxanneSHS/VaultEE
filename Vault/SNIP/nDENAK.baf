@@ -1,0 +1,108 @@
+IF
+  See([PC])
+  NumberOfTimesTalkedTo(0)
+THEN
+  RESPONSE #100
+    SmallWait(2)
+    StartDialog("denak",[PC])
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("DenakBehavior","GLOBAL",0)
+THEN
+  RESPONSE #100
+    ForceSpell(Myself,WIZARD_GLOBE_OF_INVULNERABILITY)
+    SetGlobal("DenakBehavior","GLOBAL",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("DenakBehavior","GLOBAL",1)
+THEN
+  RESPONSE #100
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_CHAOS)
+    SetGlobal("DenakBehavior","GLOBAL",2)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("DenakBehavior","GLOBAL",2)
+THEN
+  RESPONSE #100
+    ForceSpell(NearestEnemyOf(Myself),RED_FIREBALL)
+    Wait(1)
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_LIGHTNING_BOLT)
+    SetGlobal("DenakBehavior","GLOBAL",3)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("DenakBehavior","GLOBAL",3)
+THEN
+  RESPONSE #50
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_FLESH_TO_STONE)
+    Wait(1)
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_LIGHTNING_BOLT)
+    SetGlobal("DenakBehavior","GLOBAL",4)
+  RESPONSE #50
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_CHAOS)
+    SetGlobal("DenakBehavior","GLOBAL",4)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("DenakBehavior","GLOBAL",4)
+THEN
+  RESPONSE #100
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_LIGHTNING_BOLT)
+    Wait(1)
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_LIGHTNING_BOLT)
+    SetGlobal("DenakBehavior","GLOBAL",5)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("DenakBehavior","GLOBAL",5)
+THEN
+  RESPONSE #100
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)
+    Wait(1)
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_LIGHTNING_BOLT)
+    SetGlobal("DenakBehavior","GLOBAL",6)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("DenakBehavior","GLOBAL",6)
+THEN
+  RESPONSE #50
+    ForceSpell(NearestEnemyOf(Myself),RED_FIREBALL)
+    SetGlobal("DenakBehavior","GLOBAL",7)
+  RESPONSE #50
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)
+    SetGlobal("DenakBehavior","GLOBAL",7)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("DenakBehavior","GLOBAL",7)
+THEN
+  RESPONSE #100
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_CHAOS)
+    Wait(1)
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_LIGHTNING_BOLT)
+    SetGlobal("DenakBehavior","GLOBAL",8)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("DenakBehavior","GLOBAL",8)
+THEN
+  RESPONSE #33
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_MAGIC_MISSILE)
+    SetGlobal("DenakBehavior","GLOBAL",7)
+  RESPONSE #67
+    Attack(NearestEnemyOf(Myself))
+END
+

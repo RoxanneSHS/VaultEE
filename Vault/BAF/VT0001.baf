@@ -1,0 +1,64 @@
+IF
+	Global("VaultVisitedVT0001","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("VaultVisitedVT0001","GLOBAL",1)
+END
+
+IF
+	!Global("TheVaultPortal","GLOBAL",1)
+THEN
+	RESPONSE #100
+		SetGlobal("TheVaultPortal","GLOBAL",1)
+END
+
+IF
+	Global("TheVaultVamp","GLOBAL",0)
+THEN
+	RESPONSE #100
+		CreateCreature("JC_VAM",[650.540],0)
+		CreateCreature("BATTHO",[520.480],0) // Battle Horror
+		CreateCreature("BATTHO",[650.480],0) // Battle Horror
+		CreateCreature("GOLSTO01",[600.290],0)
+		CreateCreature("GOLSTO01",[850.370],0)
+		CreateCreature("GOLSTO01",[360.140],0)
+		CreateCreature("GOLSTO01",[430.310],0)
+		SetGlobal("TheVaultVamp","GLOBAL",1)
+END
+
+IF
+	Global("TheVaultSentry","GLOBAL",1)
+	Dead("JC_VAM")
+THEN
+	RESPONSE #100
+		CreateCreature("JC_VS2",[1140.520],0)
+		SetGlobal("TheVaultSentry","GLOBAL",2)
+END
+
+IF
+	Global("TheVaultTreasure","GLOBAL",0)
+	Dead("JC_VAM")
+THEN
+	RESPONSE #100
+		CreateCreature("JC_TR01",[720.585],0)
+		CreateCreature("JC_TR02",[760.560],0)
+		CreateCreature("JC_TR01",[725.585],0)
+		CreateCreature("JC_TR03",[500.440],0)
+		CreateCreature("JC_TR01",[475.450],0)
+		CreateCreature("JC_TR04",[455.465],0)
+		CreateCreature("JC_TR01",[460.475],0)
+		CreateCreature("JC_TR05",[1365.555],0)
+		CreateCreature("JC_TR01",[1370.555],0)
+		CreateCreature("JC_TR06",[1375.555],0)
+		CreateCreature("JC_TR01",[1250.530],0)
+		CreateCreature("JC_TR07",[1245.535],0)
+		CreateCreature("JC_TR01",[1180.520],0)
+		CreateCreature("JC_TR08",[1140.520],0)
+		CreateCreature("JC_TR01",[1145.525],0)
+		CreateCreature("JC_TR01",[1170.530],0)
+		CreateCreature("JC_TR09",[1140.600],0)
+		CreateCreature("JC_TR01",[1145.605],0)
+		CreateCreature("JC_TR01",[1135.595],0)
+		SetGlobal("TheVaultTreasure","GLOBAL",1)
+END
+

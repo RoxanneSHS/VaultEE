@@ -1,0 +1,196 @@
+IF
+	OR(2)
+		!AreaType(OUTDOOR)
+		!TimeOfDay(DAY)
+	!Global("VaultDrowDisint","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("VaultDrowDisint","GLOBAL",0)
+END
+
+IF
+	OR(3)
+		PartyHasItem("CHANDRW")
+		PartyHasItem("SW1DRW")
+		PartyHasItem("XBOWDRW")
+	AreaType(OUTDOOR)
+	TimeOfDay(DAY)
+	Global("VaultDrowDisint","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("VaultDrowDisint","GLOBAL",1)
+END
+
+IF
+	Global("VaultDrowDisint","GLOBAL",1)
+	HasItem("CHANDRW",Player1)
+THEN
+	RESPONSE #100
+		TakeItemReplace("MISCDRW2","CHANDRW",Player1)
+		Continue()
+END
+
+IF
+	Global("VaultDrowDisint","GLOBAL",1)
+	HasItem("CHANDRW",Player2)
+THEN
+	RESPONSE #100
+		TakeItemReplace("MISCDRW2","CHANDRW",Player2)
+		Continue()
+END
+
+IF
+	Global("VaultDrowDisint","GLOBAL",1)
+	HasItem("CHANDRW",Player3)
+THEN
+	RESPONSE #100
+		TakeItemReplace("MISCDRW2","CHANDRW",Player3)
+		Continue()
+END
+
+IF
+	Global("VaultDrowDisint","GLOBAL",1)
+	HasItem("CHANDRW",Player4)
+THEN
+	RESPONSE #100
+		TakeItemReplace("MISCDRW2","CHANDRW",Player4)
+		Continue()
+END
+
+IF
+	Global("VaultDrowDisint","GLOBAL",1)
+	HasItem("CHANDRW",Player5)
+THEN
+	RESPONSE #100
+		TakeItemReplace("MISCDRW2","CHANDRW",Player5)
+		Continue()
+END
+
+IF
+	Global("VaultDrowDisint","GLOBAL",1)
+	HasItem("CHANDRW",Player6)
+THEN
+	RESPONSE #100
+		TakeItemReplace("MISCDRW2","CHANDRW",Player6)
+		Continue()
+END
+
+IF
+	Global("VaultDrowDisint","GLOBAL",1)
+	HasItem("SW1DRW",Player1)
+THEN
+	RESPONSE #100
+		TakeItemReplace("MISCDRW1","SW1DRW",Player1)
+		Continue()
+END
+
+IF
+	Global("VaultDrowDisint","GLOBAL",1)
+	HasItem("SW1DRW",Player2)
+THEN
+	RESPONSE #100
+		TakeItemReplace("MISCDRW1","SW1DRW",Player2)
+		Continue()
+END
+
+IF
+	Global("VaultDrowDisint","GLOBAL",1)
+	HasItem("SW1DRW",Player3)
+THEN
+	RESPONSE #100
+		TakeItemReplace("MISCDRW1","SW1DRW",Player3)
+		Continue()
+END
+
+IF
+	Global("VaultDrowDisint","GLOBAL",1)
+	HasItem("SW1DRW",Player4)
+THEN
+	RESPONSE #100
+		TakeItemReplace("MISCDRW1","SW1DRW",Player4)
+		Continue()
+END
+
+IF
+	Global("VaultDrowDisint","GLOBAL",1)
+	HasItem("SW1DRW",Player5)
+THEN
+	RESPONSE #100
+		TakeItemReplace("MISCDRW1","SW1DRW",Player5)
+		Continue()
+END
+
+IF
+	Global("VaultDrowDisint","GLOBAL",1)
+	HasItem("SW1DRW",Player6)
+THEN
+	RESPONSE #100
+		TakeItemReplace("MISCDRW1","SW1DRW",Player6)
+		Continue()
+END
+
+IF
+	Global("VaultDrowDisint","GLOBAL",1)
+	HasItem("XBOWDRW",Player1)
+THEN
+	RESPONSE #100
+		TakeItemReplace("MISCDRW1","XBOWDRW",Player1)
+		Continue()
+END
+
+IF
+	Global("VaultDrowDisint","GLOBAL",1)
+	HasItem("XBOWDRW",Player2)
+THEN
+	RESPONSE #100
+		TakeItemReplace("MISCDRW1","XBOWDRW",Player2)
+		Continue()
+END
+
+IF
+	Global("VaultDrowDisint","GLOBAL",1)
+	HasItem("XBOWDRW",Player3)
+THEN
+	RESPONSE #100
+		TakeItemReplace("MISCDRW1","XBOWDRW",Player3)
+		Continue()
+END
+
+IF
+	Global("VaultDrowDisint","GLOBAL",1)
+	HasItem("XBOWDRW",Player4)
+THEN
+	RESPONSE #100
+		TakeItemReplace("MISCDRW1","XBOWDRW",Player4)
+		Continue()
+END
+
+IF
+	Global("VaultDrowDisint","GLOBAL",1)
+	HasItem("XBOWDRW",Player5)
+THEN
+	RESPONSE #100
+		TakeItemReplace("MISCDRW1","XBOWDRW",Player5)
+		Continue()
+END
+
+IF
+	Global("VaultDrowDisint","GLOBAL",1)
+	HasItem("XBOWDRW",Player6)
+THEN
+	RESPONSE #100
+		TakeItemReplace("MISCDRW1","XBOWDRW",Player6)
+		Continue()
+END
+
+IF
+	Global("VaultDrowDisint","GLOBAL",1)
+	!PartyHasItem("CHANDRW")
+	!PartyHasItem("SW1DRW")
+	!PartyHasItem("XBOWDRW")
+THEN
+	RESPONSE #100
+		DisplayStringHead(Player1,@204)
+		SetGlobal("VaultDrowDisint","GLOBAL",0)
+END
+	

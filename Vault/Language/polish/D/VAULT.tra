@@ -1,0 +1,193 @@
+@0   = ~Hmmm?... Bez w¹tpienia rzemios³o drowów. Tak, mo¿na coœ tym zrobiæ. Ale to nie dla mnie. Mój by³y uczeñ kiedyœ zajmowa³ siê badaniem takich materia³ów, jednak¿e po nieszczêœliwym wypadku ze zmian¹ swojego kszta³tu nie s¹dzê, aby chcia³ siê ponownie zag³êbiaæ w podobne eksperymenty.~ 
+@1   = ~Nawet nie musze go dotykaæ by stwierdziæ, ¿e jest przeklêty... Zaczekaj, to nie wydaje siê prawdopodobne, ale... w ¿yciu nie spodziewa³em siê ujrzeæ tego przeklêtego artefaktu! Wampirza Zemsta, jeœli pamiêæ mnie nie myli. Tak... coœ otwiera, ale co to by³o?~
+@2   = ~Wierzê, ¿e jest kluczem do czegoœ.~ 
+@3   = ~Niewa¿ne.~
+@4   = ~Tak! To JEST klucz! Nie mogê sobie jednak przypomnieæ co otwiera. Jakiœ ukryty magiczny magazyn... Bêdziesz musia³ znaleŸæ kogoœ, kto wiêcej wie o tych przesyconych z³em artefaktach stworzonych w dawnych czasach. Mo¿e kap³an Gonda we Wrotach Baldura albo jasnowidz mogliby ci powiedzieæ coœ wiêcej! Ja nie chcê mieæ z tym NIC wspólnego!~ ~Tak! To JEST klucz! Nie mogê sobie jednak przypomnieæ co otwiera. Jakiœ ukryty magiczny magazyn... Bêdziesz musia³a znaleŸæ kogoœ, kto wiêcej wie o tych przesyconych z³em artefaktach stworzonych w dawnych czasach. Mo¿e kap³an Gonda we Wrotach Baldura albo jasnowidz mogliby ci powiedzieæ coœ wiêcej! Ja nie chcê mieæ z tym NIC wspólnego!~ 
+@5   = ~Nie chcia³em a¿ tak ciê dotkn¹æ. Wybacz...~ ~Nie chcia³am a¿ tak ciê dotkn¹æ. Wybacz...~
+@6   = ~Przeklêta Wampirza zemsta wywo³a³a kolejne niepe³ne wspomnienie u jednej z wa¿niejszych postaci Wybrze¿a Mieczy. Mag Thalantyr przypomina sobie, ¿e jest to klucz, jednak nie pamiêta co on otwiera. Sugeruje, ¿e aby rozwi¹zaæ tê zagadkê nale¿y znaleŸæ kogoœ bardziej lepiej obeznanego w wiedzy na temat staro¿ytnych artefaktów, jak kap³an Gonda albo jasnowidz.~
+@7   = ~Witaj ponownie, <CHARNAME>, jak mogê ci dzisiaj pomóc?~ 
+@8   = ~Zdoby³em pewien przedmiot o magicznych w³aœciwoœciach... jednak¿e nie jest on na sprzeda¿. Zastanawiam siê, czy nie móg³byœ mi powiedzieæ czegoœ o jego zastosowaniach.~ ~Zdoby³am pewien przedmiot o magicznych w³aœciwoœciach... jednak¿e nie jest on na sprzeda¿. Zastanawiam siê, czy nie móg³byœ mi powiedzieæ czegoœ o jego zastosowaniach.~
+@9   = ~Mam przy sobie doœæ zagadkowy miecz. Nie jest co prawda na sprzeda¿, ale czy móg³byœ rzuciæ na niego okiem?~ 
+@10  = ~Co siê dzieje z t¹ kopalni¹? Dopiero co oczyœci³eœ j¹ z tych psiog³owych gadów, a teraz mamy tu plagê paj¹ków!~ ~Co siê dzieje z t¹ kopalni¹? Dopiero co oczyœci³aœ j¹ z tych psiog³owych gadów, a teraz mamy tu plagê paj¹ków!~
+@11  = ~Wygl¹da na to, ¿e w sam¹ porê przyby³em do Kopalni Nashkel. Stra¿nik poinformowa³ mnie, ¿e opanowa³y j¹ paj¹ki. Byæ mo¿e nie ma to ¿adnego zwi¹zku z moim poszukiwaniem staro¿ytnej ksiêgi. Choæ z drugiej strony - niekoniecznie.~ ~Wygl¹da na to, ¿e w sam¹ porê przyby³am do Kopalni Nashkel. Stra¿nik poinformowa³ mnie, ¿e opanowa³y j¹ paj¹ki. Byæ mo¿e nie ma to ¿adnego zwi¹zku z moim poszukiwaniem staro¿ytnej ksiêgi. Choæ z drugiej strony - niekoniecznie.~
+@12  = ~Dziêkujê za pozbycie siê tych wszystkich paj¹ków! Miejmy nadziejê, ¿e teraz bêdzie tu przez jakiœ czas spokojnie.~ 
+@13  = ~Z³o... staje siê coraz silniejsze... TY! Nie, z³o promieniuje z drugiej strony pomieszczenia!~
+@14  = ~Obecnoœæ z³a zagra¿a œwiêtoœci westybulu! Chce zniszczyæ Œwi¹tyniê Pieœni Poranka! Nie ma czasu... Nadchodzi! Do broni!~ 
+@15  = ~Nie, poczekaj proszê! Bogowie przys³ali ciê tu nie bez przyczyny... Z³o przybywa przez nieczysty portal na wschodniej œcianie westybulu i nale¿y je powstrzymaæ. Dwóch kap³anów mo¿e je tylko spowolniæ, ale bez twojej pomocy...~
+@16  = ~Bardzo dobrze.~
+@17  = ~Nic z tego. Wynoszê siê st¹d!~
+@18  = ~Nie ma czasu... Nadchodzi! Do broni!~ 
+@19  = ~Dziêkujê za pomoc. Przeczuwam jednak, ¿e to jeszcze nie koniec. Zobacz siê z Keldathem, proszê... z pewnoœci¹ bêdzie wiedzia³ wiêcej na ten temat ni¿ Bran albo ja.~
+@20  = ~Witaj, <CHARNAME>. Ufam, ¿e podró¿ujesz pod przewodnictwem Lathandera. Jak mogê ci pomóc?~ 
+@21  = ~Potrzeba mi leczenia i b³ogos³awieñstw.~ 
+@22  = ~W tej chwili nie potrzebujê pomocy.~
+@23  = ~CZERWONY MAG! Przychodzisz zatem obejrzeæ swoje dzie³o! Z³o nadchodzi, ale ty zginiesz zanim przedostanie siê przez ten plugawy portal!~ 
+@24  = ~Po drugiej stronie! Bran, pospiesz siê i przygotuj ochronê!~
+@25  = ~Co tu siê dzieje?~
+@26  = ~No nie! Mam ju¿ po dziurki w nosie takich szalonych kap³anów!~
+@27  = ~Uspokój siê, dobry cz³owieku. Nie jestem z³em, o którym mówisz. Powiedz mi co siê dzieje.~
+@28  = ~Do broni! Œwiêtoœæ tego miejsca nie mo¿e zostaæ skalana!~
+@29  = ~Masz wdziêcznoœæ Lathandera, ale to dopiero pocz¹tek...~
+@30  = ~Wróæ, kiedy z³o zostanie zniszczone. Bêdê mia³ dla ciebie coœ przydatnego... o ile twe serce jest czyste.~
+@31  = ~Keldath poinformowa³ nas o twoich bohaterskich dokonaniach. Masz nasz¹ wdziêcznoœæ. Z pewnoœci¹ Keldath sowicie ciê wynagrodzi³. To, co my mamy do zaoferowania, to jedynie proste b³ogos³awieñstwo. Jeœli natkniesz siê na m³ot o ma³ym umagicznieniu oraz zdobêdziesz dar siriny, przynieœ je do mnie. Póki co ¿egnaj.~
+@32  = ~Po pokonaniu pomniejszego demona Lestraubimata, Kap³an Œwitu Bran powiedzia³, ¿e bêdzie mia³ dla mnie propozycjê, jeœli przyniosê mu m³ot o niewielkim umagicznieniu oraz dar siriny. Bêdzie mnie oczekiwa³ w westybulu Œwi¹tyni Pieœni Poranka.~
+@33  = ~Widzê, ¿e masz przy sobie per³ê - najcenniejszy dar siriny. Niestety nie posiadasz m³ota bojowego o ma³ym umagicznieniu. Wróæ, kiedy bêdziesz mia³ oba przedmioty, a obdarzê je b³ogos³awieñstwem.~ ~Widzê, ¿e masz przy sobie per³ê - najcenniejszy dar siriny. Niestety nie posiadasz m³ota bojowego o ma³ym umagicznieniu. Wróæ, kiedy bêdziesz mia³a oba przedmioty, a obdarzê je b³ogos³awieñstwem.~
+@34  = ~Widzê, ¿e masz ze sob¹ nieznacznie ulepszony magicznie m³ot bojowy. Niestety, nadal nie posiadasz daru siriny w postaci drogocennego klejnotu. Wróæ, kiedy bêdziesz mia³ oba przedmioty, a obdarzê je b³ogos³awieñstwem.~ ~Widzê, ¿e masz ze sob¹ nieznacznie ulepszony magicznie m³ot bojowy. Niestety, nadal nie posiadasz daru siriny w postaci drogocennego klejnotu. Wróæ, kiedy bêdziesz mia³a oba przedmioty, a obdarzê je b³ogos³awieñstwem.~
+@35  = ~Witaj, <CHARNAME>. Jak widzê ci¹gle szukasz przedmiotów potrzebnych do odprawienia mojego rytua³u. ¯yczê ci powodzenia, a jeœli natkniesz siê na nie, to bêdê czeka³ tutaj, w westybulu.~
+@36  = ~Wspaniale! M³ot bojowy z niewielkimi w³aœciwoœciami magicznymi oraz cenna per³a od siriny. Daj mi je...~
+@37  = ~Obyœ nigdy nie musia³ unosiæ Wp³ywu Lathandera. Niech oœwietla twoj¹ drogê, <CHARNAME>.~ ~Obyœ nigdy nie musia³a unosiæ Wp³ywu Lathandera. Niech oœwietla twoj¹ drogê, <CHARNAME>.~
+@38  = ~Rozdzia³ Siódmy: Powrót do Candlekeep
+
+Twoja wêdrówka zatoczy³a pe³en kr¹g. Ksi¹¿ê Eltan poprosi³ ciê o powrót do Candlekeep, gdzie musisz odszukaæ przywódców ¯elaznego Tronu. Bardzo ciê martwi fakt, ¿e ³otry korzystaj¹ z wielkiej biblioteki i lepiej by by³o, by twemu powrotowi towarzyszy³y inne okolicznoœci. Mimo to z przyjemnoœci¹ wracasz do domu.~
+@39  = ~<CHARNAME>! Okropne czasy nasta³y dla Gullykin! Jesteœmy nêkani przez plemiê pod³ych ogrów pod wodz¹ ogrzego maga o imieniu Kharaz! ¯¹daj¹, ¿ebyœmy opuœcili wioskê, bo chc¹ urz¹dziæ tu swoje obozowisko! Wys³aliœmy ju¿ dwóch goñców w poszukiwaniu pomocy, ale zostali zatrzymani i zabici. Proszê, musisz nam pomóc! Ogry nap³ywaj¹ w coraz wiêkszej liczbie, okaleczaj¹ mieszkañców, niszcz¹ ich dobytek...~
+@40  = ~Zobaczê co da siê zrobiæ.~
+@41  = ~Wioskê Gullykin oblega zgraja ogrów dowodzona przez maga o imieniu Kharaz. Wydaje siê, ¿e si³y ogrów nale¿y liczyæ w setkach, a gromady napastników nieustannie siej¹ spustoszenie w wiosce. Powiedzia³em jednak Gandolarowi, ¿e zobaczê, czy bêdê potrafi³ jakoœ zaradziæ tej sytuacji.~ ~Wioskê Gullykin oblega zgraja ogrów dowodzona przez maga o imieniu Kharaz. Wydaje siê, ¿e si³y ogrów nale¿y liczyæ w setkach, a gromady napastników nieustannie siej¹ spustoszenie w wiosce. Powiedzia³am jednak Gandolarowi, ¿e zobaczê, czy bêdê potrafi³a jakoœ zaradziæ tej sytuacji.~
+@42  = ~<CHARNAME>! Co? Powiadasz, ¿e ta horda ogrów wydaje siê nie mieæ koñca? To z³e wieœci. Co mo¿na zrobiæ? Nie wytrzymamy d³ugo...~
+@43  = ~Nie widzê ¿adnej nadziei. Lepiej bêdzie odejœæ st¹d zanim wszystko bêdzie stracone.~
+@44  = ~Tak, ich si³y s¹ nie do pokonania. Bêdê odpiera³ ich ataki, ¿eby twoi ludzie mogli uciec.~ ~Tak, ich si³y s¹ nie do pokonania. Bêdê odpiera³a ich ataki, ¿eby twoi ludzie mogli uciec.~
+@45  = ~Ten Kharaz, o którym wspomnia³eœ, Gandolarze. Widzia³eœ go?~
+@46  = ~Póki co uciekajmy st¹d, Gandolarze. Lepiej bêdzie, jak wymyœlimy inny sposób na pokonanie tych ogrów.~
+@47  = ~Co? Ja... nie jestem pewny. Co proponujesz?~
+@48  = ~Liczebnoœæ ich si³ jest przyt³aczaj¹ca. Bêdê odpiera³ ich ataki, ¿eby twoi ludzie mogli uciec.~ ~Liczebnoœæ ich si³ jest przyt³aczaj¹ca. Bêdê odpiera³a ich ataki, ¿eby twoi ludzie mogli uciec.~
+@49  = ~W tej chwili nic. Ale na wszelki wypadek trzymaj ludzi w pogotowiu.~
+@50  = ~Mo¿e, choæ to nic pewnego, uda mi siê z³amaæ tê armiê odcinaj¹c jej g³owê.~
+@51  = ~Nie widzê ¿adnej nadziei. Lepiej bêdzie st¹d odejœæ zanim wszystko bêdzie stracone.~
+@52  = ~Póki co uciekajmy st¹d, Gandolarze. Lepiej bêdzie, jak wymyœlimy inny sposób na pokonanie tych ogrów.~
+@53  = ~Hmmm... Rozumiem. Widzia³em ogra wzgórzu, który wydawa³ siê dowodziæ ca³ym tym atakiem. Je¿eli masz s³usznoœæ, to mo¿e wys³anie ma³ej dru¿yny, by zabi³a ich przywódcê, os³abi³oby oblê¿enie! Brzmi to desperacko, ale to mo¿e byæ nasza jedyna nadzieja.~
+@54  = ~Zdesperowani chwytaj¹ siê desperackich œrodków. Wyruszê z ma³ym oddzia³em najszybciej jak siê da. Niech bogowie maj¹ nas w opiece.~
+@55  = ~Sytuacja Gullykin staje sie coraz powa¿niejsza. Horda nie przestaje naciskaæ... Gandolar i ja wymyœliliœmy pewne rozwi¹zanie, choæ trudno powiedzieæ, czy narodzi³o siê ono ze starannego planowania, czy z desperacji: postanowiliœmy wys³aæ niewielk¹ jednostkê, która zabije Kharaza maj¹c nadziejê, ¿e z³amie to morale jego armii. Gandolar nie jest do koñca przekonany do tego rozwi¹zania, ale raczej nic lepszego nie przyjdzie nam do g³ów. Powiedzia³ mi, ¿e widzia³ ogra dowodz¹cego grupami wrogów, jak sta³ na zboczu wzgórza tu¿ pod Gullykin.~
+@56  = ~<CHARNAME>! Ogry siê wycofa³y, gdy tylko dostrzeg³y œmieræ Kharaza na zboczu wzgórza! Po raz kolejny ci siê uda³o! Proszê, weŸ to jako wyraz naszej wdziêcznoœci!~
+@57  = ~Wraz ze œmierci¹ ogrzego maga Kharaza horda ogrów uciek³a ze wzgórza, a tych nielicznych, którzy pozostali w wiosce, powinno doœæ ³atwo daæ siê pokonaæ. Gandolar i mieszkañcy Gullykin mog¹ poczuæ ulgê, ¿e ich domy ponownie s¹ bezpieczne.~
+@58  = ~Ufam, ¿e mieszkañcy naszej ma³ej osady okazali siê przyjacielscy? Zawsze z radoœci¹ powitamy bohaterów Gullykin!~
+@59  = ~Ufam, ¿e mieszkañcy naszej ma³ej osady okazali siê przyjacielscy? Odk¹d pozbyliœcie siê koboldów nasta³y tutaj spokój i cisza!~
+@60  = ~Zbadaæ ruiny Mostu Firewine.
+
+Most Firewine jest wszystkim, co zosta³o z elfiego miasta kupieckiego, które zosta³o zburzone ponad dwieœcie lat temu.~
+@61  = ~Zbadaæ ruiny Mostu Firewine.
+
+W Gullykin s¹ koboldy, które wydaj¹ siê lepiej zorganizowane ni¿ jest to typowe dla ich rasy.~
+@62  = ~Zbadaæ ruiny Mostu Firewine.
+
+Wed³ug s³ów farmera, z którym rozmawialiœmy, w ruinach mostu Firewine mo¿na znaleŸæ ukryte skarby.~
+@63  = ~Zbadaæ ruiny Mostu Firewine.
+
+Gandolar Szczêœliwa Stopa powiedzia³ nam, ¿e z jednego z domostw nizio³ków w Gullykin wiedzie ukryte przejœcie do ruin mostu Firewine.~
+@64  = ~Zbadaæ ruiny Mostu Firewine.
+
+W ruinach Firewine s¹ koboldy.~
+@65  = ~Zbadaæ ruiny Mostu Firewine.
+
+Nizio³ek z Gullykin imieniem Gandolar spyta³ czy oczyœci³bym oczyœci³ ruiny mostu Firewine z koboldów. Powinienem uwa¿aæ, poniewa¿ ró¿ne rodzaje tajemniczych istot mog¹ obudziæ siê ze snu.~ ~Zbadaæ ruiny Mostu Firewine.
+
+Nizio³ek z Gullykin imieniem Gandolar spyta³ czy oczyœci³abym oczyœci³ ruiny mostu Firewine z koboldów. Powinnam uwa¿aæ, poniewa¿ ró¿ne rodzaje tajemniczych istot mog¹ obudziæ siê ze snu.~
+@66  = ~Zbadaæ ruiny Mostu Firewine.
+
+Myœliwy, którego spotkaliœmy poradzi³ nam przeszukaæ most Firewine, jeœli chcemy znaleŸæ przygodê.~
+@67  = ~Mam wiele nauki, ale przynajmniej ¿yjê i mogê siê uczyæ. Jak móg³bym ci pomóc, <CHARNAME>?~
+@68  = ~Dzisiaj w ¿aden sposób, Melicampie. Dziêkujê.~
+@69  = ~Skoro ju¿ mówimy o nauce, to czy w trakcie swoich badañ natkn¹³eœ siê mo¿e na informacje na temat artefaktów drowów?~
+@70  = ~Mam ze sob¹ te szaty odpornoœci. Czy mo¿esz je po³¹czyæ ze zbroj¹ drowów?~
+@71  = ~Zgromadzi³em trochê magicznych szat u¿ywanych przez ró¿nych magów. Czy mo¿esz je po³¹czyæ ze zbroj¹ drowów?~ ~Zgromadzi³am trochê magicznych szat u¿ywanych przez ró¿nych magów. Czy mo¿esz je po³¹czyæ ze zbroj¹ drowów?~
+@72  = ~S¹ tu wszystkie szaty o niewielkim umagicznieniu, jakie uda³o mi siê zebraæ. Czy mo¿esz je po³¹czyæ ze zbroj¹ drowów?~
+@73  = ~Normalnie nie przyzna³bym siê, ¿e posiadam dostêp do takiej wiedzy, poniewa¿ Thalantyr z pewnoœci¹ kaza³by mi opuœciæ swoj¹ rezydencjê, ale skoro jestem ci coœ winien za wybawienie mnie z mojego nieszczêœcia... tak, poczyta³em trochê o rzemios³ach Podmroku.~
+@74  = ~Wpad³a mi niedawno w rêce ta rozpadaj¹ca siê zbroja. Da³oby siê coœ ni¹ zrobiæ?~
+@75  = ~Hmmm... stop typowy dla drowów, jeœli siê nie mylê. Nadal posiada pewne magiczne w³aœciwoœci, ale obawiam siê, ¿e one szybko malej¹. Widzisz, broñ, zbroje i niemal wszystko, co wykonano w Podmroku szybko traci jakoœæ pod wp³ywem œwiat³a s³onecznego... Jednak¿e...~
+@76  = ~Tak?~
+@77  = ~S¹dzê, ¿e potrafiê, uhm, uratowaæ czêœæ magii, jaka pozosta³a w zbroi, o ile mia³bym w³aœciwe komponenty... jak na przyk³ad proste ubiory o pomniejszym umagicznieniu. Tak... tak! Myœlê, ¿e to naprawdê mo¿liwe! Wróæ do mnie z kilkoma takimi magicznymi szatami, a wykonam coœ dla ciebie!~
+@78  = ~W porz¹dku. Zaraz siê tym zajmê.~
+@79  = ~Uczeñ Thalantyra, Melicamp, okazuje siê byæ jeszcze ca³kiem obiecuj¹cym m³odym cz³owiekiem. Kiedy pokaza³em mu zbrojê zdobyt¹ na drowach w Kopalniach Nashkel, szybko zaproponowa³, ¿e wykona dla mnie pewien magiczny przedmiot. Muszê tylko przynieœæ mu kilka szat o niewielkim umagicznieniu.~ ~Uczeñ Thalantyra, Melicamp, okazuje siê byæ jeszcze ca³kiem obiecuj¹cym m³odym cz³owiekiem. Kiedy pokaza³am mu zbrojê zdobyt¹ na drowach w Kopalniach Nashkel, szybko zaproponowa³, ¿e wykona dla mnie pewien magiczny przedmiot. Muszê tylko przynieœæ mu kilka szat o niewielkim umagicznieniu.~
+@80  = ~O tak! Szaty odpornoœci to œwietny materia³ na to, co zamierzam stworzyæ! Hmm, jednak¿e bêdê potrzebowa³ niewielkiej sumy, powiedzmy 8000 sztuk z³ota, by to zrobiæ... Mistrz w zasadzie nie wie o naszych planach i wpad³by w lekk¹ furiê, gdyby siê dowiedzia³, ¿e u¿ywamy jego magicznych sk³adników w takich celach. Hehe. *gdak*~
+@81  = ~W porz¹dku, mam z³oto. Zróbmy to.~
+@82  = ~Muszê to najpierw przemyœleæ.~
+@83  = ~W porz¹dku. Stój z boku, dopóki nie skoñczê wypowiadaæ formu³y.~
+@84  = ~Ale¿ oczywiœcie! Nadadz¹ siê do stworzenia wspania³ej szaty! Hmm, jednak¿e jest jeszcze pewien ma³y wymóg... 8000 sztuk z³ota. Mistrz w zasadzie nie wie o naszych planach i wpad³by w lekk¹ furiê, gdyby siê dowiedzia³, ¿e u¿ywamy jego magicznych sk³adników w takich celach. Hehe. *gdak*~
+@85  = ~No dobrze, tu masz z³oto na sk³adniki. Bierzmy siê do dzie³a.~
+@86  = ~8000 sztuk z³ota?! Muszê to przemyœleæ.~
+@87  = ~W porz¹dku. Po³ó¿ tu szaty. Stój z boku, dopóki nie skoñczê wypowiadaæ formu³y.~
+@88  = ~Tak, w rzeczy samej! Musia³o ci zaj¹æ sporo czasu zebranie ich wszystkich, ale œmiem twierdziæ, ¿e by³o warto! Jest jednak¿e jeszcze jeden niewielki warunek, uhm, 20000 sztuk z³ota, no i pewien szczegó³ do omówienia. Mistrz w zasadzie nie wie o naszych planach i wpad³by w lekk¹ furiê, gdyby siê dowiedzia³, ¿e u¿ywamy jego magicznych sk³adników w takich celach. To z³oto pokryje wszelkie komponenty, jakie zu¿yjemy. Hehe. *gdak* A co do tego niewielkiego szczegó³u, to istnieje minimalna szansa, ¿e, hmm, wszystkie sk³adniki ulegn¹ zniszczeniu zamiast siê po³¹czyæ. *gdak*~
+@89  = ~Wierzê, ¿e warto podj¹æ to ryzyko. Zróbmy to.~
+@90  = ~20000 sztuk z³ota i szansa, ¿e wszystko stracê? Muszê to przemyœleæ.~
+@91  = ~Dobrze zatem! Po³ó¿ tu szaty i stój z boku, dopóki nie skoñczê wypowiadaæ formu³y.~
+@92  = ~Rozumiem. W takim razie w czym jeszcze mogê ci pomóc?~
+@93  = ~Wiesz coœ o artefaktach drowów?~
+@94  = ~Gotowe! Jest to jak dotychczas moje najwiêksze, i szczerze mówi¹c jedyne, magiczne dzie³o! Niech dobrze ci s³u¿y w twoich wêdrówkach, <CHARNAME>.~
+@95  = ~Mam tu ze sob¹ doœæ dziwny miecz. Zechcia³byœ rzuciæ na niego okiem?~
+@96  = ~Czy móg³byœ obejrzeæ ten magiczny he³m, który posiadam? Zastanawia mnie, czy mo¿na jakoœ ulepszyæ ochronê, któr¹ on zapewnia.~
+@97  = ~Czy móg³byœ obejrzeæ ten He³m Infrawizji? Zastanawia mnie, czy mo¿na jakoœ ulepszyæ ochronê, któr¹ on zapewnia.~
+@98  = ~Czy móg³byœ obejrzeæ ten magiczny he³m, który posiadam? Chroni przed zaklêciami wp³ywaj¹cymi na umys³, ale mam nadziejê, ¿e móg³byœ jakoœ ulepszyæ ochronê, któr¹ on zapewnia.~
+@99  = ~Czy to nie g³owê wywerny masz ze sob¹? Tak... TAK, œwietna jakoœæ i odpowiednia wielkoœæ. S¹dzê, ¿e mogê z niej dla ciebie zrobiæ bardzo u¿yteczn¹ zbrojê - tak¹, która zapewni ochronê przeciwko œmiertelnej magii, jak równie¿ odpornoœæ na pewne trucizny... 9000 sztuk z³ota powinno pokryæ koszty pozosta³ych materia³ów oraz robocizny. Co ty na to?~
+@100 = ~Twoja propozycja wydaje siê korzystna.~
+@101 = ~Potrzeba mi nieco czasu, ¿eby przemyœleæ twoj¹ szczodr¹ ofertê. Czy mogê w miêdzyczasie obejrzeæ twoje towary?~
+@102 = ~W takim razie uwa¿aj to za zrobione. To nie potrwa d³ugo... Mam ju¿ formê zbroi, która tylko potrzebuje specjalnego materia³u na spodni¹ warstwê... No i ju¿, gotowe!~
+@103 = ~Ach, widzê, ¿e posiadasz wspania³y He³m ochrony. Œwietnie wykonany pod ka¿dym mo¿liwym wzglêdem. Powiadasz, ¿e potrzebna ci lepsza ochrona? S¹dzê, ¿e to mo¿liwe. Bêdê jednak potrzebowa³ pierœcienia zwanego "Pierœcieniem ksi¹¿¹t", opalu oraz 5000 sztuk z³ota za fatygê.~
+@104 = ~Zgadzam siê na to. Tu masz czarny opal, pierœcieñ, o który prosi³eœ, oraz he³m.~
+@105 = ~Zgadzam siê na to. Tu masz czarny opal, pewien nadzwyczajny pierœcieñ, jaki chcia³eœ, oraz he³m.~
+@106 = ~Zgadzam siê na to. Tu masz wodny opal, pierœcieñ, o który prosi³eœ, oraz he³m.~
+@107 = ~Zgadzam siê na to. Tu masz wodny opal, pewien nadzwyczajny pierœcieñ, jaki chcia³eœ, oraz he³m.~
+@108 = ~Propozycja wydaje siê korzystna, ale mimo to muszê j¹ jeszcze przemyœleæ.~
+@109 = ~Dobrze! Zaczynajmy!~
+@110 = ~Co? To przeklête ostrze! Zdaje mi siê, ¿e najlepiej byœ zrobi³ pozbywaj¹c siê go, przyjacielu, zanim przypadkowo, w ogniu walki, dobêdziesz go z pochwy!~ ~Co? To przeklête ostrze! Zdaje mi siê, ¿e najlepiej byœ zrobi³a pozbywaj¹c siê go, przyjació³ko, zanim przypadkowo, w ogniu walki, dobêdziesz go z pochwy!~
+@111 = ~W takim razie sprzedam go.~
+@112 = ~Dziêkujê za twoj¹ troskê. Mogê jeszcze o coœ spytaæ?~
+@113 = ~Dziêkujê za troskê, ale mia³em nadziejê na uzyskanie informacji o pochodzeniu tego miecza.~ ~Dziêkujê za troskê, ale mia³am nadziejê na uzyskanie informacji o pochodzeniu tego miecza.~
+@114 = ~Obawiam siê, ¿e nie mogê ci powiedzieæ nic ponad to, co ju¿ wiesz... jeœli jednak naprawdê chcesz dowiedzieæ siê czegoœ wiêcej o tym mieczu, to mo¿e rzemieœlnicy ze œwi¹tyni Gonda bêd¹ w stanie ci pomóc.~
+@115 = ~Kowal Taerom "Grzmi¹cy M³ot" Fuiruim rozpozna³ przeklêty miecz wrêczony mi przez zjawê Ulcastera, ale nie potrafi³ powiedzieæ mi o nim niczego wiêcej. Zasugerowa³ mi jednak, ¿e móg³bym zasiêgn¹æ rady kap³anów Gonda we Wrotach Baldura, poniewa¿ mog¹ mieæ oni wiêksz¹ wiedzê na ten temat.~ ~Kowal Taerom "Grzmi¹cy M³ot" Fuiruim rozpozna³ przeklêty miecz wrêczony mi przez zjawê Ulcastera, ale nie potrafi³ powiedzieæ mi o nim niczego wiêcej. Zasugerowa³ mi jednak, ¿e mog³abym zasiêgn¹æ rady kap³anów Gonda we Wrotach Baldura, poniewa¿ mog¹ mieæ oni wiêksz¹ wiedzê na ten temat.~
+@116 = ~Oczywiœcie. Jak mogê ci pomóc?~
+@117 = ~Mo¿esz mi pokazaæ co masz na sprzeda¿?~
+@118 = ~Mam tu ze sob¹ doœæ dziwny miecz. Zechcesz rzuciæ na niego okiem?~
+@119 = ~W tym momencie niczego nie potrzebujê.~
+@120 = ~"Oczy prawdy", jak na niego mówi¹. Niez³y sprzêt, choæ zapewnia tylko niewielk¹ ochronê. Powiadasz, ¿e chcia³byœ go ulepszyæ? S¹dzê, ¿e to mo¿liwe. Bêdê jednak potrzebowa³ kilku rzeczy: pierœcienia ochrony zwanego "Pierœcieniem ksi¹¿¹t", opalu oraz 5000 sztuk z³ota na pokrycie kosztów pracy.~ ~"Oczy prawdy", jak na niego mówi¹. Niez³y sprzêt, choæ zapewnia tylko niewielk¹ ochronê. Powiadasz, ¿e chcia³abyœ go ulepszyæ? S¹dzê, ¿e to mo¿liwe. Bêdê jednak potrzebowa³ kilku rzeczy: pierœcienia ochrony zwanego "Pierœcieniem ksi¹¿¹t", opalu oraz 5000 sztuk z³ota na pokrycie kosztów pracy.~
+@121 = ~Dobrze, wszystko wydaje siê byæ w porz¹dku. Bierzemy siê do pracy!~
+@122 = ~A tak, He³m ochrony przed urokami, dobrze mówiê? Przyk³ad œwietnej kowalskiej roboty. Mówisz, ¿e chcesz, by zapewnia³ lepsz¹ ochronê? To wykonalne, ale potrzebowa³bym kilku rzeczy, by to zrobiæ. Pierœcienia ochrony zwanego "Pierœcieniem ksi¹¿¹t", opalu oraz 5000 sztuk z³ota na pokrycie kosztów pracy. Co ty na to?~
+@123 = ~Kap³ani Œwitu powiadomili mnie o tym, co w³aœnie siê wydarzy³o... Dziêkujê ci za okazan¹ pomoc, ale zmuszony jestem prosiæ ciê o jeszcze jedn¹ przys³ugê. Ranthis... to tylko pos³aniec.~
+@124 = ~W porz¹dku, ale wpierw muszê otrzymaæ kilka odpowiedzi.~
+@125 = ~Je¿eli oznacza to zniszczenie kolejnego z kompanów tamtego demona, to jestem gotów siê tym zaj¹æ.~ ~Je¿eli oznacza to zniszczenie kolejnego z kompanów tamtego demona, to jestem gotowa siê tym zaj¹æ.~
+@126 = ~Zapomnij! Na twoich kap³anów natkn¹³em siê przypadkowo i nie mam zamiaru uganiaæ siê w twoich sprawach ryzykuj¹c ¿yciem!~ ~Zapomnij! Na twoich kap³anów natknê³am siê przez przypadkowo i nie mam zamiaru uganiaæ siê w twoich sprawach ryzykuj¹c ¿yciem!~
+@127 = ~Tak naprawdê to nie by³em ja. Jestem tu, bo potrzebujê leczenia.~ ~Tak naprawdê to nie by³am ja. Jestem tu, bo potrzebujê leczenia.~
+@128 = ~Oczywiœcie. Postaram siê udzieliæ ci odpowiedzi, jeœli bêdê móg³. Jednak zrozum, proszê, ¿e nie zosta³o wiele czasu.~
+@129 = ~Có¿, nag³a potrzeba jest wa¿niejsza od wyjaœnieñ. Wiem, ¿e jesteœ cz³owiekiem, który kieruje siê szlachetnymi pobudkami. Powiedz mi, co nale¿y zrobiæ.~
+@130 = ~Có¿ to za stworzenie, z którym przysz³o mi walczyæ w Westybulu?~
+@131 = ~Dziêki mojej magii poznania ujrza³em kolejny, o wiele wiêkszy portal otwierany w³aœnie w opuszczonych ruinach na wschód od Beregostu. Przypuszczam, ¿e to sam demon Lestraubimat przybywa tu przez bramê, któr¹ otwieraj¹ dla niego czerwoni magowie z Thay...~
+@132 = ~Trzeba sie spieszyæ. I jeszcze jedno ostrze¿enie: Lestraubimat nigdy nie podró¿uje samotnie. Bêdzie mia³ eskortê z³o¿on¹ z jego licznych s³ug... ogniste wywerny, bazyliszki. Proszê, weŸ to. Mo¿e ci pomóc w twojej misji.~
+@133 = ~Keldath Ormlyr wys³a³ mnie z misj¹ zniszczenia pomniejszego demona Lestraubimata i wyjaœni³ jednoczeœnie, ¿e pokonany przeze mnie demoniczny rycerz Ranthis by³ jedynie jego pos³añcem. Nie wiem czy posiadam wystarczaj¹co du¿o doœwiadczenia w polowaniu na demony, ale wydaje siê, ¿e nie mam wielkiego wyboru.~
+@134 = ~Demoniczny rycerz Ranthis, z którym siê zmierzy³eœ, by³ wys³annikiem pomniejszego demona Lestraubimata, odra¿aj¹cego potwora z negatywnej sfery, któremu zale¿y wy³¹cznie na zaspokojeniu w³asnej ¿¹dzy krwi.~ ~Demoniczny rycerz Ranthis, z którym siê zmierzy³aœ, by³ wys³annikiem pomniejszego demona Lestraubimata, odra¿aj¹cego potwora z negatywnej sfery, któremu zale¿y wy³¹cznie na zaspokojeniu w³asnej ¿¹dzy krwi.~
+@135 = ~Staro¿ytne kroniki mówi¹, ¿e Lestraubimat potrafi skusiæ ludzi, by otworzyli dla niego przejœcie w zamian za spe³nienie jednego ¿yczenia. To musi byæ powód, dla którego ci czerwoni magowie podjêli próbê sprowadzenia go do naszego œwiata. Skutki tego mog¹ byæ katastrofalne.~
+@136 = ~Sytuacja jest rzeczywiœcie bardzo powa¿na. Co mam zrobiæ?~
+@137 = ~Wspólnicy czerwonych magów! Nie uda siê wam wpuœciæ Lestraubimata do tej sfery!~
+@138 = ~Lestraubimat poleg³... Wyczu³em, ¿e demon zosta³ wygnany. Dziêkujê ci. Przyjmij to, proszê. To ma³a sumka od Œwi¹tyni Pieœni Poranka. Ponadto Kap³an Œwitu Bran mo¿e mieæ dla ciebie propozycjê.~
+@139 = ~Czekajcie! Nie chcemy wam przeszkadzaæ, po prostu pozwólcie nam odejœæ, a nigdy ju¿ nas nie zobaczycie.~
+@140 = ~Nie ulêkniemy siê bandy odzianych w czerwieñ przebierañców!~
+@141 = ~Proszê, nie zabijajcie nas. Nie chcemy umieraæ.~
+@142 = ~Wiem, po co tu jesteœcie i przyby³em, by was powstrzymaæ! Lestraubimat pozostanie uwiêziony w swoim œwiecie!~ ~Wiem, po co tu jesteœcie i przyby³am, by was powstrzymaæ! Lestraubimat pozostanie uwiêziony w swoim œwiecie!~
+@143 = ~Szlachetne s³owa, ale jest ju¿ za póŸno! Spójrz, oto nadchodzi Lestraubimat!~
+@144 = ~Witam was, podró¿nicy. Hmm... Nie spodziewa³em siê ciebie tak szybko, Edwin. Mam nadziejê, ¿e zaj¹³eœ siê swoim....interesem, bo je¿eli nie, to bêdziesz musia³ szybko to nadrobiæ. Zulkir Nevron by³by bardzo niezadowolony, gdybyœ go zawiód³. To wszystko co chcia³em powiedzieæ. Mi³ego dnia wszystkim... TO wkrótce zostanie uwolnione.~
+@145 = ~Banda bezczelnych szczeniaków! Bez w¹tpienia to Keldath was tu przys³a³! Wasza œmieræ bêdzie dla mnie najs³odsz¹ nagrod¹ i uczyni przywo³anie Lestraubimata jeszcze bardziej udanym!~
+@146 = ~Przykro mi, ale nie wierzê w to, co mówisz, a poza tym Czerwoni Magowie z Thay nie s³yn¹ z ³agodnej natury. Musimy was zabiæ.~
+@147 = ~Co mo¿esz mi powiedzieæ o tym mieczu? To przeklêta broñ znana jako Wampirza Zemsta.~
+@148 = ~Gdzie dok³adnie znajduje siê ta Krypta, o której wspomnia³eœ?~
+@149 = ~Kap³an Gonda opowiedzia³ mi o staro¿ytnym miejscu zwanym Krypt¹. Gdzie mogê je znaleŸæ?~
+@150 = ~Ostrze zosta³o wykute przez staro¿ytnych Nosferatu, by karaæ ich wrogów. S³u¿y równie¿ jako klucz do ich skarbca, znanego nielicznym jako Krypta.~
+@151 = ~Mistrz poznania raz jeszcze dowiód³ swego kunsztu. Dowiedzia³em siê od niego, ¿e przeklêty miecz jest kluczem do Krypty.~ ~Mistrz poznania raz jeszcze dowiód³ swego kunsztu. Dowiedzia³am siê od niego, ¿e przeklêty miecz jest kluczem do Krypty.~
+@152 = ~Daleko st¹d na po³udnie i nieco na zachód. W pobli¿u fortu zamieszkanego przez gnolle. Poœrodku rzeki, ale tylko wtedy, gdy jej pr¹d jest s³aby.~
+@153 = ~Mistrz poznania Haspur okreœli³ po³o¿enie Krypty w pobli¿u Twierdzy Gnolli i poœrodku rzeki. Dziwne, ¿e ci nieumarli obrali za miejsce zamieszkania sanktuarium, do którego sami nie mog¹ swobodnie wejœæ.~
+@154 = ~Mam ksiêgê, której potrzebujesz.~
+@155 = ~Pokornie proszê, abyœ zechcia³ obejrzeæ ten miecz, który niedawno uda³o mi siê zdobyæ.~
+@156 = ~Ach tak, oczywiœcie. Bóg rzemios³a i wynalazków mo¿e byæ w stanie pomóc ci, jeœli chodzi o zbadanie magicznych przedmiotów! Wymaga to jednak¿e pokaŸnej ofiary, powiedzmy 10000 sztuk z³ota.~
+@157 = ~Rozumiem. Pozwól zatem, ¿e ofiarujê Gondowi to, co mu nale¿ne. Tu jest z³oto.~
+@158 = ~Có¿, muszê przyznaæ, ¿e a¿ TAK bardzo nie ciekawi mnie ten miecz. Mimo to dziêkujê.~
+@159 = ~Doprawdy? 10000? Taka skromna kwota... Ech, jakie inne us³ugi oferujesz?~
+@160 = ~Przykro mi, ale nie mam w tym momencie takiej sumy. Wrócê tu, kiedy bêdê j¹ mia³.~ ~Przykro mi, ale nie mam w tym momencie takiej sumy. Wrócê tu, kiedy bêdê j¹ mia³a.~
+@161 = ~Wampirza Zemsta... prastary i z³y przedmiot... z równie prastarej i z³ej epoki. Stworzony przez Nosferatu ze staro¿ytnego sabatu w jakiejœ mitycznej krainie na zachodzie. Miecz wykonano w dwóch celach. Pierwszym, o czym ju¿ wiesz, by³o wabienie wrogów, by u¿ywali tego miecza. Sprawia³o to, ¿e w przeklêty sposób sami krwawili przy ka¿dym uderzeniu, a ich umys³ by³ zbyt os³abiony, by pomyœleæ o pozbyciu siê miecza...~
+@162 = ~Drug¹, bardziej dyskretn¹ funkcj¹ tego miecza jest bycie... kluczem. Kluczem do Krypty, sk³adu bogactwa, którego te wampiry u¿ywa³y w transakcjach z innymi. Po dziœ dzieñ nikomu nie uda³o siê odnaleŸæ Krypty, nikt równie¿ nie ¿y³ na tyle d³ugo, by opisaæ jej po³o¿enie. Plotki g³osz¹, ¿e znajduje siê na ma³ej, odludnej wysepce otoczonej wzburzonymi wodami, a wejœæ tam mo¿na jedynie wówczas, gdy wody stan¹ siê spokojne. Fakt, ¿e jesteœmy na Wybrze¿u Mieczy, w s¹siedztwie otwartego morza sprawia, ¿e wcale nie tak ³atwo odgadn¹æ dok³adne po³o¿enie Krypty... Zak³adaj¹c oczywiœcie, ¿e nie posiadasz zdolnoœci jasnowidzenia.~
+@163 = ~Kap³an Gonda w Komnacie Cudów okaza³ siê byæ bardzo pomocny przy rozszyfrowaniu kolejnej czêœci tajemnicy i poda³ mi nazwê miejsca, którego poszukujê. Chodzi o Kryptê, skarbiec ukryty gdzieœ na Wybrze¿u Mieczy, otoczony wodami i najwidoczniej dostêpny jedynie wówczas, gdy te wody s¹ spokojne. Prawdopodobnie najlepiej by³oby udaæ siê na zachód, poniewa¿ Morze Mieczy to najbardziej logiczne miejsce na rozpoczêcie poszukiwañ. Gdyby tak posiadaæ choæ odrobinê umiejêtnoœci jasnowidzenia, o której napomkn¹³ kap³an.~
+@164 = ~
+Wygl¹da na to, ¿e moje przeczucia odnoœnie zapisów w ksiêdze, któr¹ da³ mi Ksi¹¿ê Eltan, by³y s³uszne. Po dostarczeniu duchowi Ulcastera statuetki dawno zapomnianego boga Kozaha, znalezionej na terenie wykopalisk i strze¿onej przez Siewcê Zag³ady, a tak¿e staro¿ytnej zbroi zdobytej w podziemiach mostu Firewine, zjawa wrêczy³a mi tajemniczy miecz mówi¹c "zemsta... jest... kluczem... do... Krypty...". S¹dzê, ¿e to wszystko warte jest dalszego zbadania.~
+@165 = ~...pos¹¿ek... i zbroja... w zamian...~
+@166 = ~Widok ksiêgi staro¿ytnej wiedzy, któr¹ da³ mi Ksi¹¿e Eltan, najwyraŸniej pobudzi³ coœ w nieœwiadomoœci zjawy Ulcastera. Duch napomkn¹³ coœ o pos¹¿ku, o zbroi i jakiejœ wymianie. Byæ mo¿e poszukuje innych pami¹tek, by pomóc swojej udrêczonej duszy w osi¹gniêciu spokoju... i mo¿e w tekœcie Historii Zwoju z Netheril ukryty jest jakiœ sekret.~
+@167 = ~Jeszcze raz dziêki za przyniesienie butów. Co macie dzisiaj ciekawego w plecakach?~
+@168 = ~Czas okazaæ wdziêcznoœæ, Zhurlong. By³ tu u ciebie pewnego dnia cz³owiek o imieniu Zernan, by zapytaæ o grupê ludzi, którzy mogli mu pomóc rozszyfrowaæ staro¿ytny tekst. Co wiesz na ten temat?~
+@169 = ~A, tamten goœæ? To kawa³ ³obuza, mówiê ci. Powiedzia³em mu, ¿eby poszed³ do Kopalñ Nashkel. S³ysza³em o jakiejœ szemranej grupce, która chcia³a ksi¹¿kê... i nie, niczego mu nie zwin¹³em! Trzeba naprawdê przebieg³ego z³odzieja, ¿eby nie da³ innemu chytremu z³odziejowi siê okraœæ! Czekaj, czy to nie on?~
+@170 = ~Zhurlong potwierdzi³, ¿e widzia³ siê z Zernanem i powiedzia³, ¿e skierowa³ badacza do Kopalñ Nashkel. Jednak¿e, co wydaje mi siê dziwne, da³ do zrozumienia, ¿e Zernan jest kimœ wiêcej ni¿ naukowcem. Stwierdzi³, ¿e aby schwytaæ z³odzieja trzeba samemu byæ z³odziejem. Naprawdê dziwne.~
+@171 = ~...zemsta... jest... kluczem... do... krypty...~
+@172 = ~Dziêkujê za propozycjê, ale na razie zrezygnujê. Mogê jeszcze o coœ zapytaæ?~
+@173 = ~Interesuje mnie ta zbroja z wywerny, o której rozmawialiœmy. Tu jest g³owa wywerny i 9000 z³otych monet, o które prosi³eœ.~

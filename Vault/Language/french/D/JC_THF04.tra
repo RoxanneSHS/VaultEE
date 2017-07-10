@@ -1,0 +1,36 @@
+// JC_THF04 Translation File
+
+@0   = ~Arrêtez-vous ! <CHARNAME> ? <CHARNAME> !~
+@1   = ~Oui, c'est moi. Qui êtes-vous, dites-moi ?~
+@2   = ~Calmez-vous, c'est moi. De quoi avez-vous besoin ?~
+@3   = ~Je suis désolé. Je n'ai pas de temps pour ceci. Je dois retourner à la Porte de Baldur aussi vite que possible.~ ~Je suis désolée. Je n'ai pas de temps pour ceci. Je dois retourner à la Porte de Baldur aussi vite que possible.~
+@4   = ~C'est vous ! Exactement comme vous a décrit Zernan ! Oh, Zernan !~ ~C'est vous ! Exactement comme vous a décrite Zernan ! Oh, Zernan !~
+@5   = ~Zernan ? ... L'érudit ?~
+@6   = ~Heu, oui, l'érudit... Je suis Nandin, son collègue... quelque chose d'affreux lui est arrivé ! Je l'ai rencontré à l'Auberge de Brasamical après qu'il ait récupéré le livre.~
+@7   = ~Et que s'est-il passé ?~
+@8   = ~Il a dit qu'il devait rencontrer un roublard au Magicien Ardent, porteur d'informations sur un autre groupe, au sud, qui était aussi intéressé par l'étude de ce livre. Il m'a ensuite enjoint de le retrouver à Nashkel... c'était il y a quelques jours. Je ne l'ai ni revu ni entendu parler de lui depuis. Il m'a dit que si quoi que soit d'inhabituel devait se produire, je devais me rendre à Château-Suif et vous trouver.~
+@9   = ~Etes-vous certain ? Peut-être a-t-il été tant emporté par son zèle et sa quête du savoir qu'il a oublié votre rendez-vous ?~
+@10  = ~Hmm... C'est étrange, même pour Zernan. N'avez-vous pas le nom de la personne qu'il devait rencontrer ?~
+@11  = ~Il y a peu de chances, <CHARNAME>. Parfois, il était dépassé par ses affaires... heu, études, mais jamais assez longtemps pour oublier des rendez-vous importants.~
+@12  = ~Je vois. Alors qu'avons-nous pour continuer, à présent ? Quel était le nom de cette personne à Bérégost ?~
+@13  = ~Zhurlag... Je pense. Allez-vous nous aider ?~
+@14  = ~Très bien. Je m'occupe de ça immédiatement.~
+@15  = ~Je suis désolé. Je n'ai pas de temps pour ceci. Je dois me rendre immédiatement à la Porte de Baldur.~ ~Je suis désolée. Je n'ai pas de temps pour ceci. Je dois me rendre immédiatement à la Porte de Baldur.~
+@16  = ~Vous ne voulez quand même pas parler de ce petit voleur, Zhurlong ?!~
+@17  = ~Je le savais. On ne peut jamais compter sur d'autres pour régler les choses à sa place. Je le chercherai moi-même... après avoir veillé à effacer ses traces. Tuez-les tous !~
+@18  = ~Par les neuf enfers ?!~
+@19  = ~Il semblerait que l'érudit Zernan n'était pas du tout ce qu'il prétendait être. Un de ses "collègues" m'a attaqué hors des murs de Château-Suif après que j'ai refusé de l'aider à retrouver Zernan qui, semble-il, a disparu... mais je n'ai pas de temps pour ceci, je dois retourner à la Porte de Baldur et affronter Sarevok... J'imagine que l'endroit où se trouve Zernan restera un mystère à tout jamais.~
+@20  = ~Zhurlong, c'est son nom ! Vous le connaissez ? Alors vous allez m'aider ?~
+@21  = ~Je le connais, oui, mais ça ne veut pas dire que nous sommes bons amis... Très bien, je verrai Zhurlong aussi vite que je le peux...~
+@22  = ~Je suis désolé. Je n'ai pas le temps, ni pour vous, Zernan, ou Zhurlong. Je dois me rendre immédiatement à la Porte de Baldur.~ ~Je suis désolée. Je n'ai pas le temps, ni pour vous, Zernan, ou Zhurlong. Je dois me rendre immédiatement à la Porte de Baldur.~
+@23  = ~Oh, merci ! Merci, <CHARNAME> ! Je serai à l'Auberge de Nashkel au cas où mon ami y viendrait et j'y attendrai toute nouvelle que vous pourriez glâner sur ce qui lui est arrivé.~
+@24  = ~Prenez soin de vous, Nandin. Et ne vous inquiétez pas trop. Je suis certain que nous le trouverons à temps.~ ~Prenez soin de vous, Nandin. Et ne vous inquiétez pas trop. Je suis certaine que nous le trouverons à temps.~
+@25  = ~Il semble que l'érudit Zernan ait disparu. Son ami, Nandin, est venu jusqu'à Château-Suif pour me demander mon aide et je ne peux pas la lui refuser. La dernière fois qu'ils se sont vus, Zernan se rendait à Bérégost pour y rencontrer un petit-homme du nom de Zhurlong, au Magicien Ardent. Je suppose que c'est là que je devrais commencer. Nandin m'attendra à l'auberge de Nashkel si je trouvais la moindre information sur son ami.~
+@26  = ~Quoi ? Zernan dans les Mines de Nashkel ? Il ne s'y rendrait pas de son plein gré, si ce n'était pour assouvir sa soif de connaissances. Vous devez vous y rendre immédiatement, <CHARNAME>. J'ai bien peur que mon collègue n'ait rencontré un événement bien funeste dans ces mines.~
+@27  = ~Des nouvelles, <CHARNAME> ?~
+@28  = ~Nous avons trouvé le livre, mais malheureusement pour Zern...~
+@29  = ~Pas pour l'instant. Mais ne vous inquiétez pas, je retournerai bientôt dans les mines.~
+@30  = ~Où est le livre ? Donnez-le moi, donnez-le moi !~
+@31  = ~Nandin, au sujet de Zernan...~
+@32  = ~Zernan était un imbécile ! Me quitter et penser qu'il pouvait faire confiance aux drows pour honorer leur partie du contrat ! A présent que j'ai le livre, je n'ai plus besoin de lui ni de vous !~
+@33  = ~Il semble que ni Nandin, ni Zernan n'étaient ce qu'ils prétendaient être. Zernan avait apparemment fait un marché avec les drows pour décrypter les mystères du livre et garder ses secrets hors de portée de son partenaire, Nandin. Pourquoi ces hommes sont-ils allés jusqu'à de telles extrémités pour un livre ? Peut-être y-a-t'il plus dans ce livre que sa simple valeur marchande. Si je trouve le temps, cela vaudrait peut-être la peine de l'étudier.~

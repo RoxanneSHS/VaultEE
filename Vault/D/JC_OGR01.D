@@ -1,0 +1,12 @@
+BEGIN ~JC_OGR01~
+
+IF ~!PartyHasItem("SW2VAL")~ THEN BEGIN OGR0 
+  SAY @0
+  IF ~~ THEN DO ~Enemy()~ EXIT
+END
+
+IF ~PartyHasItem("SW2VAL")~ THEN BEGIN OGR1 
+  SAY @1
+  IF ~~ THEN DO ~Enemy()~ EXIT
+END
+

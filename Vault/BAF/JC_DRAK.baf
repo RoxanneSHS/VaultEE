@@ -1,0 +1,51 @@
+IF
+  See(NearestEnemyOf(Myself))
+  Global("DrakeBehave","GLOBAL",0)
+  HasItem("POTN14",Myself)  // ~Oil of Speed~
+THEN
+  RESPONSE #100
+    UseItem("POTN14",Myself)  // ~Oil of Speed~
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_AGANNAZAR_SCORCHER)
+    AttackOneRound(NearestEnemyOf(Myself))
+    AttackOneRound(NearestEnemyOf(Myself))
+    SetGlobal("DrakeBehave","GLOBAL",1)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("DrakeBehave","GLOBAL",1)
+THEN
+  RESPONSE #70
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_AGANNAZAR_SCORCHER)
+    Wait(2)
+    AttackOneRound(NearestEnemyOf(Myself))
+    AttackOneRound(NearestEnemyOf(Myself))
+    SetGlobal("DrakeBehave","GLOBAL",2)
+  RESPONSE #30
+    AttackOneRound(NearestEnemyOf(Myself))
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_BURNING_HANDS)
+    AttackOneRound(NearestEnemyOf(Myself))
+    SetGlobal("DrakeBehave","GLOBAL",2)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("DrakeBehave","GLOBAL",2)
+THEN
+  RESPONSE #100
+    AttackOneRound(NearestEnemyOf(Myself))
+    AttackOneRound(NearestEnemyOf(Myself))
+    SetGlobal("DrakeBehave","GLOBAL",3)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("DrakeBehave","GLOBAL",3)
+THEN
+  RESPONSE #100
+    AttackOneRound(NearestEnemyOf(Myself))
+    ForceSpell(NearestEnemyOf(Myself),WIZARD_BURNING_HANDS)
+    AttackOneRound(NearestEnemyOf(Myself))
+    SetGlobal("DrakeBehave","GLOBAL",1)
+END
+

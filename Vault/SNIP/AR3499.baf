@@ -1,0 +1,12 @@
+IF
+	PartyHasItem("SW1HVAM") // The Vampire's Revenge
+	Global("TheVault","GLOBAL",1)
+	Global("TheVaultSentry","GLOBAL",0)
+THEN
+	RESPONSE #100
+		CreateCreature("JC_VS1",[2900.1505],0)
+		SetGlobal("TheVaultSentry","GLOBAL",1)
+		Continue()
+END
+
+

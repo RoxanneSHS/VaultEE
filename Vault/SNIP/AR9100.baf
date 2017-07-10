@@ -1,0 +1,44 @@
+IF
+	Global("VestibuleRelease","GLOBAL",1)
+THEN
+	RESPONSE #100
+		Wait(8)
+		CreateCreature("JC_DRAK",[2197.1937],5)
+		CreateCreature("JC_DRAK",[1747.1794],5)
+		Wait(4)
+		CreateCreature("BASILG",[1904.1962],5) // Greater Basilisk
+		Wait(4)
+		CreateCreature("BASILG",[1900.1962],5) // Greater Basilisk
+		Wait(4)
+		CreateCreature("JC_DEM02",[1994.1824],5)
+		SetGlobal("VestibuleRelease","GLOBAL",2)
+		Continue()
+END
+
+IF
+	OR(2)
+		Dead("DENAK")
+		!Exists("DENAK")
+	Global("VestibuleKeld","GLOBAL",1)
+	Global("VestibuleRelease","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("VestibuleQuest","GLOBAL",4)
+		CreateCreature("JC_DRAK",[2197.1937],5)
+		CreateCreature("JC_DRAK",[1747.1794],5)
+		CreateCreature("BASILG",[1904.1962],5) // Greater Basilisk
+		CreateCreature("BASILG",[1900.1962],5) // Greater Basilisk
+		CreateCreature("JC_DEM02",[1994.1824],5)
+		SetGlobal("VestibuleRelease","GLOBAL",2)
+		Continue()
+END
+
+IF
+	Dead("JC_DEM02")
+THEN
+	RESPONSE #100
+		SetGlobal("VestibuleQuest","GLOBAL",5)
+		Continue()
+END
+
+

@@ -1,0 +1,96 @@
+IF
+	OR(2)
+		GlobalLT("ReturnNashQuest","GLOBAL",7)
+		GlobalGT("ReturnNashQuest","GLOBAL",7)
+THEN
+	RESPONSE #100
+		TriggerActivation("ReturnNashTrap 1",FALSE)
+		TriggerActivation("ReturnNashTrap 2",FALSE)
+		TriggerActivation("ReturnNashTrap 3",FALSE)
+		TriggerActivation("ReturnNashTrap 4",FALSE)
+		TriggerActivation("ReturnNashTrap 5",FALSE)
+		TriggerActivation("ReturnNashTrap 6",FALSE)
+		TriggerActivation("ReturnNashTrap 7",FALSE)
+		Continue()
+END
+
+IF
+	Global("ReturnNashQuest","GLOBAL",7)
+	Global("ReturnNashLevel3","GLOBAL",0)
+THEN
+	RESPONSE #100
+		TriggerActivation("ReturnNashTrap 1",TRUE)
+		TriggerActivation("ReturnNashTrap 2",TRUE)
+		TriggerActivation("ReturnNashTrap 3",TRUE)
+		TriggerActivation("ReturnNashTrap 4",TRUE)
+		TriggerActivation("ReturnNashTrap 5",TRUE)
+		TriggerActivation("ReturnNashTrap 6",TRUE)
+		TriggerActivation("ReturnNashTrap 7",TRUE)
+		CreateCreature("JC_DRW02",[1635.135],0)
+		CreateCreature("JC_DRW01",[1640.400],0)
+		CreateCreature("JC_DRW01",[1640.400],0)
+		CreateCreature("JC_DRW01",[1640.400],0)
+		CreateCreature("JC_DRW01",[1640.400],0)
+		CreateCreature("JC_DRW01",[2580.2650],0)
+		CreateCreature("JC_DRW01",[2580.2650],0)
+		CreateCreature("JC_DRW01",[2580.2650],0)
+		CreateCreature("JC_DRW01",[2580.2650],0)
+		CreateCreature("JC_DRW02",[1335.375],0)
+		CreateCreature("JC_DRW02",[1335.375],0)
+		CreateCreature("GOLSTO01",[1335.375],0)
+		CreateCreature("JC_DRW02",[1355.2345],0)
+		CreateCreature("JC_DRW02",[1355.2345],0)
+		CreateCreature("GOLSTO01",[1355.2345],0)
+		CreateCreature("JC_DRW02",[1795.680],0)
+		CreateCreature("JC_DRW02",[1795.680],0)
+		CreateCreature("JC_DRW01",[1795.680],0)
+		CreateCreature("JC_DRW01",[1795.680],0)
+		CreateCreature("JC_DRW02",[1755.2025],0)
+		CreateCreature("JC_DRW02",[1755.2025],0)
+		CreateCreature("JC_DRW01",[1755.2025],0)
+		CreateCreature("JC_DRW01",[1755.2025],0)
+		CreateCreature("GOLSTO01",[2320.1030],0)
+		CreateCreature("GOLSTO01",[2320.1030],0)
+		CreateCreature("JC_DRW01",[2320.1030],0)
+		CreateCreature("JC_DRW02",[2320.1030],0)
+		CreateCreature("GOLSTO01",[2305.1245],0)
+		CreateCreature("GOLSTO01",[2305.1245],0)
+		CreateCreature("GOLSTO01",[2305.1245],0)
+		CreateCreature("GOLSTO01",[2305.1245],0)
+		CreateCreature("JC_DRW01",[2305.1245],0)
+		CreateCreature("JC_DRW01",[2305.1245],0)
+		CreateCreature("GOLSTO01",[1190.2728],0)
+		CreateCreature("GOLSTO01",[1190.2728],0)
+		CreateCreature("GOLFLE01",[1190.2728],0) // Flesh Golem
+		CreateCreature("GOLFLE01",[1190.2728],0) // Flesh Golem
+		CreateCreature("JC_DRW01",[1190.2728],0)
+		CreateCreature("JC_DRW01",[1190.2728],0)
+		CreateCreature("JC_DRW01",[2270.1565],0)
+		CreateCreature("JC_DRW01",[2270.1565],0)
+		CreateCreature("JC_DRW01",[2270.1565],0)
+		CreateCreature("JC_DRW01",[2270.1565],0)
+		CreateCreature("JC_DRW02",[1120.2647],0)
+		CreateCreature("JC_DRW02",[1120.2647],0)
+		CreateCreature("JC_DRW02",[1380.2746],0)
+		CreateCreature("SPIDPHAS",[980.2960],0) // Astral Phase Spider
+		CreateCreature("SPIDPHAS",[1495.2730],0) // Astral Phase Spider
+		CreateCreature("BASILG",[1200.2830],0) // Greater Basilisk
+		CreateCreature("JC_DRW03",[1020.2730],0)
+		CreateCreature("JC_DRW05",[990.2730],0)
+		CreateCreature("JC_DRW06",[1010.2785],0)
+		SetGlobal("ReturnNashLevel3","GLOBAL",1)
+		Continue()
+END
+
+IF
+	Global("ReturnNashQuest","GLOBAL",7)
+	Dead("JC_DRW06")
+	PartyHasItem("BOOK68") // History of the Nether Scrolls
+THEN
+	RESPONSE #100
+		CreateCreatureObject("JRNL",Player1,0,0,0)
+		SetGlobal("ReturnNashQuest","GLOBAL",8)
+		Continue()
+END
+
+

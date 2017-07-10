@@ -1,0 +1,27 @@
+IF
+	PartyHasItem("BOOK68") // History of the Nether Scrolls
+	GlobalLT("Chapter","GLOBAL",%tutu_chapter_5%)
+THEN
+	RESPONSE #100
+		IncrementChapter("Chptxt6")
+END
+
+IF
+	PartyHasItem("BOOKDRW")
+	GlobalLT("Chapter","GLOBAL",%tutu_chapter_5%)
+THEN
+	RESPONSE #100
+		IncrementChapter("Chptxt6")
+END
+
+IF
+	Global("ReturnNashQuest","GLOBAL",5)
+	Global("ReturnNashQuestNandin","GLOBAL",0)
+	GlobalGT("Chapter","GLOBAL",%tutu_chapter_5%)
+THEN
+	RESPONSE #100
+		CreateCreature("JC_THF04",[4735.3215],0)
+		SetGlobal("ReturnNashQuestNandin","GLOBAL",2)
+END
+
+

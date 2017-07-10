@@ -1,0 +1,35 @@
+IF
+	Global("VaultVisitedAR4400","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("VaultVisitedAR4400","GLOBAL",1)
+END
+
+IF
+	Global("ReturnNashQuest","GLOBAL",7)
+	Global("ReturnNashLevel0","GLOBAL",0)
+THEN
+	RESPONSE #100
+		CreateCreature("SPIDSW",[2550.360],0) // Sword Spider
+		CreateCreature("SPIDSW",[2550.360],0) // Sword Spider
+		CreateCreature("SPIDSW",[2550.360],0) // Sword Spider
+		CreateCreature("SPIDPH",[2550.360],0) // Phase Spider
+		CreateCreature("SPIDSW",[1625.475],0) // Sword Spider
+		CreateCreature("SPIDSW",[1625.475],0) // Sword Spider
+		CreateCreature("SPIDSW",[1625.475],0) // Sword Spider
+		CreateCreature("SPIDPH",[1625.475],0) // Phase Spider
+		CreateCreature("SPIDSW",[1005.900],0) // Sword Spider
+		CreateCreature("SPIDSW",[1005.900],0) // Sword Spider
+		CreateCreature("SPIDSW",[1005.900],0) // Sword Spider
+		CreateCreature("SPIDPH",[1005.900],0) // Phase Spider
+		SetGlobal("ReturnNashLevel0","GLOBAL",1)
+END
+
+IF
+	!Global("TheVaultPortal","GLOBAL",9)
+THEN
+	RESPONSE #100
+		SetGlobal("TheVaultPortal","GLOBAL",9)
+END
+
+

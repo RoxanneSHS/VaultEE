@@ -1,0 +1,10 @@
+IF
+	Global("VestibuleQuest","GLOBAL",5)
+	Global("VestibuleJosh","GLOBAL",0)
+THEN
+	RESPONSE #100
+		CreateCreature("JC",[2930.1400],5)
+		SetGlobal("VestibuleJosh","GLOBAL",1)
+END
+
+

@@ -1,0 +1,36 @@
+// JC_THF04 Translation File
+
+@0   = ~Ehi! <CHARNAME>? <CHARNAME>!~
+@1   = ~Si, sono io. Chi sei tu?~
+@2   = ~Calmati, sono io. Di cosa hai bisogno?~
+@3   = ~Mi dispiace. Non ho tempo. Devo ritornare subito a Baldur's Gate.~ 
+@4   = ~Sei tu! Esattamente come ti ha descritto Zernan! Oh, Zernan!~
+@5   = ~Zernan? ...l’erudito?~
+@6   = ~Um, si, l’erudito... Io sono Nandin, suo collega... gli è successo qualcosa di terribile! Mi sono incontrato con lui al Braccio Amico dopo che aveva scambiato il libro con te.~
+@7   = ~E poi cosa è successo?~
+@8   = ~Mi ha detto che si sarebbe dovuto incontrare con un furfante al Mago Rovente a Beregost il quale aveva informazioni su di un certo gruppo, a sud, che era interessato allo studio del libro. Mi ha poi detto che dovevamo incontrarci a Nashkel... che sarebbe stato qualche giorno fa. Da allora non ho avuto più notizie di lui. Mi aveva anche detto che se sarebbe successo qualcosa fuori dall'ordinario, sarei dovuto andare a Candlekeep e cercarti.~
+@9   = ~Forse ha perso tempo nello studio del libro e si è dimenticato del vostro incontro!~
+@10  = ~Hmm... questo è strano, persino per Zernan. Sai il nome di quella persona che doveva incontrare?~
+@11  = ~E' improbabile, <CHARNAME>. Lui a volte si faceva sopraffare dai suoi affari... um, studi, ma mai si sarebbe dimenticato di incontri così importanti.~
+@12  = ~Capisco. Ora cosa succederà? Quale era il nome di quell'individuo che doveva incontrare a Beregost?~
+@13  = ~Zhurlag... credo. Mi aiuterai?~
+@14  = ~D'accordo. Me ne occuperò immediatamente.~
+@15  = ~Mi dispiace. Non ho tempo per queste cose. Devo ritornare subito a Baldur's Gate.~
+@16  = ~Vuoi dire quel ladruncolo di Zhurlong?!~
+@17  = ~Lo sapevo. Non dovevo contare sugli altri per svolgere questo lavoro. Lo cercherò da solo... dopo essermi occupato di alcune cose. Uccideteli tutti!~
+@18  = ~Chi, per i Nove Inferni?!~
+@19  = ~Sembra che l’erudito Zernan non sia affatto la persona che ha dichiarato di essere. Un suo 'collega' mi ha attaccato fuori delle mura di Candlekeep dopo che ho rifiutato di aiutarlo a trovare Zernan, che sembra essere scomparso... ma non ho tempo per tutto questo, io devo ritornare a Baldur's Gate e affrontare Sarevok... Credo che dove sia Zernan rimarrà per sempre un mistero.~
+@20  = ~Zhurlong, questo è il suo nome! Lo conosci? Allora mi aiuterai?~
+@21  = ~Lo conosco, si, ma questo non significa che siamo buoni amici... D'accordo, andrò da Zhurlong il prima possibile.~
+@22  = ~Mi dispiace. Non ho tempo per te, Zernan o Zhurlong. Devo ritornare subito a Baldur's Gate.~
+@23  = ~Oh, grazie! Grazie, <CHARNAME>! Sarò alla Locanda di Nashkel in caso il mio amico salti fuori, e aspetterò qualsiasi notizia tu possa darmi.~
+@24  = ~Abbi cura di te, Nandin. E non preoccuparti troppo. Sono sicuro che lo ritroveremo.~
+@25  = ~Sembra che l’erudito Zernan sia scomparso. Il suo amico, Nandin, è venuto subito a Candlekeep a cercare il mio aiuto e io non ho potuto mandarlo via. Quando lo ha visto per l'ultima volta, Zernan si doveva incontrare con un halfling chiamato Zhurlong al Mago Rovente a Beregost. Credo che dovrei iniziare da lì. Nandin mi aspetterà alla Locanda di Nashkel se avrò informazioni sul suo amico.~
+@26  = ~Cosa? Zernan alle Miniere di Nashkel? Non sarebbe mai andato lì se non fosse stato per amore della conoscenza. Devo andare subito lì, <CHARNAME>. Temo che il mio collega sia andato incontro a sfortunati eventi in quelle miniere.~
+@27  = ~Ci sono novità, <CHARNAME>?~
+@28  = ~Abbiamo trovato il libro, ma sfortunatamente, per Zern...~
+@29  = ~Per il momento no. Ma non temere, presto mi avventurerò di nuovo in quelle miniere.~ 
+@30  = ~Dov'è il libro? Dimmelo, dimmelo!~
+@31  = ~Nandin, per quel che riguarda Zernan...~
+@32  = ~Zernan è stato un folle! E' andato e ha creduto di potersi fidare dei Drow per raggiungere il suo scopo! Adesso che so dove è il libro, non ho altri incarichi per lui o per te!~
+@33  = ~Sembra che sia Nandin che Zernan non erano affatto le persone che si dichiaravano di essere. Zernan sembra aver fatto un patto con i Drow per cercare di svelare i misteri del libro e carpirne i suoi segreti per il suo complice, Nandin. Perché questi uomini avrebbero rischiato tanto per questo libro? Forse questo libro ha un valore che va oltre l'aspetto puramente monetario. Se avrò il tempo, potrei approfondire e studiarne il suo reale valore.~

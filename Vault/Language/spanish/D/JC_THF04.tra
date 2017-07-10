@@ -1,0 +1,36 @@
+// JC_THF04 Translation File
+
+@0   = ~¡Alto ahí! ¿<CHARNAME>? ¡<CHARNAME>!~
+@1   = ~Así es. Os pido que me digáis quién sois vos.~
+@2   = ~Calma, soy yo. ¿Qué necesitáis?~
+@3   = ~Lo lamento. No tengo tiempo para esto. Debo regresar a la Puerta de Baldur de inmediato.~ 
+@4   = ~¡Sois vos! ¡Exactamente como Zernan os describió! ¡Oh, Zernan!~
+@5   = ~¿Zernan? ...¿el erudito?~
+@6   = ~Mm, sí, el erudito... Soy Nandin, su colega... ¡algo terrible le ha sucedido! Tuve un encuentro con él en el Mesón del Brazo Amigo después de que recuperara el libro de vos.~
+@7   = ~¿Y entonces que sucedió?~
+@8   = ~Dijo que iba a encontrarse con un explorador en el Mago Ardiente de Beregost con información de cierto grupo en el sur que también estaba interesado en estudiar el tomo. Entonces me dio instrucciones para encontrarme con él en Nashkel... eso fue hace unos días. No le he visto o he oído de él desde entonces. Me dijo que debería suceder algo fuera de lo normal y debía aventurarme hasta Candelero para buscaros.~
+@9   = ~¿Estáis seguro? ¿Quizás se marchara en su fervor y búsqueda del conocimiento y por eso olvidó vuestro encuentro?~
+@10  = ~Mmm... Eso es raro, incluso para Zernan. ¿Tenéis el nombre de este individuo con el que iba a encontrarse?~
+@11  = ~No lo creo, <CHARNAME>. A veces se queda abrumado por su trabajo... mm, estudios, pero nunca demasiado como para olvidarse de los encuentros importantes.~
+@12  = ~Entiendo. ¿Entonces a dónde tenemos que ir ahora? ¿Cuál era el nombre de este individuo de Beregost?~
+@13  = ~Zhurlag... Creo. ¿Nos ayudaréis?~
+@14  = ~De acuerdo. Investigaré este asunto inmediatamente.~
+@15  = ~Lo lamento. No tengo tiempo para esto. Debo regresar a la Puerta de Baldur de inmediato.~
+@16  = ~¿¡No querréis decir ese pequeño ladrón llamado Zhurlong!?~
+@17  = ~Lo conocí. Nunca se puede depender de otros para hacer nuestro trabajo. Yo mismo lo buscaré... después que termine de completar algunas cosas. ¡Matadlos a todos!~ ~Lo conocí. Nunca se puede depender de otros para hacer nuestro trabajo. Yo misma lo buscaré... después que termine de completar algunas cosas. ¡Matadlos a todos!~
+@18  = ~¿¡Por los nueve infiernos, el qué!?~
+@19  = ~Parece que el erudito Zernan no es todo lo que decía ser. Un 'colega' suyo me atacó fuera de los muros de Candelero después de rechazar ayudarle a encontrar a Zernan, quién había desaparecido... pero no tengo tiempo para esto, debo regresar a la ciudad de Puerta de Baldur y enfrentarme a Sarevok... Creo que la ubicación de Zernan será siempre un misterio.~
+@20  = ~Zhurlong, ¡ese es el nombre! ¿Le conocéis? ¿Entonces nos ayudaréis?~
+@21  = ~Le conozco, sí, pero eso no quiere decir que seamos buenos amigos... De acuerdo, iré a ver a Zhurlong tan pronto como pueda.~
+@22  = ~Lo lamento. No tengo tiempo para vos, Zernan, o para Zhurlong. Debo regresar a la Puerta de Baldur de inmediato.~
+@23  = ~Oh, ¡gracias! ¡Gracias, <CHARNAME>! Estaré en la Posada de Nashkel sólo por si acaso mi amigo llega y esperando cualquier noticia que podáis tener de lo que le haya podido suceder.~
+@24  = ~Id con cuidado, Nandin. Y no os preocupéis demasiado. Estoy seguro de que lo encontraremos de un momento a otro.~ ~Id con cuidado, Nandin. Y no os preocupéis demasiado. Estoy segura de que lo encontraremos de un momento a otro.~
+@25  = ~Parece ser que el erudito Zernan ha desaparecido. Su amigo, Nandin, ha hecho el viaje hasta Candelero buscando mi ayuda y no puedo decirle que no. La última vez que se encontraron, Zernan estaba de camino a encontrarse con un mediano llamado Zhurlong en el Mago Ardiente de Beregost. Supongo que es donde debería empezar a buscar. Nandin me estará esperando en la Posada de Nashkel por si tengo alguna información de su amigo.~
+@26  = ~¿Qué? ¿Zernan en las Minas de Nashkel? Él no lo haría por voluntad propia, si no fuera por su búsqueda del conocimiento. Debéis ir allí de inmediato, <CHARNAME>. Me temo que mi colega se ha topado con un infortunio en aquellas minas.~
+@27  = ~¿Alguna noticia, <CHARNAME>?~
+@28  = ~Encontramos el libro, pero desafortunadamente para Zern...~
+@29  = ~Por ahora no. Pero no temáis, pronto me aventuraré en las minas.~ 
+@30  = ~¿Dónde está el libro? ¡Dejádmelo, dejádmelo!~
+@31  = ~Nandin, respecto Zernan...~
+@32  = ~¡Zernan era un necio! ¡Marcharse y pensar que podría confiar en los drow para preservar su fin! Ahora que tengo el libro, ¡ya no os necesito más, ni a él, ni a vos!~
+@33  = ~Parece ser que tanto Nandin como Zernan no eran todo lo que decían ser. Zernan había llegado a un acuerdo con los drow para descifrar los misterios del tomo y guardar los secretos de su compañero, Nandin. ¿Por qué habrán pasado por un libro tantos problemas estos hombres? Quizás haya más en este libro de lo que vale en oro. Si encuentro tiempo, valdría la pena estudiarlo.~

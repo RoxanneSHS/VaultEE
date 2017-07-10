@@ -1,0 +1,56 @@
+IF
+	Global("UlcasterHell","GLOBAL",0)
+THEN
+	RESPONSE #100
+		CreateCreature("WOLFVA",[1910.700],5) // Vampiric Wolf
+		CreateCreature("WOLFVA",[1205.207],5) // Vampiric Wolf
+		CreateCreature("WOLFVA",[1990.933],5) // Vampiric Wolf
+		CreateCreature("WOLFVA",[1750.1154],5) // Vampiric Wolf
+		CreateCreature("WOLFVA",[1780.1076],5) // Vampiric Wolf
+		CreateCreature("WOLFWEGL",[582.219],5) // Wolfwere
+		CreateCreature("WOLFWEGL",[518.184],5) // Wolfwere
+		CreateCreature("WOLFWEGL",[629.1485],5) // Wolfwere
+		CreateCreature("WOLFWEGL",[1644.1342],5) // Wolfwere
+		CreateCreature("WOLFWEGR",[1241.1171],5) // Greater Wolfwere
+		SetGlobal("UlcasterHell","GLOBAL",1)
+		Continue()
+END
+
+IF
+	Global("UlcasterHell","GLOBAL",1)
+THEN
+	RESPONSE #100
+		Wait(3600)
+		CreateCreature("WOLFWE",[1504.1344],5) // Wolfwere
+		SetGlobal("UlcasterHell","GLOBAL",2)
+		Continue()
+END
+
+IF
+	Global("UlcasterHell","GLOBAL",2)
+THEN
+	RESPONSE #100
+		SetGlobal("UlcasterHell","GLOBAL",3)
+		SetGlobalTimer("UlcasterHellSpawn","GLOBAL",ONE_DAY)
+		Continue()
+END
+
+IF
+	Global("UlcasterHell","GLOBAL",3)
+	GlobalTimerExpired("UlcasterHellSpawn","GLOBAL")
+THEN
+	RESPONSE #100
+		CreateCreature("WOLFVA",[1910.700],5) // Vampiric Wolf
+		CreateCreature("WOLFVA",[1205.207],5) // Vampiric Wolf
+		CreateCreature("WOLFVA",[1990.933],5) // Vampiric Wolf
+		CreateCreature("WOLFVA",[1750.1154],5) // Vampiric Wolf
+		CreateCreature("WOLFVA",[1780.1076],5) // Vampiric Wolf
+		CreateCreature("WOLFWEGL",[582.219],5) // Wolfwere
+		CreateCreature("WOLFWEGL",[518.184],5) // Wolfwere
+		CreateCreature("WOLFWEGL",[629.1485],5) // Wolfwere
+		CreateCreature("WOLFWEGL",[1644.1342],5) // Wolfwere
+		SetGlobal("UlcasterHell","GLOBAL",2)
+		Continue()
+END
+
+

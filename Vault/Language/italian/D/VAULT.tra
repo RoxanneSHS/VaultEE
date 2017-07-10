@@ -1,0 +1,189 @@
+// Vault Translation File
+
+@0   = ~Hmmm?... artigianato Drow, senza dubbio. Si, potrebbe essere di qualche utilità. Ma non a me. Il mio apprendista una volta si interessava allo studio di simili materiali, ma dopo lo sfortunato incidente del suo polimorfismo, non credo che continui ancora in certi esperimenti.~
+@1   = ~Non è necessario che la tocchi per dirti che è maledetta... Aspetta... Non mi sembra vero, ma... Non mi sarei mai aspettato, in tutta la mia vita, di vedere questo dannato oggetto! La Vendetta del Vampiro, se la memoria non mi inganna. Si... e serviva anche ad aprire qualcosa!?~
+@2   = ~Credo sia la chiave di qualcosa.~
+@3   = ~Va bene, grazie.~
+@4   = ~Si! E' anche una chiave! Ma non mi ricordo di cosa. In qualche negozio di magia occulta... Troverai qualcuno che ha una maggiore conoscenza di questi oggetti malvagi creati moltissimo tempo fa. Forse il Sacerdote di Gond a Baldur's Gate, o un incontro fortunato con qualche conoscitore di cose simili potrebbero dirti di più! Io non voglio avere NIENTE a che fare con tutto ciò!~
+@5   = ~Non volevo farti innervosire. Mi dispiace...~
+@6   = ~La spada maledetta Vendetta del Vampiro ha smosso ancora una volta il ricordo incompleto di uno dei più potenti simboli della Costa della Spada. Il mago Thalantyr si è ricordato che dovrebbe essere una chiave per qualcosa, ma non ricorda cosa. Ha suggerito di rivolgersi a qualcuno più specializzato nella conoscenza di questi antichi oggetti come il Sacerdote di Gond o magari cercando un incontro fortunato con qualche conoscitore di queste cose per risolvere il mistero.~ 
+@7   = ~Salve di nuovo, <CHARNAME>, come posso aiutarti oggi?~
+@8   = ~Ho ottenuto un oggetto di una qualche importanza magica... sebbene non lo voglia vendere, mi stavo domandando se mi poteva essere di qualche utilità.~
+@9   = ~Ho con me una spada piuttosto strana. Sebbene non la voglia vendere, potresti darci un'occhiata?~
+@10  = ~Cosa succeed con queste miniere? Le hai ripulite da quei piccoli cani qualche tempo fa e ora abbiamo un'infestazione di ragni!~
+@11  = ~Sembra che sono arrivato alle Miniere di Nashkel appena in tempo. La guardia mi ha informato che i ragni si sono impossessati della miniera. Forse tutto ciò non è correlato con la mia ricerca dell'antico libro. Ma forse si.~
+@12  = ~Grazie per aver ripulito tutto dai ragni! Speriamo che le cose torneranno tranquille ora, per qualche tempo.~
+@13  = ~Il male... è diventato più forte... TU! No, il male proviene da qualche altra parte bella stanza!~
+@14  = ~Una malvagia presenza minaccia la santità del vestibolo! Cerca di distruggere il Tempio del Canto del Mattino! Non c'é più tempo... Sta arrivando! Alle armi!~
+@15  = ~No, per favore, aspetta un momento! Gli dei ti hanno inviato qui per un motivo... Un male si erge attraverso un empio portale sul muro orientale del vestibolo e deve essere fermato. Due sacerdoti dell'alba possono solo rallentarlo ma con il tuo aiuto...~
+@16  = ~E va bene.~
+@17  = ~Neanche per sogno. Io me ne vado!~
+@18  = ~Non c'è tempo... Sta arrivando! Alle armi!~
+@19  = ~Grazie per averci aiutato. Ma sento che questo scontro non è finito. Per favore incontrati con Keldath... lui è più informato di Bran o di me.~
+@20  = ~Salve, <CHARNAME>. Confido che viaggi sotto la guida di Lathander. Come posso aiutarti?~
+@21  = ~Abbiamo bisogno di cure e di benedizione.~
+@22  = ~Non abbiamo bisogno di nulla al momento, grazie.~
+@23  = ~Tu! Sei uno STREGONE ROSSO! Sei venuto per far da testimone alle vostre stesse opere! Il male arriva, ma tu cadrai prima che lui passerà il suo empio portale!~ 
+@24  = ~Là sull'altro lato! Bran, sbrigati e prepara la difesa!~
+@25  = ~Cosa sta succedendo qui?~
+@26  = ~Vi stà bene, non ne posso più di folli sacerdoti!~
+@27  = ~Calmati, buon uomo, io NON sono il male. Dimmi cosa sta succedendo.~
+@28  = ~Alle armi! La santità di questo luogo non sarà profanata!~
+@29  = ~Hai la gratitudine di Lathander ma questo è solo l'inizio...~
+@30  = ~Ritorna quando il male sarà distrutto. Ho qualcosa che potrebbe aiutarti... se tu sei un puro di cuore.~
+@31  = ~Keldath ci ha informato della tua eroica impresa. Hai la nostra gratitudine. Sono sicuro che Keldath ti ha ricompensato bene. Tutto quello che noi possiamo offrirti è una semplice benedizione. Se dovessi entrare in possesso di un martello con incantesimi minori ed un dono delle sirene, portali da me. Fino ad allora, ti auguro ogni bene.~
+@32  = ~Dopo aver sconfitto il demone minore Lestraubimat, il Sacerdote dell'alba Bran mi ha detto che mi potrebbe aiutare se gli porto un martello con incantesimi minori e un dono delle sirene. Può essere trovato nel vestibolo appena a nord del Tempio del Canto del Mattino.~
+@33  = ~Vedo che hai una perla - un pregiato dono delle sirene. Purtroppo non hai con te un martello di piccola aura magica. Ritorna quando lo avrai e gli conferirò la mia benedizione.~
+@34  = ~Vedo che porti con te un martello con alcuni incantesimi magici. Purtroppo non hai ancora con te un dono delle sirene di pietra preziosa. Ritorna quando lo avra e gli conferirò la mia benedizione.~
+@35  = ~Benvenuto, <CHARNAME>. Sei ancora alla ricerca degli oggetti che ti ho richiesto affinché io esegua la mia benedizione, vedo. Ti auguro ogni bene e ritorna con gli oggetti, io starò qui nel vestiboli, ad aspettare.~
+@36  = ~Molto bene! Un martello da guerra con alcune proprietà magiche e una preziosa perla delle sirene... Puoi darmele...~
+@37  = ~Possa tu non aver mai bisogno di sollevare l'Influenza di Lathander. Cammina nella sua luce, <CHARNAME>.~
+@38  = ~Capitolo Sette: Ritorno a Candlekeep
+
+Il tuo viaggio ti ha riportato al punto di partenza. Il Duca Eltan ti ha chiesto di tornare a Candlekeep, dove devi spiare i capi del Trono di Ferro. Sebbene ti preoccupi che uomini così malvagi usino la grande biblioteca e vorresti che le circostanze della tua visita fossero un tantino diverse, sarà comunque un piacere tornare nella tua vecchia casa.~
+@39  = ~<CHARNAME>! Sono tempi terribili per Gullykin! Siamo assediati da un gruppo di orchi violenti sotto il comando di un orco magi che si chiama Kharaz! Chiedono che il villaggio sia sgombrato per farne il luogo del loro nuovo accampamento! Abbiamo già cercato di inviare due messaggeri per cercare aiuto ma sono stati intercettati ed uccisi. Per favore, devi aiutarci! Sono un centinaio e fanno delle continue irruzioni, mutilando la gente e distruggendo le nostre proprietà...~
+@40  = ~Vedrò quello che posso fare.~
+@41  = ~Il villaggio di Gullykin è sotto assedio da una banda di orchi comandati da un orco magi chiamato Kharaz. Gli orchi sembrano essere un centinaio, con continui e continui e continui saccheggi ed hanno distrutto la maggior parte del villaggio e i suoi abitanti, ma ho detto a Gandolar che vedrò quello che posso fare per rimediare alla situazione.~
+@42  = ~<CHARNAME>! Cosa? Credi che l'orda di orchi non abbia fine? Questa è una brutta notizia. Cosa si può fare? Non resisteremo a lungo...~
+@43  = ~Non c'è speranza. Penso sia meglio andarcene prima che sia tutto perduto.~
+@44  = ~Si, il loro numero sembra insormontabile. Continuerò a difendervi in modo tale che la vostra gente abbia il tempo di fuggire.~
+@45  = ~Questo Kharaz di cui mi hai parlato, Gandolar. L'hai visto?~
+@46  = ~Lasciamoli fuggire, per ora, Gandolar. Penso che il la soluzione migliore non sia distruggere questi orchi.~
+@47  = ~Cosa? Io... sono indeciso. Cosa proponi di fare?~
+@48  = ~Loro sono moltissimi. Continuerò a difendervi in modo tale che la vostra gente abbia il tempo di fuggire.~
+@49  = ~Niente al momento. Ma tieni la tua gente pronta caso mai.~
+@50  = ~Forse, e ribadisco forse, possiamo spaccare questo esercito colpendolo alla sua tesa.~
+@51  = ~Non c'è speranza. Penso sia meglio andarcene prima che sia tutto perduto.~
+@52  = ~Lasciamoli fuggire, per ora, Gandolar. Penso che il la soluzione migliore non sia distruggere questi orchi.~
+@53  = ~Hmmm... ho capito. Ho visto un orco, nei pressi di una collina appena fuori il villaggio, che sembra essere al comando di questi attacchi. Se tu sei d'accordo, si potrebbe inviare un piccolo gruppo ad uccidere il loro capo per cercare di indebolire i loro attacchi! E' una soluzione disperata, ma potrebbe essere l'unica speranza.~
+@54  = ~Uomini disperati provano soluzioni disperate. Partirò con un piccolo distaccamento di persone al più presto. Possano gli dei aiutarci.~
+@55  = ~La situazione di Gullykin sembra aggravarsi di ora in ora. L'orda di orchi continua a incalzare... Gandolar ed io abbiamo ideato una possibile soluzione, non so se sia nata da un'acuta e accurata intuizione o da una situazione disperata: ho proposto di inviare una piccola unità ad uccidere questo Kharaz nella speranza che il morale dell'esercito ne sia influenzato e si indebolisca. Gandolar è indeciso, ma non abbiamo molte altre scelte. Mi ha detto che ha visto un orco che comandava gli attacchi nei pressi di una piccola collina appena fuori Gullykin.~
+@56  = ~<CHARNAME>! Gli orchi si sono ritirati quando hanno visto che Kharaz è stato ucciso sul pendio della collina! Hai vinto ancora una volta! Per favore, prendi questi piccoli pegni in segno del nostro ringraziamento!~
+@57  = ~Con la morte dell'Orco Magi Kharaz, l’orda di orchi si é dileguata tra le colline e quei pochi che sono rimasti nel villaggio si dilegueranno rapidamente. Gandolar e i cittadini di Gullykin sono sollevati del fatto che la loro terra é di nuovo in salvo.~
+@58  = ~Immagino che troviate amabile il popolo del nostro piccolo villaggio.  Gli eroi di Gullykin sono sempre i benvenuti!~
+@59  = ~Immagino che troviate amabile il popolo del nostro piccolo villaggio.  Sono tutti in pace e in tranquillità da quando hai sconfitto i coboldi!~
+@60  = ~Investiga sulle rovine di Firewine.
+
+Il ponte di Firewine è tutto ciò che è rimasto della cittadina commerciale elfica distrutta più di duecento anni fa.~
+@61  = ~Investiga sulle rovine di Firewine.
+
+Ci sono dei coboldi a Gullykin, ma sembrano più organizzati di quanto sia tipico della loro razza.~
+@62  = ~Investiga sulle rovine di Firewine.
+
+Secondo il contadino con cui abbiamo parlato, nelle rovine del Ponte di Firewine sono nascosti molti tesori.~
+@63  = ~Investiga sulle rovine di Firewine.
+
+Gandolar Luckyfoot ci ha detto che c'è un passaggio segreto per le rovine del Ponte di Firewine in una delle tane degli halfling di Gullykin.~
+@64  = ~Investiga sulle rovine di Firewine.
+
+Tra le rovine di Firewine ci sono dei coboldi.~
+@65  = ~Investiga sulle rovine di Firewine.
+
+Un halfling di Gullykin di nome Gandolar ci ha chiesto di far cessare la minaccia dei coboldi dalle rovine di Firewine. Dovrei prestare attenzione, perché ogni sorta di cosa misteriosa potrebbe risvegliarsi dal proprio riposo.~
+@66  = ~Investiga sulle rovine di Firewine.
+
+Un cacciatore che abbiamo incontrato ci ha suggerito di cercare le avventure tra le rovine del ponte di Firewine.~
+@67  = ~Ho molto da imparare, ma io almeno vivrò abbastanza per riuscirci. Allora, come posso aiutarti, <CHARNAME>?~
+@68  = ~Non ho bisogno di niente oggi, Melicamp. Ti ringrazio.~
+@69  = ~A proposito, ti sei mai imbattuto in qualche manufatto Drow durante i tuoi studi?~
+@70  = ~Ho con me questi abiti della resistenza. Puoi utilizzarli per fare qualcosa con l'Armatura Drow?~
+@71  = ~Ho con me questi abiti utilizzati da molti maghi. Puoi utilizzarli per fare qualcosa con l'Armatura Drow?~
+@72  = ~Questi sono tutti abiti con incantesimi minori che ho potuto accumulare. Puoi utilizzarli per fare qualcosa con l'Armatura Drow?~
+@73  = ~Di solito non dico a tutti di possedere simili conoscenze poiché Thalantyr mi manderebbe subito via da qui, ma siccome sono in debito con te per avermi liberato dalla mia disavventura... si, ho studiato di certi oggetti del Sottosuolo.~
+@74  = ~Recentemente sono entrato in possesso di questo deteriorato pezzo di armatura. Puoi fare qualcosa?~
+@75  = ~Hmmm... metalli Drow, se non erro. E ci sono rimaste ancora alcune proprietà magiche, ma svaniranno rapidamente, temo. Vedi, le armi, le armature, e quasi ogni oggetto creato nel Sottosuolo si deteriorano alla la luce del sole... Sebbene...~
+@76  = ~Si?~
+@77  = ~Credo di essere in grado di, um, recuperare alcune proprietà magiche lasciate in questa armatura, se riesco ad ottenere i giusti ingredienti per lavorarci su... come dei semplici abiti con incantesimi minori. Si... si! Credo sia veramente possibile! Torna da me con diversi di questi abiti ed io creerò qualcosa per te!~
+@78  = ~D'accordo. Andrò immediatamente a cercarli.~
+@79  = ~Sembra che l'apprendista di Thalantyr, Melicamp, mi possa aiutare. Quando gli ho mostrato un'armatura, di cui sono entrato in possesso, dei Drow delle Miniere di Nashkel, mi ha subito lasciato intendere che può lavorarci su creando qualche oggetto magico per me. Tutto quello che devo fare è portargli diversi abiti con incantesimi minori.~
+@80  = ~Si, si! Gli abiti della resistenza vanno benissimo per la nostra creazione! Um, devo, tuttavia, richiederti una piccola somma di denaro, diciamo, 8,000 monete d'oro per lavorarci su... Il maestro è completamente all'oscuro di quello che stiamo facendo e si arrabbierà abbastanza quando si accorgerà che abbiamo utilizzato gli ingredienti per i suoi incantesimi per qualcosa del genere. Hehe. *coccodè*~
+@81  = ~D'accordo, ho il denaro. Facciamolo.~
+@82  = ~Devo prima devo pensarci su, Melicamp.~
+@83  = ~D'accordo. Mettiti da una parte fin tanto che faccio l'incantesimo.~
+@84  = ~Certamente! Si creerà un abito stupefacente! Um, c'é, tuttavia, un'altra piccola esigenza di denaro... 8,000 monete d'oro. Il maestro è completamente all'oscuro di quello che stiamo facendo e si arrabbierà abbastanza quando si accorgerà che abbiamo utilizzato gli ingredienti per i suoi incantesimi per qualcosa del genere. Hehe. *coccodè* ~
+@85  = ~Va bene, ecco i soldi per gli ingredienti. Facciamolo.~
+@86  = ~8,000 monete d'oro?! Devo pensarci un po' su, Melicamp.~
+@87  = ~D'accordo. Metti gi abiti qui. Stai indietro mentre faccio l'incantesimo.~
+@88  = ~Si, certamente! Devi aver perso molto tempo per aver racimolato tutti questi abiti, ma oserei dire che ne è valsa la pena! Um, tuttavia, ci sarebbe un'altra piccola richiesta di, um, 20,000 monete d'oro, e un piccolo dettaglio da chiarire. Il maestro è completamente all'oscuro di quello che stiamo facendo e si arrabbierà abbastanza quando si accorgerà che abbiamo utilizzato gli ingredienti per i suoi incantesimi per qualcosa del genere. I soldi lo risarcirebbero di tutti gli ingredienti che utilizzeremo. Hehe. *coccodè* Per quel che riguarda il piccolo dettaglio, c'é la piccola possibilità che l'incantesimo, um, distruggerà tutti gli ingredienti invece di combinarli insieme. *coccodè*~
+@89  = ~Credo che il rischio ne valga la pena, Melicamp. Facciamolo.~
+@90  = ~20,000 monete d'oro e la possibilità che andrà tutto perduto? Devo pensarci un po' su, Melicamp.~
+@91  = ~D'accordo, allora. Metti gi abiti qui. Stai indietro mentre faccio l'incantesimo.~
+@92  = ~Ho capito. Con che altro posso aiutarti, allora?~
+@93  = ~Hai delle conoscenze sugli artefatti dei Drow?~
+@94  = ~Ecco! Questa è stata, di gran lunga la mia più grande creazione magica! Possa ben servirti durante i tuoi viaggi, <CHARNAME>.~
+@95  = ~Ho con me una spada piuttosto strana. Potresti darci un'occhiata?~
+@96  = ~Potresti dare un'occhiata a questo elmo magico? Mi stavo domandando se potessi migliorare la protezione che fornisce.~
+@97  = ~Puoi dare un'occhiata a questo Elmo dell'Infravisione? Mi stavo domandando se potessi migliorare la protezione che fornisce.~
+@98  = ~ Potresti dare un'occhiata a questo elmo? Mi garantisce l'immunità dagli influssi magici ma speravo che tu potevi potenziare le sue protezioni.~
+@99  = ~E' una a testa di viverna quella che hai con te? Si... SI, di ottima qualità ed anche della grandezza giusta. Credo di potertela modellare in un'utilissima armatura - tale da darti protezione agli elementi e alla resistenza di diversi veleni... 9000 monete d'oro dovrebbero coprire i costi della mano d'opera e dei materiali. Allora, che ne dici?~
+@100 = ~Sembra una buona offerta.~
+@101 = ~Ho bisogno di un po' di tempo per pensare alla tua generosa offerta. Nel frattempo, potrei vedere i tuoi oggetti?~
+@102 = ~Allora consideralo fatto. Ci metterò un attimo... Ho un'armatura già modellata che ha solo bisogno di uno speciale materiale per la sua imbottitura... Ecco, tutto fatto!~
+@103 = ~Ehi, possiedi un pregiato Elmo della Difesa. Di eccellente fattura, che segue ogni standard. Vuoi migliorarne la protezione, eh? Credo che sia possibile, ma avrei bisogno di un anello chiamato "l'Anello dei Principi", un opale e, naturalmente 5,000 monete d'oro per il mio disturbo.~
+@104 = ~Accetto. Ecco un Opale Nero, l'anello che hai chiesto, e l'Elmo.~
+@105 = ~Accetto. Ecco un Opale Nero, un anello non convenzionale, come hai richiesto, e l'Elmo.~
+@106 = ~ Accetto. Ecco un Opale d'acqua, l'anello che hai chiesto, e l'Elmo.~
+@107 = ~ Accetto. Ecco un Opale d'acqua, un anello non convenzionale, come hai richiesto, e l'Elmo.~
+@108 = ~ Sembra una buona offerta, ma devo pensarci, per ora.~
+@109 = ~Bene allora! Iniziamo!~
+@110 = ~Huh? Questa è una lama maledetta! Credo sia meglio che tu te ne liberi se non vuoi che accidentalmente ti attiri nel fervore di qualche battaglia, amico mio!~
+@111 = ~Allora la venderò.~
+@112 = ~Terrò a mente il vostro consiglio, signore. Grazie. Posso chiederti qualche altra cosa?~
+@113 = ~Grazie per il vostro consiglio, ma speravo di avere più informazioni riguardo le origini di questa spada.~
+@114 = ~Temo di non poterti dire di più di quello che già sai... ma, se tu sei veramente desideroso di saperne di più, credo che i sacerdoti al Tempio di Gond siano in grado di aiutarti.~
+@115 = ~Il fabbro Taerom "Thunderhammer" Fuiruim ha riconosciuto la spada maledetta datami dallo spettro di Ulcaster ma non  mi ha potuto dire altro. Tuttavia, mi ha suggerito di rivolgermi ai sacerdoti di Gond a Baldur's Gate, che forse hanno più informazioni da darmi a riguardo.~
+@116 = ~Va bene. In che altro modo posso aiutarti?~
+@117 = ~Potresti mostrarci cos'hai da vendere?~
+@118 = ~Ho con me una strana spada. Vorresti darci un'occhiata?~
+@119 = ~Niente per il momento.~
+@120 = ~Gli "Gli Occhi della Verità", così viene chiamato. Ottimo oggetto con una modesta protezione. Mi chiedi se è possibile potenziarlo? Credo sia possibile, ma sono necessari altri oggetti. Un Anello dei Principi, un opale, e, 3,000 monete d'oro per coprire i costi della mano d'opera.~
+@121 = ~Perfetto, sembra esserci tutto. Iniziamo il lavoro!~
+@122 = ~Ah, si, un Elmo della Protezione dallo Charme, giusto? E anche di buona qualità. Mi domandi se posso fornirgli più protezione? E' possibile, ma ho necessità di avere altri oggetti per farlo. Un Anello dei Principi, un opale, e 5,000 monete d'oro. Che ne dici?~
+@123 = ~I sacerdoti dell'alba mi hanno informato di quello che è successo... Ti ringrazio per il tuo aiuto ma devo chiederti un altro compito. Ranthis... non era altro che un messaggero.~
+@124 = ~D'accordo, ma prima devo avere delle risposte.~
+@125 = ~Se vuol dire sconfiggere un altro demone come quello, allora cercherò di farlo.~
+@126 = ~Dimenticatelo! Sono capitato in questa situazione con i tuoi sacerdoti per caso e non ho intenzione di correre altri rischi per causa vostra!~
+@127 = ~In realtà, eravamo noi. Stavamo qui solo per ricevere delle cure.~
+@128 = ~Certamente. Proverò a rispondere se potrò. Ma per favore, sappi che abbiamo poco tempo.~
+@129 = ~L'urgenza prevale sul bisogno di spiegazioni. Tu sei un nobile uomo con una nobile causa. Dimmi quello necessita di essere fatto.~
+@130 = ~Che tipo di creatura è quella che abbiamo appena visto?~
+@131 = ~Il mio potere di divinazione ha visto un altro... portale più grande iniziare ad aprirsi in alcune rovine abbandonate ad est di Beregost. Credo si tratti dello stesso Lestraubimat che sta cercando di passare attraverso un portale che è stato aperto dagli Stregoni Rossi di Thay...~
+@132 = ~Dobbiamo sbrigarci. Un ultimo avvertimento: Lestraubimat non viaggia mai tra i piani da solo. Avrà un'orda di schiavi che lo accompagneranno... draghi di fuoco e basilischi. Ecco prendi questi. Possono aiutarti in quello che devi fare.~
+@133 = ~Sono stato incaricato da Keldath Ormlyr di sconfiggere il demone minore Lestraubimat, mi ha detto che il cavaliere demoniaco Ranthis che ho appena sconfitto era solo un suo messaggero. Non so se ho l'esperienza sufficiente per andare a caccia del demone, ma sembra che non ho altra scelta.~
+@134 = ~Il cavaliere demoniaco Ranthis con il quale ti sei appena confrontato è il messaggero del demone minore Lestraubimat, un'orrida creatura proveniente dal piano materiale negativo solo per soddisfare la sua sete di sangue.~
+@135 = ~Una vecchia storia narra che Lestraubimat è in grado di convincere gli uomini ad aprirgli il portale in cambio della concessione di una loro grande e potente richiesta. Questo deve essere il motivo per cui gli Stregoni Rossi lo hanno portato nel nostro mondo. E le conseguenze sono catastrofiche.~
+@136 = ~La situazione è davvero grave. Cosa devo fare?~
+@137 = ~Agenti degli Stregoni Rossi! Non libererete mai Lestraubimat su questo piano!~
+@138 = ~Lestraubimat è caduto... percepisco che il demone è stato cacciato... Grazie. Per favore accetta questo. E' una piccola somma del Tempio del Canto del Mattino. Vai dal Sacerdote dell'alba Bran, anche lui dovrebbe avere qualcosa da offrirti.~
+@139 = ~Aspetta solo un momento! Non vogliamo disturbarti, lasciaci solo andare per la nostra strada....e non ci vedrai più.~
+@140 = ~Non abbiano paura di certi atteggiamenti di persone ripugnanti vestite di rosso!~
+@141 = ~Per favore non ucciderci. Non vogliamo morire.~
+@142 = ~Sappiamo perché siete qui e siamo venuti a fermarvi! Lestraubimat deve rimanere chiuso nel suo mondo!~
+@143 = ~Nobili parole ma è troppo tardi! Guarda, Lestraubimat sta per entrare!~
+@144 = ~Salve viaggiatori.  Mmmm...Edwin, non mi aspettavo di vederti così presto. Spero che....ti sei preso cura dei tuoi affari Edwin, perché se così non fosse dovresti farlo presto. Credo che Zulkir Nevron rimarrebbe molto deluso se sapesse che hai fallito. Questo è tutto quello che era veramente importante dire. Noi qui abbiamo fatto... presto LUI sarà liberato.~
+@145 = ~Un gruppo di ragazzi maleducati e arroganti! Inviati da Keldath, non ne dubito! Questa è come una ricompensa, le vostre morti renderanno tutto più piacevole e la liberazione di Lestraubimat renderà tutto più appagante!~
+@146 = ~Mi dispiace, ma non credo che stai dicendo il vero e inoltre, gli Stregoni Rossi di Thay non sono conosciuti per la loro natura magnanima. Ti uccideremo.~
+@147 = ~Sai qualcosa su questa spada, l'arma maledetta conosciuta come La Vendetta del Vampiro?~
+@148 = ~Dove si trova esattamente questo Sotterraneo di cui hai parlato?~
+@149 = ~Un Sacerdote di Gond mi ha raccontato di un vecchio deposito chiamato il Sotterraneo. Dove si trova?~
+@150 = ~La lama é stata creata dal vecchio Nosferatu per punire i suo nemici. Era utilizzata anche come una chiave per accedere al luogo dove erano situate le sue molteplici ricchezze, luogo noto come il Sotterraneo.~ 
+@151 = ~Il divinatore Haspur ancora una volta ha dimostrato la sua conoscenza dell'arcano. Ho saputo da lui che la spada maledetta è la chiave per il Sotterraneo.~
+@152 = ~Nel lontano sud ovest. Non lontano da una fortezza dove dimorano dei malvagi gnoll e all'interno di un fiume, può essere visto solo quando le acque sono calme.~ 
+@153 = ~Il divinatore Haspur ci ha descritto il luogo dove é situato il Sotterraneo vicino ad una fortezza di gnoll e all'interno di un fiume. Strano per questi Non Morti collocare cose simili in un luogo sacro dove loro stessi non possono entrare liberamente.~
+@154 = ~Abbiamo il libro che hai richiesto.~
+@155 = ~Chiedo umilmente se potete dare un'occhiata a questa spada che ho recentemente acquisito.~
+@156 = ~Ah, si, certamente. Il dio dell'ingegnosità e delle invenzioni può aiutarti nelle informazioni sugli artefatti magici! Tuttavia, si richiede una modesta offerta, diciamo, di 10,000 monete d'oro.~ 
+@157 = ~Capisco. Allora lasciamo la nostra modesta offerta a Gond. Ecco i soldi.~
+@158 = ~Capisco. Beh, devo ammettere che, in verità, non ho tutta QUESTA curiosità su questa spada. In ogni caso grazie.~
+@159 = ~Davvero? 10,000? Una somma modesta... Um, di che servizi disponete qui?~
+@160 = ~Mi dispiace, al momento non possiedo una somma simile. Tornerò quando la avrò.~
+@161 = ~La Vendetta del Vampiro... un antico e malvagio oggetto... di un'antica epoca malvagia. Fu forgiata da niente meno che Nosferatu di un'antica congrega ad ovest delle terre leggendarie. Fu creata per due scopi. Il primo, come hai avuto modo di appurare, era quello di allettare i suoi nemici ad usarla, rendendoli poi maledetti e facendogli perdere la loro linfa vitale e la ragione ad ogni colpo ed una volta fatti impazzire collocarla da un'altra parte...~
+@162 = ~Il secondo, e più celato scopo di questa spada é il suo utilizzo come chiave... anzi é LA chiave... per il Sotterraneo, un deposito dove ci sono una grande quantità di ricchezze e tesori che quei Vampiri utilizzavano per i loro traffici mortali. Ma ad oggi, nessuno è stato in grado di trovare questo Sotterraneo, o vivere abbastanza per testimoniarne la sua esatta locazione. Si vocifera esserci una piccola e desolata isola circondata da tempestose acque, ma ci si può accedere solo nei momenti in cui queste acque si placano... Essendo la Costa della Spada prospera di acque, stabilirne il punto esatto è una cosa ardua, amico mio... A meno che, naturalmente, tu non possieda dei grandi poteri di divinazione che ti aiutino nella ricerca.~ 
+@163 = ~Il Sacerdote di Gond nella Grande Sala delle Meraviglie mi é stato molto utile nel decifrare un'altra parte del mistero e, di fatto, ha dato un nome alla mia ricerca. Devo cercare il Sotterraneo, un deposito dove sono situati ricchezze e tesori nascosti in un luogo lontano della Costa della Spada, circondato da acque tempestose e apparentemente accessibile solo quando le acque sono calme. Probabilmente sarebbe meglio andare in direzione ovest, dato che il Mare delle Spade è il luogo più logico da dove iniziare. Se ho ben colto l'allusione del sacerdote.~
+@164 = ~Sembra che i miei sospetti fossero esatti in merito al testo decifrato del vecchio libro che mi ha dato il Duca. Ho consegnato la statua di un dio a lungo dimenticato, Kozah, che ho ottenuto da un sito archeologico difeso da un Profeta di sventure e una vecchia corazza che ho recuperato dal Ponte di Firewine allo spirito di Ulcaster, e, al ritorno, il fantasma mi ha dato una misteriosa lama dicendo "vendetta... é... la chiave... per... il Sotterraneo..." Credo si tratti di qualcosa che necessita di ulteriori informazioni.~
+@165 = ~...la statua... e la corazza... in cambio...~
+@166 = ~Mostrando il libro della Conoscenza Antica, datomi dal Duca Eltan, allo spettro di Ulcaster sembra aver smosso qualcosa nel suo inconscio. Ha fatto delle allusioni ad una statua, ad una corazza ed ad uno scambio. Forse sta cercando delle reliquie per aiutare la sua anima torturata a trovare un senso di pace... e forse c'é qualche segreto nascosto nel testo delle Pergamene Inferiori.~
+@167 = ~Grazie ancora per avere ritrovato gli stivali. Che cosa avete in quel pacco oggi??~
+@168 = ~E' tempo di parlare, Zhurlong. Un uomo chiamato Zernan é venuto da te giorni fa chiedendo di un gruppo di persone che potevano aiutarlo a decifrare dei vecchi testi. Cosa ne sai?~
+@169 = ~Ah, quel tipo? E' un furfante, te lo assicuro. Ha detto che andava alle Miniere di Nashkel. Gli ho solo detto che avevo sentito che lì un gruppo di farabutti cercavano un libro... e, io comunque non gli ho rubato nulla! Ci vuole un ladro astuto per fermare un altro ladro astuto affinché non ficchi il naso nei suoi affari! Aspetta, non è lui laggiù?~
+@170 = ~Zhurlong ha ammesso di aver avuto contatti con Zernan e che ha diretto l’erudito verso le Miniere di Nashkel. Strano, comunque, ha anche fatto capire che Zernan non era solo un semplice erudito, specificando che solo un ladro astuto può fermare un altro ladro astuto. Davvero strano.~

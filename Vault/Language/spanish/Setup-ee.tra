@@ -1,0 +1,1141 @@
+@31  = ~Amuleto~
+@32  = ~Talismán de Cicatriz de Cuervo~
+@33  = ~Los collares son piezas ornamentales de joyería en metal que se suelen elaborar con plata, oro, platino u otro metal precioso que se adorna con gemas. Se llevan siempre en el cuello y pueden tener cualquier longitud.~
+@34  = ~Este misterioso talismán fue creado por los Ladrones de las Sombras de Amn y entregado a uno de sus líderes de cofradía, Alatos "Cicatriz de Cuervo". El talismán otorga a su portador destreza y una mejora a sus habilidades de ladrón, así como visión nocturna. Cómo llegó a vuestras manos sólo demuestra que no existe el honor entre los ladrones.
+
+ESTADÍSTICAS:
+
+Especial:
+ +1 a destreza
+ Infravisión
+ Invisibilidad durante 10 turnos (cargas limitadas)
+Detectar/Desactivar trampas: +5%
+Hurtar: +5%
+Abrir cerraduras: +5%
+Esconderse en las sombras: +5%
+Permitido a:
+ Ladrón (clase única, multiclase y clase dual)~
+@35  = ~Fajín~
+@36  = ~Tahalí de fuerza de Gigante de las Colinas~
+@37  = ~Los fajines son parecidos a los cinturones. Pero los fajines no se utilizan para sujetarse los pantalones, sino para llevar bolsas, vainas y cosas similares.
+
+ESTADÍSTICAS:
+
+Peso: 2
+No permitido a:~
+@38  = ~Este sencillo cinturón hace que el portador tenga la fuerza de un gigante de las colinas, pero no su tamaño. Muchos guerreros fanfarrones han sido sorprendidos por oponentes más pequeños con una fuerza increíble. Muy a menudo la razón es un cinturón como éste.
+
+ESTADÍSTICAS:
+
+Fuerza: definida en 19
+No permitido a:
+ Mago~
+@39  = ~Garrote~
+@40  = ~Cólera de Dageid~
+@41  = ~La mayoría de los garrotes son palos recios de madera, estrechos en la empuñadura y más anchos en los extremos. Esta sencilla herramienta se ha utilizado desde que el hombre comenzó a utilizar herramientas. Todo el mundo puede encontrar una buena pieza recia de madera con la que golpear, de ahí el amplio uso de los garrotes.
+
+ESTADÍSTICAS:
+
+Daño: 1D6
+Tipo de daño: contundente
+Peso: 3
+Factor de velocidad: 4
+Talento marcial: armas sin punta
+Tipo: a una mano
+No permitido a:
+ Mago~
+@42  = ~Garrote +1: Cólera de Dageid
+Un bárbaro de las tribus de Uthgodt, Dageid, era un salvaje que viajaba por los reinos causando estragos y destrucción allá por donde pasaba. Su reino de terror llegó a su fin tras una sangrienta emboscada tendida por los nobles de Luna de Plata. Se rumorea que el garrote aún es capaz de desatar la cólera del fallecido bárbaro en combate bajo ciertas circunstancias, acabando con la desdichada víctima tras un par de golpes.
+
+ESTADÍSTICAS:
+
+Daño: 1D6 +1 
+THAC0: +1
+Especial:
+ +1 a fuerza
+ 50% de posibilidades de que el objetivo deba superar una tirada de salvación contra muerte o recibir +10 puntos adicionales de daño contundente
+Tipo de daño: contundente
+Peso: 2
+Factor de velocidad: 3
+Talento marcial: armas sin punta
+Tipo: a una mano
+No permitido a:
+ Mago~
+@43  = ~Maza~
+@44  = ~Portadora de Muerte~
+@45  = ~La maza deriva directamente del garrote común y se compone simplemente de un asta de madera con una punta de piedra o hierro montada en el extremo. El diseño de la punta varía: unas tienen púas, otras rebordes y otras tienen piezas piramidales.
+
+ESTADÍSTICAS:
+
+Daño: 1D6 + 1
+Tipo de daño: contundente
+Peso: 8
+Factor de velocidad: 7
+Talento marcial: armas sin punta
+Tipo: a una mano
+No permitido a:
+ Druida
+ Mago
+ Ladrón~
+@46  = ~Maza +1: Portadora de Muerte
+Portadora de Muerte emana caos puro y, debido a esto, no puede ser usada por los partidarios de la ley. El arma irradia un aura sobrenatural, y parece obtener su energía de la electricidad producida durante las tormentas más intensas. A día de hoy, nadie sabe cuándo, por quién o con qué propósito se creó esta maza. Se supone que fue un arma diseñada para matar a sus víctimas al instante mediante infinitas descargas de electricidad. No obstante, su creador fue incapaz de contener su poder a pesar de conferirle algunas protecciones mágicas contra su elemento, ya que emite descargas igual de intensas a su portador, matándolo casi al instante. Por lo visto, su nombre es bastante apropiado.
+
+ESTADÍSTICAS:
+
+Daño: 1D6 + 2
+THAC0: +1
+Especial: 
+ 5% de posibilidades de matar al instante al objetivo y el portador sufre 6D6 de daño eléctrico (tirada de salvación contra muerte para recibir la mitad del daño)
+ +10% a la resistencia eléctrica
+Tipo de daño: contundente
+Peso: 4
+Factor de velocidad: 4
+Talento marcial: armas sin punta
+Tipo: a una mano
+No permitido a:
+ Personajes de alineamiento legal
+ Druida
+ Mago
+ Ladrón~
+@47  = ~Zarzas Venenosas~
+@48  = ~Garrote +1: Zarzas Venenosas
+Zarzas Venenosas es un arma mortífera creada por los Druidas de las Sombras para ayudarles a proteger los bosques y sus criaturas, así como castigar a quienes osen dañarlos. Con cada golpe, existe la posibilidad de clavar uno o dos pinchos de las ramas del arma encantada a la víctima, añadiéndose el efecto de la potencia del veneno.
+
+ESTADÍSTICAS:
+
+Daño: 1D6 +1 
+THAC0: +2 
+Especial:
+ Cualquier criatura golpeada por Zarzas Venenosas debe superar una tirada de salvación contra veneno con un bonificador +2 o recibir 1 punto de daño por veneno durante 8 segundos
+Tipo de daño: contundente
+Peso: 3
+Factor de velocidad: 3
+Talento marcial: armas sin punta
+Tipo: a una mano
+No permitido a:
+ Mago~
+@49  = ~Mayal~
+@50  = ~Furia del Caos~
+@51  = ~El mayal es un robusto mango de madera sujeto a una barra de metal, una vara de madera con púas o una bola de hierro con pinchos. Entre el mango y la cabeza suele haber un gozne o argolla. Originalmente, esta arma fue un utensilio con el que se golpeaba el centeno para desgranarlo.
+
+ESTADÍSTICAS:
+
+Daño: 1D6 +1
+Tipo de daño: contundente
+Peso: 15
+Factor de velocidad: 7
+Talento marcial: armas con punta
+Tipo: a una mano
+No permitido a:
+ Druida
+ Mago 
+ Ladrón~
+@52  = ~Mayal +2: Furia del Caos
+Creado por los duergar para la guerra, Furia del Caos acarrea una larga historia de sangrientas batallas y largos asedios entre los enanos grises y sus numerosos enemigos. El mayal está hecho con un mango de madera reforzado y su bola de hierro con pinchos ha sido encantada para que inflija daño adicional con cada golpe.
+
+ESTADÍSTICAS:
+
+Daño: 1D6 + 3
+THAC0: +2
+Especial:
+ +3 de daño perforante
+Tipo de daño: contundente
+Peso: 11
+Factor de velocidad: 5
+Talento marcial: armas con punta
+Tipo: a una mano
+No permitido a:
+ Druida
+ Mago
+ Ladrón~
+@53  = ~El Durmiente~
+@54  = ~Maza +2: El Durmiente
+Esto perteneció a Ssitalc, un elfo maligno poco usual conocido como el Esclavista de la Costa de la Espada. Hasta que murió repentinamente hace varios años, Ssitalc acaudilló una gran fuerza de bandidos humanos, enanos y gnomos, utilizando el Durmiente para mantener el orden. Existe la posibilidad de que incapacite a cualquier criatura induciéndole un sueño profundo.
+
+ESTADÍSTICAS:
+
+Daño: 1D6 + 3
+THAC0: +2
+Especial:
+ Cualquier criatura golpeada por El Durmiente debe superar una tirada de salvación contra veneno con un bonificador +2 o caerá dormida durante 12 segundos
+Tipo de daño: contundente
+Peso: 6
+Factor de velocidad: 4
+Talento marcial: armas sin punta
+Tipo: a una mano
+No permitido a:
+ Druida
+ Mago
+ Ladrón~
+@55  = ~Libro del Conocimiento Antiguo~
+@56  = ~Un erudito entregó este libro a <CHARNAME> a cambio de la Historia de los Pergaminos Sombríos.
+La escritura de este texto es completamente imposible de descifrar y resiste cualquier intento de comprensión a través de magia normal o cualquier otro medio.~
+@57  = ~Un erudito entregó este libro a <CHARNAME> a cambio de la Historia de los Pergaminos Sombríos. Su valor debe ser de 10,000 monedas de oro o incluso más.
+La escritura de este texto es completamente imposible de descifrar y resiste cualquier intento de comprensión a través de magia normal o cualquier otro medio.~
+@58  = ~Botas rotas~
+@59  = ~Botas del zorro~
+@60  = ~Las botas se suelen hacer a mano por zapateros. Las botas normales se hacen partiendo de un molde, pero las buenas se diseñan para el pie de alguna persona en particular. 
+
+ESTADÍSTICAS:
+
+Peso: 4~
+@61  = ~No se sabe mucho sobre estas botas mágicas salvo que provienen de las regiones norteñas de Faerûn conocidas como el Espinazo del Mundo. Se dice que las consiguió un valiente grupo de aventureros que viajaba por las traicioneras montañas en una misión para destruir un gran mal.
+
+ESTADÍSTICAS:
+
+Clase de armadura: +1
+Especial:
+ +40% al factor de movimiento
+Peso: 3~
+@62  = ~Arco corto~
+@63  = ~Arco fantasmal~
+@64  = ~Los arcos cortos fueron los primeros en desarrollarse, aunque no recibían este nombre. Éste es un término que se aplica a todo lo que no sea un arco largo. Las varas de los arcos cortos son de unos 190 centímetros de media. Con el paso del tiempo, se hicieron intentos de mejorar el alcance de los arcos. Esto se hacía alargando las varas o aumentando la flexibilidad sin cambiar la longitud. El primer caso dio como resultado el arco largo. 
+
+ESTADÍSTICAS:
+
+Daño: 
+Peso: 2
+Factor de velocidad: 6
+Talento marcial: arcos
+Tipo: a dos manos
+No permitido a:
+ Druida
+ Clérigo
+ Mago~
+@65  = ~Arco corto +1: Arco Fantasmal
+Durante mucho tiempo, se creyó que este objeto sólo existía en mitos o cuentos de aventureros. Se dice que el Arco Fantasmal fue forjado en las entrañas de un reino místico distinto a los nuestros y otorgado a los guardianes que vigilaban las puertas entre los planos. Como tal, se usó para evitar viajes no permitidos de criaturas malvadas que sólo buscaban amenazar el delicado equilibrio entre el orden y el caos.
+
+Se dice que cada vez que se tensa su cuerda, el arco abre un portal a través de los planos del que crea una flecha elemental, siendo una fuente ilimitada de proyectiles. Por otro lado, el arco concede al portador una asombrosa maestría, aumentando su precisión de forma temporal. No obstante, también disminuye su fuerza cuando use su misterioso poder, ya que canaliza su energía al plano de su sobrenatural creación.
+
+ESTADÍSTICAS:
+
+Daño: 1D3 +1
+THAC0: +1
+Especial:
+ -1 a fuerza y +1 a destreza
+ No necesita flechas
+Tipo de daño: perforante
+Peso: 3
+Factor de velocidad: 4
+Talento marcial: arcos
+Tipo: a dos manos
+No permitido a:
+ Druida
+ Clérigo
+ Mago~
+@66  = ~Bala~
+@67  = ~Bala de fuego~
+@68  = ~Una bala no es más que una piedra redonda bien equilibrada. 
+
+ESTADÍSTICAS:
+
+Daño: 1D4 + 1
+Tipo de daño: perforante
+Peso: 0
+Lanzador: honda~
+@69  = ~Esta piedra, extraña y bien equilibrada, ha sido imbuida con propiedades mágicas que hace que sea más precisa y letal. También posee el poder de causar una pequeña llama al impactar contra su víctima, haciendo que sea un proyectil muy peligroso en manos expertas.
+
+ESTADÍSTICAS:
+
+Daño: 1D4 + 3
+Especial: 1D4 de daño por fuego (tirada de salvación contra hechizos niega) 
+THAC0: +2
+Tipo de daño: perforante
+Peso: 0
+Lanzador: honda~
+@70  = ~Cota de mallas~
+@71  = ~Cota de mallas drow +2~
+@72  = ~La cota de mallas está formada por anillos de metal entrelazados. Siempre está sobre una capa de tela acolchada o de cuero suave para evitar los roces y disminuir el impacto de los golpes.
+
+ESTADÍSTICAS:
+
+Clase de armadura: 5
+Peso: 40
+No permitido a:
+ Druida 
+ Mago 
+ Ladrón~
+@73  = ~Cota de mallas drow +2
+La cota de mallas drow es una cota de mallas élfica fabricada con metales únicos que sólo se encuentran en la Infraoscuridad.
+
+ESTADÍSTICAS:
+
+Clase de armadura: 3
+Peso: 10
+No permitido a:
+ Druida~
+@74  = ~Túnica de mago~
+@75  = ~Túnica de acero~
+@76  = ~Desde la época de Netheril, los magos han aprendido a conferir una gran variedad de propiedades mágicas a los objetos cotidianos que les rodean. Uno de los elementos favoritos para tal encantamiento es la túnica común. Es ligera, económica y mantiene bien el encantamiento, por lo que resulta un equipo ideal para un mago. No obstante, debido a su patrimonio mágico, sólo los magos de clase única, multiclase y clase dual pueden llevar estas túnicas encantadas.
+
+ESTADÍSTICAS:
+
+Peso: 9
+Permitido a:
+ Mago (clase única, multiclase y clase dual)~
+@77  = ~Túnica de acero
+La túnica de acero fue creada por Melicamp, el aprendiz de mago de Beregost, como gratitud a <CHARNAME> por salvarle de las garras de un lobo tras haberse convertido en un pollo por accidente. La investigación exhaustiva realizada por el mago menor sobre las túnicas que se le proporcionaron ha dado como resultado una poderosa túnica, digna del propio Thalantyr.
+
+Esta pesada túnica conserva una parte de la resistencia y la durabilidad del acero drow sin la desventaja de convertirse en polvo bajo la luz del sol. También otorga a quien la viste muchas resistencias a la magia elemental usada en los reinos, convirtiéndolo en un mago formidable.
+
+ESTADÍSTICAS:
+
+Clase de armadura: 6
+Especial:
+ +1 a las tiradas de salvación
+ 20% a la resistencia mágica
+ 20% a la resistencia al fuego
+ 20% a la resistencia al frío
+ 20% a la resistencia a la electricidad
+Peso: 9
+Permitido a:
+ Mago (clase única, multiclase y clase dual)~
+@78  = ~Túnica de resistencia menor~
+@79  = ~Túnica de resistencia menor
+La túnica de resistencia menor fue creada por Melicamp, el aprendiz de mago de Beregost, como gratitud a <CHARNAME> por salvarle de las garras de un lobo tras haberse convertido en un pollo por accidente. La investigación exhaustiva realizada por el mago menor sobre las túnicas que se le proporcionaron ha dado como resultado una túnica de extraordinario poder.
+
+Esta pesada túnica conserva una parte de la resistencia y la durabilidad del acero drow sin la desventaja de convertirse en polvo bajo la luz del sol. También otorga a quien la viste diversas resistencias a la magia elemental usada en los reinos.
+
+ESTADÍSTICAS:
+
+Clase de armadura: 7
+Especial:
+ 5% a la resistencia mágica
+ 20% a la resistencia al fuego
+ 20% a la resistencia al frío
+ 20% a la resistencia a la electricidad
+Peso: 9
+Permitido a:
+ Mago (clase única, multiclase y clase dual)~
+@80  = ~Túnica del erudito~
+@81  = ~Túnica del erudito
+La túnica del erudito fue creada por Melicamp, el aprendiz de mago de Beregost, como gratitud a <CHARNAME> por salvarle de las garras de un lobo tras haberse convertido en un pollo por accidente. La investigación exhaustiva realizada por el mago menor sobre las túnicas que se le proporcionaron ha dado como resultado una túnica de extraordinario poder.
+
+Esta pesada túnica conserva una parte de la resistencia y la durabilidad del acero drow sin la desventaja de convertirse en polvo bajo la luz del sol. También otorga a quien la viste diversas resistencias a la magia elemental usada en los reinos.
+
+ESTADÍSTICAS:
+
+Clase de armadura: 7
+Especial:
+ +1 a las tiradas de salvación
+ 5% a la resistencia mágica
+Peso: 9
+Permitido a:
+ Mago (clase única, multiclase y clase dual)~
+@82  = ~Casco~
+@83  = ~Corona de los Reyes Caídos~
+@84  = ~Esta clase de casco de rostro descubierto, hecho con cuero reforzado o con metal, cubre casi toda la cabeza, salvo la cara y el cuello. Este parece ser un casco ornamental que tal vez se venda a buen precio.
+
+ESTADÍSTICAS:
+
+Bonificador de clase de armadura: ninguno
+Especial:
+ Protege contra golpes críticos
+Peso: 2
+No permitido a:
+ Mago
+ Bardo
+ Ladrón~
+@85  = ~Descubierta en unas ruinas antiguas al sur de Amn, esta corona ha visto el ascenso y la caída de incontables imperios. Fue venerada por muchos por ser tanto un símbolo de gobierno para mantener la paz como un modo de declarar la guerra. La historia indica que se vio por última vez a manos de un tirano despiadado que huyó tras la caída de su reino del Mar de las Espadas, perdiéndose luego entre sus aguas.
+
+ESTADÍSTICAS:
+
+THAC0: +1
+Clase de armadura: +2
+Especial: 
+ Protege contra golpes críticos
+ +20% a la resistencia mágica
+Peso: 2
+No permitido a:
+ Ladrón~
+@86  = ~Nota indescifrable~
+@87  = ~...como han descrito quienes nos contrataron... nos encontraremos en las afueras de Carnaval, al norte de la colina, y hablaremos del tema de la recompensa.
+N~
+@88  = ~Cota de mallas élfica +2~
+@89  = ~Cota de mallas élfica +2
+Se dice que esta ilustre armadura élfica fue forjada durante la Edad Dorada entre los elfos de la Mano de Seldarine y los enanos de Dorn. Creada entrelazando anillos de metal, la cota de mallas élfica no impide el movimiento a quien la viste y le concede una protección menor contra magia.
+
+ESTADÍSTICAS:
+
+Clase de armadura: 3
+Resistencia mágica: 10%
+Peso: 25
+No permitido a:~
+@90  = ~Mallas de la Infraoscuridad +1~
+@91  = ~Mallas de la Infraoscuridad +1
+Esta cota de mallas élfica está hecha de ilitio, un mineral extraño que sólo se encuentra en los recovecos más profundos de Faerûn, y como tal, irradia un fuerte alquimo. Las complejas runas que se han grabado en la superficie de la armadura indican que fue diseñada para sacerdotisas drow, ya que permite establecer un mayor contacto con los dioses y los semidioses de los reinos a quien la viste. Aunque esto pueda ser respetado en la Infraoscuridad, es repugnante a los ojos de los habitantes de la superficie, por lo que su portador sufrirá sus consecuencias.
+
+ESTADÍSTICAS:
+
+Clase de armadura: 4
+Resistencia mágica: 33%
+Especial:
+ Sabiduría: definida en 18
+ Carisma: -2
+Peso: 25
+No permitido a:
+ Druida~
+@92  = ~Martillo de guerra~
+@93  = ~Influencia de Lathander~
+@94  = ~Los caballeros no pueden utilizar con efectividad armas con mango largo mientras están a caballo; como resultado, muchas armas se han adaptado reduciendo su mango para ser empuñadas con una mano. Las mazas y mayales son dos ejemplos claros, así como el martillo de guerra. El martillo de guerra del jinete es el descendiente del martillo de lucerna. Está fabricado totalmente en acero con un rondel para proteger la empuñadura. Los rondeles son pequeños discos de metal que a menudo forman diseños decorativos. El mango suele medir 50 centímetros. 
+
+ESTADÍSTICAS:
+
+Daño: 1D4 + 1
+Tipo de daño: contundente
+Peso: 6
+Factor de velocidad: 4
+Talento marcial: armas sin punta
+Tipo: a una mano
+No permitido a:
+ Druida
+ Mago
+ Ladrón~
+@95  = ~Aunque antes era un martillo con encantamientos menores, este arma sagrada recibió la bendición de Lathander a través del sacerdote del amanecer Bran y fue entregado a <CHARNAME> como recompensa por su heroica intervención para evitar que el demonio menor Lestraubimat se liberara en la Costa de la Espada. El martillo concede a su portador una asombrosa fuerza e incluso una protección menor contra magia. Sólo aquellos de corazón puro e inquebrantable fe pueden empuñar el martillo.
+
+ESTADÍSTICAS:
+
+Daño: 1D4 + 3
+THAC0: +2
+Especial:
+ +1 a fuerza
+ +20% a la resistencia mágica
+Tipo de daño: contundente
+Peso: 5
+Factor de velocidad: 3
+Talento marcial: armas sin punta
+Tipo: a una mano
+No permitido a: 
+ Personajes de alineamiento maligno
+ Druida
+ Mago
+ Ladrón~
+@96  = ~Sombrero~
+@97  = ~Sombrero de pícaro~
+@98  = ~El sombrero de fieltro es el favorito de bardos y ladrones, aunque apenas ofrece protección.
+
+ESTADÍSTICAS:
+
+Peso: 2
+Permitido a:
+ Bardo
+ Ladrón~
+@99  = ~El sombrero de fieltro es el favorito de bardos y ladrones, aunque apenas ofrece protección. No obstante, este sombrero ha sido encantado, y aunque parece tan endeble como uno normal, es lo bastante resistente como para resistir un buen golpe.
+
+ESTADÍSTICAS:
+
+Bonificador de clase de armadura: ninguno
+Especial:
+ Protege contra golpes críticos
+ +1 a las tiradas de salvación
+Peso: 2
+Permitido a:
+ Bardo
+ Ladrón~
+@100 = ~Casco de defensa~
+@101 = ~Casco de defensa: 'El Obsequio de la Paz'
+Muy apreciado por su origen noble, así como por los beneficios que otorga a su portador, este yelmo fue en principio un simple regalo. No había momentos de crisis ni males peligrosos a los que enfrentarse. Sencillamente, fue el deseo de un amigo de ofrecer un obsequio a su compañero. Lo mismo podría haber sido un buen libro que una botella de vino, aunque cabría decir que los aventureros son muy prácticos a la hora de ofrecer un obsequio. El yelmo ha sido testigo de numerosos y grandiosos combates desde su creación, pero siempre se recordará por la virtud que rodea esta historia.
+Taerom "Martillo Atronador" ha mejorado las propiedades de este yelmo, que ahora concede una protección mayor a su portador.
+
+ESTADÍSTICAS:
+
+Bonificador de clase de armadura: 1
+Especial:
+ Protege contra golpes críticos
+ +1 a las tiradas de salvación
+ +20% a la resistencia al fuego
+ +20% a la resistencia al frío
+ +20% a la resistencia eléctrica
+Peso: 3
+No permitido a:
+ Mago
+ Bardo
+ Ladrón~
+@102 = ~Casco de infravisión~
+@103 = ~Casco de infravisión: 'Los Ojos de la Verdad'
+Babette Maelestrom, una especie de carroñera, hizo que le fabricaran este yelmo para ayudarse en sus incursiones bajo tierra. Después, ella atribuiría su riqueza adquirida únicamente al poder del yelmo, aunque cabría señalar que más que nada se debía a su aguda visión.
+Taerom "Martillo Atronador" ha mejorado las propiedades de este yelmo, que ahora concede una protección mayor a su portador.
+
+ESTADÍSTICAS:
+
+Bonificador de clase de armadura: 1
+Especial:
+ Protege contra golpes críticos
+ Infravisión hasta 40m.
+Peso: 3
+No permitido a:
+ Mago
+ Bardo
+ Ladrón~
+@104 = ~Casco de protección contra hechizos~
+@105 = ~Casco de protección contra hechizos: 'El Imparcial'
+Como sugiere su nombre, el casco de protección contra hechizos protege al que lo lleva de cualquier intento mágico de manipulación emocional. Como precaución, algunos grupos de mercenarios de alto nivel equipan regularmente a sus miembros con cascos como éste, de modo que puedan cumplir con sus obligaciones sin interferencia del exterior.
+Taerom “Martillo Atronador” ha mejorado las propiedades de este yelmo, que ahora concede una protección mayor a su portador.
+
+ESTADÍSTICAS:
+
+Bonificador de clase de armadura: 1
+Especial:
+ Protege contra golpes críticos
+ Inmunidad contra hechizos
+Peso: 4
+No permitido a:
+ Mago
+ Bardo
+ Ladrón~
+@106 = ~Armadura de pieles~
+@107 = ~Cuero de Bala~
+@108 = ~La armadura de pieles se fabrica con la gruesa piel de animales de gran tamaño, como los elefantes, o con varias capas de cuero de animales más comunes, como las vacas. La armadura de pieles es demasiado voluminosa, inflexible y pesada como para ser usada por las culturas humanas más avanzadas, aunque entre es muy común entre los bárbaros humanoides que habitan en los bosques oscuros y las selvas espesas. Aunque ofrece una mayor protección que la armadura de cuero, uno debe sobreponerse al mal olor y el aspecto chapucero para usarla con eficacia. Aunque los ladrones pueden vestir esta armadura, tiene efectos negativos sobre sus habilidades.
+
+ESTADÍSTICAS:
+
+Clase de armadura: 6
+Esconderse en las sombras: -20%
+Abrir cerraduras: -10%
+Detectar/Desactivar trampas: -10%
+Hurtar: -30%
+Peso: 40
+No permitido a:
+ Mago~
+@109 = ~Cuero de Bala +4
+Siendo su propietario original el infame príncipe malhumorado de un clan de enanos, Bala, se pensaba que esta armadura de pieles había sido creada muchos años después de que asesinara al cruel mago elfo que lo había aprisionado en Thesk. La manufactura es penosa, bastante parecida a la de la legendaria hacha de Bala, pero posee una fuerte aura que imbuye al que la vista una gran resistencia contra la magia.
+
+ESTADÍSTICAS:
+
+Clase de armadura: 2
+Resistencia mágica: 60%
+Esconderse en las sombras: -10%
+Abrir cerraduras: -5%
+Detectar/Desactivar trampas: -5%
+Hurtar: -10%
+Peso: 30
+No permitido a:
+ Mago~
+@110 = ~Pieles de bárbaro~
+@111 = ~Pieles de bárbaro +1
+Esta armadura de pieles en particular está hecha con muchas capas de cuero curtido y endurecido de osos de montaña, por lo que provee una protección mayor a quien la viste, pero al estar hecha de un material tan grueso, es muy inflexible y voluminosa. Aunque ofrece una mayor protección que la armadura de cuero, uno debe sobreponerse al mal olor y el aspecto chapucero para usarla con eficacia. Aunque los ladrones pueden vestir esta armadura, tiene efectos negativos sobre sus habilidades.
+
+ESTADÍSTICAS:
+
+Clase de armadura: 5
+Esconderse en las sombras: -10%
+Abrir cerraduras: -10%
+Detectar/Desactivar trampas: -10%
+Hurtar: -20%
+Peso: 35
+No permitido a:
+ Mago~
+@112 = ~Arma drow~
+@113 = ~Estos parecen ser los restos de un arma forjada con acero drow. Por lo visto, fue expuesta a la luz del sol y ahora no sirve para nada.~
+@114 = ~Armadura drow~
+@115 = ~Estos parecen ser los restos de una armadura mágica forjada con acero drow. Por lo visto, fue expuesta a la luz del sol y ahora no sirve para nada, aunque podría ser un objeto interesante para un minero experto o un artesano hábil.~
+@116 = ~Túnica empapada de sangre~
+@117 = ~Túnica de resistencia a la electricidad de Zernan~
+@118 = ~Desde la época de Netheril, los magos han aprendido a conferir una gran variedad de propiedades mágicas a los objetos cotidianos que les rodean. Uno de los elementos favoritos para tal encantamiento es la túnica común. Es ligera, económica y mantiene bien el encantamiento, por lo que resulta un equipo ideal para un mago. No obstante, debido a su patrimonio mágico, sólo los magos de clase única, multiclase y clase dual pueden llevar estas túnicas encantadas.
+Esta parece ser la indumentaria del erudito Zernan, aunque es imposible estar seguro ya que ha sido rasgada hasta quedar irreconocible y está empapada de sangre. Sólo las propiedades mágicas de la túnica han impedido que sea totalmente destruida.~
+@119 = ~Aunque se ven con menos frecuencia que otras, las túnicas de mago de resistencia a la electricidad no se pueden considerar poco comunes. Algunos paranoicos llevan estas túnicas buscando protección de tormentas, pero la mayoría son magos que buscan protegerse de las intrigas de otros de su clase. Al igual que las demás túnicas de este tipo, la túnica de mago de resistencia a la electricidad sólo la pueden llevar los que se dediquen a la brujería.
+Esta parece ser la indumentaria del erudito Zernan, aunque es imposible estar seguro ya que ha sido rasgada hasta quedar irreconocible y está empapada de sangre. Sólo las propiedades mágicas de la túnica han impedido que sea totalmente destruida.
+
+ESTADÍSTICAS:
+
+Resistencia a la electricidad: +20%
+Peso: 3
+Permitido a:
+ Mago (clase única, multiclase y clase dual)~
+@120 = ~Armadura de placas~
+@121 = ~Cota de escamas de draco~
+@122 = ~La armadura de placas es una combinación de armadura de cota con placas metálicas que cubren las áreas vitales como el pecho, el abdomen y la entrepierna. Semejante en su construcción a la armadura de placas de bronce, la armadura de placas verdadera está compuesta de cota y cuero. 
+
+ESTADÍSTICAS:
+
+Clase de armadura: 3
+Peso: 50
+No permitido a:
+ Bardo
+ Druida
+ Mago
+ Ladrón~
+@123 = ~Esta armadura fue forjada para <CHARNAME> por Taerom Fuiruim, célebre herrero de Beregost. La armadura fue creada a partir de la piel de un draco y es tan voluminosa como una cota de escamas, pero provee la protección de la armadura de placas mágica y concede a quien la vista resistencia contra algunos venenos.
+
+ESTADÍSTICAS:
+
+Clase de armadura: 2
+Especial:
+ +5 a las tiradas de salvación contra veneno/parálisis
+Peso: 20
+No permitido a:
+ Bardo
+ Druida
+ Mago
+ Ladrón~
+@124 = ~Poción~
+@125 = ~Poción de curación mayor~
+@126 = ~Esta poción restaura 24 puntos de golpe a la persona que la consume. El efecto es instantáneo y la poción se destruye en el proceso.~
+@127 = ~Anillo~
+@128 = ~Anillo místico~
+@129 = ~Un anillo es una pequeña banda de metal precioso que se utiliza como joya. Algunos anillos poco comunes han tenido encantamientos que confieren varias propiedades mágicas. Estos anillos son muy buscados, especialmente por aquellos que se dedican a las aventuras.~
+@130 = ~El origen exacto de este anillo se desconoce, aunque se cree que perteneció a un mago viejo que vivía en un pueblecito en el que hizo de "sabio" antes de morir.
+
+ESTADÍSTICAS:
+
+Especial:
+ Proporciona un conjuro adicional de segundo y tercer nivel
+Permitido a:
+ Mago (clase única, multiclase y clase dual)~
+@131 = ~Anillo de percepción menor~
+@132 = ~Los líderes de cofradía de Puerta de Baldur encargaron la creación de este objeto para sus aliados. El anillo mejora la percepción sensorial de su usuario, lo que le permite realizar mejor tareas "delicadas" y a menudo oscuras.
+
+ESTADÍSTICAS:
+
+Detectar/Desactivar trampas: +10%
+Hurtar: +10%
+Abrir cerraduras: +10%
+Esconderse en las sombras: +10%
+Permitido a:
+ Ladrón (clase única, multiclase y clase dual)~
+@133 = ~Bastón~
+@134 = ~Bastón del ariete +3~
+@135 = ~Es la más sencilla y humilde de las armas de palo. La barra es una madera 180 a 275 centímetros de largo. Un buen bastón está hecho de madera de roble y va rematada con metal en ambos extremos. La barra se debe empuñar con ambas manos.
+
+ESTADÍSTICAS:
+
+Daño: 1D6
+Tipo de daño: contundente
+Peso: 4
+Factor de velocidad: 4
+Talento marcial: armas sin punta
+Tipo: a dos manos
+No permitido a:~
+@136 = ~Este bastón es el arma personal de Cadderly. El gran mago Belisarius, amigo suyo y residente en las afueras de Caradoon, encantó este objeto, el cual ha ayudado desde entonces al clérigo y erudito de Deneir en sus numerosos encuentros con las fuerzas de Castillo Trinidad. Se dice que el bastón ha recibido la bendición de Deneir y Oghma, y perteneció al fiel clérigo durante mucho tiempo, imbuyéndole aún más magia.
+
+ESTADÍSTICAS:
+
+Daño: 1D6 +3
+THAC0: +3
+Especial:
+ +1 a los conjuros de segundo y tercer nivel de sacerdote
+ +1 a las tiradas de salvación
+Tipo de daño: contundente
+Peso: 3
+Factor de velocidad: 2
+Talento marcial: armas sin punta
+Tipo: a dos manos
+Permitido a:
+ Personajes de alineamiento bueno o neutral
+ Clérigo
+ Druida
+ Paladín~
+@137 = ~Bastón de los robles oscuros +2~
+@138 = ~Se dice que sólo los más altos rangos de los Druidas de las Sombras poseen estos míticos bastones que les conceden una piel tan dura como la de los robles oscuros y resistencia contra el fuego y los venenos más potentes.
+
+ESTADÍSTICAS:
+
+Daño: 1D6 +2
+THAC0: +2
+Especial:
+ +30% a la resistencia al fuego
+ +3 a las tiradas de salvación contra veneno
+ Piel robliza sobre su portador
+Tipo de daño: contundente
+Peso: 3
+Factor de velocidad: 1 
+Talento marcial: armas sin punta
+Tipo: a dos manos
+Permitido a:
+ Druida~
+@139 = ~Bastón de aguante~
+@140 = ~Las marcas en los extremos del bastón indican que fue forjado en épocas de magia olvidada hace tiempo y que ha visto numerosas luchas por el poder en los planos materiales. Se dice que su último propietario fue un hechicero tirano y cruel cuya vida acabó en un duelo con un esclavo, un mago de menor experiencia que buscaba escapar de las oscuras prisiones de su captor. Historias y rumores indican que el prisionero cogió el bastón, escapó por un portal, y desapareció en la Costa de la Espada.
+
+ESTADÍSTICAS:
+
+Daño: 1D6+1
+THAC0: +1 
+Clase de armadura: +1
+Especial:
+ +2 a las tiradas de salvación
+ +10% a la resistencia mágica
+Tipo de daño: contundente
+Peso: 2
+Factor de velocidad: 1
+Talento marcial: armas sin punta
+Tipo: a dos manos
+Permitido a:
+ Mago
+ Bardo~
+@141 = ~Espada bastarda~
+@142 = ~Distancia~
+@143 = ~La espada bastarda, conocida también como espada de puño y medio, se llama así porque está a medio camino entre la espada de dos puños y la espada larga. La espada bastarda tiene una hoja de doble filo y una empuñadura larga, que se puede adaptar a las dos manos si se prefiere. La longitud total de la espada bastarda oscila entre 120 y 150 centímetros.
+
+ESTADÍSTICAS:
+
+Daño: 2D4 + 1
+THAC0: +1
+Tipo de daño: cortante
+Peso: 9
+Factor de velocidad: 7
+Talento marcial: espada grande
+Tipo: a una mano
+No permitido a:
+ Druida
+ Clérigo
+ Mago
+ Ladrón~
+@144 = ~Espada bastarda +1: Distancia
+Se dice que esta espada bastarda de aspecto simple perteneció al infame gladiador Abdel el Bárbaro, cuyo ingenio y astucia no tuvieron igual en sus treinta y ocho peleas en los fosos clandestinos. Por lo visto, el gladiador podía golpear a un adversario y distanciarse en un instante, impidiendo cualquier posible contrataque de sus enemigos.
+
+Puede que las historias no se alejen de la verdad. La espada posee la extraña habilidad de ocultar a su portador durante unos segundos tras golpear a su objetivo, permitiéndole distanciarse del enemigo o incluso planear otro golpe preventivo. 
+
+ESTADÍSTICAS:
+
+Daño: 2D4 + 1
+THAC0: +1
+Especial:
+ 50% de posibilidades de que el portador se vuelva invisible durante 12 segundos
+Tipo de daño: cortante
+Peso: 9
+Factor de velocidad: 7
+Talento marcial: espada grande
+Tipo: a una mano
+No permitido a:
+ Druida
+ Clérigo
+ Mago
+ Ladrón~
+@145 = ~Espada corta~
+@146 = ~Espada corta drow para apuñalar por la espalda~
+@147 = ~La espada corta fue el primer tipo de espada utilizada y se podría describir como una especie de daga de hoja tan larga que ya deja de ser una daga. En la clasificación de espadas no se incluye el término espada corta. Sin embargo, la utilización de este vocablo se ha generalizado para describir una hoja de doble filo de aproximadamente 60 cm. de longitud. La punta de la espada suele ser afilada, perfecta para apuñalar. 
+
+ESTADÍSTICAS:
+
+Daño: 1D6
+Tipo de daño: perforante
+Peso: 3
+Factor de velocidad: 3
+Talento marcial: espada pequeña
+Tipo: a una mano
+No permitido a:
+ Druida
+ Clérigo 
+ Mago~
+@148 = ~Espada corta drow para apuñalar por la espalda
+Esta espada corta fue creada por los drow imitando a la Hoja de la Sombra a partir de metal de la Infraoscuridad para ser la herramienta perfecta del asesino.
+
+ESTADÍSTICAS:
+
+Especial: Multiplicador de puñalada +1
+
+Daño: 1D6 +3
+THAC0: +3
+Tipo de daño: perforante
+Peso: 3 
+Factor de velocidad: 0
+Talento marcial: espada pequeña
+Tipo: a una mano
+No permitido a:
+ Druida
+ Clérigo 
+ Mago~
+@149 = ~Mandoble~
+@150 = ~Estrago~
+@151 = ~La espada de dos puños es una variación de la espada larga. Los armeros buscan siempre la forma de mejorar las armas que ya existen y para mejorar la espada larga, alargaron la hoja. Finalmente, hubo que extender la empuñadura, por lo que se hizo necesario utilizar ambas manos. La función principal de la espada de dos puños es partir en dos a los caballeros montados y dispersar las formaciones en pica.
+
+ESTADÍSTICAS:
+
+Daño: 1D10
+Tipo de daño: cortante
+Peso: 15
+Factor de velocidad: 10
+Talento marcial: espada grande
+Tipo: a dos manos
+No permitido a:
+ Druida
+ Clérigo
+ Mago 
+ Ladrón~
+@152 = ~Mandoble +2: 'Estrago'
+Este mandoble fue arrancado de las garras del demonio mensajero Ranthis por un grupo de aventureros dirigido por <CHARNAME>. El arma aún conserva la mancha de su propietario original y llena a quien la toca de odio y rencor. Es una espada poderosa, siendo capaz de paralizar a casi cualquier enemigo de un solo golpe, pero sólo puede ser empuñada por aquellos que compartan los deseos malignos de Ranthis.
+
+ESTADÍSTICAS:
+
+Daño: 1D10 +2
+THAC0: +2 
+Especial:
+ 75% de posibilidades de que el objetivo deba superar una tirada de salvación contra parálisis con un penalizador -1 o quedará paralizado durante 12 segundos
+ +20 a los puntos de golpe máximos
+Tipo de daño: cortante
+Peso: 8
+Factor de velocidad: 8
+Talento marcial: espada grande
+Tipo: a dos manos
+No permitido a:
+ Personajes de alineamiento bueno
+ Druida
+ Clérigo
+ Mago
+ Ladrón~
+@153 = ~Valor~
+@154 = ~Mandoble +1: Valor
+Este mandoble perteneció al "Mejor Ogro Mago" Kahrk. En un principio, Valor fue entregado a Sir Gregory del Pilar, líder de un grupo de cruzados cuyo objetivo era librar la Costa de la Espada de una despiadada horda de ogros. Los cruzados fracasaron en su misión, siendo masacrados por un ejército de monstruos descomunal tras una larga batalla. Los ogros cogieron Valor como trofeo por la derrota de los humanos, usándola como un símbolo del poder de su raza. No obstante, la espada ha mantenido su pureza durante las décadas que estuvo en su posesión. Según las leyendas, un día se alzará un héroe que reclamará el arma sagrada y esto marcará una serie de cambios en la Costa de la Espada mayor de lo que jamás se haya visto sobre la faz de Faerûn.
+
+ESTADÍSTICAS:
+
+Daño: 1D10 +1
+THAC0: +2
+Clase de armadura: +1
+Especial:
+ +10 a los puntos de golpe máximos
+Tipo de daño: cortante
+Peso: 10
+Factor de velocidad: 4
+Talento marcial: espada grande
+Tipo: a dos manos
+No permitido a:
+ Personajes de alineamiento maligno
+ Druida
+ Clérigo
+ Mago
+ Ladrón
+ Bardo~
+@155 = ~Ballesta ligera~
+@156 = ~Ballesta ligera drow +1~
+@157 = ~Una ballesta es un arco que se monta transversalmente sobre un fuste de madera o de metal. El último recibe el nombre de timón. El arco se suele hacer de madera de fresno o de tejo. La ballesta dispara cuadrillos (también llamados virotes).
+
+ESTADÍSTICAS:
+
+Peso: 7
+Factor de velocidad: 5
+Talento marcial: armas de proyectil
+Tipo: a dos manos
+No permitido a:
+ Druida
+ Clérigo
+ Mago~
+@158 = ~Ballesta ligera drow +1
+Esta ballesta está hecha con el ligero y extraño metal de la Infraoscuridad. La ballesta dispara cuadrillos (también llamados virotes).
+
+ESTADÍSTICAS:
+
+Daño: +1
+THAC0: +1
+Peso: 6
+Factor de velocidad: 4
+Talento marcial: armas de proyectil
+Tipo: a dos manos
+No permitido a:
+ Druida
+ Clérigo
+ Mago~
+@159 = ~Amuleto de influencia de metaconjuro: 'El Amplificador'~
+@160 = ~Amuleto de influencia de metaconjuro: 'El Amplificador'
+El Amuleto de influencia de metaconjuro, conocido por su capacidad para intensificar cualquier conjuro, es muy codiciado por los magos de profesión. Elairdrin Mellwith, que residía en las Montañas de las Estrellas, fue quien creó este objeto. Sus razones para fabricar tal pieza derivaban de sus hábitos mujeriegos y, en este sentido, el Amplificador le fue muy útil. Después, un mago con intenciones más destructivas se lo robó, pero existen varias versiones sobre sus diferentes dueños.
+
+ESTADÍSTICAS:
+
+Especial:
+ Proporciona un conjuro adicional de primer y segundo nivel
+Permitido a:
+ Mago (clase única, multiclase y clase dual)~
+@161 = ~La escritura de este texto es casi imposible de descifrar y resiste cualquier intento de comprensión a través de magia normal o cualquier otro medio.
+Tal vez un erudito o alguien más hábil con las artes arcanas pueda darle sentido a este texto arcaico.~
+@162 = ~Ahora se pueden entender las palabras "Kozah", "Armadura de Vinoardiente" y "Ulcaster". El resto de la escritura de este texto es completamente imposible de descifrar y resiste cualquier intento de comprensión a través de magia normal o cualquier otro medio.~
+@163 = ~Capa sagrada~
+@164 = ~Esta túnica es un artefacto sagrado de los habitantes de la aldea de los hombres-lobo. Un objeto con más valor simbólico que mágico; un recuerdo de su llegada a la isla.
+
+ESTADÍSTICAS: 
+
+Especial:
+ Desconocido
+No permitido a:
+ Ladrón
+ Bardo~
+@165 = ~Esta capa es un artefacto sagrado de los habitantes de la aldea de los hombres-lobo. Un objeto con más valor simbólico que mágico; un recuerdo de su llegada a la isla.
+
+ESTADÍSTICAS: 
+
+Bonificador de clase de armadura: 1
+Especial:
+ Bendecir sobre su portador
+No permitido a:
+ Ladrón
+ Bardo~
+@166 = ~Capa~
+@167 = ~Capa de Shandalar~
+@168 = ~La poderosa hechicera Semia robó esta capa a Shandalar, probablemente a causa de la poderosa magia entretejida en su tela. Cómo ha llegado a vuestras manos y cuál ha sido el destino de Semia siguen siendo un misterio que no es probable que se resuelva. Muchos de los secretos de esta capa continuarán siendo un enigma incluso para los hechiceros más poderosos.
+
+ESTADÍSTICAS:
+ 
+Especial:
+ Desconocido
+Permitido a:
+ Mago (clase única, multiclase y clase dual)~
+@169 = ~La poderosa hechicera Semia robó esta capa a Shandalar, probablemente a causa de la poderosa magia entretejida en su tela. Cómo ha llegado a vuestras manos y cuál ha sido el destino de Semia siguen siendo un misterio que no es probable que se resuelva. Muchos de los secretos de esta capa continuarán siendo un enigma incluso para los hechiceros más poderosos.
+
+ESTADÍSTICAS:
+
+Bonificador de clase de armadura: 1
+Especial:
+ +2 a inteligencia
+ +15 al conocimiento
+ +1 a los conjuros de cuarto nivel
+Permitido a:
+ Mago (clase única, multiclase y clase dual)~
+@170 = ~Espada vampírica~
+@171 = ~La Venganza del Vampiro~
+@172 = ~Este arma tiene escrito "Espada Vampírica" en lenguaje común en su hoja y posee un extraño alquimo imposible de descifrar.
+
+ESTADÍSTICAS:
+
+Daño: 1D8
+Tipo de daño: cortante
+Peso: 4
+Factor de velocidad: 5
+Talento marcial: espada grande
+Tipo: a una mano
+No permitido a:
+ Druida
+ Clérigo
+ Mago~
+@173 = ~Parece que la propia especulación sobre la existencia de esta arma ha conspirado para sacarla del reino de la fantasía e introducirla en lo cotidiano, aunque, como todas las cosas que provienen de los sueños, no es oro todo lo que reluce. Es una espada vampírica, como su nombre podría sugerir, pero no del tipo que podría esperar quien la encuentre. Se rumorea que fue forjada por vampiros como una trampa para aquellos que se les opusieran en el futuro. Parece que estos ingeniosos demonios han creado con el tiempo numerosas versiones de estas espadas, que son la perdición para todos los aventureros de bien. Cada vez que lanza una estocada inflige daño al portador, consumiendo su energía vital para curar a su supuesta víctima. Por si esto no fuera suficiente, el arma está maldita; la mente del que la empuña es consumida para evitar que ni siquiera piense en deshacerse de ella. Éste puede ser uno de los pocos tesoros mágicos que no merecen la pena buscar, pudiendo utilizar mejor ese tiempo en disfrutar de una buena bebida, en vez de vagar por la campiña con un grupo lleno de cretinos cazafantasmas. El arma posee un extraño alquimo imposible de descifrar.
+
+ESTADÍSTICAS:
+
+Daño: 1D8 +1
+THAC0: +1
+Especial:
+ Inflige daño al portador y sana a la víctima
+ Desconocido
+Tipo de daño: cortante
+Peso: 4
+Factor de velocidad: 4
+Talento marcial: espada grande
+Tipo: a una mano
+No permitido a:
+ Druida
+ Clérigo
+ Mago~
+@176 = ~Casco de Defensa~
+@177 = ~Yelmo de defensa: 'El Obsequio de la Paz'
+Muy apreciado por su origen noble, así como por los beneficios que otorga a su portador, este yelmo fue en principio un simple regalo. No había momentos de crisis ni males peligrosos a los que enfrentarse. Sencillamente, fue el deseo de un amigo de ofrecer un obsequio a su compañero. Lo mismo podría haber sido un buen libro que una botella de vino, aunque cabría decir que los aventureros son muy prácticos a la hora de ofrecer un obsequio. El yelmo ha sido testigo de numerosos y grandiosos combates desde su creación, pero siempre se recordará por la virtud que rodea esta historia.
+
+ESTADÍSTICAS:
+
+Habilidades Equipado:
+ Tiradas de Salvación: +1
+
+Bonificación Clase de Armadura: 1
+Protección contra Golpes Críticos
+Peso: 3
+No lo puede usar:
+ Bardo
+ Mago
+ Monje
+ Ladrón
+ Kensai~
+@178 = ~Casco del Vigilante~
+@179 = ~No está claro si estas piezas mágicas fueron creadas por los clérigos de Helm, dios de los guardianes, o si adquirieron sus nombres debido a alguna circunstancia particular. Cualquiera sea el caso, son altamente apreciadas por guardianes y centinelas. De más está decir que bandidos también las usan, dice el viejo proverbio: "Lo que es bueno para algunos, es bueno para otros".
+
+ESTADÍSTICAS:
+
+Habilidades Equipado:
+ Inmunidad a ceguera y sordera 
+
+Bonificación de Clase de Armadura: 1
+Protección contra Golpes Críticos
+Peso: 3
+No lo puede usar:
+ Bardo
+ Mago
+ Monje
+ Ladrón
+ Kensai~
+@180 = ~Casco de protección contra hechizos~
+@181 = ~Como sugiere su nombre, el casco de protección contra hechizos protege al que lo lleva de cualquier intento mágico de manipulación emocional. Como precaución, algunos grupos de mercenarios de alto nivel equipan regularmente a sus miembros con cascos como éste, de modo que puedan cumplir con sus obligaciones sin interferencia del exterior.
+
+ESTADÍSTICAS:
+
+Habilidades Equipado:
+ Inmunidad a efectos de hechizos
+
+Bonificación de Clase de Armadura: 1
+Protección contra Golpes Críticos
+Peso: 3
+No lo puede usar:
+ Bardo
+ Mago
+ Monje
+ Ladrón
+ Kensai~
+@182 = ~Yelmo de Defensa~
+@183 = ~Yelmo de defensa: 'El Obsequio de la Paz'
+Muy apreciado por su origen noble, así como por los beneficios que otorga a su portador, este yelmo fue en principio un simple regalo. No había momentos de crisis ni males peligrosos a los que enfrentarse. Sencillamente, fue el deseo de un amigo de ofrecer un obsequio a su compañero. Lo mismo podría haber sido un buen libro que una botella de vino, aunque cabría decir que los aventureros son muy prácticos a la hora de ofrecer un obsequio. El yelmo ha sido testigo de numerosos y grandiosos combates desde su creación, pero siempre se recordará por la virtud que rodea esta historia.
+
+Este yelmo ha sido mejorado por el herrero de Beregost, Taerom "Martillo Atronador".
+
+ESTADÍSTICAS:
+
+Habilidades Equipado:
+ Tiradas de Salvación: +1
+ Resistencia Mágica: +10%
+
+Bonificación de Clase de Armadura: 1
+Protección contra Golpes Críticos
+Peso: 3
+No lo puede usar:
+ Bardo
+ Mago
+ Monje
+ Ladrón
+ Kensai~
+@184 = ~Casco del Vigilante~
+@185 = ~No está claro si estas piezas mágicas fueron creadas por los clérigos de Helm, dios de los guardianes, o si adquirieron sus nombres debido a alguna circunstancia particular. Cualquiera sea el caso, son altamente apreciadas por guardianes y centinelas. De más está decir que bandidos también las usan, dice el viejo proverbio: "Lo que es bueno para algunos, es bueno para otros".
+
+Este yelmo ha sido mejorado por el herrero de Beregost, Taerom "Martillo Atronador".
+
+ESTADÍSTICAS:
+
+Habilidades Equipado:
+ Inmunidad a ceguera y sordera
+ THAC0: +1
+
+Bonificación de Clase de Armadura: 1
+Protección contra Golpes Críticos
+Peso: 3
+No lo puede usar:
+ Bardo
+ Mago
+ Monje
+ Ladrón
+ Kensai~
+
+@186 = ~Casco de protección contra hechizos~
+@187 = ~Como sugiere su nombre, el casco de protección contra hechizos protege al que lo lleva de cualquier intento mágico de manipulación emocional. Como precaución, algunos grupos de mercenarios de alto nivel equipan regularmente a sus miembros con cascos como éste, de modo que puedan cumplir con sus obligaciones sin interferencia del exterior.
+
+Este yelmo ha sido mejorado por el herrero de Beregost, Taerom "Martillo Atronador".
+
+ESTADÍSTICAS:
+
+Habilidades Equipado:
+ Inmunidad a efectos de hechizos
+ Sabiduría: +1 
+
+Bonificación de Clase de Armadura: 1
+Protección contra Golpes Críticos
+Peso: 3
+No lo puede usar:
+ Bardo
+ Mago
+ Monje
+ Ladrón
+ Kensai~
+@188 = ~Túnica de mago de resistencia al frío~
+@189 = ~Las túnicas de mago de resistencia al frío son algo común en la región de la Costa de la Espada, especialmente cuando se viaja en dirección norte hacia Neverwinter y los Valles del Viento Helado. Muchos magos jóvenes la reciben como regalo de sus instructores al terminar con éxito sus cinco años de estudio. Estas túnicas sólo las pueden llevar los que se dedican a la brujería.
+
+ESTADÍSTICAS:
+
+Habilidades Equipado:
+ Resistencia al frío: +40%
+
+Peso: 3
+Sólo lo puede usar:
+ Mago~
+@190 = ~Túnica de mago de resistencia al fuego~
+@191 = ~Debido a la naturaleza sumamente imprevisible de la mayor parte de la magia, las túnicas de mago de resistencia al fuego son habituales entre los jóvenes acólitos y sus tutores magos. Estas túnicas sólo las pueden llevar los magos.
+
+ESTADÍSTICAS:
+
+Habilidades Equipado:
+ Resistencia al fuego: +40% 
+Peso: 3
+Sólo lo puede usar:
+ Mago~
+@192 = ~Túnica de mago de resistencia a la electricidad~
+@193 = ~Como se ven con menos frecuencia que otras túnicas de mago, las de resistencia a la electricidad se pueden considerar algo poco común. Algunos paranoicos llevan estas túnicas buscando protección de tormentas, pero la mayoría las llevan magos que buscan protegerse de las intrigas de otros de su clase. Al igual que las demás túnicas de este tipo, la túnica de mago de resistencia a la electricidad sólo la pueden llevar los que se dediquen a la brujería.
+
+ESTADÍSTICAS:
+
+Habilidades Equipado:
+ Resistencia a la electricidad: +40%
+
+Peso: 3
+Sólo lo puede usar:
+ Mago~
+@194 = ~Túnica del Pícaro~
+@195 = ~Esta túnica ha sido especialmente encantada para aquellas necesidades eclécticas de los magos multiclase. La favorita entre los ladrones-mago, la túnica del pícaro ha sido encantada para cubrir a su portador de las espadas y los venenos de cualquier callejón oscuro. Como otras de su tipo, está restringido su uso a los estudiantes de la magia arcana
+
+ESTADÍSTICAS:
+
+Habilidades Equipado:
+ Inmunidad al apuñalamiento por la espalda
+ Tiradas de Salvación: +2 contra veneno
+
+Peso: 4
+Sólo lo puede usar:
+ Mago~
+@196 = ~Túnica del Viajero~
+@197 = ~Esta túnica de mago ha sido perfeccionada para que la utilice cualquier mago excursionista e itinerante que viaje de ciudad en ciudad. Sus encantamientos protegen de la flecha del bandido sino que también permiten al portador moverse con extraordinaria rapidez sin esfuerzo. Como las demás túnicas de su tipo, la túnica del viajante sólo la pueden llevar los magos.
+
+ESTADÍSTICAS:
+
+Habilidades Equipado:
+ Velocidad de movimiento: +2
+ Clase de Armadura: +2 contra misiles
+ Tiradas de Salvación: +2 contra aliento
+
+Peso: 4
+Sólo lo puede usar:
+ Mago~
+@198 = ~Túnica del aventurero~
+@199 = ~Diseñada por Vangerdahast, mago real del Rey Zoun IV de Cormyr, quien fue un exitoso aventurero de gran fama. Una razón por la que fue popular en el círculo de magia fue la creación de la túnica del aventurero. Los magos tienen siempre que luchar con las limitaciones a su alrededor para usar su habilidad en convocar magia arcana. Estas túnicas dan al mago una mejor posibilidad de sobrevivir a encuentro con guerreros cuerpo a cuerpo absorbiendo la mayor parte de los golpes.
+
+ESTADÍSTICAS:
+
+Habilidades Equipado:
+ Resistencia a los daños físicos: +10%
+
+Peso: 4
+Sólo lo puede usar:
+ Mago~
+@200 = ~Túnica de Acero
+La Túnica de Acero fue especialmente diseñada por Melicamp, el mago aprendiz de Beregost, como gratitud hace <CHARNAME> por salvarle de terminar en el estómago de un hambriento lobo cuando accidentalmente se transformó a sí mismo en pollo. La extensa investigación del mago menor ha hecho en los diversos trajes que habéis dado un manto de un poder extraordinario, digno de igualar al mismísimo Thalantyr.
+
+Estos trajes pesados asumen parte de la resistencia y durabilidad del acero Drow sin el defecto de la desintegración en polvo bajo la luz del sol. También proporciona al portador una resistencia a algunas de las magias elementales utilizadas en los reinos, desarrollando verdaderamente un formidable mago a ser considerado. 
+
+ESTADÍSTICAS:
+
+Clase de Armadura: 6
+Tiradas de Salvación: +1
+Resistencia Mágica: +20%
+Resistencia al fuego: +30% 
+Resistencia al frío: +30% 
+Resistencia a la electricidad: +30% 
+Peso:  9
+Sólo lo puede usar:
+Mago (simple, dual, o multiclase)~
+@201 = ~Túnica Menor de Resistencia
+La Túnica Menor de Resistencia fue especialmente diseñada por Melicamp, el mago aprendiz de Beregost, como gratitud hace <CHARNAME> por salvarle de terminar en el estómago de un hambriento lobo cuando accidentalmente se transformó a sí mismo en pollo. La extensa investigación del mago menor ha hecho en los diversos trajes que habéis dado un manto de un poder extraordinario.
+
+Estos trajes pesados asumen parte de la resistencia y durabilidad del acero Drow sin el defecto de la desintegración en polvo bajo la luz del sol. También proporciona al portador una resistencia a algunas de las magias elementales utilizadas en los reinos.
+
+ESTADÍSTICAS:
+
+Clase de Armadura:  7
+Resistencia al fuego:  30% 
+Resistencia al frío:  30% 
+Resistencia a la electricidad:  30% 
+Peso:  9
+Sólo lo puede usar:
+Mago (simple, dual, o multiclase)~
+@202 = ~Túnica del Erudito
+La Túnica del Erudito fue especialmente diseñada por Melicamp, el mago aprendiz de Beregost, como gratitud hace <CHARNAME> por salvarle de terminar en el estómago de un hambriento lobo cuando accidentalmente se transformó a sí mismo en pollo. La extensa investigación del mago menor ha hecho en los diversos trajes que habéis dado un manto de un poder extraordinario.
+
+Estos trajes pesados asumen parte de la resistencia y durabilidad del acero Drow sin el defecto de la desintegración en polvo bajo la luz del sol. También proporciona al portador una resistencia a algunas de las magias elementales utilizadas en los reinos.
+
+ESTADÍSTICAS:
+
+Clase de Armadura:  7
+Tirada de Salvación:  +1
+Resistencia Mágica:  10%
+Velocidad de Movimiento: +2
+Peso:  9
+Sólo lo puede usar:
+Mago (simple, dual, o multiclase)~

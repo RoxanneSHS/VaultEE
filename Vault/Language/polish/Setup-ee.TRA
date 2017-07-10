@@ -1,0 +1,1254 @@
+@31  = ~Amulet~
+@32  = ~Talizman Czarnej Blizny~
+@33  = ~Naszyjniki to ozdobna, metalowa bi¿uteria zwykle wykonana ze srebra, z³ota, platyny lub innych cennych metali, w których dodatkowo osadzone s¹ kamienie szlachetne. Naszyjnik jest zawsze noszony na szyi i mo¿e mieæ bardzo ró¿n¹ d³ugoœæ.~
+@34  = ~Ten tajemniczy talizman zosta³ wykonany przez Z³odziei Cienia z Amn dla jednego z przywódców gildii Alatosa "Czarnej Blizny". Talizman podnosi zrêcznoœæ osoby, która go nosi, a tak¿e zapewnia zwiêkszone umiejêtnoœci z³odziejskie oraz zdolnoœæ widzenia w ciemnoœciach. To, w jaki sposób znalaz³ siê w twoich rêkach dowodzi, ¿e wœród z³odziei rzeczywiœcie nie ma honoru.
+
+PARAMETRY:
+
+Specjalne:
+ +1 do Zrêcznoœci
+ Zapewnia nosz¹cemu infrawizjê
+ Pozwala rzucaæ Niewidzialnoœæ na 10 tur (liczba ³adunków ograniczona)
+ +5% do Znajdowania pu³apek
+ +5% do Kradzie¿y kieszonkowej
+ +5% do Otwierania zamków
+ +5% do Krycia siê
+
+Mo¿e u¿ywaæ:
+ Z³odziej (jedno-, dwu- i wieloklasowiec)~
+@35  = ~Pas~
+@36  = ~Pas si³y wzgórzowego olbrzyma~
+@37  = ~Pasy s¹ podobne do zwyk³ych pasków. W odró¿nieniu jednak od tych ostatnich, nie s³u¿¹ podtrzymywaniu spodni i innych imponderabiliów, ale wiesza siê na nich torby, sakwy, pochwy itp.
+
+PARAMETRY:
+
+Waga: 2~
+@38  = ~Ten zwyczajnie wygl¹daj¹cy pas czyni nosz¹c¹ go osobê siln¹ jak olbrzym wzgórzowy, ale nie zwiêksza jej rozmiarów. Wielu aroganckich wojowników zosta³o zaskoczonych przez znacznie mniejszych przeciwników o powa¿nej sile. Doœæ czêsto przyczyn¹ tego jest pas podobny do tego.
+
+PARAMETRY:
+
+Si³a: 19
+
+Nie mo¿e u¿ywaæ:
+ Mag
+~
+@39  = ~Maczuga~
+@40  = ~Gniew Dageida~
+@41  = ~Wiêkszoœæ maczug to po prostu kawa³ki twardego drewna, od strony uchwytu wê¿sze, zaœ po przeciwnej szersze. Ta prosta broñ by³a u¿ywana od czasów, gdy cz³owiek zacz¹³ stosowaæ narzêdzia. Ka¿dy mo¿e znaleŸæ gdzieœ mocny kawa³ek drewna i zacz¹æ nim machaæ, st¹d te¿ popularnoœæ i powszechnoœæ maczug.
+
+PARAMETRY:
+
+Obra¿enia: 1K6
+Typ obra¿eñ: obuchowe
+Waga: 3
+OpóŸnienie: 4
+Rodzaj bieg³oœci: maczuga
+Typ broni: 1-rêczna
+Wymagana si³a: 5
+Nie mo¿e u¿ywaæ:
+ Mag
+~
+@42  = ~Maczuga +1: 'Gniew Dageida'
+Dageid, barbarzyñca z jednego z plemion Uthgardtu, by³ przera¿aj¹cym dzikusem, który podró¿owa³ przez Krainy siej¹c zamêt i niszcz¹c wszystko, co stanê³o na jego drodze. Jego okrutne postêpki znalaz³y swój koniec w krwawej zasadzce urz¹dzonej przez szlachciców z Silverymoon. Plotka g³osi, ¿e podczas walki maczuga nadal potrafi w pewnych okolicznoœciach wyzwoliæ gniew martwego barbarzyñcy i zabiæ nieszczêsn¹ ofiarê kilkoma uderzeniami.
+
+PARAMETRY:
+
+Obra¿enia: 1K6 +1
+TraK0: +1
+Typ obra¿eñ: obuchowe
+Specjalne:
+ +1 do Si³y
+ 50% szansa, ¿e cel bêdzie musia³ wykonaæ udany rzut obronny przeciw œmierci albo otrzyma dodatkowo 10 pkt obra¿eñ obuchowych 
+Waga: 2
+OpóŸnienie: 3
+Rodzaj bieg³oœci: maczuga
+Typ broni: 1-rêczna
+Wymagana si³a: 3
+Nie mo¿e u¿ywaæ:
+ Mag
+~
+@43  = ~Wekiera~
+@44  = ~Szafarz œmierci~
+@45  = ~Wekiera jest w prostej linii spadkobierczyni¹ zwyk³ej maczugi. Jest to po prostu drewniany trzonek, na którym zosta³a osadzona kamienna lub metalowa g³owica, uzbrojona w kolce, æwieki lub inne ostre zakoñczenia.
+
+
+PARAMETRY:
+
+Obra¿enia: 1K6 +1
+Typ obra¿eñ: obuchowe
+Waga: 8
+OpóŸnienie: 7
+Rodzaj bieg³oœci: wekiera
+Typ broni: 1-rêczna
+Wymagana si³a: 10
+Nie mo¿e u¿ywaæ:
+ Druid
+ Mag
+ Z³odziej
+~
+@46  = ~Wekiera +1: 'Szafarz œmierci'
+Orê¿ ten emanuje czystym chaosem i z tego powodu okazuje siê byæ nieu¿yteczny dla tych, którzy uwa¿aj¹ siê za pos³usznych prawu. Pulsuje nieziemskimi pr¹dami, jak gdyby czerpa³ swoj¹ energiê z najgwa³towniejszych burz. Po dziœ dzieñ nie wiadomo kiedy stworzono tê wekierê, kto obdarzy³ j¹ jej w³aœciwoœciami ani do jakich celów s³u¿y³a. Przypuszcza siê, ¿e mia³a byæ to broñ zdolna do natychmiastowego zabicia przeciwnika przy pomocy nieskoñczonych wy³adowañ elektrycznych. Twórca wekiery nie by³ jednak w stanie okie³znaæ jej mocy pomimo wyposa¿enia jej w pewn¹ magiczn¹ ochronê przed ¿ywio³em, którym siê pos³uguje. Dlatego te¿ przesy³a ona równie silne wy³adowania w kierunku tego, kto jej u¿ywa, w pe³ni zas³uguj¹c na swoj¹ nazwê.
+
+PARAMETRY:
+
+Obra¿enia: 1K6 +2
+TraK0: +1
+Typ obra¿eñ: obuchowe
+Specjalne:
+ +10% do odpornoœci na elektrycznoœæ
+ 5% szansa na natychmiastowe uœmiercenie ofiary i zadanie w³aœcicielowi 6K6 obra¿eñ od elektrycznoœci (po³owa po udanym rzucie obronnym przeciw œmierci)
+Waga: 4
+OpóŸnienie: 4
+Rodzaj bieg³oœci: wekiera
+Typ broni: 1-rêczna
+Wymagana si³a: 10
+Nie mo¿e u¿ywaæ:
+ Postaæ praworz¹dna
+ Druid
+ Mag
+ Z³odziej
+~
+@47  = ~Zatrute je¿yny~
+@48  = ~Maczuga +1: 'Zatrute je¿yny'
+Jest to œmiercionoœna broñ zaprojektowana przez Druidów Cienia, by chroniæ lasy i mieszkaj¹ce w nich stworzenia, jak równie¿ by karaæ tych, którzy oœmieliliby siê wyrz¹dziæ im krzywdê. Przy ka¿dym trafieniu przeciwnik zostaje uderzony przez dwa lub wiêcej zatrute kolce ga³êzi tej zaklêtej broni, co wzmacnia dzia³anie trucizny.
+
+PARAMETRY:
+
+Obra¿enia: 1K6 +1
+TraK0: +2
+Typ obra¿eñ: obuchowe
+Specjalne:
+ Trafiony przeciwnik musi wykonaæ udany rzut obronny przeciw truciŸnie z modyfikatorem +2 albo bêdzie otrzymywa³ po 1 pkt obra¿eñ od trucizny przez 8 sekund 
+Waga: 3
+OpóŸnienie: 3
+Rodzaj bieg³oœci: maczuga
+Typ broni: 1-rêczna
+Wymagana si³a: 3
+Nie mo¿e u¿ywaæ:
+ Mag
+~
+@49  = ~Cep bojowy~
+@50  = ~Chaotyczna wœciek³oœæ~
+@51  = ~Cep bojowy sk³ada siê z solidnego drzewca, s³u¿¹cego za uchwyt, do którego przymocowany jest b¹dŸ gruby metalowy prêt, b¹dŸ nabijany ostrymi kawa³kami metalu lub kamieni dr¹g, lub te¿ ¿elazna kula ze szpikulcami. Te dwa elementy ³¹czono zwykle krótkim ³añcuchem lub mocnymi rzemieniami. Broñ ta wywodzi siê od cepów u¿ywanych do m³ócenia zbo¿a.
+
+PARAMETRY:
+
+Obra¿enia: 1K6 +1
+Typ obra¿eñ: obuchowe
+Waga: 15
+OpóŸnienie: 7
+Rodzaj bieg³oœci: cep bojowy/morgensztern
+Typ broni: 1-rêczna
+Wymagana si³a: 13
+Nie mo¿e u¿ywaæ:
+ Druid
+ Mag
+ Z³odziej~
+@52  = ~Cep bojowy +2: 'Chaotyczna wœciek³oœæ'
+Stworzony przez pewnego duergara jako orê¿ wojenny, cep 'Chaotyczna wœciek³oœæ' przeby³ d³ug¹ historiê krwawych wojen pomiêdzy szarymi krasnoludami i ich wrogami. Cep zosta³ zrobiony ze wzmocnionego drewnianego uchytu, zaœ jego ¿elazna g³owica z kolcami zosta³a zaklêta, by zadawaæ dodatkowe obra¿enia przy trafieniu.
+
+PARAMETRY:
+
+Obra¿enia: 1K6 +3,
+TraK0: +2
+Typ obra¿eñ: obuchowe
+Specjalne:
+ +3 pkt obra¿eñ k³utych
+Waga: 11
+OpóŸnienie: 5
+Rodzaj bieg³oœci: cep bojowy/morgensztern
+Typ broni: 1-rêczna
+Wymagana si³a: 13
+Nie mo¿e u¿ywaæ:
+ Druid
+ Mag
+ Z³odziej
+~
+@53  = ~Usypiacz~
+@54  = ~Wekiera +2: 'Usypiacz'
+Broñ nale¿a³a do Ssitalca, elfa o nietypowym dla jego rasy z³ym charakterze, znanego jako Sprzedawca Niewolników z Wybrze¿a Mieczy. Do chwili swojej œmierci wiele lat temu, Ssitalc dowodzi³ du¿¹ grup¹ ludzkich, krasnoludzkich i gnomich rozbójników, u¿ywaj¹c 'Usypiacza', by trzymaæ ich w ryzach. Orê¿ potrafi obezw³adniæ ka¿da istotê sprawiaj¹c, ¿e pogr¹¿a siê ona w g³êbokim œnie.
+
+PARAMETRY:
+
+Obra¿enia: 1K6 +3
+TraK0: +2
+Typ obra¿eñ: obuchowe
+Specjalne:
+  Przy ka¿dym trafieniu ofiara musi wykonaæ rzut obronny przeciw truciŸnie z modyfikatorem +3 lub zostanie uœpiona na 12 sekund.
+Waga: 6
+OpóŸnienie: 4
+Rodzaj bieg³oœci: wekiera
+Typ broni: 1-rêczna
+Wymagana si³a: 10
+Nie mo¿e u¿ywaæ:
+  Druid
+  Mag
+  Z³odziej
+~
+@55  = ~Ksiêga Staro¿ytnej Wiedzy~
+@56  = ~Tê ksiêgê da³ ci badacz Zernan w zamian za Historiê Tomu z Netheril.
+Tekst ksiêgi jest kompletnie nie do odczytania, a ponadto opiera siê próbom jego zrozumienia za pomoc¹ magii czy innych œrodków. ~
+@57  = ~Tê ksiêgê da³ ci badacz Zernan w zamian za Historiê Tomu z Netheril. Jej wartoœæ wynosi rzekomo 10000 sztuk z³ota lub nawet wiêcej.
+Tekst ksiêgi jest kompletnie nie do odczytania, a ponadto opiera siê próbom jego zrozumienia za pomoc¹ magii czy innych œrodków. ~
+@58  = ~Znoszone buty~
+@59  = ~Buty lisa~
+@60  = ~Buty s¹ zwykle rêcznie wyrabiane przez szewców. Zwyk³e buty s¹ robione z u¿yciem jakiegoœ ogólnego modelu stopy, ale te dobre wykonywane s¹ na zamówienie i dopasowywane do stóp zamawiaj¹cego.
+
+PARAMETRY:
+
+Waga: 4~
+@61  = ~Niewiele wiadomo o tych magicznych butach z wyj¹tkiem tego, ¿e pochodz¹ z pó³nocnego regionu Faerunu zwanego Grzbietem Œwiata. Powiadaj¹, ¿e zdoby³a je grupa dzielnych poszukiwaczy przygód, którzy podró¿owali przez te zdradliwe, smagane lodowatym wiatrem góry d¹¿¹c do zniszczenia potê¿nego z³a.
+
+PARAMETRY:
+
+Specjalne:
+ +1 do Klasy Pancerza
+ Zwiêkszaj¹ o 40% prêdkoœæ poruszania siê
+Waga: 3  ~
+@62  = ~Krótki ³uk~
+@63  = ~Widmowy ³uk~
+@64  = ~£uki krótkie zosta³y wprowadzone jako pierwsze, choæ na pocz¹tku nie by³y tak nazywane. Kategoria ta obejmuje wszystkie rodzaje tej broni, które nie s¹ ³ukami d³ugimi. Ich drzewce maj¹ zazwyczaj oko³o 1,5 metra d³ugoœci. W ci¹gu lat próbowano zwiêkszyæ zasiêg ³uków. Osi¹gano to na dwa sposoby: zwiêkszaj¹c ich d³ugoœæ lub czyni¹c bardziej sprê¿ystymi. £uki nale¿¹ce do pierwszej kategorii nazwano ³ukami d³ugimi.
+
+PARAMETRY:
+
+Waga: 2
+OpóŸnienie: 6
+Rodzaj bieg³oœci: krótki ³uk
+Typ broni: 2-rêczna
+Wymagana si³a: 3
+
+Nie mo¿e u¿ywaæ:
+ Druid
+ Kap³an
+ Mag
+~
+@65  = ~Krótki ³uk +1: 'Widmo'
+Przez d³ugi czas uwa¿any za rzecz istniej¹c¹ tylko w legendach b¹dŸ niewiarygodnych opowieœciach starych poszukiwaczy przygód, ³uk 'Widmo' zosta³ ponoæ stworzony w czeluœciach odleg³ej, mistycznej krainy i wrêczony stra¿nikom strzeg¹cym przejœæ pomiêdzy sferami. £uk jako taki by³ u¿ywany do zapobiegania niepo¿¹danym podró¿om nikczemnych i z³oœliwych istot, które zagra¿a³y kruchej równowadze pomiêdzy porz¹dkiem i chaosem.
+
+Mówi siê, ¿e przy ka¿dym naci¹gniêciu eterycznej ciêciwy tego ³uku otwiera siê portal miêdzysferowy i za ka¿dym razem tworzona jest nowa strza³a. Sprawia to, ¿e w³aœciciel ³uku posiada dostêp do ich nieskoñczonej iloœci. £uk zapewnia te¿ u¿ytkownikowi uczucie lepszego panowania nad broni¹, na krótko zwiêkszaj¹c jego celnoœæ strza³u. Jednoczeœnie jednak pomniejsza si³ê strzelaj¹cego, kieruj¹c jego energiê do sfery, w której broñ zosta³a stworzona.
+
+PARAMETRY:
+
+Obra¿enia: 1K3 +1
+TraK0: +1
+Specjalne:
+ +1 do Zrêcznoœci
+ -1 do Si³y
+ Nie potrzebuje amunicji
+Waga: 3
+OpóŸnienie: 4
+Rodzaj bieg³oœci: krótki ³uk
+Typ broni: 2-rêczna
+Wymagana si³a: 6 
+Nie mo¿e u¿ywaæ:
+ Druid
+ Kap³an
+ Mag
+~
+@66  = ~Pocisk~
+@67  = ~Pocisk ognia~
+@68  = ~Pocisk jest zwyk³ym, okr¹g³ym, dobrze wywa¿onym kamieniem.
+
+PARAMETRY:
+
+Obra¿enia: 1K4 +1
+Typ obra¿eñ: pocisk (k³ute) 
+Waga: 0
+Wyrzutnia: proca~
+@69  = ~Ten rzadko spotykany, dobrze wywa¿ony pocisk zosta³ magicznie ulepszony tak, by sta³ siê celniejszy i bardziej niebezpieczny. Zawarto w nim równie¿ magiczn¹ moc, by wybucha³ niewielkim p³omieniem przy uderzeniu, co we wprawnych rêkach czyni go szczególnie niebezpiecznym pociskiem.
+
+PARAMETRY:
+
+Obra¿enia: 1K4 +3, +1K4 obra¿eñ od ognia (udany rzut obronny przeciw czarom neguje)
+TraK0: +2
+Typ obra¿eñ: pocisk (k³ute) 
+Waga: 0
+Wyrzutnia: proca~
+@70  = ~Kolczuga~
+@71  = ~Kolczuga drowów +2~
+@72  = ~Kolczuga jest wykonana z przeplataj¹cych siê metalowych kó³eczek. Zawsze nak³ada siê j¹ na kubrak z pikowanego materia³u; ma to zapobiec bolesnym otarciom i z³agodziæ si³ê ciosów.
+
+
+PARAMETRY:
+
+Klasa Pancerza: 5
+Waga: 40
+Wymagana si³a: 8
+
+Nie mo¿e u¿ywaæ:
+ Druid
+ Mag
+ Z³odziej
+~
+@73  = ~Kolczuga drowów +2
+Kolczuga drowów to elfia kolczuga wykonana z unikalnych metali spotykanych jedynie w Podmroku.
+
+PARAMETRY:
+
+Klasa Pancerza: 3
+Waga: 10
+Wymagana si³a: 8
+
+Nie mo¿e u¿ywaæ:
+ Druid
+~
+@74  = ~Magiczna szata~
+@75  = ~Stalowa szata~
+@76  = ~Od czasów Netheril magowie nauczyli siê obdarzaæ szerok¹ gamê zwyk³ych otaczaj¹cych ich przedmiotów czarodziejskimi mocami. Szczególnie upodobali sobie zwyk³e szaty, gdy¿ s¹ one doœæ lekkie, wszêdzie dostêpne i ³atwo ch³on¹ magiê, staj¹c siê idealnym wyposa¿eniem czarodzieja. Magiczne pochodzenie przyczynia siê jednak¿e do faktu, i¿ zaczarowane szaty mog¹ nosiæ tylko magowie.
+
+PARAMETRY:
+
+Waga: 9
+Mo¿e u¿ywaæ:
+ Mag (jedno-, dwu- i wieloklasowiec)~
+@77  = ~Stalowa szata
+Stalowa szata zosta³a wykonana dla ciebie przez Melicampa, ucznia maga z Beregostu, w ramach wdziêcznoœci za uratowanie go ze szponów agresywnego wilka, gdy Melicamp przypadkowo zamieni³ siê w kurczaka. Rozleg³e badania, jakie ten pocz¹tkuj¹cy mag wykona³ na ró¿ych dostarczonych mu szatach, zaowocowa³y stworzeniem potê¿nej szaty, godnej samego Thalantyra.
+
+Te ciê¿ka szata przejê³a czêœæ odpornoœci i wytrzyma³oœci stali drowów, jednak¿e bez jej wady w postaci rozpadania siê w py³ pod wp³ywem œwiat³a s³onecznego. Zapewnia równie¿ nosz¹cemu czêœciow¹ odpornoœæ na efekty zaklêæ opartych na ¿ywio³ach sprawiaj¹c, ¿e staje siê on magiem, z którym nale¿y siê liczyæ.
+
+PARAMETRY:
+
+Klasa Pancerza: 6
+Specjalne:
+ +1 do rzutów obronnych
+ +20% do odpornoœci na magiê
+ +20% do odpornoœci na ogieñ
+ +20% do odpornoœci na ch³ód
+ +20% do odpornoœci na elektrycznoœæ
+Waga: 9
+Mo¿e u¿ywaæ tylko:
+ Mag (jedno-, dwu- i wieloklasowiec)
+~
+@78  = ~Pomniejsza szata odpornoœci~
+@79  = ~Pomniejsza szata odpornoœci
+Pomniejsza szata odpornoœci zosta³a wykonana dla ciebie przez Melicampa, ucznia maga z Beregostu, w ramach wdziêcznoœci za uratowanie go ze szponów agresywnego wilka, gdy Melicamp przypadkowo zamieni³ siê w kurczaka. Rozleg³e badania, jakie ten pocz¹tkuj¹cy mag wykona³ na ró¿ych dostarczonych mu szatach, zaowocowa³y stworzeniem potê¿nej szaty, godnej samego Thalantyra.
+
+Te ciê¿ka szata przejê³a czêœæ odpornoœci i wytrzyma³oœci stali drowów, jednak¿e bez jej wady w postaci rozpadania siê w py³ pod wp³ywem œwiat³a s³onecznego. Zapewnia równie¿ nosz¹cemu czêœciow¹ odpornoœæ na efekty zaklêæ opartych na ¿ywio³ach.
+
+PARAMETRY:
+
+Klasa Pancerza: 7
+Specjalne:
+ +5% do odpornoœci na magiê
+ +20% do odpornoœci na ogieñ
+ +20% do odpornoœci na ch³ód
+ +20% do odpornoœci na elektrycznoœæ
+Waga: 9
+Mo¿e u¿ywaæ tylko:
+ Mag (jedno-, dwu- i wieloklasowiec)
+~
+@80  = ~Szata ucznia~
+@81  = ~Szata ucznia
+Szata ucznia zosta³a wykonana dla ciebie przez Melicampa, ucznia maga z Beregostu, w ramach wdziêcznoœci za uratowanie go ze szponów agresywnego wilka, gdy Melicamp przypadkowo zamieni³ siê w kurczaka. Rozleg³e badania, jakie ten pocz¹tkuj¹cy mag wykona³ na ró¿ych dostarczonych mu szatach, zaowocowa³y stworzeniem potê¿nej szaty, godnej samego Thalantyra.
+
+Te ciê¿ka szata przejê³a czêœæ odpornoœci i wytrzyma³oœci stali drowów, jednak¿e bez jej wady w postaci rozpadania siê w py³ pod wp³ywem œwiat³a s³onecznego. Zapewnia równie¿ nosz¹cemu czêœciow¹ odpornoœæ na efekty zaklêæ opartych na ¿ywio³ach.
+
+PARAMETRY:
+
+Klasa Pancerza: 7
+Specjalne:
+ +1 do rzutów obronnych
+ +5% do odpornoœci na magiê
+Waga: 9
+Mo¿e u¿ywaæ tylko:
+ Mag (jedno-, dwu- i wieloklasowiec)
+~
+@82  = ~He³m~
+@83  = ~Korona upad³ych w³adców~
+@84  = ~Ten rodzaj otwartego he³mu, wykonywany z metalu lub wzmocnionej skóry, stanowi ochronê dla g³owy, jednak zwykle bez os³aniania twarzy i karku. He³m jest bogato zdobiony i dziêki temu mo¿e osi¹gn¹æ wy¿sz¹ cenê w sklepie.
+
+PARAMETRY:
+
+Klasa pancerza: bez zmian
+Specjalne:
+ Chroni przed trafieniami krytycznymi
+Waga: 2
+Nie mo¿e u¿ywaæ:
+ Mag
+ Bard
+ Z³odziej
+~
+@85  = ~Odkryta po raz pierwszy w staro¿ytnych ruinach na po³udnie od Amn, ta korona by³a œwiadkiem œwietnoœci i upadków niezliczonych imperiów. Cieszy³a siê szacunkiem zarówno jako symbol pokoju, jak i œrodek wypowiadania i prowadzenia wojen. Po raz ostatni widziano j¹ w rêkach bezwzglêdnego tyrana uciekaj¹cego ze swego chyl¹cego siê ku upadkowi królestwa w stronê Morza Mieczy, by tam zaton¹æ w jego wzburzonych wodach.
+
+PARAMETRY:
+
+Klasa Pancerza: +2
+TraK0: +1
+Specjalne:
+ Chroni przed trafieniami krytycznymi
+ +20% do odpornoœci na magiê
+Waga: 2
+Nie mo¿e u¿ywaæ:
+ Z³odziej
+~
+@86  = ~Nierozszyfrowana notatka~
+@87  = ~z..., tAk jak opisali to nasi pracodawcy... spotkaj siê ze mN¹ na obrze¿ach jarmarku na pó³noc od wzgórza, a przeDyskutujemy jeszcze kwestIê wyNagrodzenia.
+N~
+@88  = ~Elfia kolczuga +2~
+@89  = ~Elfia kolczuga +2
+Uwa¿a siê, ¿e tego rodzaju znakomite elfickie zbroje by³y wykowane w  czasie Z³otej Ery panuj¹cej w stosunkach elfów z D³oni Seldarine oraz krasnoludów z G³êbi Dorna. Wykonana z przeplataj¹cych siê metalowych kó³eczek, ta lekka elfia kolczuga nie krêpuje ruchów i zapewnie niewielk¹ ochronê przed magi¹.
+
+PARAMETRY:
+
+Klasa Pancerza: 3
+Specjalne:
+ +10% do odpornoœci na magiê
+Waga: 25
+Wymagana si³a: 5
+Nie mo¿e u¿ywaæ:
+ Mag
+ Mnich
+ Druid
+~
+@90  = ~Kolczuga z Podmroku +1~
+@91  = ~Kolczuga z Podmroku +1
+Ta misternie wykonana elfia kolczuga jest zrobiona z illitu, rzadkiej rudy wystêpuj¹cej w najbardziej niedostêpnych zakamarkach Faerunu, i jako taka promieniuje siln¹ magiczna aur¹. Zawi³e wzory i runy wytrawione na powierzchni zbroi wskazuj¹ na to, ¿e zosta³a ona wykonana specjalnie dla kap³anek drowów, jako ¿e pozwala ona nosz¹cemu na bli¿sze zespolenie umys³u z bóstwami i pó³bogami Krain. Chocia¿ kolczuga by³a wysoko ceniona w Podmroku, to dla oczu naziemców mo¿e wydawaæ siê odpychaj¹ca i ten, kto j¹ za³o¿y cierpi tego konsekewncje.
+
+PARAMETRY:
+
+Klasa Pancerza: 4
+Specjalne:
+ M¹droœæ: 18
+ -2 do Charyzmy
+ +33% do odpornoœci na magiê
+Waga: 25
+Wymagana si³a: 5
+Nie mo¿e u¿ywaæ:
+ Mag
+ Z³odziej
+ Mnich
+ Druid
+~
+@92  = ~M³ot bojowy~
+@93  = ~Wp³yw Lathandera~
+@94  = ~Konni rycerze nie mog¹ efektywnie u¿ywaæ d³ugich broni drzewcowych, co sprawi³o, ¿e wiele rodzajów broni zosta³o zaopatrzonych w krótsze drzewce, aby mog³y byæ u¿ywane jednorêcznie. Wekiery i cepy bojowe s¹ dwoma tego typu rodzajami broni drzewcowych - m³ot bojowy kolejnym. Ca³y jest wykonany ze stali, z dyskami, chroni¹cymi i wzmacniaj¹cymi uchwyt. Dyski te s¹ ma³e i metalowe, czêsto uk³adane w dekoracyjne kszta³ty. Drzewiec ma oko³o 60 cm d³ugoœci.
+
+PARAMETRY:
+
+Obra¿enia: 1K4 +1
+Typ obra¿eñ: obuchowe
+Waga: 6
+OpóŸnienie: 4
+Rodzaj bieg³oœci: m³ot bojowy
+Typ broni: 1-rêczna
+Wymagana si³a: 9
+
+Nie mo¿e u¿ywaæ:
+ Druid
+ Mag
+ Z³odziej
+~
+@95  = ~Ta œwiêta broñ, niegdyœ bêd¹ca m³otem o niewielkim umagicznieniu, zosta³a obdarzona b³ogos³awieñstwem Lathandera przez Kap³ana Œwitu Brana i wrêczona ci za zapobie¿enie wypuszczeniu na Wybrze¿e Mieczy pomniejszego demona o imieniu Lestraubimat. M³ot obdarza w³aœciciela zadziwiaj¹c¹ si³, a nawet zapewnia niewielk¹ ochron¹ przed magi¹. Tylko osoby o czystym sercu i pe³ne niezachwianej wiary mog¹ pos³ugiwac siê tym m³otem.
+
+PARAMETRY:
+
+Obra¿enia: 1K4 +3
+TraK0: +2
+Typ obra¿eñ: obuchowe
+Specjalne:
+ +1 do Si³y
+ +20% do odpornoœci na magiê
+Waga: 5
+OpóŸnienie: 3
+Rodzaj bieg³oœci: m³ot bojowy
+Typ broni: 1-rêczna
+Wymagana si³a: 9
+Nie mo¿e u¿ywaæ:
+ Postaæ o z³ym charakterze
+ Druid
+ Mag
+ Z³odziej
+~
+@96  = ~Kapelusz~
+@97  = ~Kapelusz ³otrzyka~
+@98  = ~Filcowy kapelusz to ulubione nakrycie bardów i im podobnych ³otrzyków, mimo ¿e nie oferuje zbyt wielkiej ochrony.
+
+PARAMETRY:
+
+Waga: 2
+Mo¿e u¿ywaæ:
+ Bard
+ Z³odziej
+~
+@99  = ~Filcowy kapelusz to ulubione nakrycie bardów i im podobnych ³otrzyków, mimo ¿e nie oferuje zbyt wielkiej ochrony. Ten kapelusz jednak¿e zosta³ zaklêty i choæ wygl¹da na równie nietrwa³y jak zwyk³a czapka z filcu czy tkaniny, posiada wystarczaj¹c¹ wytrzyma³oœæ, by przetrwaæ solidne uderzenie.
+
+PARAMETRY:
+
+Klasa pancerza: bez zmian
+Specjalne:
+ Chroni przed trafieniami krytycznymi
+ +1 do rzutów obronnych
+Waga: 2
+Mo¿e u¿ywaæ:
+ Bard
+ Z³odziej
+~
+@100 = ~He³m ochrony~
+@101 = ~He³m ochrony: 'Dar Pokoju'
+Ten he³m - ceniony za szlacheckie "pochodzenie" oraz za moce, którymi obdarza w³aœciciela - mia³ byæ zwyk³ym darem. W tych dniach nie zbli¿a³o siê ¿adne niebezpieczeñstwo czy z³o, które trzeba by³oby pokonaæ. Po prostu jeden przyjaciel zapragn¹³ wrêczyæ dar innemu. A prezentem mog³aby równie dobrze byæ ciekawa ksiêga lub butla wina. Niestety, poszukiwacze przygód zwykli obdarzaæ siê bardziej praktycznymi darami. He³m bra³ udzia³ w wielu bitwach i zawsze pamiêtano o jego skutecznoœci.
+Taerom "Grzmi¹cy M³ot" Fuiruim ulepszy³ ten he³m, by zapewnia³ lepsz¹ ochronê nosz¹cemu.
+
+PARAMETRY:
+
+Klasa pancerza: +1
+Specjalne:
+ +1 do rzutów obronnych
+ +20% do odpornoœci na elektrycznoœæ
+ +20% do odpornoœci na zimno
+ +20% do odpornoœci na ogieñ
+ Chroni przed trafieniami krytycznymi
+Waga: 3
+Nie mo¿e u¿ywaæ:
+ Mag
+ Bard
+ Z³odziej
+~
+@102 = ~He³m infrawizji~
+@103 = ~He³m infrawizji: 'Oczy Prawdy'
+Babette Maelestrom by³a swego rodzaju poszukiwaczem przygód, a he³m ten mia³ pomagaæ jej w trakcie niebezpiecznych wypraw. Byæ mo¿e pragnê³a ona póŸniej wykorzystaæ zdobyte bogactwo do zwiêkszenia jego mocy, ale najpewniej ca³y czas myœla³a o swym przenikliwym wzroku, a nie o czymœ innym.
+Taerom "Grzmi¹cy M³ot" Fuiruim ulepszy³ ten he³m, by zapewnia³ lepsz¹ ochronê nosz¹cemu.
+
+PARAMETRY:
+
+Klasa pancerza: +1
+Specjalne:
+ Chroni przed trafieniami krytycznymi
+ Zapewnia nosz¹cemu infrawizjê na odleg³oœæ 40 metrów
+Waga: 3
+Nie mo¿e u¿ywaæ:
+ Mag
+ Bard
+ Z³odziej
+~
+@104 = ~He³m ochrony przed urokami~
+@105 = ~He³m ochrony przed urokami: 'Bezstronny'
+Jak to sugeruje jego nazwa, he³m ochrony przed urokami, chroni nosz¹c¹ go osobê przed wszystkimi próbami manipulowania jej emocjami. W ramach zachowania ostro¿noœci, niektóre grupy najemników wyposa¿aj¹ swoich ludzi w he³my tego typu, aby zapobiec zak³óceniu wykonywanych przez nich obowi¹zków przez zewnêtrzne wp³ywy.
+Taerom "Grzmi¹cy M³ot" Fuiruim ulepszy³ ten he³m, by zapewnia³ lepsz¹ ochronê nosz¹cemu.
+
+PARAMETRY:
+
+Klasa pancerza: +1
+Specjalne:
+ Chroni przed trafieniami krytycznymi
+ Nosz¹ca go osoba jest odporna na zauroczenia
+Waga: 4
+Nie mo¿e u¿ywaæ:
+ Mag
+ Bard
+ Z³odziej
+~
+@106 = ~Zbroja skórzana gruba~
+@107 = ~Skóra Bali~
+@108 = ~Zbroja skórzana gruba (futro) jest wykonana ze skóry bardzo du¿ego zwierzêcia (na przyk³ad s³onia) lub z wielu warstw skóry zwyk³ych zwierz¹t, takich jak krowy. Zbroja ta jest zbyt ciê¿ka, sztywna i niewygodna, by by³a u¿ywana przez bardziej rozwiniête cywilizacyjnie spo³ecznoœci. Jest bardzo powszechna wœród licznych barbarzyñskich humanoidów z posêpnych puszcz i mglistych d¿ungli tego œwiata. Mimo i¿ daje ona lepsz¹ ochronê ni¿ zwyk³a zbroja skórzana, nosz¹cy j¹ musi siê pogodziæ z jej nieprzyjemnym zapachem i prymitywnym wygl¹dem. Z³odzieje mog¹ u¿ywaæ tej zbroi, jednak obni¿a to ich profesjonalne umiejêtnoœci.
+
+PARAMETRY:
+
+Klasa Pancerza: 6
+Specjalne:
+ -20% do Cichego chodzenia
+ -10% do Otwierania zamków
+ -10% do Znajdowania pu³apek
+ -10% do Kradzie¿y kieszonkowych
+Waga: 40
+Wymagana si³a: 6
+Nie mo¿e u¿ywaæ:
+ Mag
+~
+@109 = ~Skóra Bali +4
+Noszona pierwotnie przez nies³awnego ksiêcia klanu krasnoludów, Balê, ta skórzana zbroja zosta³a wykonana wiele lat po tym, jak zamordowa³ on okrutnego elfiego maga w Thesk, który go uwiêzi³. Zbroja jest wykonana wyj¹tkowo niedbale, przypominaj¹c pod tym wzglêdem wykonanie legendarnego topora Bali, jednak¿e cechuje j¹ silna magiczna aura, która zapewnia nosz¹cemu niesamowit¹ odpornoœæ na potê¿n¹ magiê.
+
+PARAMETRY:
+
+Klasa Pancerza: 2
+Specjalne:
+ +30% do odpornoœci na magiê
+ +30% do odpornoœci na obra¿enia magiczne
+ -10% do Krycia siê
+ -5% do Otwierania zamków
+ -5% do Znajdowania pu³apek
+ -10% do Kradzie¿y kieszonkowych
+Waga: 30
+Wymagana si³a: 6
+Nie mo¿e u¿ywaæ:
+ Mag
+~
+@110 = ~Skóra barbarzyñcy~
+@111 = ~Skóra barbarzyñcy +1
+Ta skórzana zbroja zosta³a uszyta z wielu warstw wyprawionej i wzmocnionej skóry górskich niedŸwiedzi, zapewniaj¹c dziêki temu nosz¹cemu lepsz¹ ochronê. Poniewa¿ jednak wykonano j¹ z tak niewygodnego materia³u, jest ma³o elastyczna i ciê¿ka. Mimo i¿ daje ona lepsz¹ ochronê ni¿ zwyk³a zbroja skórzana, nosz¹cy j¹ musi siê pogodziæ z jej nieprzyjemnym zapachem i prymitywnym wygl¹dem. Z³odzieje mog¹ u¿ywaæ tej zbroi, jednak obni¿a to ich profesjonalne umiejêtnoœci.
+
+PARAMETRY:
+
+Klasa Pancerza: 5
+Specjalne:
+ -10% do Krycia siê
+ -10% do Otwierania zamków
+ -10% do Znajdowania pu³apek
+ -20% do Kradzie¿y kieszonkowych
+Waga: 35
+Wymagana si³a: 6
+Nie mo¿e u¿ywaæ:
+ Mag
+~
+@112 = ~Broñ drowów~
+@113 = ~Wygl¹da to na pozosta³oœci broni wykutej przy u¿yciu stali mrocznych elfów. Najwidoczniej wystawiono j¹ na dzia³anie œwiat³a s³onecznego, co uczyni³o j¹ bezu¿yteczn¹.~
+@114 = ~Zbroja drowów~
+@115 = ~S¹ to pozosta³oœci magicznej zbroi wykutej przy u¿yciu metali z Podmroku. Najwidoczniej wystawiono j¹ na dzia³anie œwiat³a s³onecznego, co uczyni³o j¹ bezu¿yteczn¹. Nadal jednak mo¿e stanowiæ obiekt zainteresowania dla doœwiadczonego górnika czy wprawnego rzemieœlnika.~
+@116 = ~Krwawe szaty~
+@117 = ~Szata odpornoœci na elektrycznoœæ Zernana~
+@118 = ~Od czasów Netheril magowie nauczyli siê obdarzaæ szerok¹ gamê zwyk³ych otaczaj¹cych ich przedmiotów czarodziejskimi mocami. Szczególnie upodobali sobie zwyk³e szaty, gdy¿ s¹ one doœæ lekkie, wszêdzie dostêpne i ³atwo ch³on¹ magiê, staj¹c siê idealnym wyposa¿eniem czarodzieja. Magiczne pochodzenie przyczynia siê jednak¿e do faktu, i¿ zaczarowane szaty mog¹ nosiæ tylko magowie. Ta szata wygl¹da na ubiór uczonego o imieniu Zernan, choæ nie jest to pewne zwa¿ywszy, ¿e jest mocno zniszczona i przesi¹kniêta krwi¹. Tylko magiczne w³aœciwoœci szaty uchroni³y j¹ od ca³kowitego zniszczenia. ~
+@119 = ~Magiczne szaty ochrony przed elektrycznoœci¹ s¹ rzadsze od swych kuzynów, a mo¿na nawet powiedzieæ, ¿e bardzo rzadkie. Niektóre z nich nosz¹ paranoicy pragn¹cy zabezpieczyæ siê podczas burzy. Wielu jednak magów równie¿ chroni siê nimi przed intrygami swych braci. Szaty te - podobnie w przypadku innych tego rodzaju - mog¹ nosiæ tylko magowie.
+Ta szata wygl¹da na ubiór uczonego o imieniu Zernan, choæ nie jest to pewne zwa¿ywszy, ¿e jest mocno zniszczona i przesi¹kniêta krwi¹. Tylko magiczne w³aœciwoœci szaty uchroni³y j¹ od ca³kowitego zniszczenia.
+
+PARAMETRY:
+
+Specjalne:
+ +20% do odpornoœci na elektrycznoœæ
+Waga: 3
+Mo¿e u¿ywaæ tylko:
+ Mag (jedno-, dwu- i wieloklasowiec)~
+@120 = ~Zbroja p³ytowa~
+@121 = ~£uska wywerny~
+@122 = ~Zbroja p³ytowa to po³¹czenie kolczugi z mocnymi blachami, które chroni¹ ¿ywotnie wa¿ne czêœci cia³a - klatkê piersiow¹, brzuch i krocze. Jej ciê¿ar jest równo roz³o¿ony na ca³e cia³o, zaœ ca³oœæ po³¹czona metalowymi spinkami i rzemieniami.
+
+PARAMETRY:
+
+Klasa Pancerza: 3
+Waga: 50
+Wymagana si³a: 12
+Nie mo¿e u¿ywaæ:
+ Bard
+ Druid
+ Mag
+ Z³odziej
+~
+@123 = ~Ta zbroja zosta³a wykonana dla ciebie przez Taeroma Fuiruima, s³ynnego kowala z Beregostu. Wymodelowany ze skóry martwej wywerny, ten pancerz jest równie ciê¿ki jak zbroja p³ytowa, jednak¿e oferuje ochronê w³aœciw¹ dla umagicznionej zbroi p³ytowej oraz zapewnia odpornoœæ przeciwko niektórym truciznom.
+
+PARAMETRY:
+
+Klasa Pancerza: 2
+Specjalne:
+ +5 do rzutów obronnych przeciw œmierci
+ +25% do odpornoœci na trucizny
+Waga: 20
+Wymagana si³a: 12
+Nie mo¿e u¿ywaæ:
+ Bard
+ Mnich
+ Druid
+ Mag
+ Z³odziej
+~
+@124 = ~Mikstura~
+@125 = ~Mikstura wiêkszego leczenia~
+@126 = ~Po wypiciu ta mikstura przywraca 24 punkty ¿ycia. Efekt jest natychmiastowy, a mikstura ulega zniszczeniu.~
+@127 = ~Pierœcieñ~
+@128 = ~Mistyczny pierœcieñ~
+@129 = ~Pierœcieñ to ma³a obrêcz wykonana z drogocennego metalu, s³u¿¹ca jako bi¿uteria.  Niektóre pierœcienie s¹ umagicznione, co zapewnia im specjalne w³aœciwoœci.  Pierœcienie takie s¹ szczególnie po¿¹dane, zw³aszcza wœród poszukiwaczy przygód.~
+@130 = ~Dok³adne pochodzenie tego pierœcienia pozostaje nieznane, jednak¿e s¹dzi siê, ¿e ostatnim jego w³aœcicielem by³ sêdziwy mag zamieszkuj¹cy ma³¹ wioskê, w której przed œmierci¹ pe³ni³ rolê 'mêdrca'.
+
+PARAMETRY:
+
+Specjalne:
+ Pozwala zapamiêtaæ po 1 dodatkowym zaklêciu z poziomów 2. i 3.
+Mo¿e u¿ywaæ:
+ Mag (jedno-, dwu- i wieloklasowiec)~
+@131 = ~Pomniejszy pierœcieñ percepcji~
+@132 = ~Wykonywane na zamówienie przywódców podziemnych gildii Wrót Baldura dla ich zaufanych sprzymierzeñców, pierœcienie takie jak ten wyczulaj¹ zmys³y nosz¹cego, co pozwala na ³atwiejsze wykonywanie pewnych 'delikatnych' i czêsto nieprzyjemnych zadañ.
+
+PARAMETRY:
+
+Specjalne:
+ +10% do Znajdowania pu³apek
+ +10% do Kradzie¿y kieszonkowej
+ +10% do Otwierania zamków
+ +10% do Krycia siê
+Mo¿e u¿ywaæ:
+  Z³odziej (jedno-, dwu- i wieloklasowiec)
+~
+@133 = ~Kij~
+@134 = ~Kostur tarana +3~
+@135 = ~Kij to najprostsza i najmniej efektywna z broni drzewcowych. Mo¿e mieæ d³ugoœæ od 1,8 do grubo ponad 2 metrów. Wykonuje siê go z dêbowego drewna i czêsto obija metalem na obu koñcach. Do w³adania nim trzeba u¿ywaæ obu r¹k.
+
+PARAMETRY:
+
+Obra¿enia: 1K6
+Typ obra¿eñ: obuchowe
+Waga: 4
+OpóŸnienie: 4
+Rodzaj bieg³oœci: kij
+Typ broni: 2-rêczna
+Wymagana si³a: 5
+~
+@136 = ~Ten kostur to osobista broñ Cadderly'ego. Zaklêty przez jego przyjaciela, wielkiego maga Belisariusa w jego ma³ym domostwie na obrze¿ach Caradoon, kostur pomóg³ temu kap³anowi Deneira i uczonemu w zmaganiach z si³ami Zamku Trójcy. Powiadaj¹, ¿e kostur bêd¹cy tak d³ugi czas w rêkach wiernego kap³ana otrzyma³ b³ogos³awieñstwo Deneira oraz Oghmy, pozwalaj¹c na zapamiêtanie wiêkszej liczby czarów kap³añskich.
+
+PARAMETRY:
+
+Obra¿enia: 1K6 +3
+TraK0: +3
+Typ obra¿eñ: obuchowe
+Specjalne:
+ +1 do rzutów obronnych
+ Umo¿liwia zapamiêtanie 1 dodatkowego czaru z poziomów 2. i 3.
+Waga: 3
+OpóŸnienie: 2
+Rodzaj bieg³oœci: kij
+Typ broni: 2-rêczna
+Wymagana si³a: 5
+Mo¿e u¿ywaæ:
+ Kap³an
+ Druid
+ Paladyn
+ Postaæ o charakterze dobrym albo neutralnym
+~
+@137 = ~Kij mrocznych dêbów +2~
+@138 = ~Mówi siê, ¿e tylko najwy¿si rang¹ Druidzi Cienia s¹ w posiadaniu tych legendarnych kosturów, które zapewniaj¹ im skórê tward¹ jak kora dêbu, odpornoœæ na ogieñ niepodatnoœæ na silne trucizny.
+
+PARAMETRY:
+
+Obra¿enia: 1K6 +2
+TraK0: +2
+Typ obra¿eñ: obuchowe
+Specjalne:
+ +30% do odpornoœci na ogieñ
+ +3 do rzutów obronnych przeciw truciŸnie
+ +3 do rzutów obronnych przeciw œmierci
+ Korowa skóra
+Waga: 3
+OpóŸnienie: 1
+Rodzaj bieg³oœci: kij
+Typ broni: 2-rêczna
+Wymagana si³a: 5
+Mo¿e u¿ywaæ:
+ Druid
+~
+@139 = ~Kostur wytrwa³oœci~
+@140 = ~Oznaczenia na krawêdziach kija wskazuj¹, ¿e zosta³ on wykonany w czasach dawno zapomnianej magii i by³ œwiadkiem wielu zmagañ o dominacjê w sferach materialnych. Ostatnim znanym w³aœcicielem kostura by³ okrutny i despotyczny czarodziej, który zgin¹³ w pojedynku z w³asnym wiêŸniem - mniej doœwiadczonym magiem, który pragn¹³ siê wydostaæ z lochu porywacza. Plotki i podania g³osz¹, ¿e wiêzieñ zabra³ kostur, uciek³ przez portal i znikn¹³ gdzieœ na Wybrze¿u Mieczy.
+
+PARAMETRY:
+
+Obra¿enia: 1K6 +1
+TraK0: +1
+Typ obra¿eñ: obuchowe
+Specjalne:
+ +1 do Klasy Pancerza
+ +2 do rzutów obronnych
+ +10% do odpornoœci na magiê
+Waga: 2
+OpóŸnienie: 1
+Rodzaj bieg³oœci: kij
+Typ broni: 2-rêczna
+Wymagana si³a: 5
+Mo¿e u¿ywaæ:
+ Mag (jedno-, dwu- i wieloklasowiec)
+ Bard
+~
+@141 = ~Miecz pó³torarêczny~
+@142 = ~Dystans~
+@143 = ~Zwany jest równie¿ "bêkartem" - zawdziêcza tê nazwê faktowi, ¿e jest skrzy¿owaniem miecza d³ugiego i oburêcznego. Ma obusieczne ostrze i d³ug¹ rêkojeœæ, dziêki czemu mo¿na go u¿ywaæ jedn¹ rêk¹ lub obur¹cz. Jego d³ugoœæ waha siê od 120 do 145 centymetrów.
+
+PARAMETRY:
+
+Obra¿enia: 2K4
+Typ obra¿eñ: sieczne
+Waga: 9
+OpóŸnienie: 7
+Rodzaj bieg³oœci: miecz pó³torarêczny
+Typ broni: 1-rêczna
+Wymagana si³a: 11
+Nie mo¿e u¿ywaæ: 
+  Druid
+  Kap³an
+  Mag
+  Z³odziej
+~
+@144 = ~Miecz pó³torarêczny +1: 'Dystans'
+Ten zwyczajnie wygl¹daj¹cy miecz pó³torarêczny nale¿a³ do nies³awnego gladiatora Abdela Skavena, którego przebieg³oœæ i wyrachowanie okaza³y siê niezrównane w trakcie jego trzydziestu oœmiu walkach na nielegalnych arenach. Kroniki utrzymuj¹, ¿e barbarzyñca Abdel móg³ dos³ownie uderzyæ przeciwnika i momentalnie siê oddaliæ unikaj¹c tym samym groŸnego kontrataku ze strony wroga.
+
+Opowieœci te byæ mo¿e nie s¹ dalekie od prawdy. Miecz posiada dziwn¹ w³aœciwoœæ czasowego ukrycia tego, kto go dzier¿y, w przypadku zadania celnego ciosu. Pozwala to u¿ywaj¹cemu miecza oddaliæ siê na bezpieczny dystans, a nawet zaplanowaæ kolejny wyprzedzaj¹cy atak.
+
+PARAMETRY:
+
+Obra¿enia: 2K4 +1
+TraK0: +1
+Typ obra¿eñ: sieczne
+Specjalne:
+ 50% szansa przy celnym trafieniu, ¿e posiadacz miecza stanie siê niewidzialny na 12 sekund
+Waga: 9
+OpóŸnienie: 7
+Rodzaj bieg³oœci: miecz pó³torarêczny
+Typ broni: 1-rêczna
+Wymagana si³a: 11
+Nie mo¿e u¿ywaæ: 
+  Druid
+  Kap³an
+  Mag
+  Z³odziej
+~
+@145 = ~Krótki miecz~
+@146 = ~Krótki miecz ciosów w plecy drowów~
+@147 = ~Pierwszymi mieczami jakie pojawi³y siê by³y w³aœnie krótkie miecze. Najproœciej rzecz bior¹c, jest to sztylet o ostrzu tak d³ugim, ¿e nie mo¿e byæ d³u¿ej traktowany jak sztylet. Termin "krótki miecz" nie istnieje w ¿adnych klasyfikacjach mieczy. Tutaj oznacza on dwusieczne ostrze o d³ugoœci oko³o 60 centymetrów. Jego czubek jest zazwyczaj ostry, co sprawia, ¿e doskonale s³u¿y do zadawania ran k³utych.
+
+PARAMETRY:
+
+Obra¿enia: 1K6
+Typ obra¿eñ: k³ute
+Waga: 3
+OpóŸnienie: 3
+Rodzaj bieg³oœci: krótki miecz
+Typ broni: 1-rêczna
+Wymagana si³a: 5
+Nie mo¿e u¿ywaæ:
+  Druid
+  Kap³an
+  Mag
+~
+@148 = ~Krótki miecz ciosów w plecy drowów
+Odwzorowany przez drowy Krótki miecz ciosów w plecy: 'Cieniste Ostrze', jednak¿e wykonany z metali dostêpnych w Podmroku, ten krótki miecz stworzono jako idealne narzêdzie pracy zabójców.
+
+PARAMETRY:
+
+Obra¿enia: 1K6 +3
+TraK0: +3
+Typ obra¿eñ: k³ute
+Specjalne:
+ Mno¿nik sztyletowania zwiêkszony o 1
+Waga: 3
+OpóŸnienie: 0
+Rodzaj bieg³oœci: krótki miecz
+Typ broni: 1-rêczna
+Wymagana si³a: 5
+Nie mo¿e u¿ywaæ:
+  Druid
+  Kap³an
+  Mag
+~
+@149 = ~Miecz oburêczny~
+@150 = ~Spustoszenie~
+@151 = ~Miecz oburêczny pochodzi od miecza d³ugiego. P³atnerze zawsze próbowali ulepszaæ istniej¹ce odmiany orê¿a, dlatego w czasie prób nad udoskonaleniem miecza d³ugiego wyd³u¿ono jego ostrze. To samo zrobiono z rêkojeœci¹, gdy¿ do w³aœciwego u¿ycia tej broni by³y niezbêdne obie rêce. Miecze oburêczne s³u¿y³y zazwyczaj do atakowania rycerzy na koniach i do prze³amywania formacji z pik.
+
+PARAMETRY:
+
+Obra¿enia: 1K10
+Typ obra¿eñ: sieczne
+Waga: 15
+OpóŸnienie: 10
+Rodzaj bieg³oœci: miecz oburêczny
+Typ broni: 2-rêczna
+Wymagana si³a: 14
+Nie mo¿e u¿ywaæ: 
+  Druid
+  Kap³an
+  Mag
+  Z³odziej
+~
+@152 = ~Miecz oburêczny +2: 'Spustoszenie'
+Wyrwany ze szponów Ranthisa, pos³añca z³ego demona, ten oburêczny miecz nadal nosi piêtno swego pierwotnego w³aœciciela i przepe³nia ka¿dego, kto go dotyka, uczuciem nienawiœci i gniewu. Jest to potê¿na broñ, zdolna sparali¿owaæ najodporniejszego wroga jednym uderzeniem, jednak mo¿e j¹ dzier¿yæ wy³¹cznie ten, kto podziela mroczne ¿¹dze Ranthisa.
+
+PARAMETRY:
+
+Obra¿enia: 1K10 +2
+TraK0: +2
+Typ obra¿eñ: sieczne
+Specjalne:
+ +20 do maksymalnych punktów ¿ycia
+ 25% szansa, ¿e cel bêdzie musia³ wykonaæ udany rzut obronny przeciw parali¿owi (z modyfikatorem -1), albo zostanie sparali¿owany na 12 sekund
+Waga: 8
+OpóŸnienie: 8
+Rodzaj bieg³oœci: miecz oburêczny
+Typ broni: 2-rêczna
+Wymagana si³a: 13
+Nie mo¿e u¿ywaæ:
+ Postaæ o dobrym charakterze 
+ Druid
+ Kap³an
+ Mag
+ Z³odziej
+~
+@153 = ~Mê¿ny~
+@154 = ~Miecz oburêczny +1: 'Mê¿ny'
+Odebrany samozwañczemu "najwiêkszemu ogrzemu magowi" o imieniu Kahrk, 'Mê¿ny' by³ pierwotnie u¿ywany przez Sir Gregory'ego z Pillar, przywódcê grupy paladynów, która wyruszy³a z misj¹ uwolnienia Wybrze¿a Mieczy od hordy nikczemnych ogrów. Krucjata ponios³a klêskê, a jej uczestnicy zostali zmasakrowani przez przyt³aczaj¹ce si³y wroga w nies³awnej bitwie w Prze³êczy Tyrad. 'Mê¿ny' zosta³ zagarniêty przez ogry w ramach nagrody za rozgromienie ludzi i od tego czasu by³ obnoszony jako przypomnienie przera¿aj¹cej potêgi ogrów. Bêd¹c przez dekady w posiadaniu ogrów miecz zachowa³ jednak swoj¹ nieskazitelnoœæ. Legendy g³osz¹, ¿e pewnego dnia pojawi siê bohater, który odzyska œwiête ostrze i bêdzie to pocz¹tek ca³ego ci¹gu zmian na obliczu Wybrze¿a Mieczy, niepodobnych do niczego, czego dot¹d Faerun by³ œwiadkiem.
+
+PARAMETRY:
+
+Obra¿enia: 1K10 +1
+TraK0: +2
+Specjalne:
+ +1 do Klasy Pancerza
+ +10 do maksymalnych punktów ¿ycia
+Typ obra¿eñ: sieczne
+Waga: 10
+OpóŸnienie: 4
+Rodzaj bieg³oœci: miecz oburêczny
+Typ broni: 2-rêczna
+Wymagana si³a: 13
+Nie mo¿e u¿ywaæ: 
+ Druid
+ Kap³an
+ Mag
+ Z³odziej
+ Bard
+ Postaæ o z³ym charakterze
+~
+@155 = ~Lekka kusza~
+@156 = ~Lekka kusza drowów +1~
+@157 = ~Kusza to ³uk zatkniêty poprzecznie na drewnianym lub metalowym drzewcu. Zazwyczaj wykonuje siê j¹ z jesionu albo cisu. Strzela pociskami, które zwane s¹ be³tami.
+
+PARAMETRY:
+
+Waga: 7
+OpóŸnienie: 5
+Rodzaj bieg³oœci: kusza
+Typ broni: 2-rêczna
+Wymagana si³a: 8
+Nie mo¿e u¿ywaæ: 
+ Druid
+ Kap³an
+ Mag
+~
+@158 = ~Lekka kusza drowów +1
+Ta kusza zosta³a zbudowana z niezwyk³ago lekkiego metalu z Podmroku. Strzela pociskami, które zwane s¹ be³tami.
+
+PARAMETRY:
+
+Obra¿enia: +1 (pocisk)
+TraK0: +1
+Waga: 6
+OpóŸnienie: 4
+Rodzaj bieg³oœci: kusza
+Typ broni: 2-rêczna
+Wymagana si³a: 8
+Nie mo¿e u¿ywaæ: 
+ Druid
+ Kap³an
+ Mag
+~
+@159 = ~Amulet metaczarów: 'Wzmacniacz'~
+@160 = ~Amulet metaczarów: 'Wzmacniacz'
+Ten amulet jest znany z tego, i¿ wspomaga rzucanie zaklêæ i dlatego poszukuje go wielu magów. Stworzy³ go Elairdrin Mellwith, mieszkaj¹cy w Górach Gwiezdnych. Przyczyna, dla której wykona³ ten przedmiot, by³a bardzo przyziemna - mia³ zwyczaj czêsto odwiedzaæ domy uciech, gdzie Wzmacniacz okazywa³ siê doœæ przydatny. PóŸniej Elairdrinowi amulet zabra³ mag o znacznie mniej przyziemnych intencjach, ale zapiski dotycz¹ce zmiany w³aœcicieli ró¿ni¹ siê od siebie.
+
+PARAMETRY:
+
+Specjalne:
+ Umo¿liwia zapamiêtanie 1 dodatkowego czaru z 1. i 2. poziomu
+Mo¿e u¿ywaæ:
+ Mag (jedno-, dwu- i wieloklasowiec)
+~
+@161 = ~S³owa tego tekstu s¹ niemal ca³kowicie nieczytelne, a tekst opiera sie wszelkim próbom jego zrozumienia przy pomocy magii b¹dŸ innych œrodków. Byæ mo¿e jakiœ badacz lub ktoœ uczony staro¿ytnych sztukach by³by w stanie poznaæ sens tego archaicznego tekstu.~
+@162 = ~S³owa "Kozah", "zbroja Firewine" i "Ulcaster" uda³o siê odczytaæ. Pozosta³e s³owa tego tekstu s¹ ca³kowicie nieczytelne, a tekst opiera sie wszelkim próbom jego zrozumienia przy pomocy magii b¹dŸ innych œrodków.~
+@163 = ~Œwiêty p³aszcz~
+@164 = ~Ten p³aszcz jest œwiêtym artefaktem mieszkañców wyspiarskiej wioski. Ma on wartoœæ bardziej symboliczn¹, ni¿ zwi¹zan¹ z rzeczywist¹ magi¹, gdy¿ jest pami¹tk¹ czasów, gdy wyl¹dowali oni na tej wyspie.
+
+PARAMETRY:
+
+Nieznane
+
+Nie mo¿e u¿ywaæ:
+ Z³odziej
+ Bard
+~
+@165 = ~Ten p³aszcz jest œwiêtym artefaktem mieszkañców wyspiarskiej wioski. Ma on wartoœæ bardziej symboliczn¹, ni¿ zwi¹zan¹ z rzeczywist¹ magi¹, gdy¿ jest pami¹tk¹ czasów, gdy wyl¹dowali oni na tej wyspie.
+
+PARAMETRY:
+
+Klasa Pancerza: +1
+Specjalne:
+ B³ogos³awieñstwo
+Nie mo¿e u¿ywaæ:
+ Z³odziej
+ Bard
+~
+@166 = ~P³aszcz~
+@167 = ~P³aszcz Shandalara~
+@168 = ~Ten p³aszcz zostañ ukradziony Shandalarowi przez arcyczarownicê Semiê, zapewne dla potê¿nej magii, która zosta³a wpleciona w jego tkaninê. Tajemnic¹ jednak pozostaje dalszy los Semii oraz to, w jaki sposób ten p³aszcz móg³ siê znaleŸæ w twoim posiadaniu - i ma³o prawdopodobne jest jej wyjaœnienie. Podobnie jak dok³adna natura magiczna p³aszcza, która opar³aby siê badaniu przez nawet najpotê¿niejszych magów.
+
+PARAMETRY:
+
+Nieznane
+
+Mo¿e u¿ywaæ:
+ Mag (jedno-, dwu- i wieloklasowiec)
+~
+@169 = ~Ten p³aszcz zostañ ukradziony Shandalarowi przez arcyczarownicê Semiê, zapewne dla potê¿nej magii, która zosta³a wpleciona w jego tkaninê. Tajemnic¹ jednak pozostaje dalszy los Semii oraz to, w jaki sposób ten p³aszcz móg³ siê znaleŸæ w twoim posiadaniu - i ma³o prawdopodobne jest jej wyjaœnienie. Podobnie jak dok³adna natura magiczna p³aszcza, która opar³aby siê badaniu przez nawet najpotê¿niejszych magów.
+
+PARAMETRY:
+
+Klasa Pancerza: +1
+Specjalne:
+ +2 do Inteligencji
+ +15 do Wiedzy
+ Pozwala zapamiêtaæ 1 dodatkowy czar 4. poziomu
+
+Mo¿e u¿ywaæ:
+ Mag (jedno-, dwu- i wieloklasowiec)
+~
+@170 = ~Wampiryczny miecz~
+@171 = ~Wampirza zemsta +1~
+@172 = ~Na tej bogato zdobionej broni znajduje siê napis "Wampiryczny miecz" wykonany we wspólnym jêzyku przez ca³¹ d³ugoœæ ostrza, a ponadto posiada ona dziwn¹ magiczn¹ aurê, któr¹ trudno do koñca poj¹æ.
+
+PARAMETRY:
+
+Obra¿enia: 1K8
+Typ obra¿eñ: sieczne
+Waga: 4
+OpóŸnienie: 5
+Rodzaj bieg³oœci: d³ugi miecz
+Typ broni: 1-rêczna
+Wymagana si³a: 6
+Nie mo¿e u¿ywaæ:
+  Druid
+  Kap³an
+  Mag
+~
+@173 = ~Mog³o by siê wydawaæ, ¿e same spekulacje na temat istnienia tej broni sprawi³y, i¿ zosta³a ona œci¹gniêta do œwiata rzeczywistego z krainy fantazji. Jednak, jak to bywa ze wszystkimi rzeczami rodz¹cymi siê w snach, prawda nie jest taka, jak¹ siê wydaje na pierwszy rzut oka. Ostrze jest rzeczywiœcie wampiryczne, jak sugeruje jego nazwa, jednak nie w taki sposób, na jaki móg³by mieæ nadziejê ten, kto chcia³by siê nim pos³u¿yæ. Wieœæ niesie, ¿e ten miecz, zamiast zachowywaæ siê tak, jak to jest oczekiwane od ostrzy wampirycznych, w rzeczywistoœci zosta³ pomyœlany przez wampiry jako pu³apka na tych, którzy mogliby przeciw nim wyst¹piæ. Te niezwykle sprytne bestie najwyraŸniej wytworzy³y z czasem liczne kopie tego nieszczêsnego ostrza i wszystkie one s¹ zgub¹ prawomyœlnych poszukiwaczy przygód. Ka¿dy cios zadaje rany nie ofierze, a temu, kto w³ada tym mieczem, gdy¿ miecz wysysa jego energiê ¿yciow¹, by uleczyæ tego, w kogo mia³ trafiæ. Jakby tego nie doœæ, broñ jest przeklêta w sposób, która uniemo¿liwia pozbycie siê jej, zaœ umys³ tego, kto ni¹ w³ada jest stopniowo os³abiany, by nie móg³ nawet planowaæ uwolnienia siê od niej. To ostrze nale¿y zapewne do tych niewielu magicznych skarbów, które nie s¹ warte poszukiwañ i dla ka¿dego by³oby lepiej, gdyby spêdza³ czas popijaj¹c gdzieœ jakieœ zacne piwo, a nie w³óczy³ siê po dzikich ostêpach z g³ow¹ nabit¹ mrzonkami o ró¿nych magicznych œmieciach.
+
+PARAMETRY:
+
+Obra¿enia: 1K8 +1
+TraK0: +1
+Typ obra¿eñ: sieczne
+Specjalne:
+  Wywo³uje obra¿enia u osoby nim siê pos³uguj¹cej oraz leczy przeciwnika
+  Os³abia umys³ osoby nim siê pos³uguj¹cej
+Waga: 4
+OpóŸnienie: 4
+Rodzaj bieg³oœci: d³ugi miecz
+Typ broni: 1-rêczna
+Wymagana si³a: 6
+Nie mo¿e u¿ywaæ:
+ Druid
+ Kap³an
+ Mag
+~
+@176 = ~He³m ochrony~
+@177 = ~Dar Pokoju
+Ten he³m - ceniony za szlacheckie "pochodzenie" oraz za moce, którymi obdarza w³aœciciela - mia³ byæ zwyk³ym darem. W tych dniach nie zbli¿a³o siê ¿adne niebezpieczeñstwo czy z³o, które trzeba by³oby pokonaæ. Po prostu jeden przyjaciel zapragn¹³ wrêczyæ dar innemu. A prezentem mog³aby równie dobrze byæ ciekawa ksiêga lub butla wina. Niestety, poszukiwacze przygód zwykli obdarzaæ siê bardziej praktycznymi darami. He³m bra³ udzia³ w wielu bitwach i zawsze pamiêtano o jego skutecznoœci. Z tego te¿ wzglêdu wykonano nastêpnie niezliczone odmiany tego he³mu.
+
+PARAMETRY:
+
+Klasa pancerza: +1
+Specjalne:
+ +1 do rzutów obronnych
+ Chroni przed trafieniami krytycznymi
+Waga: 3
+Nie mo¿e u¿ywaæ:
+ Mag
+ Bard
+ Z³odziej
+ Mnich
+ Kensai
+~
+@178 = ~He³m stra¿nika~
+@179 = ~Nie jest jasne, czy tego rodzaju magiczne he³my by³y tworzone przez kap³anów Helma, boga stra¿ników, czy mo¿e zyska³y swoj¹ nazwê z bardziej prozaicznych powodów. Bez wzglêdu na to, s¹ wysoko cenione przez stra¿ników i wartowników. Nie trzeba wspominaæ, ¿e bandyci równie¿ zaczêli je nosiæ, dowodz¹c prawdziwoœci powiedzenia 'co dobre dla nich dobre i dla nas'.
+
+PARAMETRY:
+
+Klasa pancerza: +1
+Specjalne:
+ Odpornoœæ na oœlepienie i g³uchotê
+ Chroni przed trafieniami krytycznymi
+Waga: 3
+Nie mo¿e u¿ywaæ:
+ Mag
+ Bard
+ Z³odziej
+ Mnich
+ Kensai
+~
+@180 = ~He³m ochrony przed urokami~
+@181 = ~Jak to sugeruje jego nazwa, he³m ochrony przed urokami, chroni nosz¹c¹ go osobê przed wszystkimi próbami manipulowania jej emocjami. W ramach zachowania ostro¿noœci, niektóre grupy najemników wyposa¿aj¹ swoich ludzi w he³my tego typu, aby zapobiec zak³óceniu wykonywanych przez nich obowi¹zków przez zewnêtrzne wp³ywy.
+
+PARAMETRY:
+
+Klasa pancerza: +1
+Specjalne:
+ Chroni przed trafieniami krytycznymi
+ Nosz¹ca go osoba jest odporna na zauroczenia
+Waga: 3
+Nie mo¿e u¿ywaæ:
+ Mag
+ Bard
+ Z³odziej
+ Mnich
+ Kensai
+~
+@182 = ~He³m ochrony~
+@183 = ~Dar Pokoju
+Ten he³m - ceniony za szlacheckie "pochodzenie" oraz za moce, którymi obdarza w³aœciciela - mia³ byæ zwyk³ym darem. W tych dniach nie zbli¿a³o siê ¿adne niebezpieczeñstwo czy z³o, które trzeba by³oby pokonaæ. Po prostu jeden przyjaciel zapragn¹³ wrêczyæ dar innemu. A prezentem mog³aby równie dobrze byæ ciekawa ksiêga lub butla wina. Niestety, poszukiwacze przygód zwykli obdarzaæ siê bardziej praktycznymi darami. He³m bra³ udzia³ w wielu bitwach i zawsze pamiêtano o jego skutecznoœci. Z tego te¿ wzglêdu wykonano nastêpnie niezliczone odmiany tego he³mu.
+
+Ten he³m zosta³ ulepszony przez kowala z Beregostu, Taeroma "Grzmi¹cego M³ota" Fuiruima. 
+
+PARAMETRY:
+
+Klasa pancerza: +1
+Specjalne:
+ +1 do rzutów obronnych
+ +10% do odpornoœci na magiê
+ Chroni przed trafieniami krytycznymi
+Waga: 3
+Nie mo¿e u¿ywaæ:
+ Mag
+ Bard
+ Z³odziej
+ Mnich
+ Kensai
+~
+@184 = ~He³m stra¿nika~
+@185 = ~Nie jest jasne, czy tego rodzaju magiczne he³my by³y tworzone przez kap³anów Helma, boga stra¿ników, czy mo¿e zyska³y swoj¹ nazwê z bardziej prozaicznych powodów. Bez wzglêdu na to, s¹ wysoko cenione przez stra¿ników i wartowników. Nie trzeba wspominaæ, ¿e bandyci równie¿ zaczêli je nosiæ, dowodz¹c prawdziwoœci powiedzenia 'co dobre dla nich dobre i dla nas'.
+
+Ten he³m zosta³ ulepszony przez kowala z Beregostu, Taeroma "Grzmi¹cego M³ota" Fuiruima. 
+
+PARAMETRY:
+
+Klasa pancerza: +1
+Specjalne:
+ Odpornoœæ na oœlepienie i g³uchotê
+ TraK0: +1
+ Chroni przed trafieniami krytycznymi
+Waga: 3
+Nie mo¿e u¿ywaæ:
+ Mag
+ Bard
+ Z³odziej
+ Mnich
+ Kensai
+~
+@186 = ~He³m ochrony przed urokami~
+@187 = ~Jak to sugeruje jego nazwa, he³m ochrony przed urokami, chroni nosz¹c¹ go osobê przed wszystkimi próbami manipulowania jej emocjami. W ramach zachowania ostro¿noœci, niektóre grupy najemników wyposa¿aj¹ swoich ludzi w he³my tego typu, aby zapobiec zak³óceniu wykonywanych przez nich obowi¹zków przez zewnêtrzne wp³ywy.
+
+Ten he³m zosta³ ulepszony przez kowala z Beregostu, Taeroma "Grzmi¹cego M³ota" Fuiruima. 
+
+PARAMETRY:
+
+Klasa pancerza: +1
+Specjalne:
+ +1 do M¹droœci
+ Nosz¹ca go osoba jest odporna na zauroczenia
+ Chroni przed trafieniami krytycznymi
+Waga: 3
+Nie mo¿e u¿ywaæ:
+ Mag
+ Bard
+ Z³odziej
+ Mnich
+ Kensai
+~
+@188 = ~Szata ochrony przed ch³odem~
+@189 = ~Magiczne szaty ochrony przed ch³odem s¹ doœæ rozpowszechnione po Wybrze¿u Mieczy, szczególnie wœród podró¿ników wêdruj¹cych na pó³noc, ku Neverwinter i Dolinie Lodowego Wichru. Wielu m³odych magów otrzymuje je w darze od swych mistrzów, jako nagrodê za ukoñczenie pierwszych piêciu lat nauki.
+
+PARAMETRY:
+
+Specjalne:
+ +40% do odpornoœci na ch³ód
+Waga: 3
+Mo¿e u¿ywaæ tylko:
+ Mag
+~
+@190 = ~Szata ochrony przed ogniem~
+@191 = ~Niestabilnoœæ magicznej energii sprawia, ¿e magiczne szaty ochrony przed ogniem s¹ rozpowszechnione poœród m³odych uczniów i ich mistrzów, szczególnie w krêgach Thay i enklawach kultu Pana Ognia Kossutha.
+
+PARAMETRY:
+
+Specjalne:
+ +40% do odpornoœci na ogieñ
+Waga: 3
+Mo¿e u¿ywaæ tylko:
+ Mag
+~
+@192 = ~Szta ochrony przed elektrycznoœci¹~
+@193 = ~Magiczne szaty ochrony przed elektrycznoœci¹ s¹ rzadsze od swych kuzynów, a mo¿na nawet powiedzieæ, ¿e bardzo rzadkie. Niektóre z nich nosz¹ paranoicy pragn¹cy zabezpieczyæ siê podczas burzy. Wielu jednak magów równie¿ chroni siê nimi przed intrygami swych braci.
+
+PARAMETRY:
+
+Specjalne:
+ +40% do odpornoœci na elektrycznoœæ
+Waga: 3
+Mo¿e u¿ywaæ tylko:
+ Mag
+~
+@194 = ~Szata ³otrzyka~
+@195 = ~Te ukochane przez z³odziei-magów szaty zosta³y tak zaczarowane, by nosz¹ca je osoba by³a chroniona przed ostrzami i truciznami, które czêsto spotyka siê w mrocznych alejkach. Podobnie jak w przypadku innych tego rodzaju szat, mog¹ je nosiæ tylko magowie.
+
+PARAMETRY:
+
+Specjalne:
+ Odpornoœæ na Cios w plecy
+ +2 do rzutów obronnych przeciwko truciznom
+Waga: 4
+Mo¿e u¿ywaæ tylko:
+ Mag
+~
+@196 = ~Szata wêdrowcy~
+@197 = ~Te magiczne szaty s¹ idealne dla wêdruj¹cych z miasta do miasta magów. Zapewniaj¹ one ochronê przed strza³ami bandytów i tymi zawistnymi z³odziejami-magami, którzy kryj¹ siê w krzakach ze Œmierdz¹c¹ chmur¹. Podobnie w przypadku innych tego rodzaju szat, mog¹ je nosiæ tylko magowie.
+
+PARAMETRY:
+
+Specjalne:
+ +2 do Klasy Pancerza przeciw pociskom
+ +2 do rzutów obronnych przeciw zioniêciom
+ +2 do prêdkoœci ruchu
+Waga: 4
+Mo¿e u¿ywaæ tylko:
+ Mag
+~
+@198 = ~Szata ³owcy przygód~
+@199 = ~By³y nadworny mag króla Azouna IV z Cormyru, Vangerdahast, by³ w swoim czasie wielkiej s³awy poszukiwaczem przygód. Jednym z powodów, dla których zyska³ popularnoœæ w krêgach magów by³a stworzona przez niego Szata poszukiwacza przygód. Magowie zawsze zmagali siê z ograniczeniami, jakie narzuca³a na nich mo¿liwoœæ nieskrêpowanego rzucania czarów. Te szaty daj¹ magom pewn¹ korzyœæ w starciach z wojownikami walcz¹cymi wrêcz, absorbuj¹c czêœæ fizycznych obra¿eñ zadawanych broni¹.
+
+
+PARAMETRY:
+
+Specjalne:
+ +10% do odpornoœci na obra¿enia fizyczne
+Waga: 4
+Mo¿e u¿ywaæ tylko:
+ Mag
+~
+@200 = ~Stalowa szata
+Stalowa szata zosta³a wykonana dla ciebie przez Melicampa, ucznia maga z Beregostu, w ramach wdziêcznoœci za uratowanie go ze szponów agresywnego wilka, gdy Melicamp przypadkowo zamieni³ siê w kurczaka. Rozleg³e badania, jakie ten pocz¹tkuj¹cy mag wykona³ na ró¿ych dostarczonych mu szatach, zaowocowa³y stworzeniem potê¿nej szaty, godnej samego Thalantyra.
+
+Te ciê¿ka szata przejê³a czêœæ odpornoœci i wytrzyma³oœci stali drowów, jednak¿e bez jej wady w postaci rozpadania siê w py³ pod wp³ywem œwiat³a s³onecznego. Zapewnia równie¿ nosz¹cemu czêœciow¹ odpornoœæ na efekty zaklêæ opartych na ¿ywio³ach, sprawiaj¹c, ¿e staje siê on magiem, z którym nale¿y siê liczyæ.
+
+PARAMETRY:
+
+Klasa Pancerza: 6
+Specjalne:
+ +1 do rzutów obronnych
+ +20% do odpornoœci na magiê
+ +30% do odpornoœci na ogieñ
+ +30% do odpornoœci na ch³ód
+ +30% do odpornoœci na elektrycznoœæ
+Waga: 9
+Mo¿e u¿ywaæ tylko:
+ Mag (jedno-, dwu- i wieloklasowiec)
+~
+@201 = ~Pomniejsza szata odpornoœci
+Pomniejsza szata odpornoœci zosta³a wykonana dla ciebie przez Melicampa, ucznia maga z Beregostu, w ramach wdziêcznoœci za uratowanie go ze szponów agresywnego wilka, gdy Melicamp przypadkowo zamieni³ siê w kurczaka. Rozleg³e badania, jakie ten pocz¹tkuj¹cy mag wykona³ na ró¿ych dostarczonych mu szatach, zaowocowa³y stworzeniem potê¿nej szaty, godnej samego Thalantyra.
+
+Te ciê¿ka szata przejê³a czêœæ odpornoœci i wytrzyma³oœci stali drowów, jednak¿e bez jej wady w postaci rozpadania siê w py³ pod wp³ywem œwiat³a s³onecznego. Zapewnia równie¿ nosz¹cemu czêœciow¹ odpornoœæ na efekty zaklêæ opartych na ¿ywio³ach.
+
+PARAMETRY:
+
+Klasa Pancerza: 7
+Specjalne:
+ +30% do odpornoœci na ogieñ
+ +30% do odpornoœci na ch³ód
+ +30% do odpornoœci na elektrycznoœæ
+Waga: 9
+Mo¿e u¿ywaæ tylko:
+ Mag (jedno-, dwu- i wieloklasowiec)
+~
+@202 = ~Szata ucznia
+Szata ucznia zosta³a wykonana dla ciebie przez Melicampa, ucznia maga z Beregostu, w ramach wdziêcznoœci za uratowanie go ze szponów agresywnego wilka, gdy Melicamp przypadkowo zamieni³ siê w kurczaka. Rozleg³e badania, jakie ten pocz¹tkuj¹cy mag wykona³ na ró¿ych dostarczonych mu szatach, zaowocowa³y stworzeniem potê¿nej szaty, godnej samego Thalantyra.
+
+Te ciê¿ka szata przejê³a czêœæ odpornoœci i wytrzyma³oœci stali drowów, jednak¿e bez jej wady w postaci rozpadania siê w py³ pod wp³ywem œwiat³a s³onecznego. Zapewnia równie¿ nosz¹cemu czêœciow¹ odpornoœæ na efekty zaklêæ opartych na ¿ywio³ach.
+
+PARAMETRY:
+
+Klasa Pancerza: 7
+Specjalne:
+ +1 do rzutów obronnych
+ +10% do odpornoœci na magiê
+ +2 do prêdkoœci poruszania siê
+Waga: 9
+Mo¿e u¿ywaæ tylko:
+ Mag (jedno-, dwu- i wieloklasowiec)
+~

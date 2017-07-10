@@ -1,0 +1,487 @@
+IF
+	!HaveAnySpells()
+	!See(NearestEnemyOf(Myself))
+	!Detect([GOODCUTOFF])
+	PartyRested()
+THEN
+	RESPONSE #100
+		Rest()
+		SetGlobal("DrowBehave","LOCALS",0)
+		SetGlobalTimer("DrowPrep","LOCALS",6)
+END
+
+IF
+	HPPercentLT(Myself,75)
+	HasItem("POTN08",Myself) // Potion of Healing
+THEN
+	RESPONSE #100
+		UseItem("POTN08",Myself) // Potion of Healing
+END
+
+IF
+	HPPercentLT(Myself,50)
+	HasItem("POTN52",Myself) // Potion of Extra Healing
+THEN
+	RESPONSE #100
+		UseItem("POTN52",Myself) // Potion of Extra Healing
+END
+
+IF
+	StateCheck(Myself,STATE_POISONED)
+	HasItem("POTN17",Myself) // Elixir of Health
+THEN
+	RESPONSE #100
+		UseItem("POTN17",Myself) // Elixir of Health
+END
+
+IF
+	StateCheck(Myself,STATE_POISONED)
+	HasItem("POTN20",Myself) // Antidote
+THEN
+	RESPONSE #100
+		UseItem("POTN20",Myself) // Antidote
+END
+
+IF
+	See([PC])
+	Class(Myself,CLERIC)
+	Global("ReturnNashDrow","GLOBAL",0)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet(LastSeenBy(Myself))
+		SetGlobal("ReturnNashDrow","GLOBAL",1)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	Class(Myself,CLERIC)
+	HPPercentLT(Myself,50)
+	GlobalGT("DrowBehave","LOCALS",1)
+	!GlobalTimerNotExpired("DrowNoWayOut","LOCALS")
+THEN
+	RESPONSE #80
+		SetGlobalTimer("DrowNoWayOut","LOCALS",120)
+		SetGlobalTimer("DrowTimer","LOCALS",6)
+		ForceSpell(Myself,CLERIC_CURE_CRITICAL_WOUNDS)
+		ReallyForceSpell(Myself,CLERIC_ARMOR_OF_FAITH)
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+	RESPONSE #20
+		SetGlobalTimer("DrowNoWayOut","LOCALS",180)
+		SetGlobalTimer("DrowTimer","LOCALS",12)
+		ForceSpell(NearestEnemyOf(Myself),POWERWORD_KILL)
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	!GlobalTimerNotExpired("DrowPrep","LOCALS")
+	!GlobalTimerNotExpired("DrowTimer","LOCALS")
+	See(NearestEnemyOf(Myself))
+	Class(Myself,CLERIC)
+THEN
+	RESPONSE #100
+		SetGlobal("DrowBehave","LOCALS",1)
+		SetGlobalTimer("DrowTimer","LOCALS",6)
+		SetGlobalTimer("DrowPrep","LOCALS",600)
+		ReallyForceSpell(Myself,CLERIC_DRAW_UPON_HOLY_MIGHT)
+		ReallyForceSpell(Myself,CLERIC_BLESS)
+		CreateCreature("SPIDPHAS",[-1.-1],0) // Astral Phase Spider
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	GlobalLT("DrowControl","LOCALS",4)
+	!GlobalTimerNotExpired("DrowDomination","LOCALS")
+	!GlobalTimerNotExpired("DrowTimer","LOCALS")
+	See(NearestEnemyOf(Myself))
+	Class(Myself,CLERIC)
+	GlobalGT("DrowBehave","LOCALS",0)
+THEN
+	RESPONSE #70
+		IncrementGlobal("DrowControl","LOCALS",1)
+		SetGlobalTimer("DrowTimer","LOCALS",6)
+		SetGlobalTimer("DrowDomination","LOCALS",36)
+		ForceSpell(NearestEnemyOf(Myself),CLERIC_MENTAL_DOMINATION)
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+	RESPONSE #30
+		IncrementGlobal("DrowControl","LOCALS",1)
+		SetGlobalTimer("DrowDomination","LOCALS",42)
+		SetGlobalTimer("DrowTimer","LOCALS",6)
+		ForceSpell(NearestEnemyOf(Myself),CLERIC_MENTAL_DOMINATION)
+		CreateCreature("SPIDPHAS",[-1.-1],0) // Astral Phase Spider
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	!GlobalTimerNotExpired("DrowPriestess","LOCALS")
+	!GlobalTimerNotExpired("DrowTimer","LOCALS")
+	See(NearestEnemyOf(Myself))
+	Class(Myself,CLERIC)
+	GlobalGT("DrowBehave","LOCALS",0)
+THEN
+	RESPONSE #70
+		SetGlobal("DrowBehave","LOCALS",2)
+		SetGlobal("prep","LOCALS",1)
+		SetGlobalTimer("DrowTimer","LOCALS",6)
+		SetGlobalTimer("DrowPriestess","LOCALS",120)
+		ReallyForceSpell(Myself,CLERIC_DEFENSIVE_HARMONY)
+		ForceSpell(Myself,CLERIC_CHANT)
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+	RESPONSE #30
+		SetGlobal("DrowBehave","LOCALS",2)
+		SetGlobalTimer("DrowTimer","LOCALS",12)
+		SetGlobalTimer("DrowPriestess","LOCALS",120)
+		ForceSpell(SecondNearestEnemyOf(Myself),CLERIC_SYMBOL_STUN)
+		CreateCreature("SPIDPHAS",[-1.-1],0) // Astral Phase Spider
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	!GlobalTimerNotExpired("DrowTimer","LOCALS")
+	See(NearestEnemyOf(Myself))
+	Class(Myself,CLERIC)
+	Global("DrowBehave","LOCALS",2)
+THEN
+	RESPONSE #60
+		SetGlobal("DrowBehave","LOCALS",3)
+		SetGlobalTimer("DrowTimer","LOCALS",12)
+		ForceSpell(ThirdNearestEnemyOf(Myself),CLERIC_GLYPH_OF_WARDING)
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+	RESPONSE #40
+		SetGlobal("DrowBehave","LOCALS",3)
+		SetGlobalTimer("DrowTimer","LOCALS",12)
+		ForceSpell(FourthNearestEnemyOf(Myself),CLERIC_GLYPH_OF_WARDING)
+		CreateCreature("SPIDPHAS",[-1.-1],0) // Astral Phase Spider
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	GlobalLT("DrowControl","LOCALS",3)
+	!GlobalTimerNotExpired("DrowHoldPerson","LOCALS")
+	!GlobalTimerNotExpired("DrowTimer","LOCALS")
+	See(NearestEnemyOf(Myself))
+	Class(Myself,CLERIC)
+	GlobalGT("DrowBehave","LOCALS",2)
+THEN
+	RESPONSE #70
+		IncrementGlobal("DrowControl","LOCALS",1)
+		SetGlobal("DrowBehave","LOCALS",4)
+		SetGlobalTimer("DrowHoldPerson","LOCALS",36)
+		SetGlobalTimer("DrowTimer","LOCALS",12)
+		ForceSpell(ThirdNearestEnemyOf(Myself),CLERIC_HOLD_PERSON)
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+	RESPONSE #30
+		IncrementGlobal("DrowControl","LOCALS",1)
+		SetGlobal("DrowBehave","LOCALS",4)
+		SetGlobalTimer("DrowTimer","LOCALS",12)
+		SetGlobalTimer("DrowHoldPerson","LOCALS",42)
+		ForceSpell(NearestEnemyOf(Myself),CLERIC_HOLD_PERSON)
+		CreateCreature("SPIDPHAS",[-1.-1],0) // Astral Phase Spider
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	!GlobalTimerNotExpired("DrowTimer","LOCALS")
+	See(NearestEnemyOf(Myself))
+	Class(Myself,CLERIC)
+	Global("DrowBehave","LOCALS",4)
+THEN
+	RESPONSE #50
+		SetGlobal("DrowBehave","LOCALS",5)
+		SetGlobalTimer("DrowTimer","LOCALS",12)
+		ForceSpell(NearestEnemyOf(Myself),CLERIC_RIGID_THINKING)
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+	RESPONSE #50
+		SetGlobal("DrowBehave","LOCALS",5)
+		SetGlobalTimer("DrowTimer","LOCALS",12)
+		ForceSpell(NearestEnemyOf(Myself),CLERIC_RIGID_THINKING)
+		CreateCreature("SPIDPHAS",[-1.-1],0) // Astral Phase Spider
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	HasItem("POTN14",Myself) // Potion of Speed
+	Class(Myself,FIGHTER_THIEF)
+	!StateCheck(Myself,STATE_HASTED)
+THEN
+	RESPONSE #100
+		UseItem("POTN14",Myself) // Potion of Speed
+		EquipRanged()
+		CreateCreature("SPIDSW",[-1.-1],0) // Sword Spider
+		AttackOneRound(NearestEnemyOf(Myself))
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	HasItem("POTN10",Myself) // Potion of Invisibility
+	Class(Myself,FIGHTER_THIEF)
+	!StateCheck(Myself,STATE_INVISIBLE)
+	Range(NearestEnemyOf(Myself),3)
+THEN
+	RESPONSE #100
+		UseItem("POTN10",Myself) // Potion of Invisibility
+END
+
+IF
+	!GlobalTimerNotExpired("SpiderTimer","LOCALS")
+	See(NearestEnemyOf(Myself))
+	Class(Myself,FIGHTER_THIEF)
+	StateCheck(Myself,STATE_INVISIBLE)
+	Range(NearestEnemyOf(Myself),3)
+	Global("SpiderSpawn","LOCALS",0)
+THEN
+	RESPONSE #100
+		EquipMostDamagingMelee()
+		CreateCreature("SPIDWR",[-1.-1],0) // Wraith Spider
+		SetGlobal("SpiderSpawn","LOCALS",1)
+		SetGlobalTimer("SpiderTimer","LOCALS",18)
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	!GlobalTimerNotExpired("SpiderTimer","LOCALS")
+	See(NearestEnemyOf(Myself))
+	!Range(NearestEnemyOf(Myself),5)
+	!StateCheck(Myself,STATE_INVISIBLE)
+	Class(Myself,FIGHTER_THIEF)
+	Global("SpiderSpawn","LOCALS",1)
+THEN
+	RESPONSE #70
+		EquipRanged()
+		CreateCreature("SPIDPH",[-1.-1],0) // Phase Spider
+		SetGlobal("SpiderSpawn","LOCALS",2)
+		SetGlobalTimer("SpiderTimer","LOCALS",24)
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+	RESPONSE #30
+		EquipRanged()
+		CreateCreature("SPIDPHAS",[-1.-1],0) // Astral Phase Spider
+		SetGlobal("SpiderSpawn","LOCALS",2)
+		SetGlobalTimer("SpiderTimer","LOCALS",36)
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	!GlobalTimerNotExpired("SpiderTimer","LOCALS")
+	See(NearestEnemyOf(Myself))
+	Range(NearestEnemyOf(Myself),5)
+	!StateCheck(Myself,STATE_INVISIBLE)
+	Class(Myself,FIGHTER_THIEF)
+THEN
+	RESPONSE #70
+		EquipMostDamagingMelee()
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+		Continue()
+	RESPONSE #30
+		EquipMostDamagingMelee()
+		CreateCreature("SPIDSW",[-1.-1],0) // Sword Spider
+		SetGlobalTimer("SpiderTimer","LOCALS",30)
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+		Continue()
+END
+
+IF
+	!See(NearestEnemyOf(Myself))
+	Class(Myself,FIGHTER_THIEF)
+	GlobalLT("SpiderSpawn","LOCALS",1)
+THEN
+	RESPONSE #50
+		Hide()
+		Continue()
+	RESPONSE #50
+		CreateCreature("SPIDWR",[-1.-1],0) // Wraith Spider
+		SetGlobal("SpiderSpawn","LOCALS",1)
+		Hide()
+		Continue()
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	HasItem("POTN10",Myself) // Potion of Invisibility
+	Class(Myself,THIEF)
+	!StateCheck(Myself,STATE_INVISIBLE)
+THEN
+	RESPONSE #100
+		UseItem("POTN10",Myself) // Potion of Invisibility
+END
+
+IF
+	!See(NearestEnemyOf(Myself))
+	Class(Myself,THIEF)
+THEN
+	RESPONSE #100
+		Hide()
+		Wait(30)
+		Continue()
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	Class(Myself,THIEF)
+	StateCheck(Myself,STATE_INVISIBLE)
+	Range(NearestEnemyOf(Myself),3)
+THEN
+	RESPONSE #100
+		EquipMostDamagingMelee()
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+		Continue()
+END
+
+IF
+	!GlobalTimerNotExpired("DrowTimer","LOCALS")
+	!GlobalTimerNotExpired("DrowDispel","LOCALS")
+	See(NearestEnemyOf(Myself))
+	Class(Myself,MAGE)
+	OR(6)
+		StateCheck(LastSeenBy(Myself),STATE_HASTED)
+		StateCheck(LastSeenBy(Myself),STATE_BLESS)
+		StateCheck(LastSeenBy(Myself),STATE_CHANT)
+		StateCheck(LastSeenBy(Myself),STATE_AID)
+		StateCheck(LastSeenBy(Myself),STATE_BLUR)
+		StateCheck(LastSeenBy(Myself),STATE_MIRRORIMAGE)
+THEN
+	RESPONSE #100
+		ForceSpell(SixthNearestEnemyOf(Myself),WIZARD_DISPEL_MAGIC)
+		SetGlobalTimer("DrowDispel","LOCALS",30)
+		SetGlobalTimer("DrowTimer","LOCALS",6)
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	!GlobalTimerNotExpired("DrowTimer","LOCALS")
+	!GlobalTimerNotExpired("DrowPrep","LOCALS")
+	See(NearestEnemyOf(Myself))
+	Class(Myself,MAGE)
+THEN
+	RESPONSE #100
+		SetGlobal("DrowBehave","LOCALS",1)
+		SetGlobalTimer("DrowTimer","LOCALS",6)
+		SetGlobalTimer("DrowPrep","LOCALS",600)
+		ReallyForceSpell(Myself,WIZARD_MIRROR_IMAGE)
+		ReallyForceSpell(Myself,WIZARD_BLUR)
+		CreateCreature("SPIDWR",[-1.-1],0) // Wraith Spider
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	GlobalGT("DrowBehave","LOCALS",0)
+	!GlobalTimerNotExpired("DrowTimer","LOCALS")
+	!StateCheck(Myself,STATE_MIRRORIMAGE)
+	See(NearestEnemyOf(Myself))
+	Class(Myself,MAGE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("DrowTimer","LOCALS",6)
+		ForceSpell(Myself,WIZARD_MIRROR_IMAGE)
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	GlobalLT("Fireworks","LOCALS",6)
+	!GlobalTimerNotExpired("DrowTimer","LOCALS")
+	!GlobalTimerNotExpired("DrowFireball","LOCALS")
+	GlobalGT("DrowBehave","LOCALS",2)
+	See(NearestEnemyOf(Myself))
+	Class(Myself,MAGE)
+THEN
+	RESPONSE #100
+		IncrementGlobal("Fireworks","LOCALS",1)
+		SetGlobalTimer("DrowTimer","LOCALS",12)
+		SetGlobalTimer("DrowFireball","LOCALS",42)
+		ForceSpell(SixthNearestEnemyOf(Myself),WIZARD_FIREBALL)
+		CreateCreature("SPIDWR",[-1.-1],0) // Wraith Spider
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	GlobalLT("Fireworks","LOCALS",6)
+	GlobalGT("DrowBehave","LOCALS",1)
+	!GlobalTimerNotExpired("DrowTimer","LOCALS")
+	!GlobalTimerNotExpired("DrowFlameArrow","LOCALS")
+	See(NearestEnemyOf(Myself))
+	Class(Myself,MAGE)
+THEN
+	RESPONSE #100
+		IncrementGlobal("Fireworks","LOCALS",1)
+		SetGlobalTimer("DrowTimer","LOCALS",12)
+		SetGlobalTimer("DrowFlameArrow","LOCALS",24)
+		ForceSpell(WeakestOf(NearestEnemyOf(Myself)),WIZARD_FLAME_ARROW)
+		CreateCreature("SPIDWR",[-1.-1],0) // Wraith Spider
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	GlobalGT("DrowBehave","LOCALS",0)
+	!GlobalTimerNotExpired("DrowStun","LOCALS")
+	!GlobalTimerNotExpired("DrowTimer","LOCALS")
+	See(NearestEnemyOf(Myself))
+	Class(Myself,MAGE)
+THEN
+	RESPONSE #50
+		SetGlobal("DrowBehave","LOCALS",2)
+		SetGlobalTimer("DrowTimer","LOCALS",12)
+		SetGlobalTimer("DrowStun","LOCALS",180)
+		ForceSpell(StrongestOf([GOODCUTOFF]),WIZARD_POWER_WORD_STUN)
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+		Spell(WeakestOf([GOODCUTOFF]),WIZARD_MAGIC_MISSILE)
+	RESPONSE #50
+		SetGlobal("DrowBehave","LOCALS",2)
+		SetGlobalTimer("DrowTimer","LOCALS",12)
+		SetGlobalTimer("DrowStun","LOCALS",180)
+		Spell(LastAttackerOf(Myself),WIZARD_POWER_WORD_STUN)
+		CreateCreature("SPIDWR",[-1.-1],0) // Wraith Spider
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	GlobalGT("DrowBehave","LOCALS",1)
+	!GlobalTimerNotExpired("DrowMelf","LOCALS")
+	!GlobalTimerNotExpired("DrowTimer","LOCALS")
+	See(NearestEnemyOf(Myself))
+	Class(Myself,MAGE)
+THEN
+	RESPONSE #100
+		SetGlobal("DrowBehave","LOCALS",3)
+		SetGlobalTimer("DrowTimer","LOCALS",6)
+		SetGlobalTimer("DrowMelf","LOCALS",24)
+		ForceSpell(WeakestOf([GOODCUTOFF]),WIZARD_MELF_ACID_ARROW)
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	GlobalGT("DrowBehave","LOCALS",2)
+	!GlobalTimerNotExpired("DrowMM","LOCALS")
+	!GlobalTimerNotExpired("DrowTimer","LOCALS")
+	See(NearestEnemyOf(Myself))
+	Class(Myself,MAGE)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("DrowTimer","LOCALS",6)
+		SetGlobalTimer("DrowMM","LOCALS",18)
+		ForceSpell(WeakestOf([GOODCUTOFF]),WIZARD_MAGIC_MISSILE)
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+END
+
+IF
+	Class(Myself,FIGHTER)
+	See(NearestEnemyOf(Myself))
+	!Range(NearestEnemyOf(Myself),5)
+	!StateCheck(Myself,STATE_INVISIBLE)
+THEN
+	RESPONSE #100
+		EquipRanged()
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+		Continue()
+END
+
+IF
+	Class(Myself,FIGHTER)
+	See(NearestEnemyOf(Myself))
+	Range(NearestEnemyOf(Myself),5)
+THEN
+	RESPONSE #100
+		EquipMostDamagingMelee()
+		AttackReevaluate(NearestEnemyOf(Myself),30)
+		Continue()
+END
+
+

@@ -1,0 +1,20 @@
+IF
+	Global("VestibuleQuest","GLOBAL",0)
+	GlobalGT("Chapter","GLOBAL",%tutu_chapter_3%)
+THEN
+	RESPONSE #100
+		SetGlobal("VestibuleQuest","GLOBAL",1)
+		SetGlobal("VestibuleBlane","GLOBAL",0)
+		SetGlobal("VestibuleBran","GLOBAL",0)
+		SetGlobal("VestibuleKeld","GLOBAL",0)
+		SetGlobal("VestibuleRelease","GLOBAL",0)
+		SetGlobal("VestibuleJosh","GLOBAL",0)
+		SetGlobal("VestibuleReden","GLOBAL",0)
+		Continue()
+END
+ IF
+ 	Dead("JC_DEM01") 	!Global("VestibuleQuest","GLOBAL",5)
+ THEN
+ 	RESPONSE #100
+ 		SetGlobal("VestibuleQuest","GLOBAL",3)
+ 		Continue() END   

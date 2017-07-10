@@ -1,0 +1,20 @@
+IF
+	Global("VestibuleQuest","GLOBAL",5)
+	Global("VestibuleReden","GLOBAL",0)
+THEN
+	RESPONSE #100
+		CreateCreature("JC_MAG01",[1860.1610],0)
+		SetGlobal("VestibuleReden","GLOBAL",1)
+END
+
+IF
+	Global("ReturnNashQuest","GLOBAL",0)
+	Global("ReturnNashQuestZernan","GLOBAL",0)
+	PartyHasItem("BOOK68") // History of the Nether Scrolls
+THEN
+	RESPONSE #100
+		CreateCreature("JC_THF01",[4445.3505],0)
+		SetGlobal("ReturnNashQuestZernan","GLOBAL",1)
+END
+
+

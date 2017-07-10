@@ -1,0 +1,36 @@
+// JC_THF04 Translation File
+
+@0   = ~Hold there! <CHARNAME>? <CHARNAME>!~
+@1   = ~Yes, it is I. Who, pray tell, are you?~
+@2   = ~Calm down, it is I. What is it you need?~
+@3   = ~I am sorry. I do not have the time for this. I must return to Baldur's Gate at once.~ 
+@4   = ~It is you! Exactly as Zernan described you! Oh, Zernan!~
+@5   = ~Zernan? ...the scholar?~
+@6   = ~Um, yes, the scholar... I am Nandin, his colleague... something dreadful has happend to him! I met up with him at the Friendly Arm after he retrieved the book from you.~
+@7   = ~And then what happened?~
+@8   = ~He said he was to meet with a rogue at the Burning Wizard in Beregost with information on a certain group down south who was also interested in studying the tome. He then instructed me to meet with him at Nashkel... that was a few days ago. I have not seen or heard from him since. He told me that should anything out of the ordinary happen, I should venture to Candlekeep and seek you out.~
+@9   = ~Are you sure? Maybe he got carried away with his zeal and quest for knowledge that he forgot about your meeting?~
+@10  = ~Hmm... that is strange, even for Zernan. Do you have the name of this individual he was to meet?~
+@11  = ~Unlikely, <CHARNAME>. He would at times get overwhelmed with his business... um, studies, but never too long so as to forget important meetings.~
+@12  = ~I see. So what have we to go on now? What was the name of this individual at Beregost?~
+@13  = ~Zhurlag... I think. Will you help us?~
+@14  = ~All right. I will see to this affair immediately.~
+@15  = ~I am sorry. I do not have the time for this. I must return to Baldur's Gate at once.~
+@16  = ~You cannot mean that little thief Zhurlong?!~
+@17  = ~I knew it. Never could depend on others to see things through for us. I will search for him myself... after I deal with loose ends. Kill them all!~
+@18  = ~What in the nine hells?!~
+@19  = ~It appears the scholar Zernan is not at all who he claimed himself to be. A 'colleague' of his attacked me outside the walls of Candlekeep after I refused to help him find Zernan, who seems to have gone missing... but I have not the time for any of this, I must return to the city of Baldur's Gate and confront Sarevok... I guess Zernan's location will forever be a mystery.~
+@20  = ~Zhurlong, that is the name! You know him? Then you will help?~
+@21  = ~I know him, yes, but that is not to say we are good friends... All right, I'll see Zhurlong as soon as I can.~
+@22  = ~I am sorry. I do not have the time for you, Zernan, or Zhurlong. I must return to Baldur's Gate at once.~
+@23  = ~Oh, thank you! Thank you, <CHARNAME>! I will be at the Nashkel Inn just in case my friend does turn up and awaiting any news you may have on what has happened to him.~
+@24  = ~You take care, Nandin. And do not worry too much. I am sure we will find him in due time.~
+@25  = ~It appears the scholar Zernan has gone missing. His friend, Nandin, has come all the way to Candlekeep to seek my aid and I can not turn him away. When last they met, Zernan was on his way to meet with a halfling named Zhurlong at the Burning Wizard in Beregost. I suppose that is where I should begin. Nandin will be awaiting me at the Nashkel Inn should I have any information on his friend.~
+@26  = ~What? Zernan in the Nashkel Mines? He would not do so willingly, if not for the sake of knowledge. You must venture there at once, <CHARNAME>. I fear that my colleague has met most unfortunate event in those mines.~
+@27  = ~Any news, <CHARNAME>?~
+@28  = ~We found the book, but unfortunately for Zern...~
+@29  = ~Not as of the moment. But fear not, I will venture into the mines again soon.~ 
+@30  = ~Where is the book? Let me have it, let me have it!~
+@31  = ~Nandin, about Zernan...~
+@32  = ~Zernan was a fool! To leave me and think he could trust the drow to keep their end! Now that I have the book, I have no further use for him or you!~
+@33  = ~It appears both Nandin and Zernan were not at all who they claimed to be. Zernan seems to have struck a deal with the drow to unlock the mysteries of the tome and keep its secrets from his partner, Nandin. Why would these men go to so much trouble for this book? Perhaps there is more to this book than its worth in gold. If I should find the time, it might be worth studying.~

@@ -1,0 +1,15 @@
+IF
+	Global("VaultVisitedAR7300","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("VaultVisitedAR7300","GLOBAL",1)
+END
+
+IF
+	!Global("TheVaultPortal","GLOBAL",5)
+THEN
+	RESPONSE #100
+		SetGlobal("TheVaultPortal","GLOBAL",5)
+END
+
+

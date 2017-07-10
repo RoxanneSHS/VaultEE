@@ -1,0 +1,2924 @@
+	/*************************************************************************
+	*
+ 	* The Vault
+	*
+ 	*************************************************************************/
+
+	// where should we put backup files?
+BACKUP ~vault/backup~  
+
+	// where should tell the user to send email if something goes wrong? 
+AUTHOR ~http://www.shsforums.net/user/29731-beleg33/~
+
+VERSION	~v7.3~
+
+AUTO_TRA ~Vault/Language/%s/D~ //%~
+
+ALWAYS
+  ACTION_IF ENGINE_IS ~bgee bg2ee eet~ BEGIN
+    ACTION_DEFINE_ASSOCIATIVE_ARRAY charsetsTable BEGIN
+      "english" => "CP1252"
+      "french" => "CP1252"
+      "italian" => "CP1252"
+      "russian" => "CP1251"
+	  "polish" => "CP1250"
+      "spanish" => "CP1252"
+    END
+    ACTION_DEFINE_ARRAY charsetsReloadArray BEGIN Setup END
+    LAF ~HANDLE_CHARSETS~
+      INT_VAR
+      infer_charsets = 0
+      STR_VAR
+      tra_path = "Vault/Language"
+      iconv_path = "Vault/Language/iconv" //available as part of the base system on OS X and GNU/Linux
+      charset_table = charsetsTable
+      reload_array = charsetsReloadArray
+    END
+    LOAD_TRA ~Vault/Language/%LANGUAGE%/Setup-ee.tra~
+  END
+  ACTION_IF GAME_IS ~bgee~ BEGIN
+    INCLUDE ~Vault/lib/liam_bgee_vars.tpa~
+  END ELSE ACTION_IF GAME_IS ~bgt~ BEGIN
+    INCLUDE ~Vault/lib/g3_bgt_cpmvars.tpa~
+  END ELSE ACTION_IF GAME_IS ~eet~ BEGIN
+    INCLUDE ~Vault/lib/eet_cpmvars.tpa~
+  END ELSE ACTION_IF GAME_IS ~tutu~ BEGIN
+    INCLUDE ~Vault/lib/g3_tutu_cpmvars.tpa~
+  END
+END
+
+LANGUAGE ~English~
+	~english~
+	~Vault/Language/english/setup.tra~
+LANGUAGE ~Francais (Traduit par les d'Oghmatiques))~
+	~french~
+	~Vault/Language/french/setup.tra~
+LANGUAGE ~Italian (translated by Ilot)~
+	~italian~
+	~Vault/Language/italian/setup.tra~
+LANGUAGE ~Espa¤ol (Traducido por Saemon de ClanDLAN.net, actualizado por Lisandro)~
+	~spanish~
+	~Vault/Language/spanish/setup.tra~
+LANGUAGE ~Russian (translated by Silent and Aldark of arcanecoast.ru)~
+	~russian~
+	~Vault/Language/russian/setup.tra~ 
+LANGUAGE ~Polski (Aristo)~
+	~polish~
+	~Vault/Language/polish/setup.tra~
+
+BEGIN @0 DESIGNATED 0
+REQUIRE_PREDICATE GAME_IS ~bgt bgee eet~ ~This mod is not compatible with your game~
+
+
+///////////////////////////////////////////////////////////////////////////////
+//	D folder 				// compile new dialogs and extensions
+///////////////////////////////////////////////////////////////////////////////
+
+		COMPILE EVAL ~vault/D~
+/* ACTION_IF FILE_EXISTS_IN_GAME ~X#BG1NPCCore.G3~
+	THEN BEGIN
+		COMPILE EVAL ~vault/D/BG1NPC~
+END */
+
+///////////////////////////////////////////////////////////////
+/////////////Level 50 Rulesets/////////////////////////////////
+///////////////////////////////////////////////////////////////
+/* // Deprecated broken ruleset
+
+ACTION_IF NOT FILE_EXISTS ~data/tdd-rule.bif~ THEN BEGIN 
+ACTION_IF NOT FILE_EXISTS ~data/rot-rule.bif~ THEN BEGIN
+COPY  ~vault/2da~		~override~					// 2DA folder, rules 50 pack (These are OK for BGT)
+  END
+END */
+
+///////////////////////////////////////////////////////////////
+////////////Area Patching//////////////////////////////////////
+///////////////////////////////////////////////////////////////
+/* 
+// Deprecated - Area replaced with a new one already patched
+
+//adding 2 new proximity triggers and 8 new vertices for them to %ArchaeologicalSite_Tomb%.ARE
+COPY_EXISTING ~%ArchaeologicalSite_Tomb%.ARE~  ~override~
+ READ_LONG  0x54  "actors_offset"
+ READ_SHORT 0x58  "actors_num"
+ READ_SHORT 0x5a  "infotrig_num"
+ READ_LONG  0x5c  "infotrig_offset"
+ READ_LONG  0x60  "spawns_offset"
+ READ_LONG  0x64  "spawns_num"
+ READ_LONG  0x68  "entrances_offset"
+ READ_LONG  0x6c  "entrances_num"
+ READ_LONG  0x70  "cont_offset"
+ READ_SHORT 0x74  "cont_num"
+ READ_SHORT 0x76  "items_num"
+ READ_LONG  0x78  "items_offset"
+ READ_LONG  0x7c  "vert_offset"
+ READ_SHORT 0x80  "vert_num"
+ READ_SHORT 0x82  "amb_num"
+ READ_LONG  0x84  "amb_offset"
+ READ_LONG  0x88  "vars_offset"
+ READ_LONG  0x8c  "vars_num"
+ READ_LONG  0xa0  "expbmp_offset"
+ READ_LONG  0xa4  "doors_num"
+ READ_LONG  0xa8  "doors_offset"
+ READ_LONG  0xac  "anim_num"
+ READ_LONG  0xb0  "anim_offset"
+ READ_LONG  0xb4  "tiled_num"
+ READ_LONG  0xb8  "tiled_offset"
+ READ_LONG  0xbc  "songs_offset"
+ READ_LONG  0xc0  "rest_spawns_offset"
+ READ_LONG  0xc4  "automap_offset"
+ READ_LONG  0xc8  "automap_num"
+
+//adding 2 new proximity triggers ************************************************
+   SET offset = ("%infotrig_offset%"+0xc4*"%infotrig_num%")
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~VTrap1~
+   WRITE_SHORT (offset+0x20) 0              //proximity trigger
+   WRITE_SHORT (offset+0x22) 940            //bounding box
+   WRITE_SHORT (offset+0x24) 530            //bounding box
+   WRITE_SHORT (offset+0x26) 980            //bounding box
+   WRITE_SHORT (offset+0x28) 650            //bounding box
+   WRITE_SHORT (offset+0x2a) 4              //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%"   //first vertex index
+   WRITE_LONG  (offset+0x34) 0              //cursor frame number
+   WRITE_LONG  (offset+0x60) 10             //flags
+   WRITE_SHORT (offset+0x68) 80             //Trap Detection
+   WRITE_SHORT (offset+0x6a) 90             //Trap Removal
+   WRITE_SHORT (offset+0x6c) 1              //Yup, it's trapped alrighty
+   WRITE_SHORT (offset+0x6e) 0              //And not detected
+   WRITE_SHORT (offset+0x70) 1180           //Trap location X
+   WRITE_SHORT (offset+0x72) 520            //Trap location Y
+   WRITE_ASCII (offset+0x7c) ~JC_GT06~      //Trap script
+   SET offset = offset+0xc4
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~VTrap2~
+   WRITE_SHORT (offset+0x20) 0              //proximity trigger
+   WRITE_SHORT (offset+0x22) 1070           //bounding box
+   WRITE_SHORT (offset+0x24) 540            //bounding box
+   WRITE_SHORT (offset+0x26) 1190           //bounding box
+   WRITE_SHORT (offset+0x28) 560            //bounding box
+   WRITE_SHORT (offset+0x2a) 4              //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%"+4 //first vertex index
+   WRITE_LONG  (offset+0x34) 0              //cursor frame number
+   WRITE_LONG  (offset+0x60) 10             //flags
+   WRITE_SHORT (offset+0x68) 70             //Trap Detection
+   WRITE_SHORT (offset+0x6a) 85             //Trap Removal
+   WRITE_SHORT (offset+0x6c) 1              //Yup, it's trapped alrighty
+   WRITE_SHORT (offset+0x6e) 0              //And not detected
+   WRITE_SHORT (offset+0x70) 2615           //Trap location X
+   WRITE_SHORT (offset+0x72) 1515           //Trap location Y
+   WRITE_ASCII (offset+0x7c) ~JC_GT07~      //Trap script
+   SET offset = offset+0xc4
+   SET "infotrig_num"="%infotrig_num%"+2
+   WRITE_SHORT 0x5a  "%infotrig_num%"
+
+   SET "info_ext"=0xc4*2
+   PATCH_IF ("%actors_offset%">="%infotrig_offset%") BEGIN
+     "actors_offset"="%actors_offset%"+"%info_ext%"
+     WRITE_LONG  0x54 "%actors_offset%"
+   END
+   PATCH_IF ("%spawns_offset%">="%infotrig_offset%") BEGIN
+     "spawns_offset"="%spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0x60  "%spawns_offset%"
+   END
+   PATCH_IF ("%entrances_offset%">="%infotrig_offset%") BEGIN
+     "entrances_offset"="%entrances_offset%"+"%info_ext%"
+     WRITE_LONG  0x68  "%entrances_offset%"
+   END
+   PATCH_IF ("%cont_offset%">="%infotrig_offset%") BEGIN
+     "cont_offset"="%cont_offset%"+"%info_ext%"
+     WRITE_LONG  0x70  "%cont_offset%"
+   END
+   PATCH_IF ("%items_offset%">="%infotrig_offset%") BEGIN
+     "items_offset"="%items_offset%"+"%info_ext%"
+     WRITE_LONG  0x78  "%items_offset%"
+   END
+   PATCH_IF ("%vert_offset%">="%infotrig_offset%") BEGIN
+     "vert_offset"="%vert_offset%"+"%info_ext%"
+     WRITE_LONG  0x7c  "%vert_offset%"
+   END
+   PATCH_IF ("%amb_offset%">="%infotrig_offset%") BEGIN
+     "amb_offset"="%amb_offset%"+"%info_ext%"
+     WRITE_LONG  0x84  "%amb_offset%"
+   END
+   PATCH_IF ("%vars_offset%">="%infotrig_offset%") BEGIN
+     "vars_offset"="%vars_offset%"+"%info_ext%"
+     WRITE_LONG  0x88  "%vars_offset%"
+   END
+   PATCH_IF ("%expbmp_offset%">="%infotrig_offset%") BEGIN
+     "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
+     WRITE_LONG  0xa0  "%expbmp_offset%"
+   END
+   PATCH_IF ("%doors_offset%">="%infotrig_offset%") BEGIN
+     "doors_offset"="%doors_offset%"+"%info_ext%"
+     WRITE_LONG  0xa8  "%doors_offset%"
+   END
+   PATCH_IF ("%anim_offset%">="%infotrig_offset%") BEGIN
+     "anim_offset"="%anim_offset%"+"%info_ext%"
+     WRITE_LONG  0xb0  "%anim_offset%"
+   END
+   PATCH_IF ("%tiled_offset%">="%infotrig_offset%") BEGIN
+     "tiled_offset"="%tiled_offset%"+"%info_ext%"
+     WRITE_LONG  0xb8  "%tiled_offset%"
+   END
+   PATCH_IF ("%songs_offset%">="%infotrig_offset%") BEGIN
+     "songs_offset"="%songs_offset%"+"%info_ext%"
+     WRITE_LONG  0xbc  "%songs_offset%"
+   END
+   PATCH_IF ("%rest_spawns_offset%">="%infotrig_offset%") BEGIN
+     "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0xc0  "%rest_spawns_offset%"
+   END
+   PATCH_IF ("%automap_offset%">="%infotrig_offset%") BEGIN
+     "automap_offset"="%automap_offset%"+"%info_ext%"
+     WRITE_LONG  0xc4  "%automap_offset%"
+   END
+
+  //adding 8 new vertices for triggers
+   SET offset = ("%vert_offset%"+0x04*"%vert_num%")
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      965
+   WRITE_SHORT  (offset+2)  530
+   WRITE_SHORT  (offset+4)  980
+   WRITE_SHORT  (offset+6)  640
+   WRITE_SHORT  (offset+8)  950
+   WRITE_SHORT  (offset+10) 650
+   WRITE_SHORT  (offset+12) 940
+   WRITE_SHORT  (offset+14) 540
+   SET offset = offset + 4*4
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      1190
+   WRITE_SHORT  (offset+2)  540
+   WRITE_SHORT  (offset+4)  1180
+   WRITE_SHORT  (offset+6)  550
+   WRITE_SHORT  (offset+8)  1080
+   WRITE_SHORT  (offset+10) 560
+   WRITE_SHORT  (offset+12) 1070
+   WRITE_SHORT  (offset+14) 545
+   SET offset = offset + 4*4
+   SET "vert_num"="%vert_num%"+8
+   WRITE_SHORT 0x80  "%vert_num%"
+
+   SET "info_ext"=0x04*8
+   PATCH_IF ("%actors_offset%">="%vert_offset%") BEGIN
+     "actors_offset"="%actors_offset%"+"%info_ext%"
+     WRITE_LONG  0x54 "%actors_offset%"
+   END
+   PATCH_IF ("%spawns_offset%">="%vert_offset%") BEGIN
+     "spawns_offset"="%spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0x60  "%spawns_offset%"
+   END
+   PATCH_IF ("%entrances_offset%">="%vert_offset%") BEGIN
+     "entrances_offset"="%entrances_offset%"+"%info_ext%"
+     WRITE_LONG  0x68  "%entrances_offset%"
+   END
+   PATCH_IF ("%cont_offset%">="%vert_offset%") BEGIN
+     "cont_offset"="%cont_offset%"+"%info_ext%"
+     WRITE_LONG  0x70  "%cont_offset%"
+   END
+   PATCH_IF ("%items_offset%">="%vert_offset%") BEGIN
+     "items_offset"="%items_offset%"+"%info_ext%"
+     WRITE_LONG  0x78  "%items_offset%"
+   END
+   PATCH_IF ("%infotrig_offset%">="%vert_offset%") BEGIN
+     "infotrig_offset"="%infotrig_offset%"+"%info_ext%"
+     WRITE_LONG  0x5c  "%infotrig_offset%"
+   END
+   PATCH_IF ("%amb_offset%">="%vert_offset%") BEGIN
+     "amb_offset"="%amb_offset%"+"%info_ext%"
+     WRITE_LONG  0x84  "%amb_offset%"
+   END
+   PATCH_IF ("%vars_offset%">="%vert_offset%") BEGIN
+     "vars_offset"="%vars_offset%"+"%info_ext%"
+     WRITE_LONG  0x88  "%vars_offset%"
+   END
+   PATCH_IF ("%expbmp_offset%">="%vert_offset%") BEGIN
+     "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
+     WRITE_LONG  0xa0  "%expbmp_offset%"
+   END
+   PATCH_IF ("%doors_offset%">="%vert_offset%") BEGIN
+     "doors_offset"="%doors_offset%"+"%info_ext%"
+     WRITE_LONG  0xa8  "%doors_offset%"
+   END
+   PATCH_IF ("%anim_offset%">="%vert_offset%") BEGIN
+     "anim_offset"="%anim_offset%"+"%info_ext%"
+     WRITE_LONG  0xb0  "%anim_offset%"
+   END
+   PATCH_IF ("%tiled_offset%">="%vert_offset%") BEGIN
+     "tiled_offset"="%tiled_offset%"+"%info_ext%"
+     WRITE_LONG  0xb8  "%tiled_offset%"
+   END
+   PATCH_IF ("%songs_offset%">="%vert_offset%") BEGIN
+     "songs_offset"="%songs_offset%"+"%info_ext%"
+     WRITE_LONG  0xbc  "%songs_offset%"
+   END
+   PATCH_IF ("%rest_spawns_offset%">="%vert_offset%") BEGIN
+     "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0xc0  "%rest_spawns_offset%"
+   END
+   PATCH_IF ("%automap_offset%">="%vert_offset%") BEGIN
+     "automap_offset"="%automap_offset%"+"%info_ext%"
+     WRITE_LONG  0xc4  "%automap_offset%"
+   END
+
+BUT_ONLY_IF_IT_CHANGES  // ~%ArchaeologicalSite_Tomb%.are~ */
+
+//Add 4 new proximity triggers and 16 new vertices for those triggers to %NashkelMines_L1%.ARE
+COPY_EXISTING ~%NashkelMines_L1%.ARE~  ~override~
+ READ_LONG  0x54  "actors_offset"
+ READ_SHORT 0x58  "actors_num"
+ READ_SHORT 0x5a  "infotrig_num"
+ READ_LONG  0x5c  "infotrig_offset"
+ READ_LONG  0x60  "spawns_offset"
+ READ_LONG  0x64  "spawns_num"
+ READ_LONG  0x68  "entrances_offset"
+ READ_LONG  0x6c  "entrances_num"
+ READ_LONG  0x70  "cont_offset"
+ READ_SHORT 0x74  "cont_num"
+ READ_SHORT 0x76  "items_num"
+ READ_LONG  0x78  "items_offset"
+ READ_LONG  0x7c  "vert_offset"
+ READ_SHORT 0x80  "vert_num"
+ READ_SHORT 0x82  "amb_num"
+ READ_LONG  0x84  "amb_offset"
+ READ_LONG  0x88  "vars_offset"
+ READ_LONG  0x8c  "vars_num"
+ READ_LONG  0xa0  "expbmp_offset"
+ READ_LONG  0xa4  "doors_num"
+ READ_LONG  0xa8  "doors_offset"
+ READ_LONG  0xac  "anim_num"
+ READ_LONG  0xb0  "anim_offset"
+ READ_LONG  0xb4  "tiled_num"
+ READ_LONG  0xb8  "tiled_offset"
+ READ_LONG  0xbc  "songs_offset"
+ READ_LONG  0xc0  "rest_spawns_offset"
+ READ_LONG  0xc4  "automap_offset"
+ READ_LONG  0xc8  "automap_num"
+
+//adding 4 new proximity triggers ************************************************
+   SET offset = ("%infotrig_offset%"+0xc4*"%infotrig_num%")
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~ReturnNashTrap 1~
+   WRITE_SHORT (offset+0x20) 0               //proximity trigger
+   WRITE_SHORT (offset+0x22) 1240            //bounding box
+   WRITE_SHORT (offset+0x24) 355             //bounding box
+   WRITE_SHORT (offset+0x26) 1450            //bounding box
+   WRITE_SHORT (offset+0x28) 380             //bounding box
+   WRITE_SHORT (offset+0x2a) 4               //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%"    //first vertex index
+   WRITE_LONG  (offset+0x34) 0               //cursor frame number
+   WRITE_LONG  (offset+0x60) 10              //flags
+   WRITE_SHORT (offset+0x68) 70              //Trap Detection
+   WRITE_SHORT (offset+0x6a) 80              //Trap Removal
+   WRITE_SHORT (offset+0x6c) 1               //Yup, it's trapped alrighty
+   WRITE_SHORT (offset+0x6e) 0               //And not detected
+   WRITE_SHORT (offset+0x70) 1470            //Trap location X
+   WRITE_SHORT (offset+0x72) 395             //Trap location Y
+   WRITE_ASCII (offset+0x7c) ~JC_GT01~       //Trap script
+   SET offset = offset+0xc4
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~ReturnNashTrap 2~
+   WRITE_SHORT (offset+0x20) 0               //proximity trigger
+   WRITE_SHORT (offset+0x22) 1220            //bounding box
+   WRITE_SHORT (offset+0x24) 260             //bounding box
+   WRITE_SHORT (offset+0x26) 1410            //bounding box
+   WRITE_SHORT (offset+0x28) 280             //bounding box
+   WRITE_SHORT (offset+0x2a) 4               //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%"+4  //first vertex index
+   WRITE_LONG  (offset+0x34) 0               //cursor frame number
+   WRITE_LONG  (offset+0x60) 10              //flags
+   WRITE_SHORT (offset+0x68) 70              //Trap Detection
+   WRITE_SHORT (offset+0x6a) 80              //Trap Removal
+   WRITE_SHORT (offset+0x6c) 1               //Yup, it's trapped alrighty
+   WRITE_SHORT (offset+0x6e) 0               //And not detected
+   WRITE_SHORT (offset+0x70) 1430            //Trap location X
+   WRITE_SHORT (offset+0x72) 300             //Trap location Y
+   WRITE_ASCII (offset+0x7c) ~JC_GT02~       //Trap script
+   SET offset = offset+0xc4
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~ReturnNashTrap 3~
+   WRITE_SHORT (offset+0x20) 0               //proximity trigger
+   WRITE_SHORT (offset+0x22) 1210            //bounding box
+   WRITE_SHORT (offset+0x24) 545             //bounding box
+   WRITE_SHORT (offset+0x26) 1510            //bounding box
+   WRITE_SHORT (offset+0x28) 570             //bounding box
+   WRITE_SHORT (offset+0x2a) 4               //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%"+8  //first vertex index
+   WRITE_LONG  (offset+0x34) 0               //cursor frame number
+   WRITE_LONG  (offset+0x60) 10              //flags
+   WRITE_SHORT (offset+0x68) 70              //Trap Detection
+   WRITE_SHORT (offset+0x6a) 80              //Trap Removal
+   WRITE_SHORT (offset+0x6c) 1               //Yup, it's trapped alrighty
+   WRITE_SHORT (offset+0x6e) 0               //And not detected
+   WRITE_SHORT (offset+0x70) 1470            //Trap location X
+   WRITE_SHORT (offset+0x72) 395             //Trap location Y
+   WRITE_ASCII (offset+0x7c) ~JC_GT03~       //Trap script
+   SET offset = offset+0xc4
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~ReturnNashTrap 4~
+   WRITE_SHORT (offset+0x20) 0               //proximity trigger
+   WRITE_SHORT (offset+0x22) 1090            //bounding box
+   WRITE_SHORT (offset+0x24) 1050            //bounding box
+   WRITE_SHORT (offset+0x26) 1205            //bounding box
+   WRITE_SHORT (offset+0x28) 1085            //bounding box
+   WRITE_SHORT (offset+0x2a) 4               //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%"+12 //first vertex index
+   WRITE_LONG  (offset+0x34) 0               //cursor frame number
+   WRITE_LONG  (offset+0x60) 10              //flags
+   WRITE_SHORT (offset+0x68) 70              //Trap Detection
+   WRITE_SHORT (offset+0x6a) 80              //Trap Removal
+   WRITE_SHORT (offset+0x6c) 1               //Yup, it's trapped alrighty
+   WRITE_SHORT (offset+0x6e) 0               //And not detected
+   WRITE_SHORT (offset+0x70) 1470            //Trap location X
+   WRITE_SHORT (offset+0x72) 395             //Trap location Y
+   WRITE_ASCII (offset+0x7c) ~JC_GT01~       //Trap script
+   SET offset = offset+0xc4
+   SET "infotrig_num"="%infotrig_num%"+4
+   WRITE_SHORT 0x5a  "%infotrig_num%"
+
+   SET "info_ext"=0xc4*4
+   PATCH_IF ("%actors_offset%">="%infotrig_offset%") BEGIN
+     "actors_offset"="%actors_offset%"+"%info_ext%"
+     WRITE_LONG  0x54 "%actors_offset%"
+   END
+   PATCH_IF ("%spawns_offset%">="%infotrig_offset%") BEGIN
+     "spawns_offset"="%spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0x60  "%spawns_offset%"
+   END
+   PATCH_IF ("%entrances_offset%">="%infotrig_offset%") BEGIN
+     "entrances_offset"="%entrances_offset%"+"%info_ext%"
+     WRITE_LONG  0x68  "%entrances_offset%"
+   END
+   PATCH_IF ("%cont_offset%">="%infotrig_offset%") BEGIN
+     "cont_offset"="%cont_offset%"+"%info_ext%"
+     WRITE_LONG  0x70  "%cont_offset%"
+   END
+   PATCH_IF ("%items_offset%">="%infotrig_offset%") BEGIN
+     "items_offset"="%items_offset%"+"%info_ext%"
+     WRITE_LONG  0x78  "%items_offset%"
+   END
+   PATCH_IF ("%vert_offset%">="%infotrig_offset%") BEGIN
+     "vert_offset"="%vert_offset%"+"%info_ext%"
+     WRITE_LONG  0x7c  "%vert_offset%"
+   END
+   PATCH_IF ("%amb_offset%">="%infotrig_offset%") BEGIN
+     "amb_offset"="%amb_offset%"+"%info_ext%"
+     WRITE_LONG  0x84  "%amb_offset%"
+   END
+   PATCH_IF ("%vars_offset%">="%infotrig_offset%") BEGIN
+     "vars_offset"="%vars_offset%"+"%info_ext%"
+     WRITE_LONG  0x88  "%vars_offset%"
+   END
+   PATCH_IF ("%expbmp_offset%">="%infotrig_offset%") BEGIN
+     "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
+     WRITE_LONG  0xa0  "%expbmp_offset%"
+   END
+   PATCH_IF ("%doors_offset%">="%infotrig_offset%") BEGIN
+     "doors_offset"="%doors_offset%"+"%info_ext%"
+     WRITE_LONG  0xa8  "%doors_offset%"
+   END
+   PATCH_IF ("%anim_offset%">="%infotrig_offset%") BEGIN
+     "anim_offset"="%anim_offset%"+"%info_ext%"
+     WRITE_LONG  0xb0  "%anim_offset%"
+   END
+   PATCH_IF ("%tiled_offset%">="%infotrig_offset%") BEGIN
+     "tiled_offset"="%tiled_offset%"+"%info_ext%"
+     WRITE_LONG  0xb8  "%tiled_offset%"
+   END
+   PATCH_IF ("%songs_offset%">="%infotrig_offset%") BEGIN
+     "songs_offset"="%songs_offset%"+"%info_ext%"
+     WRITE_LONG  0xbc  "%songs_offset%"
+   END
+   PATCH_IF ("%rest_spawns_offset%">="%infotrig_offset%") BEGIN
+     "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0xc0  "%rest_spawns_offset%"
+   END
+   PATCH_IF ("%automap_offset%">="%infotrig_offset%") BEGIN
+     "automap_offset"="%automap_offset%"+"%info_ext%"
+     WRITE_LONG  0xc4  "%automap_offset%"
+   END
+
+  //adding 16 new vertices for triggers
+   SET offset = ("%vert_offset%"+0x04*"%vert_num%")
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      1450
+   WRITE_SHORT  (offset+2)  355
+   WRITE_SHORT  (offset+4)  1450
+   WRITE_SHORT  (offset+6)  375
+   WRITE_SHORT  (offset+8)  1240
+   WRITE_SHORT  (offset+10) 380
+   WRITE_SHORT  (offset+12) 1240
+   WRITE_SHORT  (offset+14) 360
+   SET offset = offset + 4*4
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      1410
+   WRITE_SHORT  (offset+2)  260
+   WRITE_SHORT  (offset+4)  1410
+   WRITE_SHORT  (offset+6)  280
+   WRITE_SHORT  (offset+8)  1220
+   WRITE_SHORT  (offset+10) 280
+   WRITE_SHORT  (offset+12) 1220
+   WRITE_SHORT  (offset+14) 260
+   SET offset = offset + 4*4
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      1510
+   WRITE_SHORT  (offset+2)  545
+   WRITE_SHORT  (offset+4)  1510
+   WRITE_SHORT  (offset+6)  565
+   WRITE_SHORT  (offset+8)  1210
+   WRITE_SHORT  (offset+10) 570
+   WRITE_SHORT  (offset+12) 1210
+   WRITE_SHORT  (offset+14) 550
+   SET offset = offset + 4*4
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      1205
+   WRITE_SHORT  (offset+2)  1065
+   WRITE_SHORT  (offset+4)  1205
+   WRITE_SHORT  (offset+6)  1085
+   WRITE_SHORT  (offset+8)  1090
+   WRITE_SHORT  (offset+10) 1070
+   WRITE_SHORT  (offset+12) 1090
+   WRITE_SHORT  (offset+14) 1050
+   SET offset = offset + 4*4
+   SET "vert_num"="%vert_num%"+16
+   WRITE_SHORT 0x80  "%vert_num%"
+
+   SET "info_ext"=0x04*16
+   PATCH_IF ("%actors_offset%">="%vert_offset%") BEGIN
+     "actors_offset"="%actors_offset%"+"%info_ext%"
+     WRITE_LONG  0x54 "%actors_offset%"
+   END
+   PATCH_IF ("%spawns_offset%">="%vert_offset%") BEGIN
+     "spawns_offset"="%spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0x60  "%spawns_offset%"
+   END
+   PATCH_IF ("%entrances_offset%">="%vert_offset%") BEGIN
+     "entrances_offset"="%entrances_offset%"+"%info_ext%"
+     WRITE_LONG  0x68  "%entrances_offset%"
+   END
+   PATCH_IF ("%cont_offset%">="%vert_offset%") BEGIN
+     "cont_offset"="%cont_offset%"+"%info_ext%"
+     WRITE_LONG  0x70  "%cont_offset%"
+   END
+   PATCH_IF ("%items_offset%">="%vert_offset%") BEGIN
+     "items_offset"="%items_offset%"+"%info_ext%"
+     WRITE_LONG  0x78  "%items_offset%"
+   END
+   PATCH_IF ("%infotrig_offset%">="%vert_offset%") BEGIN
+     "infotrig_offset"="%infotrig_offset%"+"%info_ext%"
+     WRITE_LONG  0x5c  "%infotrig_offset%"
+   END
+   PATCH_IF ("%amb_offset%">="%vert_offset%") BEGIN
+     "amb_offset"="%amb_offset%"+"%info_ext%"
+     WRITE_LONG  0x84  "%amb_offset%"
+   END
+   PATCH_IF ("%vars_offset%">="%vert_offset%") BEGIN
+     "vars_offset"="%vars_offset%"+"%info_ext%"
+     WRITE_LONG  0x88  "%vars_offset%"
+   END
+   PATCH_IF ("%expbmp_offset%">="%vert_offset%") BEGIN
+     "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
+     WRITE_LONG  0xa0  "%expbmp_offset%"
+   END
+   PATCH_IF ("%doors_offset%">="%vert_offset%") BEGIN
+     "doors_offset"="%doors_offset%"+"%info_ext%"
+     WRITE_LONG  0xa8  "%doors_offset%"
+   END
+   PATCH_IF ("%anim_offset%">="%vert_offset%") BEGIN
+     "anim_offset"="%anim_offset%"+"%info_ext%"
+     WRITE_LONG  0xb0  "%anim_offset%"
+   END
+   PATCH_IF ("%tiled_offset%">="%vert_offset%") BEGIN
+     "tiled_offset"="%tiled_offset%"+"%info_ext%"
+     WRITE_LONG  0xb8  "%tiled_offset%"
+   END
+   PATCH_IF ("%songs_offset%">="%vert_offset%") BEGIN
+     "songs_offset"="%songs_offset%"+"%info_ext%"
+     WRITE_LONG  0xbc  "%songs_offset%"
+   END
+   PATCH_IF ("%rest_spawns_offset%">="%vert_offset%") BEGIN
+     "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0xc0  "%rest_spawns_offset%"
+   END
+   PATCH_IF ("%automap_offset%">="%vert_offset%") BEGIN
+     "automap_offset"="%automap_offset%"+"%info_ext%"
+     WRITE_LONG  0xc4  "%automap_offset%"
+   END
+
+BUT_ONLY_IF_IT_CHANGES  //********************************************************  ~%NashkelMines_L1%.are~
+
+//Add 6 new proximity triggers and 24 new vertices for those triggers to %NashkelMines_L2%.ARE
+COPY_EXISTING ~%NashkelMines_L2%.ARE~  ~override~
+ READ_LONG  0x54  "actors_offset"
+ READ_SHORT 0x58  "actors_num"
+ READ_SHORT 0x5a  "infotrig_num"
+ READ_LONG  0x5c  "infotrig_offset"
+ READ_LONG  0x60  "spawns_offset"
+ READ_LONG  0x64  "spawns_num"
+ READ_LONG  0x68  "entrances_offset"
+ READ_LONG  0x6c  "entrances_num"
+ READ_LONG  0x70  "cont_offset"
+ READ_SHORT 0x74  "cont_num"
+ READ_SHORT 0x76  "items_num"
+ READ_LONG  0x78  "items_offset"
+ READ_LONG  0x7c  "vert_offset"
+ READ_SHORT 0x80  "vert_num"
+ READ_SHORT 0x82  "amb_num"
+ READ_LONG  0x84  "amb_offset"
+ READ_LONG  0x88  "vars_offset"
+ READ_LONG  0x8c  "vars_num"
+ READ_LONG  0xa0  "expbmp_offset"
+ READ_LONG  0xa4  "doors_num"
+ READ_LONG  0xa8  "doors_offset"
+ READ_LONG  0xac  "anim_num"
+ READ_LONG  0xb0  "anim_offset"
+ READ_LONG  0xb4  "tiled_num"
+ READ_LONG  0xb8  "tiled_offset"
+ READ_LONG  0xbc  "songs_offset"
+ READ_LONG  0xc0  "rest_spawns_offset"
+ READ_LONG  0xc4  "automap_offset"
+ READ_LONG  0xc8  "automap_num"
+
+//adding 6 new proximity triggers ************************************************
+   SET offset = ("%infotrig_offset%"+0xc4*"%infotrig_num%")
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~ReturnNashTrap 1~
+   WRITE_SHORT (offset+0x20) 0               //proximity trigger
+   WRITE_SHORT (offset+0x22) 2400            //bounding box
+   WRITE_SHORT (offset+0x24) 2270            //bounding box
+   WRITE_SHORT (offset+0x26) 2515            //bounding box
+   WRITE_SHORT (offset+0x28) 2305            //bounding box
+   WRITE_SHORT (offset+0x2a) 4               //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%"    //first vertex index
+   WRITE_LONG  (offset+0x34) 0               //cursor frame number
+   WRITE_LONG  (offset+0x60) 10              //flags
+   WRITE_SHORT (offset+0x68) 70              //Trap Detection
+   WRITE_SHORT (offset+0x6a) 80              //Trap Removal
+   WRITE_SHORT (offset+0x6c) 1               //Yup, it's trapped alrighty
+   WRITE_SHORT (offset+0x6e) 0               //And not detected
+   WRITE_SHORT (offset+0x70) 2535            //Trap location X
+   WRITE_SHORT (offset+0x72) 2325            //Trap location Y
+   WRITE_ASCII (offset+0x7c) ~JC_GT01~       //Trap script
+   SET offset = offset+0xc4
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~ReturnNashTrap 2~
+   WRITE_SHORT (offset+0x20) 0               //proximity trigger
+   WRITE_SHORT (offset+0x22) 2915            //bounding box
+   WRITE_SHORT (offset+0x24) 2015            //bounding box
+   WRITE_SHORT (offset+0x26) 3070            //bounding box
+   WRITE_SHORT (offset+0x28) 2060            //bounding box
+   WRITE_SHORT (offset+0x2a) 4               //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%"+4  //first vertex index
+   WRITE_LONG  (offset+0x34) 0               //cursor frame number
+   WRITE_LONG  (offset+0x60) 10              //flags
+   WRITE_SHORT (offset+0x68) 70              //Trap Detection
+   WRITE_SHORT (offset+0x6a) 80              //Trap Removal
+   WRITE_SHORT (offset+0x6c) 1               //Yup, it's trapped alrighty
+   WRITE_SHORT (offset+0x6e) 0               //And not detected
+   WRITE_SHORT (offset+0x70) 3090            //Trap location X
+   WRITE_SHORT (offset+0x72) 2055            //Trap location Y
+   WRITE_ASCII (offset+0x7c) ~JC_GT02~       //Trap script
+   SET offset = offset+0xc4
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~ReturnNashTrap 3~
+   WRITE_SHORT (offset+0x20) 0               //proximity trigger
+   WRITE_SHORT (offset+0x22) 2925            //bounding box
+   WRITE_SHORT (offset+0x24) 2060            //bounding box
+   WRITE_SHORT (offset+0x26) 3070            //bounding box
+   WRITE_SHORT (offset+0x28) 2095            //bounding box
+   WRITE_SHORT (offset+0x2a) 4               //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%"+8  //first vertex index
+   WRITE_LONG  (offset+0x34) 0               //cursor frame number
+   WRITE_LONG  (offset+0x60) 10              //flags
+   WRITE_SHORT (offset+0x68) 70              //Trap Detection
+   WRITE_SHORT (offset+0x6a) 80              //Trap Removal
+   WRITE_SHORT (offset+0x6c) 1               //Yup, it's trapped alrighty
+   WRITE_SHORT (offset+0x6e) 0               //And not detected
+   WRITE_SHORT (offset+0x70) 3090            //Trap location X
+   WRITE_SHORT (offset+0x72) 2100            //Trap location Y
+   WRITE_ASCII (offset+0x7c) ~JC_GT03~       //Trap script
+   SET offset = offset+0xc4
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~ReturnNashTrap 4~
+   WRITE_SHORT (offset+0x20) 0               //proximity trigger
+   WRITE_SHORT (offset+0x22) 3635            //bounding box
+   WRITE_SHORT (offset+0x24) 1520            //bounding box
+   WRITE_SHORT (offset+0x26) 3760            //bounding box
+   WRITE_SHORT (offset+0x28) 1565            //bounding box
+   WRITE_SHORT (offset+0x2a) 4               //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%"+12 //first vertex index
+   WRITE_LONG  (offset+0x34) 0               //cursor frame number
+   WRITE_LONG  (offset+0x60) 10              //flags
+   WRITE_SHORT (offset+0x68) 80              //Trap Detection
+   WRITE_SHORT (offset+0x6a) 80              //Trap Removal
+   WRITE_SHORT (offset+0x6c) 1               //Yup, it's trapped alrighty
+   WRITE_SHORT (offset+0x6e) 0               //And not detected
+   WRITE_SHORT (offset+0x70) 3780            //Trap location X
+   WRITE_SHORT (offset+0x72) 1585            //Trap location Y
+   WRITE_ASCII (offset+0x7c) ~JC_GT01~       //Trap script
+   SET offset = offset+0xc4
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~ReturnNashTrap 5~
+   WRITE_SHORT (offset+0x20) 0               //proximity trigger
+   WRITE_SHORT (offset+0x22) 2135            //bounding box
+   WRITE_SHORT (offset+0x24) 1130            //bounding box
+   WRITE_SHORT (offset+0x26) 2190            //bounding box
+   WRITE_SHORT (offset+0x28) 1245            //bounding box
+   WRITE_SHORT (offset+0x2a) 4               //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%"+16 //first vertex index
+   WRITE_LONG  (offset+0x34) 0               //cursor frame number
+   WRITE_LONG  (offset+0x60) 10              //flags
+   WRITE_SHORT (offset+0x68) 80              //Trap Detection
+   WRITE_SHORT (offset+0x6a) 80              //Trap Removal
+   WRITE_SHORT (offset+0x6c) 1               //Yup, it's trapped alrighty
+   WRITE_SHORT (offset+0x6e) 0               //And not detected
+   WRITE_SHORT (offset+0x70) 2210            //Trap location X
+   WRITE_SHORT (offset+0x72) 1110            //Trap location Y
+   WRITE_ASCII (offset+0x7c) ~JC_GT02~       //Trap script
+   SET offset = offset+0xc4
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~ReturnNashTrap 6~
+   WRITE_SHORT (offset+0x20) 0               //proximity trigger
+   WRITE_SHORT (offset+0x22) 2885            //bounding box
+   WRITE_SHORT (offset+0x24) 1515            //bounding box
+   WRITE_SHORT (offset+0x26) 3010            //bounding box
+   WRITE_SHORT (offset+0x28) 1605            //bounding box
+   WRITE_SHORT (offset+0x2a) 4               //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%"+20 //first vertex index
+   WRITE_LONG  (offset+0x34) 0               //cursor frame number
+   WRITE_LONG  (offset+0x60) 10              //flags
+   WRITE_SHORT (offset+0x68) 80              //Trap Detection
+   WRITE_SHORT (offset+0x6a) 80              //Trap Removal
+   WRITE_SHORT (offset+0x6c) 1               //Yup, it's trapped alrighty
+   WRITE_SHORT (offset+0x6e) 0               //And not detected
+   WRITE_SHORT (offset+0x70) 3010            //Trap location X
+   WRITE_SHORT (offset+0x72) 1675            //Trap location Y
+   WRITE_ASCII (offset+0x7c) ~JC_GT03~       //Trap script
+   SET offset = offset+0xc4
+   SET "infotrig_num"="%infotrig_num%"+6
+   WRITE_SHORT 0x5a  "%infotrig_num%"
+
+   SET "info_ext"=0xc4*6
+   PATCH_IF ("%actors_offset%">="%infotrig_offset%") BEGIN
+     "actors_offset"="%actors_offset%"+"%info_ext%"
+     WRITE_LONG  0x54 "%actors_offset%"
+   END
+   PATCH_IF ("%spawns_offset%">="%infotrig_offset%") BEGIN
+     "spawns_offset"="%spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0x60  "%spawns_offset%"
+   END
+   PATCH_IF ("%entrances_offset%">="%infotrig_offset%") BEGIN
+     "entrances_offset"="%entrances_offset%"+"%info_ext%"
+     WRITE_LONG  0x68  "%entrances_offset%"
+   END
+   PATCH_IF ("%cont_offset%">="%infotrig_offset%") BEGIN
+     "cont_offset"="%cont_offset%"+"%info_ext%"
+     WRITE_LONG  0x70  "%cont_offset%"
+   END
+   PATCH_IF ("%items_offset%">="%infotrig_offset%") BEGIN
+     "items_offset"="%items_offset%"+"%info_ext%"
+     WRITE_LONG  0x78  "%items_offset%"
+   END
+   PATCH_IF ("%vert_offset%">="%infotrig_offset%") BEGIN
+     "vert_offset"="%vert_offset%"+"%info_ext%"
+     WRITE_LONG  0x7c  "%vert_offset%"
+   END
+   PATCH_IF ("%amb_offset%">="%infotrig_offset%") BEGIN
+     "amb_offset"="%amb_offset%"+"%info_ext%"
+     WRITE_LONG  0x84  "%amb_offset%"
+   END
+   PATCH_IF ("%vars_offset%">="%infotrig_offset%") BEGIN
+     "vars_offset"="%vars_offset%"+"%info_ext%"
+     WRITE_LONG  0x88  "%vars_offset%"
+   END
+   PATCH_IF ("%expbmp_offset%">="%infotrig_offset%") BEGIN
+     "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
+     WRITE_LONG  0xa0  "%expbmp_offset%"
+   END
+   PATCH_IF ("%doors_offset%">="%infotrig_offset%") BEGIN
+     "doors_offset"="%doors_offset%"+"%info_ext%"
+     WRITE_LONG  0xa8  "%doors_offset%"
+   END
+   PATCH_IF ("%anim_offset%">="%infotrig_offset%") BEGIN
+     "anim_offset"="%anim_offset%"+"%info_ext%"
+     WRITE_LONG  0xb0  "%anim_offset%"
+   END
+   PATCH_IF ("%tiled_offset%">="%infotrig_offset%") BEGIN
+     "tiled_offset"="%tiled_offset%"+"%info_ext%"
+     WRITE_LONG  0xb8  "%tiled_offset%"
+   END
+   PATCH_IF ("%songs_offset%">="%infotrig_offset%") BEGIN
+     "songs_offset"="%songs_offset%"+"%info_ext%"
+     WRITE_LONG  0xbc  "%songs_offset%"
+   END
+   PATCH_IF ("%rest_spawns_offset%">="%infotrig_offset%") BEGIN
+     "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0xc0  "%rest_spawns_offset%"
+   END
+   PATCH_IF ("%automap_offset%">="%infotrig_offset%") BEGIN
+     "automap_offset"="%automap_offset%"+"%info_ext%"
+     WRITE_LONG  0xc4  "%automap_offset%"
+   END
+
+  //adding 24 new vertices for triggers
+   SET offset = ("%vert_offset%"+0x04*"%vert_num%")
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      2515
+   WRITE_SHORT  (offset+2)  2285
+   WRITE_SHORT  (offset+4)  2515
+   WRITE_SHORT  (offset+6)  2305
+   WRITE_SHORT  (offset+8)  2400
+   WRITE_SHORT  (offset+10) 2290
+   WRITE_SHORT  (offset+12) 2400
+   WRITE_SHORT  (offset+14) 2270
+   SET offset = offset + 4*4
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      3070
+   WRITE_SHORT  (offset+2)  2015
+   WRITE_SHORT  (offset+4)  3070
+   WRITE_SHORT  (offset+6)  2035
+   WRITE_SHORT  (offset+8)  2915
+   WRITE_SHORT  (offset+10) 2060
+   WRITE_SHORT  (offset+12) 2915
+   WRITE_SHORT  (offset+14) 2040
+   SET offset = offset + 4*4
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      3070
+   WRITE_SHORT  (offset+2)  2060
+   WRITE_SHORT  (offset+4)  3070
+   WRITE_SHORT  (offset+6)  2080
+   WRITE_SHORT  (offset+8)  2925
+   WRITE_SHORT  (offset+10) 2095
+   WRITE_SHORT  (offset+12) 2925
+   WRITE_SHORT  (offset+14) 2075
+   SET offset = offset + 4*4
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      3760
+   WRITE_SHORT  (offset+2)  1545
+   WRITE_SHORT  (offset+4)  3760
+   WRITE_SHORT  (offset+6)  1565
+   WRITE_SHORT  (offset+8)  3635
+   WRITE_SHORT  (offset+10) 1540
+   WRITE_SHORT  (offset+12) 3635
+   WRITE_SHORT  (offset+14) 1520
+   SET offset = offset + 4*4
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      2190
+   WRITE_SHORT  (offset+2)  1130
+   WRITE_SHORT  (offset+4)  2155
+   WRITE_SHORT  (offset+6)  1245
+   WRITE_SHORT  (offset+8)  2135
+   WRITE_SHORT  (offset+10) 1245
+   WRITE_SHORT  (offset+12) 2170
+   WRITE_SHORT  (offset+14) 1130
+   SET offset = offset + 4*4
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      3010
+   WRITE_SHORT  (offset+2)  1545
+   WRITE_SHORT  (offset+4)  2915
+   WRITE_SHORT  (offset+6)  1605
+   WRITE_SHORT  (offset+8)  2885
+   WRITE_SHORT  (offset+10) 1590
+   WRITE_SHORT  (offset+12) 2970
+   WRITE_SHORT  (offset+14) 1515
+   SET offset = offset + 4*4
+   SET "vert_num"="%vert_num%"+24
+   WRITE_SHORT 0x80  "%vert_num%"
+
+   SET "info_ext"=0x04*24
+   PATCH_IF ("%actors_offset%">="%vert_offset%") BEGIN
+     "actors_offset"="%actors_offset%"+"%info_ext%"
+     WRITE_LONG  0x54 "%actors_offset%"
+   END
+   PATCH_IF ("%spawns_offset%">="%vert_offset%") BEGIN
+     "spawns_offset"="%spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0x60  "%spawns_offset%"
+   END
+   PATCH_IF ("%entrances_offset%">="%vert_offset%") BEGIN
+     "entrances_offset"="%entrances_offset%"+"%info_ext%"
+     WRITE_LONG  0x68  "%entrances_offset%"
+   END
+   PATCH_IF ("%cont_offset%">="%vert_offset%") BEGIN
+     "cont_offset"="%cont_offset%"+"%info_ext%"
+     WRITE_LONG  0x70  "%cont_offset%"
+   END
+   PATCH_IF ("%items_offset%">="%vert_offset%") BEGIN
+     "items_offset"="%items_offset%"+"%info_ext%"
+     WRITE_LONG  0x78  "%items_offset%"
+   END
+   PATCH_IF ("%infotrig_offset%">="%vert_offset%") BEGIN
+     "infotrig_offset"="%infotrig_offset%"+"%info_ext%"
+     WRITE_LONG  0x5c  "%infotrig_offset%"
+   END
+   PATCH_IF ("%amb_offset%">="%vert_offset%") BEGIN
+     "amb_offset"="%amb_offset%"+"%info_ext%"
+     WRITE_LONG  0x84  "%amb_offset%"
+   END
+   PATCH_IF ("%vars_offset%">="%vert_offset%") BEGIN
+     "vars_offset"="%vars_offset%"+"%info_ext%"
+     WRITE_LONG  0x88  "%vars_offset%"
+   END
+   PATCH_IF ("%expbmp_offset%">="%vert_offset%") BEGIN
+     "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
+     WRITE_LONG  0xa0  "%expbmp_offset%"
+   END
+   PATCH_IF ("%doors_offset%">="%vert_offset%") BEGIN
+     "doors_offset"="%doors_offset%"+"%info_ext%"
+     WRITE_LONG  0xa8  "%doors_offset%"
+   END
+   PATCH_IF ("%anim_offset%">="%vert_offset%") BEGIN
+     "anim_offset"="%anim_offset%"+"%info_ext%"
+     WRITE_LONG  0xb0  "%anim_offset%"
+   END
+   PATCH_IF ("%tiled_offset%">="%vert_offset%") BEGIN
+     "tiled_offset"="%tiled_offset%"+"%info_ext%"
+     WRITE_LONG  0xb8  "%tiled_offset%"
+   END
+   PATCH_IF ("%songs_offset%">="%vert_offset%") BEGIN
+     "songs_offset"="%songs_offset%"+"%info_ext%"
+     WRITE_LONG  0xbc  "%songs_offset%"
+   END
+   PATCH_IF ("%rest_spawns_offset%">="%vert_offset%") BEGIN
+     "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0xc0  "%rest_spawns_offset%"
+   END
+   PATCH_IF ("%automap_offset%">="%vert_offset%") BEGIN
+     "automap_offset"="%automap_offset%"+"%info_ext%"
+     WRITE_LONG  0xc4  "%automap_offset%"
+   END
+
+BUT_ONLY_IF_IT_CHANGES  //********************************************************  ~%NashkelMines_L2%.are~
+
+// Add 7 new proximity triggers and 28 new vertices for those triggers to %NashkelMines_L3%.ARE
+COPY_EXISTING ~%NashkelMines_L3%.ARE~  ~override~
+ READ_LONG  0x54  "actors_offset"
+ READ_SHORT 0x58  "actors_num"
+ READ_SHORT 0x5a  "infotrig_num"
+ READ_LONG  0x5c  "infotrig_offset"
+ READ_LONG  0x60  "spawns_offset"
+ READ_LONG  0x64  "spawns_num"
+ READ_LONG  0x68  "entrances_offset"
+ READ_LONG  0x6c  "entrances_num"
+ READ_LONG  0x70  "cont_offset"
+ READ_SHORT 0x74  "cont_num"
+ READ_SHORT 0x76  "items_num"
+ READ_LONG  0x78  "items_offset"
+ READ_LONG  0x7c  "vert_offset"
+ READ_SHORT 0x80  "vert_num"
+ READ_SHORT 0x82  "amb_num"
+ READ_LONG  0x84  "amb_offset"
+ READ_LONG  0x88  "vars_offset"
+ READ_LONG  0x8c  "vars_num"
+ READ_LONG  0xa0  "expbmp_offset"
+ READ_LONG  0xa4  "doors_num"
+ READ_LONG  0xa8  "doors_offset"
+ READ_LONG  0xac  "anim_num"
+ READ_LONG  0xb0  "anim_offset"
+ READ_LONG  0xb4  "tiled_num"
+ READ_LONG  0xb8  "tiled_offset"
+ READ_LONG  0xbc  "songs_offset"
+ READ_LONG  0xc0  "rest_spawns_offset"
+ READ_LONG  0xc4  "automap_offset"
+ READ_LONG  0xc8  "automap_num"
+
+// adding 7 new proximity triggers ************************************************
+   SET offset = ("%infotrig_offset%"+0xc4*"%infotrig_num%")
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~ReturnNashTrap 1~
+   WRITE_SHORT (offset+0x20) 0               //proximity trigger
+   WRITE_SHORT (offset+0x22) 1490            //bounding box
+   WRITE_SHORT (offset+0x24) 135             //bounding box
+   WRITE_SHORT (offset+0x26) 1670            //bounding box
+   WRITE_SHORT (offset+0x28) 175            //bounding box
+   WRITE_SHORT (offset+0x2a) 4               //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%"    //first vertex index
+   WRITE_LONG  (offset+0x34) 0               //cursor frame number
+   WRITE_LONG  (offset+0x60) 10              //flags
+   WRITE_SHORT (offset+0x68) 80              //Trap Detection
+   WRITE_SHORT (offset+0x6a) 90              //Trap Removal
+   WRITE_SHORT (offset+0x6c) 1               //Yup, it's trapped alrighty
+   WRITE_SHORT (offset+0x6e) 0               //And not detected
+   WRITE_SHORT (offset+0x70) 1690            //Trap location X
+   WRITE_SHORT (offset+0x72) 185             //Trap location Y
+   WRITE_ASCII (offset+0x7c) ~JC_GT01~       //Trap script
+   SET offset = offset+0xc4
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~ReturnNashTrap 2~
+   WRITE_SHORT (offset+0x20) 0               //proximity trigger
+   WRITE_SHORT (offset+0x22) 1490            //bounding box
+   WRITE_SHORT (offset+0x24) 145             //bounding box
+   WRITE_SHORT (offset+0x26) 1670             //bounding box
+   WRITE_SHORT (offset+0x28) 185            //bounding box
+   WRITE_SHORT (offset+0x2a) 4               //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%"+4  //first vertex index
+   WRITE_LONG  (offset+0x34) 0               //cursor frame number
+   WRITE_LONG  (offset+0x60) 10              //flags
+   WRITE_SHORT (offset+0x68) 90               //Trap Detection
+   WRITE_SHORT (offset+0x6a) 95               //Trap Removal
+   WRITE_SHORT (offset+0x6c) 1               //Yup, it's trapped alrighty
+   WRITE_SHORT (offset+0x6e) 0               //And not detected
+   WRITE_SHORT (offset+0x70) 1690            //Trap location X
+   WRITE_SHORT (offset+0x72) 205             //Trap location Y
+   WRITE_ASCII (offset+0x7c) ~JC_GT01~       //Trap script
+   SET offset = offset+0xc4
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~ReturnNashTrap 3~
+   WRITE_SHORT (offset+0x20) 0               //proximity trigger
+   WRITE_SHORT (offset+0x22) 2305            //bounding box
+   WRITE_SHORT (offset+0x24) 830             //bounding box
+   WRITE_SHORT (offset+0x26) 2530            //bounding box
+   WRITE_SHORT (offset+0x28) 890            //bounding box
+   WRITE_SHORT (offset+0x2a) 4               //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%"+8  //first vertex index
+   WRITE_LONG  (offset+0x34) 0               //cursor frame number
+   WRITE_LONG  (offset+0x60) 10              //flags
+   WRITE_SHORT (offset+0x68) 90              //Trap Detection
+   WRITE_SHORT (offset+0x6a) 95              //Trap Removal
+   WRITE_SHORT (offset+0x6c) 1               //Yup, it's trapped alrighty
+   WRITE_SHORT (offset+0x6e) 0               //And not detected
+   WRITE_SHORT (offset+0x70) 2550            //Trap location X
+   WRITE_SHORT (offset+0x72) 910             //Trap location Y
+   WRITE_ASCII (offset+0x7c) ~JC_GT04~       //Trap script
+   SET offset = offset+0xc4
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~ReturnNashTrap 4~
+   WRITE_SHORT (offset+0x20) 0               //proximity trigger
+   WRITE_SHORT (offset+0x22) 2305            //bounding box
+   WRITE_SHORT (offset+0x24) 860            //bounding box
+   WRITE_SHORT (offset+0x26) 2530            //bounding box
+   WRITE_SHORT (offset+0x28) 920            //bounding box
+   WRITE_SHORT (offset+0x2a) 4               //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%"+12 //first vertex index
+   WRITE_LONG  (offset+0x34) 0               //cursor frame number
+   WRITE_LONG  (offset+0x60) 10              //flags
+   WRITE_SHORT (offset+0x68) 90              //Trap Detection
+   WRITE_SHORT (offset+0x6a) 95              //Trap Removal
+   WRITE_SHORT (offset+0x6c) 1               //Yup, it's trapped alrighty
+   WRITE_SHORT (offset+0x6e) 0               //And not detected
+   WRITE_SHORT (offset+0x70) 2550            //Trap location X
+   WRITE_SHORT (offset+0x72) 940             //Trap location Y
+   WRITE_ASCII (offset+0x7c) ~JC_GT05~       //Trap script
+   SET offset = offset+0xc4
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~ReturnNashTrap 5~
+   WRITE_SHORT (offset+0x20) 0               //proximity trigger
+   WRITE_SHORT (offset+0x22) 2225            //bounding box
+   WRITE_SHORT (offset+0x24) 1455            //bounding box
+   WRITE_SHORT (offset+0x26) 2365            //bounding box
+   WRITE_SHORT (offset+0x28) 1480            //bounding box
+   WRITE_SHORT (offset+0x2a) 4               //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%"+16 //first vertex index
+   WRITE_LONG  (offset+0x34) 0               //cursor frame number
+   WRITE_LONG  (offset+0x60) 10              //flags
+   WRITE_SHORT (offset+0x68) 90              //Trap Detection
+   WRITE_SHORT (offset+0x6a) 95              //Trap Removal
+   WRITE_SHORT (offset+0x6c) 1               //Yup, it's trapped alrighty
+   WRITE_SHORT (offset+0x6e) 0               //And not detected
+   WRITE_SHORT (offset+0x70) 2385            //Trap location X
+   WRITE_SHORT (offset+0x72) 1490            //Trap location Y
+   WRITE_ASCII (offset+0x7c) ~JC_GT04~       //Trap script
+   SET offset = offset+0xc4
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~ReturnNashTrap 6~
+   WRITE_SHORT (offset+0x20) 0               //proximity trigger
+   WRITE_SHORT (offset+0x22) 2225            //bounding box
+   WRITE_SHORT (offset+0x24) 1465            //bounding box
+   WRITE_SHORT (offset+0x26) 2365            //bounding box
+   WRITE_SHORT (offset+0x28) 1500            //bounding box
+   WRITE_SHORT (offset+0x2a) 4               //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%"+20 //first vertex index
+   WRITE_LONG  (offset+0x34) 0               //cursor frame number
+   WRITE_LONG  (offset+0x60) 10              //flags
+   WRITE_SHORT (offset+0x68) 90              //Trap Detection
+   WRITE_SHORT (offset+0x6a) 95              //Trap Removal
+   WRITE_SHORT (offset+0x6c) 1               //Yup, it's trapped alrighty
+   WRITE_SHORT (offset+0x6e) 0               //And not detected
+   WRITE_SHORT (offset+0x70) 2385            //Trap location X
+   WRITE_SHORT (offset+0x72) 1540            //Trap location Y
+   WRITE_ASCII (offset+0x7c) ~JC_GT01~       //Trap script
+   SET offset = offset+0xc4
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~ReturnNashTrap 7~
+   WRITE_SHORT (offset+0x20) 0               //proximity trigger
+   WRITE_SHORT (offset+0x22) 2195            //bounding box
+   WRITE_SHORT (offset+0x24) 1570            //bounding box
+   WRITE_SHORT (offset+0x26) 2340            //bounding box
+   WRITE_SHORT (offset+0x28) 1615            //bounding box
+   WRITE_SHORT (offset+0x2a) 4               //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%"+24 //first vertex index
+   WRITE_LONG  (offset+0x34) 0               //cursor frame number
+   WRITE_LONG  (offset+0x60) 10              //flags
+   WRITE_SHORT (offset+0x68) 90              //Trap Detection
+   WRITE_SHORT (offset+0x6a) 95              //Trap Removal
+   WRITE_SHORT (offset+0x6c) 1               //Yup, it's trapped alrighty
+   WRITE_SHORT (offset+0x6e) 0               //And not detected
+   WRITE_SHORT (offset+0x70) 2360            //Trap location X
+   WRITE_SHORT (offset+0x72) 1610            //Trap location Y
+   WRITE_ASCII (offset+0x7c) ~JC_GT05~       //Trap script
+   SET offset = offset+0xc4
+   SET "infotrig_num"="%infotrig_num%"+7
+   WRITE_SHORT 0x5a  "%infotrig_num%"
+
+   SET "info_ext"=0xc4*7
+   PATCH_IF ("%actors_offset%">="%infotrig_offset%") BEGIN
+     "actors_offset"="%actors_offset%"+"%info_ext%"
+     WRITE_LONG  0x54 "%actors_offset%"
+   END
+   PATCH_IF ("%spawns_offset%">="%infotrig_offset%") BEGIN
+     "spawns_offset"="%spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0x60  "%spawns_offset%"
+   END
+   PATCH_IF ("%entrances_offset%">="%infotrig_offset%") BEGIN
+     "entrances_offset"="%entrances_offset%"+"%info_ext%"
+     WRITE_LONG  0x68  "%entrances_offset%"
+   END
+   PATCH_IF ("%cont_offset%">="%infotrig_offset%") BEGIN
+     "cont_offset"="%cont_offset%"+"%info_ext%"
+     WRITE_LONG  0x70  "%cont_offset%"
+   END
+   PATCH_IF ("%items_offset%">="%infotrig_offset%") BEGIN
+     "items_offset"="%items_offset%"+"%info_ext%"
+     WRITE_LONG  0x78  "%items_offset%"
+   END
+   PATCH_IF ("%vert_offset%">="%infotrig_offset%") BEGIN
+     "vert_offset"="%vert_offset%"+"%info_ext%"
+     WRITE_LONG  0x7c  "%vert_offset%"
+   END
+   PATCH_IF ("%amb_offset%">="%infotrig_offset%") BEGIN
+     "amb_offset"="%amb_offset%"+"%info_ext%"
+     WRITE_LONG  0x84  "%amb_offset%"
+   END
+   PATCH_IF ("%vars_offset%">="%infotrig_offset%") BEGIN
+     "vars_offset"="%vars_offset%"+"%info_ext%"
+     WRITE_LONG  0x88  "%vars_offset%"
+   END
+   PATCH_IF ("%expbmp_offset%">="%infotrig_offset%") BEGIN
+     "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
+     WRITE_LONG  0xa0  "%expbmp_offset%"
+   END
+   PATCH_IF ("%doors_offset%">="%infotrig_offset%") BEGIN
+     "doors_offset"="%doors_offset%"+"%info_ext%"
+     WRITE_LONG  0xa8  "%doors_offset%"
+   END
+   PATCH_IF ("%anim_offset%">="%infotrig_offset%") BEGIN
+     "anim_offset"="%anim_offset%"+"%info_ext%"
+     WRITE_LONG  0xb0  "%anim_offset%"
+   END
+   PATCH_IF ("%tiled_offset%">="%infotrig_offset%") BEGIN
+     "tiled_offset"="%tiled_offset%"+"%info_ext%"
+     WRITE_LONG  0xb8  "%tiled_offset%"
+   END
+   PATCH_IF ("%songs_offset%">="%infotrig_offset%") BEGIN
+     "songs_offset"="%songs_offset%"+"%info_ext%"
+     WRITE_LONG  0xbc  "%songs_offset%"
+   END
+   PATCH_IF ("%rest_spawns_offset%">="%infotrig_offset%") BEGIN
+     "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0xc0  "%rest_spawns_offset%"
+   END
+   PATCH_IF ("%automap_offset%">="%infotrig_offset%") BEGIN
+     "automap_offset"="%automap_offset%"+"%info_ext%"
+     WRITE_LONG  0xc4  "%automap_offset%"
+   END
+
+  //adding 28 new vertices for triggers
+   SET offset = ("%vert_offset%"+0x04*"%vert_num%")
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      1670
+   WRITE_SHORT  (offset+2)  135
+   WRITE_SHORT  (offset+4)  1670
+   WRITE_SHORT  (offset+6)  155
+   WRITE_SHORT  (offset+8)  1490
+   WRITE_SHORT  (offset+10) 175
+   WRITE_SHORT  (offset+12) 1490
+   WRITE_SHORT  (offset+14) 155
+   SET offset = offset + 4*4
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      1670
+   WRITE_SHORT  (offset+2)  145
+   WRITE_SHORT  (offset+4)  1670
+   WRITE_SHORT  (offset+6)  165
+   WRITE_SHORT  (offset+8)  1490
+   WRITE_SHORT  (offset+10) 185
+   WRITE_SHORT  (offset+12) 1490
+   WRITE_SHORT  (offset+14) 165
+   SET offset = offset + 4*4
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      2530
+   WRITE_SHORT  (offset+2)  830
+   WRITE_SHORT  (offset+4)  2530
+   WRITE_SHORT  (offset+6)  850
+   WRITE_SHORT  (offset+8)  2305
+   WRITE_SHORT  (offset+10) 890
+   WRITE_SHORT  (offset+12) 2305
+   WRITE_SHORT  (offset+14) 870
+   SET offset = offset + 4*4
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      2530
+   WRITE_SHORT  (offset+2)  860
+   WRITE_SHORT  (offset+4)  2530
+   WRITE_SHORT  (offset+6)  880
+   WRITE_SHORT  (offset+8)  2305
+   WRITE_SHORT  (offset+10) 920
+   WRITE_SHORT  (offset+12) 2305
+   WRITE_SHORT  (offset+14) 900
+   SET offset = offset + 4*4
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      2365
+   WRITE_SHORT  (offset+2)  1455
+   WRITE_SHORT  (offset+4)  2365
+   WRITE_SHORT  (offset+6)  1475
+   WRITE_SHORT  (offset+8)  2225
+   WRITE_SHORT  (offset+10) 1480
+   WRITE_SHORT  (offset+12) 2225
+   WRITE_SHORT  (offset+14) 1460
+   SET offset = offset + 4*4
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      2365
+   WRITE_SHORT  (offset+2)  1465
+   WRITE_SHORT  (offset+4)  2365
+   WRITE_SHORT  (offset+6)  1485
+   WRITE_SHORT  (offset+8)  2225
+   WRITE_SHORT  (offset+10) 1500
+   WRITE_SHORT  (offset+12) 2225
+   WRITE_SHORT  (offset+14) 1470
+   SET offset = offset + 4*4
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      2340
+   WRITE_SHORT  (offset+2)  1570
+   WRITE_SHORT  (offset+4)  2340
+   WRITE_SHORT  (offset+6)  1590
+   WRITE_SHORT  (offset+8)  2195
+   WRITE_SHORT  (offset+10) 1615
+   WRITE_SHORT  (offset+12) 2195
+   WRITE_SHORT  (offset+14) 1595
+   SET offset = offset + 4*4
+   SET "vert_num"="%vert_num%"+28
+   WRITE_SHORT 0x80  "%vert_num%"
+
+   SET "info_ext"=0x04*28
+   PATCH_IF ("%actors_offset%">="%vert_offset%") BEGIN
+     "actors_offset"="%actors_offset%"+"%info_ext%"
+     WRITE_LONG  0x54 "%actors_offset%"
+   END
+   PATCH_IF ("%spawns_offset%">="%vert_offset%") BEGIN
+     "spawns_offset"="%spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0x60  "%spawns_offset%"
+   END
+   PATCH_IF ("%entrances_offset%">="%vert_offset%") BEGIN
+     "entrances_offset"="%entrances_offset%"+"%info_ext%"
+     WRITE_LONG  0x68  "%entrances_offset%"
+   END
+   PATCH_IF ("%cont_offset%">="%vert_offset%") BEGIN
+     "cont_offset"="%cont_offset%"+"%info_ext%"
+     WRITE_LONG  0x70  "%cont_offset%"
+   END
+   PATCH_IF ("%items_offset%">="%vert_offset%") BEGIN
+     "items_offset"="%items_offset%"+"%info_ext%"
+     WRITE_LONG  0x78  "%items_offset%"
+   END
+   PATCH_IF ("%infotrig_offset%">="%vert_offset%") BEGIN
+     "infotrig_offset"="%infotrig_offset%"+"%info_ext%"
+     WRITE_LONG  0x5c  "%infotrig_offset%"
+   END
+   PATCH_IF ("%amb_offset%">="%vert_offset%") BEGIN
+     "amb_offset"="%amb_offset%"+"%info_ext%"
+     WRITE_LONG  0x84  "%amb_offset%"
+   END
+   PATCH_IF ("%vars_offset%">="%vert_offset%") BEGIN
+     "vars_offset"="%vars_offset%"+"%info_ext%"
+     WRITE_LONG  0x88  "%vars_offset%"
+   END
+   PATCH_IF ("%expbmp_offset%">="%vert_offset%") BEGIN
+     "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
+     WRITE_LONG  0xa0  "%expbmp_offset%"
+   END
+   PATCH_IF ("%doors_offset%">="%vert_offset%") BEGIN
+     "doors_offset"="%doors_offset%"+"%info_ext%"
+     WRITE_LONG  0xa8  "%doors_offset%"
+   END
+   PATCH_IF ("%anim_offset%">="%vert_offset%") BEGIN
+     "anim_offset"="%anim_offset%"+"%info_ext%"
+     WRITE_LONG  0xb0  "%anim_offset%"
+   END
+   PATCH_IF ("%tiled_offset%">="%vert_offset%") BEGIN
+     "tiled_offset"="%tiled_offset%"+"%info_ext%"
+     WRITE_LONG  0xb8  "%tiled_offset%"
+   END
+   PATCH_IF ("%songs_offset%">="%vert_offset%") BEGIN
+     "songs_offset"="%songs_offset%"+"%info_ext%"
+     WRITE_LONG  0xbc  "%songs_offset%"
+   END
+   PATCH_IF ("%rest_spawns_offset%">="%vert_offset%") BEGIN
+     "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0xc0  "%rest_spawns_offset%"
+   END
+   PATCH_IF ("%automap_offset%">="%vert_offset%") BEGIN
+     "automap_offset"="%automap_offset%"+"%info_ext%"
+     WRITE_LONG  0xc4  "%automap_offset%"
+   END
+
+BUT_ONLY_IF_IT_CHANGES  // ~%NashkelMines_L3%.are~
+
+
+//      BAM folder, bam files for custom items
+
+COPY	~vault/bam~		~override~			
+
+//      Scripts changes
+
+COPY_EXISTING ~CENTEOL.BCS~          ~override~
+  PATCH_IF ENGINE_IS ~bgee bg2ee~ BEGIN
+    REPLACE_BCS_BLOCK ~vault/snip/ocenteol-ee.baf~  ~vault/snip/ncenteol.baf~
+  END ELSE BEGIN
+    REPLACE_BCS_BLOCK ~vault/snip/ocenteol.baf~  ~vault/snip/ncenteol.baf~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~denak.BCS~          ~override~
+  REPLACE_BCS_BLOCK ~vault/snip/odenak.baf~  ~vault/snip/ndenak.baf~
+BUT_ONLY_IF_IT_CHANGES
+
+//	Scripts extend
+EXTEND_BOTTOM ~wtarsgt.bcs~ ~vault/snip/jc_wt.baf~
+EXTEND_BOTTOM ~wtasight.bcs~ ~vault/snip/jc_wt.baf~
+EXTEND_BOTTOM ~wtattkbe.bcs~ ~vault/snip/jc_wt.baf~
+EXTEND_BOTTOM ~wtattwat.bcs~ ~vault/snip/jc_wt.baf~
+EXTEND_BOTTOM ~wtholdbe.bcs~ ~vault/snip/jc_wt.baf~
+EXTEND_BOTTOM ~%NBaldursGate_BCS%.bcs~ ~vault/snip/jc7300.baf~
+EXTEND_BOTTOM ~%DurlagsTower_BCS%.bcs~ ~vault/snip/jcd000.baf~
+EXTEND_BOTTOM ~%EBaldursGate_BCS%.bcs~ ~vault/snip/jc7800.baf~
+EXTEND_BOTTOM ~%WyrmsCrossing_BCS%.bcs~ ~vault/snip/jc7900.baf~
+EXTEND_BOTTOM ~%IceIsland_BCS%.bcs~ ~vault/snip/jcu008.baf~
+EXTEND_BOTTOM ~%CloakwoodMines_BCS%.bcs~ ~vault/snip/jc8600.baf~
+EXTEND_BOTTOM ~%BanditCamp_BCS%.bcs~ ~vault/snip/jc8700.baf~
+EXTEND_BOTTOM ~%IsleofBalduranS_BCS%.bcs~ ~vault/snip/jcw000.baf~
+EXTEND_BOTTOM ~%FriendlyArmInn_BCS%.bcs~ ~vault/snip/jc6800.baf~
+EXTEND_BOTTOM ~%Candlekeep_Ch6_BCS%.bcs~ ~vault/snip/jc6526.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~%Beregost_BCS%.bcs~ ~vault/snip/jc6700.baf~
+EXTEND_BOTTOM ~%Nashkel_BCS%.bcs~ ~vault/snip/jc3700.baf~
+EXTEND_BOTTOM ~%NashkelCarnival_BCS%.bcs~ ~vault/snip/jc3800.baf~
+EXTEND_BOTTOM ~%NashkelMines_BCS%.bcs~ ~vault/snip/jc4400.baf~
+EXTEND_TOP ~%BearRiver_BCS%.BCS~ ~vault/snip/AR3499.BAF~
+EXTEND_TOP ~%NashkelMines_L1_BCS%.BCS~ ~vault/snip/AR4401.BAF~
+EXTEND_TOP ~%NashkelMines_L2_BCS%.BCS~ ~vault/snip/AR4402.BAF~
+EXTEND_TOP ~%NashkelMines_L3_BCS%.BCS~ ~vault/snip/AR4403.BAF~
+EXTEND_TOP ~%Candlekeep_Catacombs_L1Antechamber_BCS%.BCS~ ~vault/snip/AR6513.BAF~
+EXTEND_TOP ~%SpiderWood_BCS%.BCS~ ~vault/snip/AR9100.BAF~
+EXTEND_TOP ~%Temple_Vestibule_BCS%.BCS~ ~vault/snip/AR9301.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%UlcasterRuins_BCS%.BCS~ ~vault/snip/AR9798.BAF~
+EXTEND_TOP ~%Gullykin_BCS%.BCS~ ~vault/snip/AR9900.BAF~
+EXTEND_BOTTOM ~baldur.bcs~ ~vault/snip/drowdisint.baf~
+
+//      New Area
+
+COPY ~vault/ARE~ ~override~
+COPY_EXISTING ~Vault/ARE/VT0001.WED~ ~override~
+	WRITE_ASCIIE 0x24 ~%ArchaeologicalSite_Tomb%~ #8
+BUT_ONLY
+
+//      New scripts
+
+COMPILE EVAL ~vault/BAF~
+
+
+//	Patching/adding creatures
+
+  COPY_EXISTING ~basilg.cre~  ~override~
+    PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+      WRITE_LONG 0x14 5000 // XP Value
+      WRITE_ASCII 0x0258 GBASILSK // Race Script
+      WRITE_BYTE 0x0273 103 // Class
+    END
+  BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~wyverba.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14 900 // XP Value
+    WRITE_SHORT 0x0018 55 // XP
+    WRITE_SHORT 0x0028 4096 // Animation ID
+    WRITE_SHORT 0x0024 63 // Current HP
+    WRITE_SHORT 0x0026 63 // Max HP
+    WRITE_BYTE 0x0052 9 // THAC0
+    WRITE_BYTE 0x0273 1 // Class
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~wyvern.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14 2200 // XP Value
+    WRITE_SHORT 0x0018 55 // XP
+    WRITE_SHORT 0x0024 63 // Current HP
+    WRITE_SHORT 0x0026 63 // Max HP
+    WRITE_SHORT 0x0046 0 // Natural AC
+    WRITE_SHORT 0x0048 0 // Effective AC
+    WRITE_BYTE 0x0052 5 // THAC0
+    WRITE_BYTE 0x0053 3 // Number of Attacks
+    WRITE_BYTE 0x0234 10 // Level of 1st Class
+    WRITE_BYTE 0x0238 18 // Strength
+    WRITE_BYTE 0x023c 11 // Dexterity
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~aasim.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14    3600            // XP Value
+    WRITE_LONG 0x1c    195             // GP
+    WRITE_SHORT 0x0024    144             // Current HP
+    WRITE_SHORT 0x0026    144             // Max HP
+    WRITE_SHORT 0x0048    9               // Effective AC
+    WRITE_BYTE 0x0052     7               // THAC0
+    WRITE_BYTE 0x0238     19              // Strength
+    WRITE_BYTE 0x023b     19              // Wisdom
+    WRITE_BYTE 0x023c     16              // Dexterity
+    WRITE_BYTE 0x0242     0               // Morale Recovery
+    REMOVE_CRE_ITEM		~blun05~
+    REPLACE_CRE_ITEM		~LEAT09~	#0 #0 #0	~NONE~	~ARMOR~
+    ADD_CRE_ITEM		~BLUN16~	#0 #0 #0	~NONE~	~WEAPON1~	EQUIP
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~alai.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14    3600            // XP Value
+    WRITE_LONG 0x1c    166             // GP
+    WRITE_SHORT 0x0024    112             // Current HP
+    WRITE_SHORT 0x0026    112             // Max HP
+    WRITE_BYTE 0x0052     10              // THAC0
+    WRITE_BYTE 0x0234     8               // Level first class
+    WRITE_BYTE 0x0238     19              // Strength
+    WRITE_BYTE 0x023a     19              // Intelligence
+    WRITE_BYTE 0x0242     0               // Morale Recovery
+    WRITE_BYTE 0x0270     255             // Enemy-Ally
+    REPLACE_CRE_ITEM ~HAMM02~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+  ADD_CRE_ITEM ~HELM08~ #0 #0 #0 ~NONE~ ~Helmet~
+  ADD_CRE_ITEM ~SHLD11~ #0 #0 #0 ~NONE~ ~Shield~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~alatos.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14    10000           // XP Value
+    WRITE_LONG 0x1c    575             // GP
+    WRITE_SHORT 0x0024    150             // Current HP
+    WRITE_SHORT 0x0026    150             // Max HP
+    WRITE_BYTE 0x0052     ~-2~            // THAC0
+    WRITE_BYTE 0x0053     2               // Number of Attacks
+    WRITE_BYTE 0x0067     70              // Open Locks
+    WRITE_BYTE 0x0068     70              // Move Silently
+    WRITE_BYTE 0x0069     70              // Find/Disarm Traps
+    WRITE_BYTE 0x006a     75              // Pick Pockets
+    WRITE_BYTE 0x006f     2               // Small Sword Proficiency
+    WRITE_BYTE 0x0070     2               // Bow Proficiency
+    WRITE_BYTE 0x0238     19              // Strength
+    WRITE_BYTE 0x023a     12              // Intelligence
+    WRITE_BYTE 0x023b     16              // Wisdom
+    WRITE_BYTE 0x023c     19              // Dexterity
+    WRITE_BYTE 0x023d     13              // Constitution
+    WRITE_BYTE 0x023e     14              // Charisma
+    WRITE_BYTE 0x0270     128             // Enemy-Ally
+    REPLACE_CRE_ITEM ~LEAT03~ #0 #0 #0 ~NONE~ ~ARMOR~
+    REPLACE_CRE_ITEM ~DAGG03~ #0 #0 #0	~NONE~ ~WEAPON1~ EQUIP
+  ADD_CRE_ITEM ~POTN36~ #3 #0 #0 ~NONE~ ~QItem1~
+  ADD_CRE_ITEM ~AMULTF~ #15 #0 #0 ~NONE~ ~Amulet~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~amaran.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_SHORT 0x0024    148               // Current HP
+    WRITE_SHORT 0x0026    148               // Max HP
+    WRITE_BYTE 0x0048     7                 // Effective AC
+    WRITE_BYTE 0x0052     ~10~              // THAC0
+    WRITE_BYTE 0x0053     2                 // # Attacks
+    WRITE_BYTE 0x0234     10                // Level First Class
+    WRITE_BYTE 0x0235     10                // Level Second Class
+    WRITE_BYTE 0x0238     18                // Strength
+    WRITE_BYTE 0x0239     90                // Strength Bonus
+    WRITE_BYTE 0x023b     19                // Wisdom
+    WRITE_BYTE 0x0242     0                 // Morale Recovery
+    WRITE_BYTE 0x0273     3                 // Class
+    REMOVE_CRE_ITEM ~staf01~
+    REPLACE_CRE_ITEM ~LEAT05~ #0 #0 #0	~NONE~ ~ARMOR~
+    ADD_CRE_ITEM ~STAFOAK~ #0 #0 #0	~NONE~	~WEAPON1~ EQUIP
+  ADD_CRE_ITEM ~POTN38~ #1 #0 #0 ~NONE~ ~QItem1~ // Put potions in Quick Slot 1
+  ADD_CRE_ITEM ~POTN42~ #2 #0 #0 ~NONE~ ~QItem2~ // Put Potions in Quick Slot 2
+  ADD_CRE_ITEM ~POTN52~ #3 #0 #0 ~NONE~ ~QItem3~ // Put Potions in Quick Slot 3
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+ACTION_IF FILE_EXISTS_IN_GAME	~dsaxe01.itm~ THEN BEGIN
+COPY_EXISTING ~dsarchdr.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x1c    12                // GP
+    WRITE_SHORT 0x24    190               // Current HP
+    WRITE_SHORT 0x26    190               // Max HP
+    WRITE_BYTE 0x52     ~13~              // THAC0
+    WRITE_BYTE 0x6e     0                 // Large Sword Proficiency
+    WRITE_BYTE 0x23b    19                // Wisdom
+    WRITE_BYTE 0x0242   0                 // Morale Recovery
+  ADD_CRE_ITEM ~POTN38~ #1 #0 #0 ~NONE~ ~QItem1~ // Put potions in Quick Slot 1 
+  ADD_CRE_ITEM ~POTN42~ #2 #0 #0 ~NONE~ ~QItem2~ // Put Potions in Quick Slot 2
+  ADD_CRE_ITEM ~potn52~ #2 #0 #0 ~NONE~ ~QItem3~ // Put Potions in Quick Slot 3
+  END
+BUT_ONLY_IF_IT_CHANGES
+END
+
+COPY_EXISTING ~avaricem.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14    5000              // XP Value
+    WRITE_LONG 0x1c    33                // GP
+    WRITE_SHORT 0x0024    110               // Current HP
+    WRITE_SHORT 0x0026    110               // Max HP
+    WRITE_BYTE 0x0052     ~5~               // THAC0
+    WRITE_BYTE 0x006e     2                 // Large Sword Proficiency
+    WRITE_BYTE 0x006f     2                 // Small Sword Proficiency
+    WRITE_BYTE 0x0237     1                 // Sex
+    WRITE_BYTE 0x0242     0                 // Morale Recovery
+  ADD_CRE_ITEM ~POTN03~ #2 #0 #0 ~NONE~ ~QItem1~ // Put Potions in Quick Slot 1
+  ADD_CRE_ITEM ~POTN52~ #3 #0 #0 ~NONE~ ~QItem2~ // Put Potions in Quick Slot 2
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~bently.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14    4000              // XP Value
+    WRITE_LONG 0x1c    120               // GP
+    WRITE_SHORT 0x24    82                // Current HP
+    WRITE_SHORT 0x26    82                // Max HP
+    WRITE_BYTE 0x48     8                 // Effective AC
+    WRITE_BYTE 0x52     ~11~              // THAC0
+    WRITE_BYTE 0x23a     19               // Intelligence
+    WRITE_BYTE 0x242     0                // Morale Recovery
+  ADD_CRE_ITEM ~Ring07~ #0 #0 #0 ~NONE~ ~LRing~ // already has item equipped
+  ADD_CRE_ITEM ~POTN08~ #2 #0 #0 ~NONE~ ~QItem1~ // Put Potions in Quick Slot 1
+  ADD_CRE_ITEM ~WAND10~ #3 #0 #0 ~NONE~ ~QItem2~ // Put Potions in Quick Slot 2
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~beyn.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14    3600               // XP Value
+    WRITE_LONG 0x1c    96                 // GP
+    WRITE_SHORT 0x24    112                // Current HP
+    WRITE_SHORT 0x26    112                // Max HP
+    WRITE_BYTE 0x52     ~10~               // THAC0
+    WRITE_BYTE 0x237     1                 // Sex
+    WRITE_BYTE 0x238     19                // Strength
+    WRITE_BYTE 0x23a     19                // Intelligence
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+  ADD_CRE_ITEM ~POTN17~ #2 #0 #0 ~NONE~ ~QItem1~ // Put Potions in Quick Slot 1
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~blane.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     3000              // XP Value
+    WRITE_SHORT 0x24     72                // Current HP
+    WRITE_SHORT 0x26     72                // Max HP
+    WRITE_BYTE 0x46      7                 // Natural AC
+    WRITE_BYTE 0x48      7                 // Effective AC
+    WRITE_BYTE 0x52      ~11~              // THAC0
+    WRITE_BYTE 0x66      27                // Lore
+    WRITE_BYTE 0x234     9                 // Level First Class
+    WRITE_BYTE 0x238     18                // Strength
+    WRITE_BYTE 0x23b     19                // Wisdom
+    WRITE_BYTE 0x23c     17                // Dexterity
+    WRITE_ASCII 0x280    Blane             // Death Variable
+  ADD_CRE_ITEM ~PLAT04~ #0 #0 #0 ~NONE~ ~Armor~ // already has armor equipped
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~bran.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     3000              // XP Value
+    WRITE_LONG 0x1c     128               // GP
+    WRITE_SHORT 0x24     72                // Current HP
+    WRITE_SHORT 0x26     72                // Max HP
+    WRITE_BYTE 0x46      6                 // Natural AC
+    WRITE_BYTE 0x48      6                 // Effective AC
+    WRITE_BYTE 0x52      ~11~              // THAC0
+    WRITE_BYTE 0x66      27                // Lore
+    WRITE_BYTE 0x234     9                 // Level First Class
+    WRITE_BYTE 0x238     16                // Strength
+    WRITE_BYTE 0x23b     19                // Wisdom
+    WRITE_BYTE 0x23c     18                // Dexterity
+    WRITE_ASCII 0x280    Bran              // Death Variable // Completed Offset Constants
+    REPLACE_CRE_ITEM ~STAF06~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+    ADD_CRE_ITEM ~chan05~ #0 #0 #0 ~NONE~ ~ARMOR~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~britik.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     1800              // XP Value
+    WRITE_SHORT 0x24     76                // Current HP
+    WRITE_SHORT 0x26     76                // Max HP
+    WRITE_BYTE 0x52      ~7~               // THAC0
+    WRITE_BYTE 0x234     4                 // Level First Class
+    WRITE_BYTE 0x238     19                // Strength
+    WRITE_BYTE 0x239     0                 // Strength Bonus
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    REPLACE_CRE_ITEM ~RNDTRE04~ #0 #0 #0 ~NONE~ ~INV6~
+    ADD_CRE_ITEM ~POTN10~ #2 #0 #0 ~NONE~ ~QItem1~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~cadder.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     15000             // XP Value
+    WRITE_SHORT 0x24     160               // Current HP
+    WRITE_SHORT 0x26     160               // Max HP
+    WRITE_BYTE 0x52      ~6~               // THAC0
+    WRITE_BYTE 0x53      2                 // # Attacks
+    WRITE_BYTE 0x66      80                // Lore
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    WRITE_ASCII 0x280    Cadder            // Death Variable
+    REMOVE_CRE_ITEM		~staf01~
+    ADD_CRE_ITEM		~STAFCAD~	#0 #0 #0	~NONE~	~WEAPON1~	EQUIP
+	ADD_CRE_ITEM ~potn08~ #3 #0 #0 ~None~ ~qitem1~
+	ADD_CRE_ITEM ~clck01~ #1 #0 #0 ~None~ ~cloak~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+ACTION_IF FILE_EXISTS_IN_GAME	~alissa8.cre~	THEN BEGIN
+COPY_EXISTING	~cadder2.cre~  ~override~
+			~cadder3.cre~  ~override~
+			~cadder5.cre~  ~override~
+			~cadderly.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     15000             // XP Value
+    WRITE_SHORT 0x24     160               // Current HP
+    WRITE_SHORT 0x26     160               // Max HP
+    WRITE_BYTE 0x52      ~6~               // THAC0
+    WRITE_BYTE 0x53      2                 // # Attacks
+    WRITE_BYTE 0x66      80                // Lore
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    WRITE_ASCII 0x280    Cadder            // Death Variable
+    ADD_CRE_ITEM ~STAFCAD~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+	ADD_CRE_ITEM ~potn08~ #3 #0 #0 ~None~ ~qitem1~
+	ADD_CRE_ITEM ~clck01~ #1 #0 #0 ~None~ ~cloak~
+  END
+BUT_ONLY_IF_IT_CHANGES
+END
+
+COPY_EXISTING ~centeo.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     2000              // XP Value
+    WRITE_SHORT 0x24     72                // Current HP
+    WRITE_SHORT 0x26     72                // Max HP
+    WRITE_BYTE 0x48      9                 // Effective AC
+    WRITE_BYTE 0x52      ~12~              // THAC0
+    WRITE_BYTE 0x23a     19                // Intelligence
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~corsone.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     2000              // XP Value
+    WRITE_LONG 0x1c     112               // GP
+    WRITE_SHORT 0x24     90                // Current HP
+    WRITE_SHORT 0x26     90                // Max HP
+    WRITE_BYTE 0x52      ~13~              // THAC0
+    WRITE_BYTE 0x238     16                // Strength
+    WRITE_BYTE 0x23b     19                // Wisdom
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    REPLACE_CRE_ITEM		~LEAT02~	#0 #0 #0	~NONE~	~INV6~
+    REPLACE_CRE_ITEM		~STAF02~	#0 #0 #0	~NONE~	~INV7~
+	ADD_CRE_ITEM ~potn08~ #2 #0 #0 ~None~ ~qitem1~
+	ADD_CRE_ITEM ~potn17~ #2 #0 #0 ~None~ ~qitem2~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~cythan.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     4000              // XP Value
+    WRITE_SHORT 0x24     112               // Current HP
+    WRITE_SHORT 0x26     112               // Max HP
+    WRITE_BYTE 0x52      ~10~              // THAC0
+    WRITE_BYTE 0x53      2                 // # Attacks
+    WRITE_BYTE 0x23a     19                // Intelligence
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+	ADD_CRE_ITEM ~ringmyst~ #1 #0 #0 ~None~ ~lring~
+	ADD_CRE_ITEM ~potn52~ #3 #0 #0 ~None~ ~qitem3~
+	ADD_CRE_ITEM ~dart04~ #20 #0 #0 ~None~ ~weapon1~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~deathk.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     20000             // XP Value
+    WRITE_SHORT 0x24     300               // Current HP
+    WRITE_SHORT 0x26     300               // Max HP
+    WRITE_BYTE 0x48      ~-3~              // Effective AC
+    WRITE_BYTE 0x52      ~4~               // THAC0
+    WRITE_BYTE 0x238     19                // Strength
+    WRITE_BYTE 0x239     0                 // Strength Bonus
+    WRITE_BYTE 0x23a     19                // Intelligence
+    WRITE_BYTE 0x23b     16                // Wisdom
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~denak.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     7000              // XP Value
+    WRITE_LONG 0x1c     1021              // GP
+    WRITE_SHORT 0x24     51                // Current HP
+    WRITE_SHORT 0x26     51                // Max HP
+    WRITE_BYTE 0x52      ~14~              // THAC0
+    WRITE_BYTE 0x53      1                 // # Attacks
+    WRITE_BYTE 0x66      27                // Lore
+    WRITE_BYTE 0x72      2                 // Blunt Proficiency
+    WRITE_BYTE 0x75      2                 // Missile Proficiency
+    WRITE_BYTE 0x23a     19                // Intelligence
+    WRITE_BYTE 0x23b     13                // Wisdom
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~dezkie.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     7000              // XP Value
+    WRITE_SHORT 0x24     90                // Current HP
+    WRITE_SHORT 0x26     90                // Max HP
+    WRITE_BYTE 0x48      9                 // Effective AC
+    WRITE_BYTE 0x52      ~10~              // THAC0
+    WRITE_BYTE 0x53      2                 // # Attacks
+    WRITE_BYTE 0x5d      25                // Resist Magic
+    WRITE_BYTE 0x238     19                // Strength
+    WRITE_BYTE 0x23a     19                // Intelligence
+    WRITE_BYTE 0x23c     16                // Dexterity
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+	ADD_CRE_ITEM ~potn52~ #3 #0 #0 ~None~ ~qitem3~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~diyab.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     3200              // XP Value
+    WRITE_LONG 0x1c     105               // GP
+    WRITE_SHORT 0x24     120               // Current HP
+    WRITE_SHORT 0x26     120               // Max HP
+    WRITE_BYTE 0x48      9                 // Effective AC
+    WRITE_BYTE 0x52      ~7~               // THAC0
+    WRITE_BYTE 0x23b     19                // Wisdom
+    WRITE_BYTE 0x23c     19                // Dexterity
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+	ADD_CRE_ITEM ~ringperc~ #1 #0 #0 ~None~ ~rring~
+	ADD_CRE_ITEM ~potn52~ #3 #0 #0 ~None~ ~qitem1~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~fearm.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     4400              // XP Value
+    WRITE_LONG 0x1c     38                // GP
+    WRITE_SHORT 0x24     118               // Current HP
+    WRITE_SHORT 0x26     118               // Max HP
+    WRITE_BYTE 0x52      ~2~               // THAC0
+    WRITE_BYTE 0x237     1                 // Sex
+    WRITE_BYTE 0x23a     13                // Intelligence
+    WRITE_BYTE 0x23b     13                // Wisdom
+    WRITE_BYTE 0x23e     13                // Charisma
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    WRITE_ASCII 0x280    Fearm            // Death Variable
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~gandol.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     2800              // XP Value
+    WRITE_LONG 0x1c     145               // GP
+    WRITE_SHORT 0x24     88                // Current HP
+    WRITE_SHORT 0x26     88                // Max HP
+    WRITE_BYTE 0x52      ~9~               // THAC0
+    WRITE_BYTE 0x238     19                // Strength
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    WRITE_ASCII 0x280    Gandol            // Death Variable
+    REPLACE_CRE_ITEM		~AX1H02~	#0 #0 #0	~NONE~	~WEAPON1~	EQUIP
+	ADD_CRE_ITEM ~potn52~ #3 #0 #0 ~None~ ~qitem1~
+	ADD_CRE_ITEM ~potn42~ #1 #0 #0 ~None~ ~qitem2~
+	ADD_CRE_ITEM ~potn36~ #1 #0 #0 ~None~ ~qitem3~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~gellan.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     4000              // XP Value
+    WRITE_SHORT 0x24     110               // Current HP
+    WRITE_SHORT 0x26     110               // Max HP
+    WRITE_BYTE 0x52      ~11~              // THAC0
+    WRITE_BYTE 0x23b     19                // Wisdom
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    WRITE_ASCII 0x280    Gellan            // Death Variable
+    REPLACE_CRE_ITEM		~LEAT02~	#0 #0 #0	~NONE~	~ARMOR~
+    REPLACE_CRE_ITEM		~BLUN05~	#0 #0 #0	~NONE~	~WEAPON1~	EQUIP
+	ADD_CRE_ITEM ~amul17~ #1 #0 #0 ~None~ ~amulet~
+	ADD_CRE_ITEM ~potn52~ #3 #0 #0 ~None~ ~qitem3~
+	ADD_CRE_ITEM ~potn52~ #2 #0 #0 ~None~ ~inv1~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~gentho.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     3200              // XP Value
+    WRITE_LONG 0x1c     156               // GP
+    WRITE_SHORT 0x24     138               // Current HP
+    WRITE_SHORT 0x26     138               // Max HP
+    WRITE_BYTE 0x48      8                 // Effective AC
+    WRITE_BYTE 0x52      ~9~               // THAC0
+    WRITE_BYTE 0x238     19                // Strength
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+	ADD_CRE_ITEM ~potn41~ #2 #0 #0 ~None~ ~qitem1~
+	ADD_CRE_ITEM ~potn52~ #3 #0 #0 ~None~ ~qitem2~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~gerde.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     2400              // XP Value
+    WRITE_SHORT 0x24     74                // Current HP
+    WRITE_SHORT 0x26     74                // Max HP
+    WRITE_BYTE 0x48      9                 // Effective AC
+    WRITE_BYTE 0x52      ~8~               // THAC0
+    WRITE_BYTE 0x53      2                 // # Attacks
+    WRITE_BYTE 0x238     19                // Strength
+    WRITE_BYTE 0x23b     19                // Wisdom
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    REPLACE_CRE_ITEM ~CHAN05~ #0 #0 #0 ~NONE~ ~ARMOR~
+    REPLACE_CRE_ITEM ~SPER02~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+	ADD_CRE_ITEM ~boot04~ #1 #0 #0 ~None~ ~boots~
+	ADD_CRE_ITEM ~potn09~ #1 #0 #0 ~None~ ~qitem1~
+	ADD_CRE_ITEM ~potn14~ #1 #0 #0 ~None~ ~qitem2~
+	ADD_CRE_ITEM ~misc12~ #1 #0 #0 ~None~ ~inv1~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~greywo.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     2800              // XP Value
+    WRITE_SHORT 0x24     77                // Current HP
+    WRITE_SHORT 0x26     77                // Max HP
+    WRITE_BYTE 0x48      7                 // Effective AC
+    WRITE_BYTE 0x52      ~13~              // THAC0
+    WRITE_BYTE 0x53      1                 // # Attacks
+    WRITE_BYTE 0x238     17                // Strength
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+	ADD_CRE_ITEM ~shld02~ #1 #0 #0 ~None~ ~shield~
+	ADD_CRE_ITEM ~potn03~ #2 #0 #0 ~None~ ~qitem1~
+	ADD_CRE_ITEM ~potn42~ #1 #0 #0 ~None~ ~qitem2~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~hakt.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     1500              // XP Value
+    WRITE_LONG 0x1c     62                // GP
+    WRITE_SHORT 0x24     60                // Current HP
+    WRITE_SHORT 0x26     60                // Max HP
+    WRITE_BYTE 0x52      ~7~               // THAC0
+    WRITE_BYTE 0x6e      3                 // Large Sword Proficiency
+    WRITE_BYTE 0x70      3                 // Bow Proficiency
+    WRITE_BYTE 0x238     19                // Strength
+    WRITE_BYTE 0x239     0                 // Strength Bonus
+    WRITE_BYTE 0x23c     16                // Dexterity
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    REPLACE_CRE_ITEM ~RNDTRE03~ #0 #0 #0 ~NONE~ ~INV1~
+    REPLACE_CRE_ITEM ~AROW02~ #0 #0 #0 ~NONE~ ~QUIVER1~
+    REPLACE_CRE_ITEM ~LEAT05~ #0 #0 #0 ~NONE~ ~ARMOR~
+    REPLACE_CRE_ITEM ~SW1H02~ #0 #0 #0 ~NONE~ ~WEAPON2~ EQUIP
+    REPLACE_CRE_ITEM ~RNDTRE04~ #0 #0 #0 ~NONE~ ~INV2~
+	ADD_CRE_ITEM ~rndtre01~ #1 #0 #0 ~None~ ~INV3~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~husam.cre~  ~override~
+              ~husam2.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     4000              // XP Value
+    WRITE_SHORT 0x24     98                // Current HP
+    WRITE_SHORT 0x26     98                // Max HP
+    WRITE_BYTE 0x48      7                 // Effective AC
+    WRITE_BYTE 0x52      ~11~              // THAC0
+    WRITE_BYTE 0x23c     19                // Dexterity
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+	ADD_CRE_ITEM ~bootfox~ #1 #0 #0 ~None~ ~boots~
+	ADD_CRE_ITEM ~potn52~ #3 #0 #0 ~None~ ~qitem2~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~ichary.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     2000              // XP Value
+    WRITE_SHORT 0x24     92                // Current HP
+    WRITE_SHORT 0x26     92                // Max HP
+    WRITE_BYTE 0x52      ~10~              // THAC0
+    WRITE_BYTE 0x238     19                // Strength
+	ADD_CRE_ITEM ~misc36~ #2 #0 #0 ~None~ ~inv1~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~jalant.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     12000             // XP Value
+    WRITE_LONG 0x1c     300               // GP
+    WRITE_SHORT 0x24     98                // Current HP
+    WRITE_SHORT 0x26     98                // Max HP
+    WRITE_BYTE 0x52      ~11~              // THAC0
+    WRITE_BYTE 0x72      2                 // Blunt Proficiency
+    WRITE_BYTE 0x73      2                 // Spiked Proficiency
+    WRITE_BYTE 0x23b     19                // Wisdom
+    WRITE_BYTE 0x23c     19                // Dexterity
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    REPLACE_CRE_ITEM ~BLUN03~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+	ADD_CRE_ITEM ~misc53~ #1 #0 #0 ~None~ ~helmet~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~kahrk.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     7000              // XP Value
+    WRITE_SHORT 0x24     206               // Current HP
+    WRITE_SHORT 0x26     206               // Max HP
+    WRITE_BYTE 0x52      ~7~               // THAC0
+    WRITE_BYTE 0x6e      2                 // Large Sword Proficiency
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+	ADD_CRE_ITEM ~sw2val~ #1 #0 #0 ~None~ ~inv3~
+	ADD_CRE_ITEM ~potn36~ #1 #0 #0 ~None~ ~qitem3~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~kirinh.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     6000              // XP Value
+    WRITE_SHORT 0x24     96                // Current HP
+    WRITE_SHORT 0x26     96                // Max HP
+    WRITE_BYTE 0x52      ~5~               // THAC0
+    WRITE_BYTE 0x237     1                 // Sex
+    WRITE_BYTE 0x23a     19                // Intelligence
+    WRITE_BYTE 0x23e     25                // Charisma
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+	ADD_CRE_ITEM ~potn41~ #2 #0 #0 ~None~ ~qitem1~
+	ADD_CRE_ITEM ~misc51~ #1 #0 #0 ~None~ ~inv1~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~krysti.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     6000              // XP Value
+    WRITE_SHORT 0x24     108               // Current HP
+    WRITE_SHORT 0x26     108               // Max HP
+    WRITE_BYTE 0x52      ~9~               // THAC0
+    WRITE_BYTE 0x53      1                 // # Attacks
+    WRITE_BYTE 0x235     5                 // Level Second Class
+    WRITE_BYTE 0x23c     19                // Dexterity
+    ADD_CRE_ITEM ~BULL04~ #25 #0 #0 ~NONE~ ~QUIVER4~
+    ADD_CRE_ITEM ~rndtre04~ #1 #0 #0	~NONE~ ~INV7~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~lovem.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     6000              // XP Value
+    WRITE_SHORT 0x24     130               // Current HP
+    WRITE_SHORT 0x26     130               // Max HP
+    WRITE_BYTE 0x52      ~3~               // THAC0
+    WRITE_BYTE 0x237     2                 // Sex
+    WRITE_BYTE 0x23a     19                // Intelligence
+    WRITE_BYTE 0x23b     10                // Wisdom
+    WRITE_BYTE 0x23e     10                // Charisma
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    WRITE_ASCII 0x280    lovem             // Death Variable
+    REPLACE_CRE_ITEM ~SW1H02~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+	ADD_CRE_ITEM ~potn52~ #4 #0 #0 ~None~ ~qitem2~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~meilum.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     2400              // XP Value
+    WRITE_SHORT 0x24     110               // Current HP
+    WRITE_SHORT 0x26     110               // Max HP
+    WRITE_BYTE 0x52      ~9~               // THAC0
+    WRITE_BYTE 0x238     19                // Strength
+    WRITE_BYTE 0x239     0                 // Strength Bonus
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~mulahe.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     1300              // XP Value
+    WRITE_SHORT 0x24     72                // Current HP
+    WRITE_SHORT 0x26     72                // Max HP
+    WRITE_BYTE 0x48      8                 // Effective AC
+    WRITE_BYTE 0x52      ~13~              // THAC0
+    WRITE_BYTE 0x73      2                 // Spiked Proficiency
+    WRITE_BYTE 0x238     17                // Strength
+    WRITE_BYTE 0x23b     19                // Wisdom
+    WRITE_BYTE 0x242     0                // Morale Recovery
+	ADD_CRE_ITEM ~potn17~ #3 #0 #0 ~NONE~ ~qitem2~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~naaman.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     4000              // XP Value
+    WRITE_LONG 0x1c     166               // GP
+    WRITE_SHORT 0x24     112               // Current HP
+    WRITE_SHORT 0x26     112               // Max HP
+    WRITE_BYTE 0x48      9                 // Effective AC
+    WRITE_BYTE 0x52      ~10~              // THAC0
+    WRITE_BYTE 0x23a     19                // Intelligence
+    WRITE_BYTE 0x23c     19                // Dexterity
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~noober.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+	ADD_CRE_ITEM ~amul18~ #0 #0 #0 ~None~ ~amulet~
+  END
+  BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~osmadi.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x1c     102               // GP
+    WRITE_SHORT 0x24     90                // Current HP
+    WRITE_SHORT 0x26     90                // Max HP
+    WRITE_BYTE 0x52      ~13~              // THAC0
+    WRITE_BYTE 0x53      2                 // # Attacks
+    WRITE_BYTE 0x238     18                // Strength
+    WRITE_BYTE 0x239     10                // Strength Bonus
+    WRITE_BYTE 0x23b     19                // Wisdom
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    ADD_CRE_ITEM ~BLUNPOI~ #0 #0 #0 ~NONE~ ~INV6~
+	ADD_CRE_ITEM ~potn24~ #2 #0 #0 ~NONE~ ~qitem1~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~pridem.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     5000              // XP Value
+    WRITE_SHORT 0x24     130               // Current HP
+    WRITE_SHORT 0x26     130               // Max HP
+    WRITE_BYTE 0x52      ~6~               // THAC0
+    WRITE_BYTE 0x5d      40                // Resist Magic
+    WRITE_ASCII 0x280    pridem            // Death Variable
+    REPLACE_CRE_ITEM ~AX1H03~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+	ADD_CRE_ITEM ~belt06~ #0 #0 #0 ~None~ ~belt~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~raemon.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     2400              // XP Value
+    WRITE_SHORT 0x24     70                // Current HP
+    WRITE_SHORT 0x26     70                // Max HP
+    WRITE_BYTE 0x52      ~10~              // THAC0
+    WRITE_BYTE 0x238     19                // Strength
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    WRITE_ASCII 0x280    raemon            // Death Variable
+    REPLACE_CRE_ITEM ~CHAN04~ #0 #0 #0 ~NONE~ ~ARMOR~
+    REPLACE_CRE_ITEM ~SW1H05~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+    REPLACE_CRE_ITEM ~AROW02~ #30 #0 #0 ~NONE~ ~QUIVER2~
+	ADD_CRE_ITEM ~potn14~ #2 #0 #0 ~None~ ~qitem2~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~ragefa.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     8000              // XP Value
+    WRITE_SHORT 0x24     71                // Current HP
+    WRITE_SHORT 0x26     71                // Max HP
+    WRITE_BYTE 0x52      ~12~              // THAC0
+    WRITE_BYTE 0x53      1                 // # Attacks
+    WRITE_BYTE 0x23a     19                // Intelligence
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~ramazi.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     8000              // XP Value
+    WRITE_SHORT 0x24     71                // Current HP
+    WRITE_SHORT 0x26     71                // Max HP
+    WRITE_BYTE 0x46      8                 // Natural AC
+    WRITE_BYTE 0x48      8                 // Effective AC
+    WRITE_BYTE 0x52      ~13~              // THAC0
+    WRITE_BYTE 0x23a     19                // Intelligence
+    WRITE_BYTE 0x23c     18                // Dexterity
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~rielta.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     2000              // XP Value
+    WRITE_SHORT 0x24     72                // Current HP
+    WRITE_SHORT 0x26     72                // Max HP
+    WRITE_BYTE 0x52      ~14~              // THAC0
+    WRITE_BYTE 0x53      1                 // # Attacks
+    WRITE_BYTE 0x23a     19                // Intelligence
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+  ADD_CRE_ITEM ~crown~ #1 #0 #0 ~NONE~ ~Inv3~ // 
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~sarevo.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     15000             // XP Value
+    WRITE_SHORT 0x24     570               // Current HP
+    WRITE_SHORT 0x26     570               // Max HP
+    WRITE_BYTE 0x52      ~0~               // THAC0
+    WRITE_BYTE 0x59      90                // Resist Fire
+    WRITE_BYTE 0x5a      90                // Resist Cold
+    WRITE_BYTE 0x5b      90                // Resist Electricity
+    WRITE_BYTE 0x5c      90                // Resist Acid
+    WRITE_BYTE 0x5e      90                // Resist Magic Fire
+    WRITE_BYTE 0x5f      90                // Resist Magic Cold
+    WRITE_BYTE 0x63      50                // Resist Missile
+    WRITE_BYTE 0x238     19                // Strength
+    WRITE_BYTE 0x239     0                 // Strength Bonus
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~seniya.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     8000              // XP Value
+    WRITE_SHORT 0x24     122               // Current HP
+    WRITE_SHORT 0x26     122               // Max HP
+    WRITE_BYTE 0x48      9                 // Effective AC
+    WRITE_BYTE 0x52      ~13~              // THAC0
+    WRITE_BYTE 0x23b     19                // Wisdom
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    REPLACE_CRE_ITEM		~LEAT03~	#0 #0 #0	~NONE~	~ARMOR~
+  ADD_CRE_ITEM ~bootfox~ #0 #0 #0 ~NONE~ ~boots~ // already has weapon equipped
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~slythe.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     10000             // XP Value
+    WRITE_SHORT 0x24     142               // Current HP
+    WRITE_SHORT 0x26     142               // Max HP
+    WRITE_BYTE 0x52      ~7~               // THAC0
+    WRITE_BYTE 0x23c     19                // Dexterity
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~taerom.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     2700              // XP Value
+    WRITE_SHORT 0x18     33800             // XP
+    WRITE_SHORT 0x24     55                // Current HP
+    WRITE_SHORT 0x26     55                // Max HP
+    WRITE_BYTE 0x48      9                 // Effective AC
+    WRITE_BYTE 0x52      ~14~              // THAC0
+    WRITE_BYTE 0x72      3                 // Blunt Proficiency
+    WRITE_BYTE 0x234     5                 // Level First Class
+    WRITE_BYTE 0x238     19                // Strength
+    WRITE_BYTE 0x239     0                 // Strength Bonus
+    WRITE_BYTE 0x23c     16                // Dexterity
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    WRITE_ASCII 0x280    Taerom            // Death Variable
+    REPLACE_CRE_ITEM ~HAMM02~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+  ADD_CRE_ITEM ~leat05~ #0 #0 #0 ~NONE~ ~armor~  
+  ADD_CRE_ITEM ~boot04~ #0 #0 #0 ~NONE~ ~boots~
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~tamoko.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     10000             // XP Value
+    WRITE_LONG 0x1c     275               // GP
+    WRITE_SHORT 0x24     140               // Current HP
+    WRITE_SHORT 0x26     140               // Max HP
+    WRITE_BYTE 0x48      6                 // Effective AC
+    WRITE_BYTE 0x52      ~9~               // THAC0
+    WRITE_BYTE 0x23b     19                // Wisdom
+    WRITE_BYTE 0x23c     18                // Dexterity
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+  ADD_CRE_ITEM ~POTN33~ #1 #0 #0 ~NONE~ ~QItem1~ 
+  ADD_CRE_ITEM ~POTN52~ #3 #0 #0 ~NONE~ ~QItem2~ 
+  ADD_CRE_ITEM ~ring04~ #1 #0 #0 ~NONE~ ~Inv1~ 
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~taugos.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     4000              // XP Value
+    WRITE_SHORT 0x24     112               // Current HP
+    WRITE_SHORT 0x26     112               // Max HP
+    WRITE_BYTE 0x48      9                 // Effective AC
+    WRITE_BYTE 0x52      ~8~               // THAC0
+    WRITE_BYTE 0x53      2                 // # Attacks
+    WRITE_BYTE 0x238     19                // Strength
+    WRITE_BYTE 0x239     0                 // Strength Bonus
+    WRITE_BYTE 0x23c     16                // Dexterity
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    REMOVE_CRE_ITEM		~hamm02~
+  ADD_CRE_ITEM ~blunrag~ #0 #0 #0 ~NONE~ ~WEAPON1~	EQUIP
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~thalan.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     6000              // XP Value
+    WRITE_LONG 0x1c     881               // GP
+    WRITE_SHORT 0x24     74                // Current HP
+    WRITE_SHORT 0x26     74                // Max HP
+    WRITE_BYTE 0x52      ~12~              // THAC0
+    WRITE_BYTE 0x23a     19                // Intelligence
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    REMOVE_CRE_ITEM		~staf01~
+  ADD_CRE_ITEM ~STAFTHA~ #0 #0 #0 ~NONE~ ~WEAPON1~	EQUIP
+  ADD_CRE_ITEM ~POTN52~ #3 #0 #0 ~NONE~ ~QItem3~ // Put Potions in Quick Slot 3
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~tranzi.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     2000              // XP Value
+    WRITE_SHORT 0x24     64                // Current HP
+    WRITE_SHORT 0x26     64                // Max HP
+    WRITE_BYTE 0x48      9                 // Effective AC
+    WRITE_BYTE 0x52      ~14~              // THAC0
+    WRITE_BYTE 0x23a     19                // Intelligence
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~tuth.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     8000              // XP Value
+    WRITE_SHORT 0x24     166               // Current HP
+    WRITE_SHORT 0x26     166               // Max HP
+    WRITE_BYTE 0x52      ~7~               // THAC0
+    WRITE_BYTE 0x238     19                // Strength
+    WRITE_BYTE 0x239     0                 // Strength Bonus
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+  ADD_CRE_ITEM ~POTN52~ #3 #0 #0 ~NONE~ ~QITEM1~ 
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~venkt.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     1800              // XP Value
+    WRITE_SHORT 0x24     62                // Current HP
+    WRITE_SHORT 0x26     62                // Max HP
+    WRITE_BYTE 0x52      ~14~              // THAC0
+    WRITE_BYTE 0x23a     19                // Intelligence
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    REPLACE_CRE_ITEM ~DART03~ #10 #0 #0 ~NONE~ ~WEAPON3~
+  ADD_CRE_ITEM ~POTN38~ #2 #0 #0 ~NONE~ ~Inv4~ 
+  ADD_CRE_ITEM ~POTN35~ #1 #0 #0 ~NONE~ ~Inv5~ 
+  ADD_CRE_ITEM ~POTN52~ #3 #0 #0 ~NONE~ ~Inv6~ 
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~wilf.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     1600              // XP Value
+    WRITE_LONG 0x1c     62                // GP
+    WRITE_SHORT 0x24     110               // Current HP
+    WRITE_SHORT 0x26     110               // Max HP
+    WRITE_BYTE 0x52      ~11~              // THAC0
+    WRITE_BYTE 0x238     19                // Strength
+    WRITE_BYTE 0x23b     19                // Wisdom
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    REMOVE_CRE_ITEM	~hamm01~
+    ADD_CRE_ITEM		~BLUNDAG~	#0 #0 #0	~NONE~	~WEAPON1~	EQUIP
+  ADD_CRE_ITEM ~POTN03~ #2 #0 #0 ~NONE~ ~QItem2~ // Put Potions in Quick Slot 2
+  ADD_CRE_ITEM ~POTN52~ #3 #0 #0 ~NONE~ ~QItem3~ // Put Potions in Quick Slot 3
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~yago.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     6000              // XP Value
+    WRITE_LONG 0x1c     66                // GP
+    WRITE_SHORT 0x24     77                // Current HP
+    WRITE_SHORT 0x26     77                // Max HP
+    WRITE_BYTE 0x46      0                 // Natural AC
+    WRITE_BYTE 0x48      0                 // Effective AC
+    WRITE_BYTE 0x52      ~14~              // THAC0
+    WRITE_BYTE 0x60      50                // Resist Slashing
+    WRITE_BYTE 0x61      50                // Resist Crushing
+    WRITE_BYTE 0x62      50                // Resist Piercing
+    WRITE_BYTE 0x63      50                // Resist Missile
+    WRITE_BYTE 0x66      18                // Lore
+    WRITE_BYTE 0x6f      0                 // Small Sword Proficiency
+    WRITE_BYTE 0x72      3                 // Blunt Proficiency
+    WRITE_BYTE 0x75      0                 // Missile Proficiency
+    WRITE_BYTE 0x23a     19                // Intelligence
+    WRITE_BYTE 0x23c     19                // Dexterity
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    REPLACE_CRE_ITEM ~STAF06~ #0 #0 #0 ~NONE~ ~WEAPON1~ EQUIP
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~zargal.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     1300              // XP Value
+    WRITE_LONG 0x1c     152               // GP
+    WRITE_SHORT 0x24     64                // Current HP
+    WRITE_SHORT 0x26     64                // Max HP
+    WRITE_BYTE 0x52      ~9~               // THAC0
+    WRITE_BYTE 0x23c     16                // Dexterity
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~zhalim.cre~  ~override~
+  PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
+    WRITE_LONG 0x14     6000              // XP Value
+    WRITE_LONG 0x1c     168               // GP
+    WRITE_SHORT 0x24     158               // Current HP
+    WRITE_SHORT 0x26     158               // Max HP
+    WRITE_BYTE 0x48      7                 // Effective AC
+    WRITE_BYTE 0x238     19                // Strength
+    WRITE_BYTE 0x239     0                 // Strength Bonus
+    WRITE_BYTE 0x242     0                 // Morale Recovery
+    REPLACE_CRE_ITEM ~PLAT04~ #0 #0 #0 ~NONE~ ~ARMOR~
+    REPLACE_CRE_ITEM ~AROW11~ #0 #0 #0 ~NONE~ ~QUIVER1~
+    ADD_CRE_ITEM ~arow11~ #30 #0 #0 ~NONE~ ~Quiver3~ 
+  END
+BUT_ONLY_IF_IT_CHANGES
+
+//	CRE folder - New creatures
+COPY ~vault/cre/jc.cre~ ~override/jc.cre~				
+   	  SAY NAME1 @2
+  	  SAY NAME2 @2
+COPY ~vault/cre/jc_dem01.cre~ ~override/jc_dem01.cre~
+  	  SAY NAME1 @3
+  	  SAY NAME2 @3
+COPY ~vault/cre/jc_dem02.cre~ ~override/jc_dem02.cre~
+  	  SAY NAME1 @4
+  	  SAY NAME2 @4
+COPY ~vault/cre/jc_drak.cre~ ~override/jc_drak.cre~
+  	  SAY NAME1 @5
+  	  SAY NAME2 @5
+COPY ~vault/cre/jc_drw01.cre~ ~override/jc_drw01.cre~
+  	  SAY NAME1 @6
+  	  SAY NAME2 @6
+COPY ~vault/cre/jc_drw02.cre~ ~override/jc_drw02.cre~
+  	  SAY NAME1 @7
+  	  SAY NAME2 @7
+COPY ~vault/cre/jc_drw03.cre~ ~override/jc_drw03.cre~
+  	  SAY NAME1 @8
+  	  SAY NAME2 @8
+COPY ~vault/cre/jc_drw04.cre~ ~override/jc_drw04.cre~
+  	  SAY NAME1 @9
+  	  SAY NAME2 @9
+COPY ~vault/cre/jc_drw05.cre~ ~override/jc_drw05.cre~
+  	  SAY NAME1 @10
+  	  SAY NAME2 @10
+COPY ~vault/cre/jc_drw06.cre~ ~override/jc_drw06.cre~
+  	  SAY NAME1 @11
+  	  SAY NAME2 @11
+COPY ~vault/cre/jc_gol.cre~ ~override/jc_gol.cre~
+  	  SAY NAME1 @1
+  	  SAY NAME2 @1
+COPY ~vault/cre/jc_mag01.cre~ ~override/jc_mag01.cre~
+   	  SAY NAME1 @12
+  	  SAY NAME2 @12
+COPY ~vault/cre/jc_ogr01.cre~ ~override/jc_ogr01.cre~
+   	  SAY NAME1 @13
+  	  SAY NAME2 @13
+COPY ~vault/cre/jc_ogr02.cre~ ~override/jc_ogr02.cre~
+   	  SAY NAME1 @14
+  	  SAY NAME2 @14
+COPY ~vault/cre/jc_ogr03.cre~ ~override/jc_ogr03.cre~
+   	  SAY NAME1 @15
+  	  SAY NAME2 @15
+COPY ~vault/cre/jc_ske01.cre~ ~override/jc_ske01.cre~
+   	  SAY NAME1 @16
+  	  SAY NAME2 @16
+COPY ~vault/cre/jc_ske02.cre~ ~override/jc_ske02.cre~
+   	  SAY NAME1 @16
+  	  SAY NAME2 @16
+COPY ~vault/cre/jc_thf01.cre~ ~override/jc_thf01.cre~
+  	  SAY NAME1 @17
+  	  SAY NAME2 @17
+COPY ~vault/cre/jc_thf02.cre~ ~override/jc_thf02.cre~
+  	  SAY NAME1 @18
+  	  SAY NAME2 @18
+COPY ~vault/cre/jc_thf03.cre~ ~override/jc_thf03.cre~
+  	  SAY NAME1 @19
+  	  SAY NAME2 @19
+COPY ~vault/cre/jc_thf04.cre~ ~override/jc_thf04.cre~
+  	  SAY NAME1 @20
+  	  SAY NAME2 @20
+COPY ~vault/cre/jc_tr01.cre~ ~override/jc_tr01.cre~
+  	  SAY NAME1 @21
+  	  SAY NAME2 @21
+COPY ~vault/cre/jc_tr02.cre~ ~override/jc_tr02.cre~
+  	  SAY NAME1 @21
+  	  SAY NAME2 @21
+COPY ~vault/cre/jc_tr03.cre~ ~override/jc_tr03.cre~
+  	  SAY NAME1 @21
+  	  SAY NAME2 @21
+COPY ~vault/cre/jc_tr04.cre~ ~override/jc_tr04.cre~
+  	  SAY NAME1 @21
+  	  SAY NAME2 @21
+COPY ~vault/cre/jc_tr05.cre~ ~override/jc_tr05.cre~
+  	  SAY NAME1 @21
+  	  SAY NAME2 @21
+COPY ~vault/cre/jc_tr06.cre~ ~override/jc_tr06.cre~
+  	  SAY NAME1 @21
+  	  SAY NAME2 @21
+COPY ~vault/cre/jc_tr07.cre~ ~override/jc_tr07.cre~
+  	  SAY NAME1 @21
+  	  SAY NAME2 @21
+COPY ~vault/cre/jc_tr08.cre~ ~override/jc_tr08.cre~
+  	  SAY NAME1 @21
+  	  SAY NAME2 @21
+COPY ~vault/cre/jc_tr09.cre~ ~override/jc_tr09.cre~
+  	  SAY NAME1 @21
+  	  SAY NAME2 @21
+COPY ~vault/cre/jc_vam.cre~ ~override/jc_vam.cre~
+  	  SAY NAME1 @22
+  	  SAY NAME2 @22
+COPY ~vault/cre/jc_vs1.cre~ ~override/jc_vs1.cre~
+  	  SAY NAME1 @23
+  	  SAY NAME2 @23
+COPY ~vault/cre/jc_vs2.cre~ ~override/jc_vs2.cre~
+  	  SAY NAME1 @23
+  	  SAY NAME2 @23
+COPY ~vault/cre/jc_wlfwe.cre~ ~override/jc_wlfwe.cre~
+   	  SAY NAME1 @24
+  	  SAY NAME2 @24
+COPY ~vault/cre/jrnl.cre~ ~override/jrnl.cre~
+   	  SAY NAME1 @25
+  	  SAY NAME2 @25
+
+//	Patching stores
+
+COPY_EXISTING ~erdane.sto~ ~override~
+	ADD_STORE_ITEM ~leatbar~ AFTER ~leat10~ #0 #0 #0 ~IDENTIFIED~ #1
+
+COPY_EXISTING ~friend.sto~ ~override~
+	ADD_STORE_ITEM ~arow02~ AFTER ~arow01~ #10#0 #0 ~IDENTIFIED~ #20
+	ADD_STORE_ITEM ~bolt02~ AFTER ~bolt01~ #10 #0 #0 ~IDENTIFIED~ #20
+	ADD_STORE_ITEM ~bull02~ AFTER ~bull01~ #10 #0 #0 ~IDENTIFIED~ #20
+
+COPY_EXISTING ~highhedg.sto~ ~override~
+	ADD_STORE_ITEM ~scrl96~ AFTER ~scrl93~ #1 #0 #0 ~IDENTIFIED~ #3
+	ADD_STORE_ITEM ~echan01~ AFTER ~wand02~ #0 #0 #0 ~IDENTIFIED~ #1
+	ADD_STORE_ITEM ~potn52~ AFTER ~echan01~ #1 #0 #0 ~IDENTIFIED~ #20
+
+COPY	~vault/sto/jc_tem01.sto~	~override/jc_tem01.sto~
+  	  SAY NAME2 @26
+COPY	~vault/sto/jc_vs2.sto~	~override/jc_vs2.sto~
+  	  SAY NAME2 @27
+
+COPY_EXISTING ~sto0703.sto~ ~override~
+	ADD_STORE_ITEM ~leatbar~ AFTER ~leat10~ #0 #0 #0 ~IDENTIFIED~ #1
+	ADD_STORE_ITEM ~potn52~ AFTER ~potn46~ #1 #0 #0 ~IDENTIFIED~ #10
+
+COPY_EXISTING ~sto4803.sto~ ~override~
+	ADD_STORE_ITEM ~arow02~ AFTER ~arow01~ #5 #0 #0 ~IDENTIFIED~ #20
+	ADD_STORE_ITEM ~bolt02~ AFTER ~bolt01~ #5 #0 #0 ~IDENTIFIED~ #20
+	ADD_STORE_ITEM ~bull02~ AFTER ~bull01~ #10 #0 #0 ~IDENTIFIED~ #20
+
+COPY_EXISTING ~sto4901.sto~ ~override~
+	ADD_STORE_ITEM ~chan02~ AFTER ~chan01~ #0 #0 #0 ~IDENTIFIED~ #1
+	ADD_STORE_ITEM ~chan05~ AFTER ~chan04~ #0 #0 #0 ~IDENTIFIED~ #1
+
+COPY_EXISTING ~sto4905.sto~ ~override~
+	ADD_STORE_ITEM ~potn52~ AFTER ~potn46~ #1 #0 #0 ~IDENTIFIED~ #10
+
+COPY_EXISTING ~sto4906.sto~ ~override~
+	ADD_STORE_ITEM ~ringperc~ AFTER ~ring21~ #0 #0 #0 ~IDENTIFIED~ #1
+
+COPY_EXISTING ~sto4908.sto~ ~override~
+	ADD_STORE_ITEM ~blun07~ AFTER ~blun06~ #0 #0 #0 ~IDENTIFIED~ #1
+	ADD_STORE_ITEM ~dagg02~ AFTER ~dagg01~ #0 #0 #0 ~IDENTIFIED~ #1
+	ADD_STORE_ITEM ~sw1h08~ AFTER ~sw1h07~ #0 #0 #0 ~IDENTIFIED~ #1
+	ADD_STORE_ITEM ~dart02~ AFTER ~sw1h08~ #20 #0 #0 ~IDENTIFIED~ #10
+	ADD_STORE_ITEM ~belt03~ AFTER ~dart02~ #0 #0 #0 ~IDENTIFIED~ #1
+	ADD_STORE_ITEM ~leat03~ AFTER ~belt03~ #0 #0 #0 ~IDENTIFIED~ #1
+
+COPY_EXISTING ~stosilen.sto~ ~override~
+  	  SAY NAME2 @28
+	ADD_STORE_ITEM ~ringperc~ AFTER ~bull03~ #0 #0 #0 ~IDENTIFIED~ #1
+	ADD_STORE_ITEM ~potn39~ AFTER ~ringperc~ #1 #0 #0 ~IDENTIFIED~ #10
+	ADD_STORE_ITEM ~hat01~ AFTER ~potn39~ #0 #0 #0 ~IDENTIFIED~ #1
+
+COPY_EXISTING ~taerum.sto~ ~override~
+	ADD_STORE_ITEM ~bull03~ AFTER ~bull02~ #10 #0 #0 ~IDENTIFIED~ #20
+	ADD_STORE_ITEM ~bull04~ AFTER ~bull03~ #10 #0 #0 ~IDENTIFIED~ #15
+
+COPY_EXISTING ~tem0131.sto~ ~override~
+	ADD_STORE_ITEM ~potn52~ AFTER ~scrlpet~ #1 #0 #0 ~IDENTIFIED~ #10
+	ADD_STORE_ITEM ~bull02~ AFTER ~potn52~ #20 #0 #0 ~IDENTIFIED~ #10
+	ADD_STORE_ITEM ~bull03~ AFTER ~bull02~ #20 #0 #0 ~IDENTIFIED~ #10
+	ADD_STORE_ITEM ~bull04~ AFTER ~bull03~ #20 #0 #0 ~IDENTIFIED~ #10
+
+COPY_EXISTING ~tem0132.sto~ ~override~
+	ADD_STORE_ITEM ~potn52~ AFTER ~scrlpet~ #1 #0 #0 ~IDENTIFIED~ #10
+
+COPY_EXISTING ~tem2304.sto~ ~override~
+	ADD_STORE_ITEM ~scrl15~ AFTER ~scrlpet~ #1 #0 #0 ~IDENTIFIED~ #5
+	ADD_STORE_ITEM ~potn52~ AFTER ~scrl15~ #1 #0 #0 ~IDENTIFIED~ #10
+
+COPY_EXISTING ~tem2601.sto~ ~override~
+	ADD_STORE_ITEM ~potn52~ AFTER ~scrlpet~ #1 #0 #0 ~IDENTIFIED~ #10
+
+COPY_EXISTING ~tem3402.sto~ ~override~
+	ADD_STORE_ITEM ~scrl15~ AFTER ~scrlpet~ #1 #0 #0 ~IDENTIFIED~ #2
+	ADD_STORE_ITEM ~potn52~ AFTER ~scrl15~ #1 #0 #0 ~IDENTIFIED~ #10
+
+COPY_EXISTING ~tem4802.sto~ ~override~
+	ADD_STORE_ITEM ~potn52~ AFTER ~scrlpet~ #1 #0 #0 ~IDENTIFIED~ #10
+
+COPY_EXISTING ~ulgoth.sto~ ~override~
+	ADD_STORE_ITEM ~bull02~ AFTER ~bull01~ #10#0 #0 ~IDENTIFIED~ #15
+	ADD_STORE_ITEM ~bull04~ AFTER ~bull03~ #10#0 #0 ~IDENTIFIED~ #10
+	ADD_STORE_ITEM ~potn52~ AFTER ~potn38~ #1 #0 #0 ~IDENTIFIED~ #15
+	
+//      New stores
+COPY	~vault/sto/tem0149.sto~		~override/tem0149.sto~
+	 SAY NAME2 @29
+COPY	~vault/sto/tem0609.sto~		~override/tem0609.sto~
+	 SAY NAME2 @30
+
+
+//     Items
+
+COPY ~vault/itm/amultf.itm~		~override/amultf.itm~	
+   SAY NAME1 @31
+   SAY NAME2 @32
+   SAY UNIDENTIFIED_DESC @33
+   SAY DESC @34
+
+COPY ~vault/itm/blundag.itm~ ~override/blundag.itm~
+   SAY NAME1 @39
+   SAY NAME2 @40
+   SAY UNIDENTIFIED_DESC @41
+   SAY DESC @42
+
+COPY ~vault/itm/blundth.itm~ ~override/blundth.itm~
+   SAY NAME1 @43
+   SAY NAME2 @44
+   SAY UNIDENTIFIED_DESC @45
+   SAY DESC @46
+
+COPY ~vault/itm/blunpoi.itm~ ~override/blunpoi.itm~
+   SAY NAME1 @39
+   SAY NAME2 @47
+   SAY UNIDENTIFIED_DESC @41
+   SAY DESC @48
+
+COPY ~vault/itm/blunrag.itm~ ~override/blunrag.itm~
+   SAY NAME1 @49
+   SAY NAME2 @50
+   SAY UNIDENTIFIED_DESC @51
+   SAY DESC @52
+
+COPY ~vault/itm/bookdrw.itm~ ~override/bookdrw.itm~
+   SAY NAME1 @55
+   SAY NAME2 @55
+   SAY UNIDENTIFIED_DESC @56
+   SAY DESC @57
+
+COPY ~vault/itm/bootfox.itm~ ~override/bootfox.itm~
+   SAY NAME1 @58
+   SAY NAME2 @59
+   SAY UNIDENTIFIED_DESC @60
+   SAY DESC @61
+
+COPY ~vault/itm/bowpha.itm~ ~override/bowpha.itm~
+   SAY NAME1 @62
+   SAY NAME2 @63
+   SAY UNIDENTIFIED_DESC @64
+   SAY DESC @65
+
+COPY ~vault/itm/chandrw.itm~ ~override/chandrw.itm~
+   SAY NAME1 @70
+   SAY NAME2 @71
+   SAY UNIDENTIFIED_DESC @72
+   SAY DESC @73
+
+COPY ~vault/itm/clckst1.itm~ ~override/clckst1.itm~
+   SAY NAME1 @74
+   SAY NAME2 @75
+   SAY UNIDENTIFIED_DESC @76
+   SAY DESC @77
+
+COPY ~vault/itm/clckst2.itm~ ~override/clckst2.itm~
+   SAY NAME1 @74
+   SAY NAME2 @78
+   SAY UNIDENTIFIED_DESC @76
+   SAY DESC @79
+
+COPY ~vault/itm/clckst3.itm~ ~override/clckst3.itm~
+   SAY NAME1 @74
+   SAY NAME2 @80
+   SAY UNIDENTIFIED_DESC @76
+   SAY DESC @81
+
+COPY ~vault/itm/crown.itm~ ~override/crown.itm~
+   SAY NAME1 @82
+   SAY NAME2 @83
+   SAY UNIDENTIFIED_DESC @84
+   SAY DESC @85
+
+COPY ~vault/itm/doc1.itm~ ~override/doc1.itm~
+   SAY NAME1 @86
+   SAY NAME2 @86
+   SAY UNIDENTIFIED_DESC @87
+   SAY DESC @87
+
+COPY ~vault/itm/echan01.itm~ ~override/echan01.itm~
+   SAY NAME1 @70
+   SAY NAME2 @88
+   SAY UNIDENTIFIED_DESC @72
+   SAY DESC @89
+
+COPY ~vault/itm/echan02.itm~ ~override/echan02.itm~
+   SAY NAME1 @70
+   SAY NAME2 @90
+   SAY UNIDENTIFIED_DESC @72
+   SAY DESC @91
+
+COPY ~vault/itm/golems.itm~ ~override/golems.itm~
+
+COPY ~vault/itm/hammlat.itm~ ~override/hammlat.itm~
+   SAY NAME1 @92
+   SAY NAME2 @93
+   SAY UNIDENTIFIED_DESC @94
+   SAY DESC @95
+
+COPY ~vault/itm/hat01.itm~ ~override/hat01.itm~
+   SAY NAME1 @96
+   SAY NAME2 @97
+   SAY UNIDENTIFIED_DESC @98
+   SAY DESC @99
+   
+COPY_EXISTING ~helm04.itm~ ~override/helm04a.itm~
+   SAY NAME1 @82
+   SAY NAME2 @100
+   SAY UNIDENTIFIED_DESC @84
+   SAY DESC @101
+   LPF ADD_ITEM_EQEFFECT
+      INT_VAR
+         opcode = 0
+         target = 1
+         timing = 2
+         parameter1 = 1
+         parameter2 = 0
+   END
+   
+COPY_EXISTING ~helm05.itm~ ~override/helm05a.itm~
+   SAY NAME1 @82
+   SAY NAME2 @102
+   SAY UNIDENTIFIED_DESC @84
+   SAY DESC @103
+   LPF ADD_ITEM_EQEFFECT
+      INT_VAR
+         opcode = 0
+         target = 1
+         timing = 2
+         parameter1 = 1
+         parameter2 = 0
+   END
+   
+COPY_EXISTING ~helm06.itm~ ~override/helm06a.itm~
+   SAY NAME1 @82
+   SAY NAME2 @104
+   SAY UNIDENTIFIED_DESC @84
+   SAY DESC @105
+   LPF ADD_ITEM_EQEFFECT
+      INT_VAR
+         opcode = 0
+         target = 1
+         timing = 2
+         parameter1 = 1
+         parameter2 = 0
+   END
+
+COPY ~vault/itm/helmdem.itm~ ~override/helmdem.itm~
+COPY ~vault/itm/jc_poof.itm~ ~override/jc_poof.itm~
+
+COPY ~vault/itm/leatbal.itm~ ~override/leatbal.itm~
+   SAY NAME1 @106
+   SAY NAME2 @107
+   SAY UNIDENTIFIED_DESC @108
+   SAY DESC @109
+
+COPY ~vault/itm/leatbar.itm~ ~override/leatbar.itm~
+   SAY NAME1 @106
+   SAY NAME2 @110
+   SAY UNIDENTIFIED_DESC @108
+   SAY DESC @111
+
+COPY ~vault/itm/miscdrw1.itm~ ~override/miscdrw1.itm~
+   SAY NAME1 @112
+   SAY NAME2 @112
+   SAY UNIDENTIFIED_DESC @113
+   SAY DESC @113
+
+COPY ~vault/itm/miscdrw2.itm~ ~override/miscdrw2.itm~
+   SAY NAME1 @114
+   SAY NAME2 @114
+   SAY UNIDENTIFIED_DESC @115
+   SAY DESC @115
+
+COPY ~vault/itm/miscdrw3.itm~ ~override/miscdrw3.itm~
+   SAY NAME1 @116
+   SAY NAME2 @117
+   SAY UNIDENTIFIED_DESC @118
+   SAY DESC @119
+
+COPY ~vault/itm/platwy.itm~ ~override/platwy.itm~	// vestibule MOD item
+   SAY NAME1 @120
+   SAY NAME2 @121
+   SAY UNIDENTIFIED_DESC @122
+   SAY DESC @123
+   
+COPY ~vault/itm/ringmyst.itm~ ~override/ringmyst.itm~
+   SAY NAME1 @127
+   SAY NAME2 @128
+   SAY UNIDENTIFIED_DESC @129
+   SAY DESC @130
+
+COPY ~vault/itm/ringperc.itm~ ~override/ringperc.itm~
+   SAY NAME1 @127
+   SAY NAME2 @131
+   SAY UNIDENTIFIED_DESC @129
+   SAY DESC @132
+
+COPY ~vault/itm/stafcad.itm~ ~override/stafcad.itm~
+   SAY NAME1 @133
+   SAY NAME2 @134
+   SAY UNIDENTIFIED_DESC @135
+   SAY DESC @136
+
+COPY ~vault/itm/stafoak.itm~ ~override/stafoak.itm~
+   SAY NAME1 @133
+   SAY NAME2 @137
+   SAY UNIDENTIFIED_DESC @135
+   SAY DESC @138
+
+COPY ~vault/itm/staftha.itm~ ~override/staftha.itm~
+   SAY NAME1 @133
+   SAY NAME2 @139
+   SAY UNIDENTIFIED_DESC @135
+   SAY DESC @140
+
+COPY ~vault/itm/sw1dis.itm~ ~override/sw1dis.itm~
+   SAY NAME1 @141
+   SAY NAME2 @142
+   SAY UNIDENTIFIED_DESC @143
+   SAY DESC @144
+
+COPY ~vault/itm/sw1drw.itm~ ~override/sw1drw.itm~
+   SAY NAME1 @145
+   SAY NAME2 @146
+   SAY UNIDENTIFIED_DESC @147
+   SAY DESC @148
+
+COPY ~vault/itm/sw2hav.itm~ ~override/sw2hav.itm~
+   SAY NAME1 @149
+   SAY NAME2 @150
+   SAY UNIDENTIFIED_DESC @151
+   SAY DESC @152
+
+COPY ~vault/itm/sw2val.itm~ ~override/sw2val.itm~
+   SAY NAME1 @149
+   SAY NAME2 @153
+   SAY UNIDENTIFIED_DESC @151
+   SAY DESC @154
+
+COPY ~vault/itm/xbowdrw.itm~ ~override/xbowdrw.itm~
+   SAY NAME1 @155
+   SAY NAME2 @156
+   SAY UNIDENTIFIED_DESC @157
+   SAY DESC @158
+
+COPY_EXISTING ~book68.itm~ ~override/book68.itm~
+   SAY UNIDENTIFIED_DESC @161
+   SAY DESC @162
+
+COPY ~vault/itm/clck21.itm~ ~override/clck21.itm~
+   SAY NAME1 @163
+   SAY NAME2 @163
+   SAY UNIDENTIFIED_DESC @164
+   SAY DESC @165
+
+COPY ~vault/itm/clck22.itm~ ~override/clck22.itm~
+   SAY NAME1 @166
+   SAY NAME2 @167
+   SAY UNIDENTIFIED_DESC @168
+   SAY DESC @169
+
+COPY ~vault/itm/sw1hvam.itm~ ~override/sw1hvam.itm~
+   SAY NAME1 @170
+   SAY NAME2 @171
+   SAY UNIDENTIFIED_DESC @172
+   SAY DESC @173
+   
+//////////////////////////////////////////////
+
+//        IR Compatibility           //
+	 
+/////////////////////////////////////////////   
+   
+   
+BEGIN @175 DESIGNATED 1
+REQUIRE_COMPONENT ~setup-vault.tp2~ ~0~ @203
+
+COPY ~vault/bam/IR~ ~override~
+
+COPY ~vault/itm/IR/helm04.itm~ ~override/helm04.itm~
+   SAY NAME1 @82
+   SAY NAME2 @176
+   SAY UNIDENTIFIED_DESC @84
+   SAY DESC @177
+
+COPY ~vault/itm/IR/helm05.itm~ ~override/helm05.itm~
+   SAY NAME1 @82
+   SAY NAME2 @178
+   SAY UNIDENTIFIED_DESC @84
+   SAY DESC @179
+
+COPY ~vault/itm/IR/helm06.itm~ ~override/helm06.itm~
+   SAY NAME1 @82
+   SAY NAME2 @180
+   SAY UNIDENTIFIED_DESC @84
+   SAY DESC @181
+
+COPY ~vault/itm/IR/helm04a.itm~ ~override/helm04a.itm~
+   SAY NAME1 @82
+   SAY NAME2 @182
+   SAY UNIDENTIFIED_DESC @84
+   SAY DESC @183
+
+COPY ~vault/itm/IR/helm05a.itm~ ~override/helm05a.itm~
+   SAY NAME1 @82
+   SAY NAME2 @184
+   SAY UNIDENTIFIED_DESC @84
+   SAY DESC @185
+
+COPY ~vault/itm/IR/helm06a.itm~ ~override/helm06a.itm~
+   SAY NAME1 @82
+   SAY NAME2 @186
+   SAY UNIDENTIFIED_DESC @84
+   SAY DESC @187
+
+COPY ~vault/itm/IR/clck09.itm~ ~override/clck09.itm~
+   SAY NAME1 @74
+   SAY NAME2 @188
+   SAY UNIDENTIFIED_DESC @76
+   SAY DESC @189
+   
+COPY ~vault/itm/IR/clck10.itm~ ~override/clck10.itm~
+   SAY NAME1 @74
+   SAY NAME2 @190
+   SAY UNIDENTIFIED_DESC @76
+   SAY DESC @191
+   
+COPY ~vault/itm/IR/clck11.itm~ ~override/clck11.itm~
+   SAY NAME1 @74
+   SAY NAME2 @192
+   SAY UNIDENTIFIED_DESC @76
+   SAY DESC @193
+   
+COPY ~vault/itm/IR/clck12.itm~ ~override/clck12.itm~
+   SAY NAME1 @74
+   SAY NAME2 @194
+   SAY UNIDENTIFIED_DESC @76
+   SAY DESC @195
+   
+COPY ~vault/itm/IR/clck13.itm~ ~override/clck13.itm~
+   SAY NAME1 @74
+   SAY NAME2 @196
+   SAY UNIDENTIFIED_DESC @76
+   SAY DESC @197
+   
+COPY ~vault/itm/IR/clck14.itm~ ~override/clck14.itm~
+   SAY NAME1 @74
+   SAY NAME2 @198
+   SAY UNIDENTIFIED_DESC @76
+   SAY DESC @199
+   
+COPY ~vault/itm/IR/clckst1.itm~ ~override/clckst1.itm~
+   SAY NAME1 @74
+   SAY NAME2 @75
+   SAY UNIDENTIFIED_DESC @76
+   SAY DESC @200
+   
+COPY ~vault/itm/IR/clckst2.itm~ ~override/clckst2.itm~
+   SAY NAME1 @74
+   SAY NAME2 @78
+   SAY UNIDENTIFIED_DESC @76
+   SAY DESC @201
+
+COPY ~vault/itm/IR/clckst3.itm~ ~override/clckst3.itm~
+   SAY NAME1 @74
+   SAY NAME2 @80
+   SAY UNIDENTIFIED_DESC @76
+   SAY DESC @202
+   

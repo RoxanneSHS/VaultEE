@@ -1,0 +1,9 @@
+IF
+	!Global("TheVaultPortal","GLOBAL",8)
+THEN
+	RESPONSE #100
+		SetGlobal("TheVaultPortal","GLOBAL",8)
+		Continue()
+END
+
+

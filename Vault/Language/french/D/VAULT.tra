@@ -1,0 +1,192 @@
+// Vault Translation File
+
+@0   = ~Hmmm ? ... Un ouvrage de facture drow, sans doute. Oui, cela peut être utile. Mais pas à moi. Mon ancien apprenti avait cherché à étudier de tels matériaux, mais après son accident malheureux de polymorphisme, je ne pense pas qu'il se consacrerait à nouveau à de telles expériences.~
+@1   = ~Je n'ai pas besoin de le toucher pour vous dire qu'il est maudit... Attendez... Cela semble peu probable, mais... Je n'aurais jamais pensé voir cet artéfact maudit de mon vivant ! Revanche du Vampire, si ma mémoire ne me trompe pas. Oui... et il déverrouille quoi, déjà ?~
+@2   = ~Je crois que c'est la clef de quelque chose.~
+@3   = ~Laissez tomber.~
+@4   = ~Oui ! C'EST une clef ! Mais pour ouvrir quoi, je ne m'en souviens pas. Une sorte de lieu de magie cachée... Vous devrez trouver quelqu'un de plus versé dans ces artéfacts maléfiques, forgés à une époque depuis longtemps révolue. Peut-être le Prêtre de Gond, à la Porte de Baldur, ou un diseur de bonne aventure, pourront-ils vous en dire plus ! Je ne veux RIEN avoir à faire avec ceci !~
+@5   = ~Je ne voulais pas toucher une corde sensible. Pardon...~
+@6   = ~La "Revanche du Vampire" maudite a généré un autre souvenir incomplet chez l'une des figures les plus puissantes de la Côte des Epées. Le mage Thalantyr la reconnaît comme étant la clef de quelque chose, mais il ne se souvient pas de quoi. Il suggère de trouver quelqu'un de plus compétent dans le domaine de ces anciens artéfacts, comme le Prêtre de Gond ou un diseur de bonne aventure, pour résoudre ce mystère.~
+@7   = ~Bonjour à nouveau, <CHARNAME>. En quoi puis-je vous aider aujourd'hui ?~
+@8   = ~Je me suis procuré un objet d'une certaine importance magique... il n'est, cela dit, pas à vendre. Je me demandais si vous pouviez me dire s'il avait une quelconque utilité.~
+@9   = ~J'ai avec moi une épée plutôt étrange. Elle n'est pas à vendre, cela dit. Ça vous dérangerait d'y jeter un coup d'oeil ?~
+@10  = ~Qu'est-ce qu'elles ont, ces mines ? Vous les avez vidées de ces petits chiens il y a des semaines et maintenant, nous avons une infestation d'araignées !~
+@11  = ~Il semble que je sois arrivé aux Mines de Nashkel juste à temps. Le garde nous a prévenu que des araignées ont envahi la mine. Peut-être est-ce complètement indépendant de ma recherche du vieux livre. Mais en même temps, peut-être pas.~ ~Il semble que je sois arrivée aux Mines de Nashkel juste à temps. Le garde nous a prévenu que des araignées ont envahi la mine. Peut-être est-ce complètement indépendant de ma recherche du vieux livre. Mais en même temps, peut-être pas.~
+@12  = ~Merci pour avoir éliminé toutes ces araignées ! Espérons que les choses resteront tranquilles par ici pour un certain temps.~
+@13  = ~Le Mal... il s'amplifie... VOUS ! Non, le Mal irradie d'un autre endroit de la pièce !~
+@14  = ~Une présence maléfique menace la sainteté du vestibule ! Elle cherche à détruire le Temple du Matin ! Il n'est plus temps... Il vient ! Aux armes !~
+@15  = ~Non, s'il vous plait attendez ! Les dieux vous ont envoyés ici dans un but précis... Le Mal s'élève d'un portail sacrilège sur le mur oriental du vestibule et il doit être arrêté. Deux prêtres de l'aube peuvent seulement le ralentir mais avec votre aide...~
+@16  = ~Très bien.~
+@17  = ~Pas question. Je me tire !~
+@18  = ~Il n'est plus temps... Il vient ! Armez-vous !~
+@19  = ~Merci pour votre aide. Mais je sens que ce conflit n'est pas terminé. S'il vous plait, allez voir Keldath... il en sait plus que Bran ou moi.~
+@20  = ~Mes salutations, <CHARNAME>. Je suppose que vous voyagez sous la guidance de Lathandre. Comment puis-je vous aider ?~
+@21  = ~Nous avons besoin de soins et de bénédictions.~
+@22  = ~Nous n'avons pas besoin d'aide pour le moment.~
+@23  = ~MAGE ROUGE ! Ainsi, tu es venu voir le résultat de ton oeuvre par toi-même ! Le mal arrive, mais tu tomberas avant qu'il ne franchisse ce portail sacrilège !~
+@24  = ~Là, de l'autre côté ! Bran, dépêche-toi et prépare le sceau !~
+@25  = ~Qu'est-ce qu'il se passe ici ?~
+@26  = ~Ça suffit ! J'en ai assez vu de vous, prêtres cinglés, pour toute ma vie !~
+@27  = ~Calmez-vous, brave homme, je ne suis PAS le mal. Dites-moi ce qui se passe.~
+@28  = ~Aux armes ! La sainteté de cet endroit ne sera pas souillée !~
+@29  = ~Vous avez la gratitude de Lathandre mais ce n'est que le début...~
+@30  = ~Revenez lorsque le Mal sera détruit. J'ai quelque chose qui pourrait vous aider... si votre coeur est pur.~
+@31  = ~Keldath nous a informés de votre prouesse héroïque. Vous avez notre gratitude. Je suis certain que Keldath vous a bien récompensés. Nous ne pouvons vous offrir qu'une simple bénédiction. Si vous tombiez sur un marteau doté d'enchantements mineurs et le cadeau d'une sirène, rapportez-les moi. D'ici là, portez-vous bien.~
+@32  = ~Après la défaite du démon inférieur Lestraubimat, le Prêtre de l'Aube Bran m'a dit qu'il m'offrirait quelque chose si je lui rapportais un marteau doté d'enchantements mineurs et le cadeau d'une sirène. Je peux le trouver dans le vestibule juste au nord du Temple du Matin.~
+@33  = ~Je vois que vous avez une perle en votre possession... Le cadeau le plus précieux d'une sirène. Malheureusement, vous ne transportez pas de marteau doté d'un enchantement mineur. Revenez quand ce sera le cas et je vous donnerai ma bénédiction.~
+@34  = ~Je vois que vous avez un marteau de guerre doté d'une certaine amélioration magique. Malheureusement, vous n'avez pas encore acquis le cadeau d'une sirène, une pierre précieuse. Revenez quand ce sera le cas et je vous donnerai ma bénédiction.~
+@35  = ~Bienvenue, <CHARNAME>. Toujours à la recherche des objets nécessaires à ma bénédiction, je vois. Portez-vous bien et si vous deviez les trouver, je serai ici, dans le vestibule, à vous attendre.~
+@36  = ~Excellent ! Un marteau de guerre avec quelques propriétés magiques et une perle de valeur provenant d'une sirène... Donnez-les moi.~
+@37  = ~J'espère que vous ne devrez jamais élever le Rayonnement de Lathandre. Marchez dans Sa lumière, <CHARNAME>.~
+@38  = ~Chapitre Sept : Retour à Château-Suif
+
+Votre voyage a fait un tour complet. Le Duc Eltan vous a demandé de retourner à Château-Suif, où vous devez espionner les chefs du Trône de Fer. Bien qu'il vous trouble que des hommes aussi maléfiques puissent utiliser la grande bibliothèque et que vous auriez voulu que les circonstances de votre visite soient différentes, ce sera un plaisir de retourner dans votre ancien foyer.~
+@39  = ~<CHARNAME> ! Les temps sont terribles pour Gullykin ! Nous sommes assiégés par une tribu d'ogres vicieux sous le commandement d'un ogre mage appelé Kharaz ! Ils demandent que nous abandonnions le village car il doit devenir le site de leur campement ! Nous avons déjà envoyé deux messagers à la recherche d'aide, mais ils ont été interceptés et assassinés. S'il vous plait, vous devez nous aider ! Ils continuent à arriver en nombre, mutilant les gens et détruisant nos avoirs !~
+@40  = ~Je vais voir ce que je peux faire.~
+@41  = ~Le village de Gullykin est assiégé par une bande d'ogres dirigés par un mage nommé Kharaz. Les ogres semblent se compter par centaines, menant vagues sur vagues des raids qui dévastent le village et massacrent ses habitants, mais j'ai dit à Gandolar que je verrais ce que je peux faire pour remédier à cette situation.~
+@42  = ~<CHARNAME> ! Quoi ? Vous dites qu'il semble que cette horde d'ogres soit infinie ? Ce sont des nouvelles graves. Que peut-on faire ? Nous ne tiendrons pas longtemps...~
+@43  = ~C'est sans espoir. Je pense qu'il vaut mieux que nous partions avant que tout ne soit perdu.~
+@44  = ~Oui, leur nombre semble insurmontable. Je vais continuer à les combattre pour que vos gens puissent s'enfuir.~
+@45  = ~Ce Kharaz que vous mentionnez, Gandolar. L'avez-vous vu ?~
+@46  = ~Fuyons pour l'heure, Gandolar. Je pense qu'il serait mieux que nous imaginions un autre moyen de vaincre ces ogres.~
+@47  = ~Quoi ? Je... ne suis pas certain. Que proposez-vous ?~
+@48  = ~Ils sont assez nombreux pour nous submerger. Je vais continuer à les combattre pour que vos gens puissent prendre la fuite.~
+@49  = ~Rien pour l'instant. Mais gardez vos gens prêts, au cas où.~
+@50  = ~Peut-être, je dis bien, peut-être, pouvons-nous vaincre cette armée en lui coupant la tête.~
+@51  = ~C'est sans espoir. Partons avant que tout ne soit perdu.~
+@52  = ~Fuyons pour l'heure, Gandolar. Je pense que nous devons imaginer un autre moyen de vaincre ces ogres.~
+@53  = ~Hmmm... Je comprends. J'ai vu un ogre au sommet des collines qui semblait commander toute cette attaque. Si vous avez raison, peut-être qu'envoyer une petite équipe pour tuer leur chef relâchera leur emprise ! Cela semble désespéré, mais c'est peut-être notre seul espoir.~
+@54  = ~Des hommes désespérés usent de mesures désespérées. Je vais me mettre en route avec un petit détachement dès que j'en serai capable. Les dieux puissent nous aider.~
+@55  = ~La situation à Gullykin semble en perpétuelle escalade. La horde continue à nous presser fortement... Gandolar et moi avons conçu une possible solution, est-elle due à une planification réfléchie ou au désespoir, je n'en sais rien : J'ai proposé que nous envoyions une petite unité pour tuer ce Kharaz et, espérons-le, briser le moral de son armée. Gandolar est peu convaincu, mais nous n'avons pas grand chose d'autre à proposer. Il me dit qu'il a vu un ogre commander les raids depuis le sommet d'une petite colline juste en dehors de Gullykin.~
+@56  = ~<CHARNAME> ! Les ogres ont battu en retraite quand ils ont été témoins de la mort de Kharaz sur la colline ! Vous avez encore réussi ! S'il vous plaît, acceptez ce petit gage de notre gratitude !~
+@57  = ~Lorsque l'ogre-mage Kharaz a été tué, les hordes d'ogres ont fui les collines et les quelques-uns qui restent dans le village devraient être dispersés assez facilement. Gandolar et les villageois de Gullykin sont soulagés que leurs maisons soient de nouveau en sécurité.~
+@58  = ~J'espère que vous avez trouvé les gens de notre petit village amicaux ? Nous accueillons toujours les héros de Gullykin à bras ouverts !~
+@59  = ~J'espère que vous avez trouvé les gens de notre petit village amicaux ? Tout a été paisible et tranquille depuis que vous nous avez débarrassés des kobolds !~
+@60  = ~Explorer les ruines de Flammevin.
+
+Le pont de Flammevin est tout ce qui reste d'une ville marchande elfe qui a été détruite il y a 200 ans.~
+@61  = ~Explorer les ruines de Flammevin.
+
+Il y a des kobolds à Gullykin, mais ils semblent plus organisés qu'il n'est typique de leur race.~
+@62  = ~Explorer les ruines de Flammevin.
+
+D'après un fermier auquel nous avons parlé, les ruines du Pont de Flammevin cachent un gros trésor.~
+@63  = ~Explorer les ruines de Flammevin.
+
+Gandolar-aux-Pieds-Chanceux nous a dit qu'il y avait un passage secret qui mène aux ruines du pont de Flammevin dans l'une des maisons des petits-hommes de Gullykin.~
+@64  = ~Explorer les ruines de Flammevin.
+
+Il y a des kobolds dans les ruines de Flammevin.~
+@65  = ~Explorer les ruines de Flammevin
+
+Un petit-homme de Gullykin nommé Gandolar nous a demandé de nettoyer les ruines de Flammevin de la menace kobold. Je devrais être prudent, car toutes sortes de choses mystérieuses pourraient être arrachées à leur sommeil.~
+@66  = ~Explorer les ruines de Flammevin.
+
+Un chasseur que nous avons rencontré nous a suggéré de fouiller les ruines du pont de Flammevin pour y trouver l'aventure.~
+@67  = ~J'ai beaucoup à apprendre, mais au moins, je vivrai pour ce faire. Bon, comment puis-je vous aider, <CHARNAME> ?~
+@68  = ~En rien aujourd'hui, Mélicamp. Merci.~
+@69  = ~En parlant d'apprendre, avez-vous lu quoi que ce soit sur les artéfacts drows dans vos études ?~
+@70  = ~J'ai avec moi ces robes de résistance. Peut-on les utiliser avec l'armure drow ?~
+@71  = ~J'ai rassemblé ces robes, utilisées par de nombreux mages. Peut-on les utiliser avec l'armure drow ?~
+@72  = ~Voici toutes les robes dotées d'enchantements mineurs que j'ai pu rassembler. Pouvez-vous les utiliser avec l'armure drow ?~
+@73  = ~En temps normaux, je n'avouerais pas avoir accès à de telles connaissances, sinon Thalantyr me renverrait certainement de son manoir, mais puisque j'ai une dette envers vous, qui m'avez libéré de ma bêtise... oui, j'ai lu certaines choses sur les arts des Tréfonds Obscurs.~
+@74  = ~J'ai récemment acquis ce morceau d'armure qui se détériore. Qu'en faire ?~
+@75  = ~Hmmm... des métaux drows, si je ne me trompe pas. Avec quelques propriétés magiques restantes, mais qui diminuent rapidement, j'en ai peur. Vous voyez, les armes, armures et presque tout ce qui est fait dans les Tréfonds Obscurs disparait à la lumière du soleil... Cependant...~
+@76  = ~Oui ?~
+@77  = ~Je crois que je peux, hum, sauvegarder une partie de la magie qui demeure dans l'armure, à condition d'avoir les bons composants pour travailler... comme de simples vêtements dotés d'enchantements mineurs. Oui... oui ! Je pense que c'est effectivement possible ! Revenez avec plusieurs de ces robes et je vous fabriquerai quelque chose !~
+@78  = ~D'accord. Je vais m'en occuper immédiatement.~
+@79  = ~Il semble que l'apprenti de Thalantyr, Mélicamp, puisse finalement tenir ses promesses. Quand je lui ai montré une armure que j'ai obtenue auprès des drows des Mines de Nashkel, il a rapidement suggéré la fabrication d'un objet magique pour moi. Tout ce que je dois faire est de lui rapporter plusieurs robes dotées d'enchantements mineurs.~
+@80  = ~Oui, oui ! Les robes de résistance sont d'excellents matériaux pour notre création ! Hum, je vais, cependant, avoir besoin d'une petite somme, disons, 8000 pièces d'or, pour faire ceci... Le maître n'est pas au courant de nos plans et il va être relativement furieux quand il réalisera que j'ai utilisé ses composants magiques pour quelque chose tel que ceci. Héhé. *glousse*~
+@81  = ~Très bien, j'ai l'or. Au travail.~
+@82  = ~Je dois d'abord y penser, Mélicamp.~
+@83  = ~Très bien. Ecartez-vous pendant que je termine l'incantation.~
+@84  = ~En effet ! Elles feront une robe épatante ! Hum, il y a, cependant, une autre, petite nécessité... 8000 pièces d'or ? Le maître n'est pas vraiment au courant de nos plans et sera certainement furieux quand il découvrira que nous avons utilisé ses composants magiques pour quelque chose de ce genre. Héhé. *glousse*~
+@85  = ~Très bien, voici l'or pour les composants. Au travail.~
+@86  = ~8000 pièces d'or ?! Je dois y réfléchir, Mélicamp.~
+@87  = ~Très bien. Mettez les robes ici. Reculez pendant que je termine l'incantation.~
+@88  = ~Oui, en effet ! Cela doit vous avoir pris un certain temps pour acquérir toutes ces robes, mais j'oserais dire que ça va en valoir la peine ! Hum, il y a, cependant, une autre, petite, nécessité de, hum, 20 000 pièces d'or, et un petit détail à discuter. Le maître n'est pas vraiment au courant de nos plans et il sera plutôt furieux quand il découvrira que nous avons utilisé ses composants magiques pour quelque chose de ce genre. Héhé. *glousse* En ce qui concerne le petit détail, il y a une chance très minime que le sort, hum, détruise tous les composants plutôt que de les fusionner. *glousse*~
+@89  = ~Je crois que ça vaut la peine de prendre ce risque, Mélicamp. Allons-y.~
+@90  = ~20 000 pièces d'or et le risque que tout soit perdu ? Je dois y penser sérieusement, Mélicamp.~
+@91  = ~Très bien, alors ! Placez les robes ici et écartez-vous pendant que je termine l'incantation.~
+@92  = ~Je comprends. Que puis-je faire d'autre pour vous, alors ?~
+@93  = ~Vous y connaissez-vous en artéfacts drows ?~
+@94  = ~Voici ! C'est, de loin, ma plus grande et, je dois l'avouer, ma seule création magique ! Qu'elle vous serve bien dans vos voyages, <CHARNAME>.~
+@95  = ~J'ai avec moi une épée plutôt étrange. Ça vous dérangerait d'y jeter un coup d'oeil ?~
+@96  = ~Pourriez-vous jeter un oeil à ce heaume magique pour moi ? Je me demandais si vous pouviez, d'une manière ou d'une autre, améliorer la protection qu'il procure.~
+@97  = ~Pourriez-vous regarder ce Casque d'Infravision pour moi ? Je me demandais si vous pourriez, d'une manière ou d'une autre, améliorer la protection qu'il procure.~
+@98  = ~Pourriez-vous jeter un oeil à ce casque pour moi ? Il me procure une immunité à la magie de l'influence mais j'espérais que vous pourriez améliorer la protection qu'il offre.~
+@99  = ~Est-ce une tête de wiverne que vous transportez ? Oui... OUI, d'excellente qualité et en quantité adéquate, aussi. Je crois que je peux la transformer en une armure très utile qui procure à la fois une protection contre les éléments rigoureux et une résistance à certains poisons... 9000 pièces d'or devraient couvrir le coût des matériaux et du travail. Alors, qu'en dites-vous ?~
+@100 = ~Ça m'a l'air une offre valable.~
+@101 = ~Je voudrais prendre du temps pour réfléchir à cette offre généreuse. En attendant, puis-je voir vos marchandises ?~
+@102 = ~Alors considérez-le comme fait. J'aurai fini dans quelques instants... J'ai un moule d'armure qui a justement besoin de matériaux spéciaux pour son rembourrage... Voilà, c'est fait !~
+@103 = ~Oui, c'est un beau Casque de Défense que vous avez en votre possession. De l'excellent travail d'après les standards. Vous dites que vous voulez plus de protection ? Je pense que c'est possible, mais j'aurais besoin d'un exemplaire de ce qu'on appelle un "Anneau des Princes", d'une opale et, bien sûr, de 5000 pièces d'or pour mon travail.~
+@104 = ~Je suis d'accord avec ça. Voici une Opale Noire, l'anneau que vous avez demandé et le Casque.~
+@105 = ~Je suis d'accord avec ça. Voici une Opale Noire, un anneau peu conventionnel, mais tel que vous l'avez demandé, et le Casque.~
+@106 = ~Je suis d'accord avec ça. Voici une Opale d'Eau, l'anneau que vous avez demandé et le Casque.~
+@107 = ~Je suis d'accord avec ça. Voici une Opale d'Eau, un anneau peu conventionnel, mais tel que vous l'avez demandé, et le Casque.~
+@108 = ~Cela semble une offre valable, mais je dois y réfléchir, pour l'heure.~
+@109 = ~Bien ! Commençons !~
+@110 = ~Hein ? Cette lame est maudite ! Je pense qu'il vaut mieux que vous vous en débarrassiez avant de la dégainer par erreur au coeur d'une bataille, mon ami.~ ~Hein ? Cette lame est maudite ! Je pense qu'il vaut mieux que vous vous en débarrassiez avant de la dégainer par erreur au coeur d'une bataille, mon amie.~
+@111 = ~Alors je vais la vendre.~
+@112 = ~Je note votre préoccupation, messire. Merci. Puis-je vous demander autre chose ?~
+@113 = ~Merci pour votre préoccupation, mais j'espérais en apprendre plus sur les origines de cette épée.~
+@114 = ~J'ai peur de ne pas pouvoir vous en dire plus que ce que vous savez déjà à son sujet... mais, si vous avez vraiment envie d'en savoir plus, je pense que les inventeurs du Temple de Gond pourraient vous aider.~
+@115 = ~Le forgeron Taerom "Grondemarteau" Fuiruim a reconnu l'épée maudite qui m'a été donnée par l'esprit d'Ulcaster mais n'a pas pu m'en dire plus. Cependant, il m'a suggéré d'aller consulter les prêtres de Gond à la Porte de Baldur car ils pourraient avoir plus d'informations à son sujet.~
+@116 = ~Bien sûr. Comment puis-je vous aider ?~
+@117 = ~Pourriez-vous nous montrer ce que vous avez à vendre ?~
+@118 = ~J'ai avec moi une épée plutôt étrange. Pourriez-vous y jeter un coup d'oeil ?~
+@119 = ~Pas pour l'instant.~
+@120 = ~Les "Yeux de la Vérité", comme d'autres l'appelleraient. Un bel équipement de protection modeste. Vous dites que vous cherchez à l'améliorer ? Je pense que c'est possible, mais j'aurais besoin de quelques objets supplémentaires. Un Anneau des Princes, une opale, et 5000 pièces d'or devraient couvrir le coût du travail.~
+@121 = ~Très bien, tout semble être en place. Commençons le travail !~
+@122 = ~Ah, oui, un Casque de Protection contre les Charmes, n'est-ce pas ? Et de bonne facture, de surcroît. Vous dites que vous cherchez à ce qu'il procure davantage de protection ? C'est possible, mais j'aurais besoin de quelques autres objets pour pouvoir le faire. Un Anneau des Princes, une opale et 5000 pièces d'or pour couvrir les coûts. Qu'en dites-vous ?~
+@123 = ~Les prêtres de l'aube m'ont informé de ce qui vient de se produire... Je vous remercie pour votre aide mais je dois vous demander une tâche supplémentaire. Ranthis... n'était qu'un messager.~
+@124 = ~D'accord, mais je veux d'abord des réponses.~
+@125 = ~Si cela signifie vaincre un autre des sbires de ce démon, alors je veillerai à ce que cela soit fait.~
+@126 = ~Oubliez ça ! Je suis tombé sur vos prêtres par accident et je n'ai aucune intention de risquer ma vie à droite à gauche pour votre cause !~ ~Oubliez ça ! Je suis tombée sur vos prêtres par accident et je n'ai aucune intention de risquer ma vie à droite à gauche pour votre cause !~
+@127 = ~En fait, ce n'était pas nous. Je suis juste ici pour recevoir des soins.~
+@128 = ~Bien sûr. Je vais tâcher de répondre à ce que je peux. Mais s'il vous plait, comprenez qu'il reste peu de temps.~
+@129 = ~L'urgence pèse plus lourd que le besoin d'explications. Vous êtes un homme noble et votre cause l'est aussi. Dites-moi ce qui doit être fait.~
+@130 = ~Quelle créature venons-nous d'affronter ?~
+@131 = ~Mon pouvoir de divination a vu un autre... portail beaucoup plus grand s'ouvrir dans les ruines désertées à l'est de Bérégost. Je pense que c'est le démon inférieur Lestraubimat lui-même qui se canalise au travers d'un portail ouvert par les Mages Rouges de Thay.~
+@132 = ~Nous devons nous hâter. Un dernier avertissement : Lestraubimat n'arpente jamais les Plans seul. Il aura une horde de sous-fifres pour l'escorter... des drakes de feu et des basilics. Prenez ceci. Que cela puisse vous aider à faire ce qui doit être fait.~
+@133 = ~Keldath Ormlyr m'a envoyé détruire le démon mineur Lestraubimat, m'expliquant que le Chevalier Démon Ranthis que je viens de combattre n'était qu'un de ses messagers. Je ne sais pas si j'ai suffisamment d'expérience pour partir à la chasse au démon, mais il semble que je n'ai pas vraiment le choix.~
+@134 = ~Le Chevalier Démon Ranthis que vous venez d'affronter est le messager du démon mineur Lestraubimat, une créature horrible des plans matériels négatifs, qui n'est guidée que par sa soif du sang.~
+@135 = ~Des chroniques anciennes disent que Lestraubimat convainc les hommes de lui ouvrir un portail en échange de la réalisation d'un voeu puissant. Cela doit expliquer pourquoi les Mages Rouges ont comploté pour l'amener dans notre monde. Les conséquences en seraient catastrophiques.~
+@136 = ~La situation est grave, en effet. Que dois-je faire ?~
+@137 = ~Agents des Mages Rouges ! Vous ne libérerez pas Lestraubimat dans ce Plan !~
+@138 = ~Lestraubimat est tombé... Je l'ai senti lorsque le démon a été banni... Merci. S'il vous plaît, acceptez ceci. C'est une petite somme de la part du Temple du  Matin. De plus, le Prêtre de l'Aube Bran pourrait avoir quelque chose à vous offrir...~
+@139 = ~Attendez un moment ! Nous ne vous ennuierons pas, laissez-nous juste passer... et vous ne nous verrez plus jamais.~
+@140 = ~Nous n'avons pas peur d'une bande de fanatiques fêlés en robe rouge !~
+@141 = ~S'il vous plaît, ne nous tuez pas. Nous ne voulons pas mourir.~
+@142 = ~Nous savons pourquoi vous êtes ici et nous sommes venus pour vous arrêter ! Lestraubimat restera prisonnier dans son monde !~
+@143 = ~De nobles paroles mais vous êtes arrivés trop tard ! Attention, Lestraubimat survient !~
+@144 = ~Bonjour, voyageurs. Mmmm... Edwin, je ne m'attendais pas à te voir si tôt. J'espère que tu as... réglé tes affaires, car si ce n'est le cas, tu devrais au plus tôt. Je pense que Zulkir Nevron serait très déçu s'il apprenait que tu as échoué. C'est tout ce qu'il y a vraiment à dire... Nous en avons fini ici... IL sera bientôt libéré.~
+@145 = ~Un groupe de chiots arrogants ! Envoyés par Keldath, sans aucun doute ! Quelle récompense, cela rendra vos morts bien plus délicieuses, et la libération de Lestraubimat bien plus satisfaisante !~
+@146 = ~Pardon, mais je ne pense pas que vous disiez vrai et de plus, les Mages Rouges de Thay ne sont pas connus pour leur nature magnanime. Nous allons devoir vous tuer.~
+@147 = ~Que dites-vous de cette épée, l'arme maudite connue comme La Revanche du Vampire ?~
+@148 = ~Où est l'exacte localisation de ce Caveau dont vous parlez ?~
+@149 = ~Un Prêtre de Gond m'a parlé d'un ancien magasin appelé le Caveau. Où puis-je le trouver ?~
+@150 = ~La lame a été forgée par d'anciens Nosferatu pour punir leurs ennemis. Elle sert aussi de clef à leur montagne de trésors, connue par quelques initiés sous le nom de Caveau.~
+@151 = ~Haspur le Devin a à nouveau démontré sa prouesse dans les arcanes. J'ai appris de lui que l'épée maudite est la clef du Caveau.~
+@152 = ~Loin dans le sud et vers l'ouest. Non loin d'un fort qui abrite des gnolls maléfiques et au coeur d'une rivière, visible seulement quand les torrents sont faibles.~
+@153 = ~Haspur le Devin a placé la localisation du Caveau près d'une forteresse gnoll et dans une rivière. C'est étrange que ces morts-vivants installent un tel site dans un sanctuaire où ils ne peuvent pas entrer librement eux-mêmes.~
+@154 = ~Nous avons le livre dont vous avez besoin.~
+@155 = ~Je vous demande humblement de jeter un oeil à cette épée que j'ai récemment acquise.~
+@156 = ~Ah, oui, bien sûr. Le dieu des Artifices et des Inventions pourrait offrir de l'aide dans le domaine des choses investies de magie ! Ceci, cependant, nécessite une offrande plus substantielle, disons, 10 000 pièces d'or ?~
+@157 = ~Je vois. Alors offrons à Gond ce qui est convenable. Voici l'or.~
+@158 = ~Je vois. Bien, je dois avouer que je ne suis pas A CE POINT curieux d'en savoir plus sur cette épée. Merci quand même.~ ~Je vois. Bien, je dois avouer que je ne suis pas A CE POINT curieuse d'en savoir plus sur cette épée. Merci quand même.~
+@159 = ~Vraiment ? 10 000 ? Quelle somme modeste... Hum, quels services offrez-vous ici, déjà ?~
+@160 = ~Je suis désolé, je n'ai pas cette somme en ce moment. Je reviendrai quand je l'aurai.~ ~Je suis désolée, je n'ai pas cette somme en ce moment. Je reviendrai quand je l'aurai.~
+@161 = ~La Revanche du Vampire... un instrument ancien et maléfique... issu d'un âge ancien et maléfique. Elle a été forgée par les Nosferatu d'une antique assemblée dans un pays occidental mythique. Elle a été fabriquée pour deux raisons. La première, comme vous l'avez sans doute déjà appris, était d'amener leurs ennemis à utiliser l'épée, les maudissant à se saigner à chaque coup, l'esprit trop affaibli pour songer à la jeter...~
+@162 = ~Le second usage, plus discret, est que cette épée est une clef... en vérité LA clef... du Caveau, un endroit où sont entreposés de vastes richesses et trésors que ces Vampires utilisaient dans leurs échanges mortels. Mais à ce jour, personne n'a été capable de trouver ce Caveau, ou n'a vécu assez longtemps pour en documenter la localisation. La rumeur le plaçait sur une petite île désolée entourée d'eaux rugissantes, de sorte qu'on ne pouvait y pénétrer que lorsque les eaux étaient calmes... Que nous soyons sur la Côte des Epées, regorgeant d'eaux diverses, cependant, fait de l'endroit exact une énigme complexe, mon ami... A moins, bien sûr, que vous n'ayez quelque pouvoir de divination éternelle pour vous aider.~ ~Le second usage, plus discret, est que cette épée est une clef... en vérité LA clef... du Caveau, un endroit où sont entreposés de vastes richesses et trésors que ces Vampires utilisaient dans leurs échanges mortels. Mais à ce jour, personne n'a été capable de trouver ce Caveau, ou n'a vécu assez longtemps pour en documenter la localisation. La rumeur le plaçait sur une petite île désolée entourée d'eaux rugissantes, de sorte qu'on ne pouvait y pénétrer que lorsque les eaux étaient calmes... Que nous soyons sur la Côte des Epées, regorgeant d'eaux diverses, cependant, fait de l'endroit exact une énigme complexe, mon amie... A moins, bien sûr, que vous n'ayez quelque pouvoir de divination éternelle pour vous aider.~
+@163 = ~Le Prêtre de Gond dans le Grand Hall des Merveilles a été des plus utiles dans le décryptage de ce mystère et a donné un nom à ma quête. Je cherche le Caveau, un entrepôt de richesses et trésors caché quelque part sur la Côte des Epées, entouré par les eaux, et apparemment accessible seulement lorsque ces eaux sont calmes. Nous ferions sans doute mieux de nous rendre vers l'ouest, puisque la Mer des Epées est l'endroit le plus logique par où commencer. Si seulement j'avais même une fraction des pouvoirs de divination qu'a mentionnés le clerc...~
+@164 = ~Il semblerait que mon intuition à propos des inscriptions décryptées du vieux livre que m'a donné le Duc Eltan était juste. J'ai donné au spectre d'Ulcaster la statue du dieu depuis longtemps oublié, Kozah, que j'ai obtenue d'un site de fouilles gardé par un Prophète du Malheur, et une ancienne armure que j'ai récupérée au Pont de Flammevin et, en échange, le fantôme m'a donné une mystérieuse épée en disant "revanche... est... la clef... du... Caveau..." Je crois que ceci mérite des recherches plus approfondies.~
+@165 = ~...la statue... et l'armure... en échange...~
+@166 = ~Montrer le livre de savoir ancien que m'a donné le Duc Eltan au spectre d'Ulcaster semble avoir réveillé quelque chose dans son inconscient. Il a fait allusion à une statue, une armure et un échange. Peut-être s'agit-il de rechercher d'autres reliques pour aider son âme torturée à trouver la paix... et peut-être s'agit-il d'un secret caché dans le texte des Parchemins Néthères.~
+@167 = ~Merci encore d'avoir été chercher ces bottes pour moi. Qu'avez-vous dans votre sac aujourd'hui ?~
+@168 = ~Il est temps de payer le prix de tes erreurs, Zhurlong. Un homme appelé Zernan est venu te parler l'autre jour, au sujet d'un groupe de personnes qui pourraient l'aider à déchiffrer d'anciens textes. Que sais-tu ?~
+@169 = ~Oh, ce mec-là ? C'est un coquin, j'te l'dis. J'lui ai dit d'aller aux Mines de Nashkel. J'ai entendu qu'un groupe douteux voulait le bouquin... et... j'lui ai pas volé ! Faut un voleur futé pour attraper un autre voleur futé et l'empêcher de fouiner dans ses affaires ! Attends, c'est pas lui, là ?~
+@170 = ~Zhurlong a admis avoir eu un contact avec Zernan et dit qu'il a envoyé l'érudit aux mines de Nashkel. Etrangement, cela dit, il a aussi sous-entendu que Zernan était davantage qu'un simple érudit, disant qu'il faut un voleur pour attraper un autre voleur. Etrange, en effet.~
+@171 = ~...la vengeance... est... la clef... du... caveau...~
+@172 = ~Merci de votre proposition mais je n'en veux pas. Puis-je vous demander autre chose ?~
+@173 = ~Je suis intéressé par cette armure de wiverne dont vous parliez. Voici la tête de wiverne et les 9000 pièces d'or que vous demandiez.~ ~Je suis intéressée par cette armure de wiverne dont vous parliez. Voici la tête de wiverne et les 9000 pièces d'or que vous demandiez.~

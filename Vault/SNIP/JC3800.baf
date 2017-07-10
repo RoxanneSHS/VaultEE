@@ -1,0 +1,11 @@
+IF
+	Global("ReturnNashQuest","GLOBAL",4)
+	Global("ReturnNashQuestNandin","GLOBAL",0)
+	Dead("JC_THF01")
+THEN
+	RESPONSE #100
+		CreateCreature("JC_THF02",[4945.1855],0)
+		SetGlobal("ReturnNashQuestNandin","GLOBAL",1)
+END
+
+

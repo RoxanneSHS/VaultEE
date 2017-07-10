@@ -1,0 +1,193 @@
+// Vault Translation File
+
+@0   = ~Hmmm?... Drow craftsmanship, no doubt. Yes, it is of some use. But not to me. My former apprentice once sought to study such materials, but after the unfortunate incident of his polymorphism, I do not think he would delve into similar experiments again.~
+@1   = ~I need not touch it to tell you that is cursed... Wait... It doesn't seem likely, but... I had not expected to see that damned artifact in this lifetime! Revenge of the Vampire, if my memory does not fail me. Yes... and unlocks what was it?~
+@2   = ~I believe it is the key to something.~
+@3   = ~Never mind.~
+@4   = ~Yes! It IS a key! But to what, I cannot remember. Some store of hidden magic... You will have to find someone more learned in these evil artifacts crafted in days long past. Maybe the Priest of Gond in Baldur's Gate, or a fortune teller could tell you more! I want NOTHING to do with this!~
+@5   = ~I didn't mean to touch a nerve. Sorry...~
+@6   = ~The cursed Vampire's Revenge has stirred yet another incomplete recollection in one of the Sword Coast's more powerful figures. The mage Thalantyr recognizes it as a key to something but could not recall what. He suggests finding someone more apt in the lore of these ancient artifacts like the Priest of Gond or a fortune teller to solve this mystery.~ 
+@7   = ~Hello again, <CHARNAME>, how can I help you today?~
+@8   = ~I have obtained an item of some magical significance... it is, however, not for sale. I was wondering if your could tell me if it may be of some use.~
+@9   = ~I have with me a rather strange sword. It is not for sale, however. Would you mind looking at it?~
+@10  = ~What it is with these mines? You cleared it of those little dogs weeks ago and now we've got a spider infestation!~
+@11  = ~It seems I have arrived at the Nashkel Mines just in time. The guard has informed me that spiders have taken over the mine. Perhaps it is totally unrelated to my search for the ancient tome. But then again, maybe not.~
+@12  = ~Thanks for clearing out all of the spiders! Let's hope things will stay quiet around here now for some time.~
+@13  = ~The evil... it grows stronger... YOU! No, the evil radiates from elsewhere in the room!~
+@14  = ~An evil presence threatens the holiness of the vestibule! It seeks to destroy the Song of the Morning Temple! There is no more time... It comes! Arm yourselves!~
+@15  = ~No, please wait! The gods have sent you here for a purpose... An evil arises through an unholy portal on the eastern wall of the vestibule and it must be stopped. Two dawn priests can only slow it down but with your help...~
+@16  = ~Very well.~
+@17  = ~No way. I'm outta here!~
+@18  = ~There is no more time... It comes! Arm yourselves!~
+@19  = ~Thank you for assisting us. But I feel this conflict is not over. Please see Kelddath... he is more knowledgable than either Bran or I.~
+@20  = ~Greetings, <CHARNAME>. I trust that you travel under the guidance of Lathander. How may I assist you?~
+@21  = ~We are in need of healing and blessing.~
+@22  = ~We don't require any help at the moment.~
+@23  = ~RED WIZARD! So, you have come to witness for yourself your handiwork! The evil arrives, but you shall fall before it enters through its unholy portal!~ 
+@24  = ~There on the other side! Bran, hurry and prepare the ward!~
+@25  = ~What is going on in here?~
+@26  = ~That's it! I've had it with you mad priests to last me a lifetime!~
+@27  = ~Calm down, good man, I am NOT the evil. Tell me what is happening.~
+@28  = ~To arms! The sanctity of this place will not be defiled!~
+@29  = ~You have Lathander's gratitude but this is only the beginning...~
+@30  = ~Return when the evil is destroyed. I have something that may be of help to you... if you are pure of heart.~
+@31  = ~Keldath has informed us of your heroic accomplishment. You have our gratitude. I am sure that Keldath has rewarded you well. What we have to offer is but a simple blessing. If you should come across a hammer with minor enchantments and a sirine's gift, bring them to me. Until then, I wish you well.~
+@32  = ~After the defeat of the lesser demon Lestraubimat, Dawn Priest Bran told me that he would offer me something if I brought him a hammer with minor enchantments and a sirine's gift. He can be found in the vestibule just north of the Song of the Morning Temple.~
+@33  = ~I see that you have in your possession a pearl - a sirine's most precious gift. Unfortunately, you do not carry with you a hammer of minor dweomer. Return when you do and I shall grant my blessing.~
+@34  = ~I see you have with you a warhammer with some magical enhancement. Unfortunately, you still have not acquired the sirine's gift of precious stone. Return when you do and I shall grant my blessing.~
+@35  = ~Welcome, <CHARNAME>. Still searching for the items required for me to perform my blessing, I see. I wish you well and should you come across them, I shall be here in the vestibule, waiting.~
+@36  = ~Most excellent! A warhammer with some magical properties and a valuable pearl from a sirine... Hand them to me...~
+@37  = ~May you never have to raise Lathander's Influence. Walk in his light, <CHARNAME>.~
+@38  = ~Chapter Seven: Return to Candlekeep
+
+Your journey has come full circle.  Duke Eltan has asked that you travel back to Candlekeep, where you must spy upon the leaders of the Iron Throne.  While it troubles you that such evil men now make use of the great library, and you wish the circumstances of your visit would be different, it will still be a pleasure to return to your former home.~
+@39  = ~<CHARNAME>! It is a terrible time for Gullykin! We are beset by a tribe of vicious ogres under the command of one ogre magi called Kharaz! They demand that the village be vacated as it will be the site of their new encampment! Already we have sent two couriers to seek help but they have been intercepted and murdered. Please, you must help us! They continue to pour in numbers, maiming the people and destroying our property...~
+@40  = ~I will see what I can do.~
+@41  = ~The village of Gullykin is under siege from a band of ogres led by a magi called Kharaz. The ogres seem to number in the hundreds, with waves and waves and waves of raiding parties laying waste to the village and its inhabitants, but I have told Gandolar that I will see what I can do to remedy the situation.~
+@42  = ~<CHARNAME>! What? You say there seems to be no end to the horde of ogres? This is grave news. What can be done? We will not last long...~
+@43  = ~It is beyond hope. I think it best that we leave before all is lost.~
+@44  = ~Yes, their numbers seem insurmountable. I will continue to fend them off so your people can make their escape.~
+@45  = ~This Kharaz you mentioned, Gandolar. Have you seen him?~
+@46  = ~Let us flee for now, Gandolar. I think we best plan another way of defeating these ogres.~
+@47  = ~What? I... am uncertain. What do your propose?~
+@48  = ~Their numbers are overwhelming. I will continue to fend them off so your people can make their escape.~
+@49  = ~Nothing at the moment. But keep your people ready just in case.~
+@50  = ~Maybe, just maybe, we can break this army by cutting off its head.~
+@51  = ~It is beyond hope. Let us leave before all is lost.~
+@52  = ~Let us flee for now, Gandolar. I think we best plan another way of defeating these ogres.~
+@53  = ~Hmmm... I understand. I have seen an ogre atop the hills who seems to be commanding this whole attack. If you are right, maybe sending a small party to kill their leader will weaken their grip! It sounds desperate, but it may well be our only hope.~
+@54  = ~Desperate men employ desperate measures. I will set out with a small detachment as soon as I am able. May the gods help us.~
+@55  = ~The Gullykin situation seems to be escalating every moment. The horde continues to press hard... Gandolar and I have conceived a possible solution, whether it is is born of careful planning or desperation, I do not know: I have proposed that we send a small unit to kill this Kharaz and hopefully break this army's morale. Gandolar is uncertain, but we have little else to go on. He tells me that he saw an ogre commanding the raiding parties atop the small hill just outside Gullykin.~
+@56  = ~<CHARNAME>! The ogres retreated once they witnessed the death of Kharaz on the hillside! You have done it once again! Please take this small token of our appreciation!~
+@57  = ~With the Ogre Mage Kharaz slain, the ogre hordes have fled the hillside and the few that remain in the village should be dispersed quite easily. Gandolar and the townfolk of Gullykin are relieved that their homes are once again safe.~
+@58  = ~I trust you have found the populous of our little village to be amiable?  We always welcome Gullykin's heroes!~
+@59  = ~I trust you have found the populous of our little village to be amiable?  It's been all peace and quiet since you got rid of the kobolds!~
+@60  = ~Investigate the Firewine ruins.
+
+The Firewine bridge is all that is left of an elven trading town that was destroyed over two hundred years ago.~
+@61  = ~Investigate the Firewine ruins.
+
+There are kobolds in Gullykin, but they seem more organized than is typical of their race.~
+@62  = ~Investigate the Firewine ruins.
+
+According to a farmer we talked with, the Firewine Bridge ruin hides a lot of treasure.~
+@63  = ~Investigate the Firewine ruins.
+
+Gandolar Luckyfoot has told us that there is a secret path to the Firewine bridge ruins in one of the halfling burrows of Gullykin.~
+@64  = ~Investigate the Firewine ruins.
+
+There are kobolds in the Firewine ruins.~
+@65  = ~Investigate the Firewine ruins.
+
+A halfling from Gullykin by the name of Gandolar has asked us to clear the kobold threat from the Firewine ruins.  I should be careful, because all sorts of mysterious things could be awakened from rest.~
+@66  = ~Investigate the Firewine ruins.
+
+A hunter we met suggested that we search out the Firewine bridge ruins for adventure.~
+@67  = ~I've a lot to learn, but at least I'll live to learn it. So, how can I assist you, <CHARNAME>?~
+@68  = ~Nothing today, Melicamp. Thank you.~
+@69  = ~Speaking of learning, have you come across anything about drow artifacts in your studies?~
+@70  = ~I have with me these robes of resistance. Can you use them with the drow armor?~
+@71  = ~I have gathered these robes used by many mages. Can you use them with the drow armor?~
+@72  = ~These are all the robes with minor enchantments that I could gather. Can you use them with the drow armor?~
+@73  = ~Normally, I would not admit to having access to such knowledge since Thalantyr would certainly have me dismissed from this manor, but since I am in your debt for releasing me from my mishap... yes, I have read on certain Underdark crafts.~
+@74  = ~I recently acquired this deteriorating piece of armor. What do you make of it?~
+@75  = ~Hmmm... drow metals, if I am not mistaken. Still with some magical properties left, but quickly diminishing, I am afraid. You see, weapons, armor, and almost everything made in the Underdark will recede under the light of the sun... However...~
+@76  = ~Yes?~
+@77  = ~I believe that I can, um, salvage some of the magic left in the armor, if I had just the right components to work with... like simple garments with minor enchantments. Yes... yes! I think it is indeed possible! Come back to me with several of these robes and I will craft something for you!~
+@78  = ~All right. I will see to it right away.~
+@79  = ~It seems Thalantyr's apprentice, Melicamp, may yet show some promise. When presented with an armor I acquired from the drow in the Nashkel Mines, he was quick to suggest the crafting of some magical item for me. All I need do is bring him several robes with minor enchantments.~
+@80  = ~Yes, yes! Robes of resistance are excellent materials for our creation! Um, I will, however, require a small sum of, say, 8,000 gold to craft this... The master is quite unaware of our plans and will be fairly mad once he finds out that we used his spell components for something such as this. Hehe. *cluck*~
+@81  = ~All right, I have the gold. Let us do it.~
+@82  = ~I must think it over first, Melicamp.~
+@83  = ~All right. Stand aside while I finish the incantation.~
+@84  = ~Indeed! These will make for an astounding robe! Um, there is, however, another, small requirement... 8,000 gold? The master is quite unaware of our plans and will be fairly mad once he finds out that we used his spell components for something such as this. Hehe. *cluck* ~
+@85  = ~All right, here is the gold for the components. Let us do it.~
+@86  = ~8,000 gold?! I must reconsider for now, Melicamp.~
+@87  = ~All right. Place the robes here. Stay back while I finish the incantation.~
+@88  = ~Yes, indeed! It must have taken you quite some time to acquire all of these, but I dare say it will be worth it! Um,  however, another, minor requirement of, um, 20,000 gold, and a small detail to discuss. The master is quite unaware of our plans and will be fairly mad once he finds out that we used his spell components for something such as this. The gold should compensate for any and all other components we shall use. Hehe. *cluck* As for the small detail, there is the slightest chance that the spell will, um, destroy all the components instead of meld them together. *cluck*~
+@89  = ~I believe it is a risk worth taking, Melicamp. Let us do it.~
+@90  = ~20,000 gold and a chance this will all be lost? I must think this through, Melicamp.~
+@91  = ~All right, then! Place the robes here and stand aside until I finish the incantation.~
+@92  = ~I understand. What else can I help you with, then?~
+@93  = ~Do you know of drow artifacts?~
+@94  = ~There! This, by far, has been my greatest and, quite frankly, my only magical creation! May it serve you well in your journeys, <CHARNAME>.~
+@95  = ~I have with me a rather strange sword. Would you mind looking at it?~
+@96  = ~Would you mind looking at this magical helm for me? I was wondering if you could in any way enhance the protection it gives.~
+@97  = ~Would you mind looking at this Helm of Infravision for me? I was wondering if you could in any way enhance the protection it gives.~
+@98  = ~Would you mind looking at this helm for me? It grants me immunity from magics of influence but I was hoping you could enhance the protection it gives.~
+@99  = ~Is that a wyvern's head you have with you? Yes... YES, of excellent quality and adequate quantity too. I believe I can fashion it into a very useful suit of armor for you- one that provides both protection from the rigorous elements and resistance to some poisons... 9000 gold pieces should cover the cost of materials and labor. So, what do you say?~
+@100 = ~Sounds like a worthwhile offer.~
+@101 = ~I would like some time to think upon your generous offer. In the meantime, might I see your wares?~
+@102 = ~Then consider it done. I'll have it done within moments... I have a mold of armor that is just in need of special material for its padding... There, all done!~
+@103 = ~Aye, that is a fine Helm of Defense you have in your possession. Excellent craftsmanship by any standard. You say you want more protection? I believe it is possible, but I would need one of what they call "the Ring of Princes", an opal, and, of course 5,000 gold for my troubles.~
+@104 = ~I am agreeable to that. Here is a Black Opal, the ring you have asked for, and the Helm.~
+@105 = ~I am agreeable to that. Here is a Black Opal, an unconventional ring, but as you have asked for, and the Helm.~
+@106 = ~I am agreeable to that. Here is a Water Opal, the ring you have asked for, and the Helm.~
+@107 = ~I am agreeable to that. Here is a Water Opal, an unconventional ring, but as you have asked for, and the Helm.~
+@108 = ~Sounds like a worthwhile offer, but I must reconsider, for now.~
+@109 = ~Good! Let us begin!~
+@110 = ~Huh? Cursed, this blade is! I would think it best that you rid yourself of it lest you accidentally draw it in the heat of battle, my friend!~
+@111 = ~Then sell it I shall.~
+@112 = ~Your concern is noted, sir. Thank you. May I ask you something else?~
+@113 = ~Thank you for your concern, but I was hoping to gain more information about the origins of this sword.~
+@114 = ~I am afraid I cannot tell you anything other than what you already know about it... but, if you are really keen on learning more about it, I think the artificers in the Temple of Gond may be able to help you there.~
+@115 = ~The smithy Taerom "Thunderhammer" Fuiruim recognized the cursed sword given to me by the wraith of Ulcaster but could not tell me anything further. He, however, suggested that I could consult with the priests of Gond in Baldur's Gate, as they might have more information on it.~
+@116 = ~Of course. How may I help you?~
+@117 = ~Could you show us what you have for sale?~
+@118 = ~I have with me a rather strange sword. Would you mind looking at it?~
+@119 = ~Nothing at the moment.~
+@120 = ~The "Eyes of Truth", as others would call it. Fine equipment of modest protection. You say you are looking to enhance it? I believe it is possible, but I would need several more items. A Ring of Princes, an opal, and, 5,000 gold to shoulder the cost of labor.~
+@121 = ~All right, everything seems to be in place. Let us begin the work!~
+@122 = ~Ah, yes, a Helm of Charm Protection, is it? Of quality smithing, too. You say you are looking to have it provide you more protection? That is possible, but I would need several more items to do so. A Ring of Princes, an opal, and, 5,000 gold to shoulder the costs. What do you say?~
+@123 = ~The dawn priests have informed me of what has just transpired... I thank you for your assistance but I must ask of you one more task. Ranthis... is but a messenger.~
+@124 = ~All right, but I must have answers first.~
+@125 = ~If it means vanquishing another of that demon's consort, then I will see it done.~
+@126 = ~Forget it! I stumbled upon your priests by accident and I have no intention of running around risking my life for your cause!~
+@127 = ~Actually, that wasn't us. I'm just here to receive some healing.~
+@128 = ~Of course. I will try to answer what I can. But please understand, there is little time left.~
+@129 = ~Urgency outweighs the need for explanation. You are a noble man with a noble cause. Tell me what needs to be done.~
+@130 = ~What creature did we just face?~
+@131 = ~My divination has seen another... much larger portal being opened in some deserted ruins to the east of Beregost. I believe it is the lesser demon, Lestraubimat himself channeling through a gateway being opened by the Red Wizards of Thay...~
+@132 = ~We must hurry. A final warning: Lestraubimat never travels the planes alone. It will have a horde of minions to escort it... fire drakes and basilisks. Here take these. May it aid you in what you must do.~
+@133 = ~I have been sent by Kelddath Ormlyr to destroy the lesser demon Lestraubimat, telling me that the demonknight Ranthis I had just fought was but a messenger for him. I do not know if I have enough experience to go demon hunting, but it seems I have little choice.~
+@134 = ~The demonknight Ranthis which you just faced is the messenger of the lesser demon Lestraubimat, a horrid creature from the negative material planes bent on nothing more than feeding its bloodlust.~
+@135 = ~Ancient chronicles say that Lestraubimat lures men to open a gateway for him in exchange for one powerful wish granted. This must be why the Red Wizards have plotted to bring him into our world. The consequences of which are catastrophic.~
+@136 = ~The situation is grave indeed. What must I do?~
+@137 = ~Agents of the Red Wizards! You shall not release Lestraubimat into this plane!~
+@138 = ~Lestraubimat is fallen... I sensed it as the demon was banished... Thank you. Please accept this. It is a small sum from the Song of the Morning Temple. Also, Dawn Priest Bran might have something to offer you.~
+@139 = ~Just wait a moment!  We won't bother you, just let us go on our way....and you'll never see us again.~
+@140 = ~We're not scared of a bunch of posturing red robed freaks!~
+@141 = ~Please don't kill us.  We don't want to die.~
+@142 = ~We know why you are here and we have come to stop you! Lestraubimat stays caged in his world!~
+@143 = ~Noble words but you are already too late! Behold, Lestraubimat enters!~
+@144 = ~Good day travelers.  Mmmm...Edwin, I did not expect to see you so soon.  I hope your....business has been attended to Edwin, for if it hasn't, then you should do so soon.  I think that Zulkir Nevron would be most disappointed if he were to hear that you failed.  That is all that really needs to be said. We are done here... IT will be released soon.~
+@145 = ~A group of arrogant whelps!  Sent by Kelddath, no doubt! This is such a reward, and will make your deaths all the more sweet and Lestraubimat's release all the more fulfilling!~
+@146 = ~Sorry, but I do not believe you speak true and besides, the Red Wizards of Thay are not known for their magnanimous  nature.  We're going to have to kill you.~
+@147 = ~What do you make of this sword, the cursed weapon known as The Vampire's Revenge?~
+@148 = ~Where is the exact location of this Vault you mentioned?~
+@149 = ~A Priest of Gond has told me of an ancient store called the Vault. Where can it be found?~
+@150 = ~The blade was crafted by ancient Nosferatu to punish their enemies. It serves also as a key to their horde of treasure, known to a learned few as the Vault.~ 
+@151 = ~The Diviner Haspur has once again demonstrated his prowess in the arcane. I have learned from him that the cursed sword is the key to the Vault.~
+@152 = ~To the far south and to the west. Not far from a fort that houses evil gnolls and inside a river, to be seen only when the torrents are weak.~ 
+@153 = ~The Diviner Haspur has pointed the location of the Vault near a stronghold of gnolls and inside a river. Odd for these undead to house such a place in a sanctuary where they themselves cannot freely enter.~
+@154 = ~We have the book you require.~
+@155 = ~I humbly ask of you to look upon this sword I have recently acquired.~
+@156 = ~Ah, yes, of course. The god of Artifice and Invention may be able help in things crafted of magic! This, however, requires a more substantial offering, say, 10,000 gold?~ 
+@157 = ~I see. Then let us offer to Gond what is proper. Here is the gold.~
+@158 = ~I see. Well, I must admit I really am not THAT curious about this sword. Thank you anyway.~
+@159 = ~Really? 10,000? Such a humble amount... Um, what services did you here again?~
+@160 = ~I am sorry I do not have that amount as of the moment. I shall return when I do.~
+@161 = ~The Vampire's Revenge... an old and evil tool... from an old and evil age. It was constructed by no less than the Nosferatu of an ancient coven in some western mythic land. It was crafted for two purposes. The first, as you may have already learned, is to lure their enemies into the sword's use, rendering them cursed to bleed themselves with each strike and ill of mind to consider its disposal...~
+@162 = ~The second and more discreet use is that the sword is a key... actually, THE key... to the Vault, a store of vast wealth and treasure that these Vampires used for their mortal dealings. But to this day, no one has been able to find this Vault, or live long enough to document its location. It was rumored to be on a small, desolate isle surrounded by raging waters, only to be entered when the waters were calmed... This being the Sword Coast and thriving in bodies of water, however, makes its exact whereabouts a hard guess, my friend... Unless, of course, you had some power of eternal divination to help you.~ 
+@163 = ~The Priest of Gond in the High Hall of Wonders has been most helpful in deciphering another part of the mystery and has, in fact, given a name to my search. I seek out, the Vault, a store of wealth and treasure hidden away somewhere in the Sword Coast, surrounded by water and apparently accessible only when these waters are calmed. It would probably be best to head west, since the Sea of Swords is the most logical place to start. If only I had even the fraction of divination the priest had hinted at.~
+@164 = ~
+It seems my hunch was right about the deciphered writings on the ancient tome Duke Eltan gave me. I delivered the statue of the long forgotten god, Kozah, that I obtained from an excavation site guarded by a Doomsayer and a suit of ancient armor I retrieved from the Firewine Bridge to the wraith of Ulcaster, and, in return, the ghost gave me a mysterious blade saying "revenge... is... the key... to... the Vault..." I believe this to be something warranting further investigation.~
+@165 = ~...the statue... and the armor... in exchange...~
+@166 = ~Showing the book of ancient knowledge given to me by Duke Eltan to the specter of Ulcaster seems to have stirred something in his unconscious. It made some allusion to a statue and armor and some exchange. Perhaps it is seeking other relics to help its tortured soul attain a sense of peace... and perhaps there is some secret hidden in the text of the Nether Scrolls.~
+@167 = ~Thanks again for getting them boots for me. What have you got in your pack today?~
+@168 = ~It is time to pay the piper, Zhurlong. A man named Zernan came to you the other day asking about a group of people who could help decipher ancient scripts. What do you know?~
+@169 = ~Oh, that fella? He is a scalawag, I tell yah. Told him ta head for the Nashkel Mines. Heard a shady group wanted the book... and naw, I dint steal it from him! Takes a wily thief to catch and stop another wily thief from pickin his stash! Wait, isn't that him over there?~
+@170 = ~Zhurlong admits to making contact with Zernan and says that he directed the scholar to the Nashkel mines. Strange, though, he also hinted that Zernan was more than just a scholar, stating that it takes a thief to catch a thief. Strange, indeed.~
+@171 = ~...revenge... is... the key... to... the vault...~
+@172 = ~Thanks for the offer but I'll pass. May I ask you something else?~
+@173 = ~I'm interested in that wyvern armor you were talking about. Here is the wyvern head and the 9000 gold pieces you asked for.~

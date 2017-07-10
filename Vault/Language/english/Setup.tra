@@ -1,0 +1,1157 @@
+// Vault .tp2 translation file
+
+@0   = ~The Vault (erebusant's rework for BGT compatibility)~
+@1   = ~Stone Golem~
+@2   = ~Josh~
+@3   = ~Ranthis~
+@4   = ~Lestraubimat~
+@5   = ~Fire Drake~
+@6   = ~Drow Fighter~
+@7   = ~Drow Stalker~
+@8   = ~Drow Mage~
+@9   = ~Drow Spider Trainer~
+@10  = ~Drow Enforcer~
+@11  = ~Drow High Priestess~
+@12  = ~Redentor~
+@13  = ~Kharaz~
+@14  = ~Kharaz Tribe Ogre~
+@15  = ~Ogre Rampager~
+@16  = ~Skeleton Guard~
+@17  = ~Zernan~
+@18  = ~Mysterious Man~
+@19  = ~Thief~
+@20  = ~Nandin~
+@21  = ~Keeper~
+@22  = ~Vault Vampire~
+@23  = ~Vault Sentry~
+@24  = ~Greater Wolfwere~
+@25  = ~Narrator~
+@26  = ~Vestibule~
+@27  = ~Sentry~
+@28  = ~Shop of Silence~
+@29  = ~Ilmater's Shrine~
+@30  = ~Water Queen's House~
+@31  = ~Amulet~
+@32  = ~Talisman of Ravenscar~
+@33  = ~A necklace is a piece of ornamental metal jewelry usually made of silver, gold, platinum, or other precious metal, and adorned with gems.  A necklace is always worn on the neck and can be of any length.~
+@34  = ~This mysterious talisman was crafted by the Shadow Thieves of Amn and given to one of their guild leaders, Alatos "Ravenscar". The talisman boosts dexterity and grants its wearer heightened thieving skills and night vision. How it came to be in your possession only proves that there is truly no honor among thieves.
+
+STATISTICS:
+
+Special:
+ +1 Dexterity while equipped
+ Infravision while equipped
+ Invisibility for 10 turns (limited charges)
+Find/Remove traps:  +5% bonus
+Pick pockets:  +5% bonus
+Pick locks:  +5% bonus
+Hide in shadows:  +5% bonus
+Usable by:
+Thief (Single, Multi, Dual Class)~
+@35  = ~Girdle~
+@36  = ~Girdle of Hill Giant Strength~
+@37  = ~Girdles are generally similar to belts.  Unlike belts, girdles are not used to hold up pants and dungarees, but to carry pouches, scabbards, and the like.  
+
+STATISTICS:
+
+Weight:  2
+Not usable by:~
+@38  = ~This ordinary looking belt makes the wearer as strong as a hill giant, but does not make him or her giant size.  Many a cocky warrior has been surprised by a much smaller opponent with remarkable strength.  More often than not a belt such as this is the reason.
+
+STATISTICS:
+
+Strength: set to 19
+Not Usable By:
+ Mage~
+@39  = ~Club~
+@40  = ~Dageid's Wrath~
+@41  = ~Most clubs are stout, hardwood sticks, narrow at the grip and wider at the end.  This simple weapon has been used since mankind first began using tools.  Anyone can find a good stout piece of wood and swing it; hence the club's widespread use.
+
+STATISTICS:
+
+Damage:  1D6
+Damage type:  crushing
+Weight: 3
+Speed Factor: 4
+Proficiency Type: Club
+Type:  1-handed
+Not Usable By:
+ Mage~
+@42  = ~Club +1: Dageid's Wrath 
+A barbarian from the tribes of the Uthgodt, Dageid was a terrible savage who traveled the realms wreaking havoc and destruction where he passed. His reign of terror ended in a bloody ambush set by the noblemen of Silverymoon. The club is still rumored to  unleash the dead barbarian's wrath at certain instances during combat, slaying the unfortunate victim with a few critical blows.
+
+STATISTICS:
+
+Damage:  1D6 +1 
+THAC0:  +1 bonus
+Special:
+ +1 Strength while equipped 
+ 50% of the time, the target hit by Dageid's Wrath must make a Save vs Death or receive an additional +10 crushing damage
+Damage type:  crushing
+Weight: 2
+Speed Factor: 3
+Proficiency Type: Club
+Type:  1-handed
+Not Usable By:
+ Mage~
+@43  = ~Mace~
+@44  = ~Death Dealer~
+@45  = ~The mace is a direct descendant of the basic club, being nothing more than a wooden shaft with a stone or iron head mounted on the end.  The head design varies; some being spiked, others flanged, and still others have pyramidal knobs.
+
+STATISTICS:
+
+Damage:  1D6 + 1
+Damage type:  crushing
+Weight: 8
+Speed Factor: 7
+Proficiency Type: Mace
+Type:  1-handed
+Not Usable By:
+ Druid
+ Mage
+ Thief~
+@46  = ~Mace +1: Death Dealer 
+The Death Dealer emanates of pure chaos and, by this virtue, renders itself unusable by those who deem themselves adherent to law. The weapon pulses of an unearthly charge, seeming to draw its energy from lightning of the fiercest storms. To this day, no one knows when this mace was created, who crafted its design, and for what purpose it served. What is surmised is that it was intended to be a weapon that could kill its victim in an instant through endless shocks of lightning. Its creator, however, was unable to contain this power despite imbuing it with some magical protection from the element of its use, for it sends equally intense bolts through its wielder's hands, killing almost instantaneously. Its name, apparently, is indeed appropriate.
+
+STATISTICS:
+
+Damage:  1D6 + 2
+THACO:  +1 bonus
+Special: 
+ 5% chance the target hit by Death Dealer is killed instantly and wielder suffers 6D6 of electrical damage (Save vs. Death for half)
+ +10% Electrical resistance
+Damage type:  Crushing
+Weight: 4
+Speed Factor: 4
+Proficiency Type: Mace
+Type:  1-handed
+Not Usable By:
+ Lawful Aligned Characters
+ Druid
+ Mage
+ Thief~
+@47  = ~Poisoned Brambles~
+@48  = ~Club +1: Poisoned Brambles
+ The Poisoned Brambles is a deadly weapon designed by the Shadow Druids to assist them in their protection of the forests and its creatures and as well to punish those who would dare harm them. With each successful hit, the target is struck with two or more poisoned tips from the branches of the enchanted weapon, adding to the the effect of the poison's potency.
+
+STATISTICS:
+
+THAC0:  +2 
+Damage:  1D6 +1 
+Special: 
+ Any target hit by Poisoned Brambles must make a Save vs Poison with a +2 bonus or receive 1 poison damage for 8 seconds
+Damage type:  crushing
+Weight: 3
+Speed Factor: 3
+Proficiency Type: Club
+Type:  1-handed
+Not Usable By:
+ Mage~
+@49  = ~Flail~
+@50  = ~Chaos Rage~
+@51  = ~The flail is a sturdy wooden handle attached to an iron rod, a wooden rod with spikes, or a spiked iron ball. Between the handle and its implement is either a hinge or chain link.  The weapon was originally used as a tool for threshing grain.  
+
+STATISTICS:
+
+Damage:  1D6 +1
+Damage type:  crushing
+Weight: 15
+Speed Factor: 7
+Proficiency Type: Flail/Morningstar
+Type:  1-handed
+Not Usable By:
+ Druid
+ Mage 
+ Thief~
+@52  = ~Flail +2: Chaos Rage
+Created by the Duergar for the purposes of war, the Chaos Rage walks a long history of bloody wars and terrible seiges between the grey dwarves and their many enemies. The flail is made of a reinforced wooden handle and its spiked iron ball is enchanted allowing additional damage to be inflicted with each landed blow.
+
+STATISTICS:
+
+Damage:  1D6 + 3
+THACO:  +2
+Special: +3 piercing  damage
+Damage type:  crushing
+Weight: 11
+Speed Factor: 5
+Proficiency Type: Flail/Morningstar
+Type:  1-handed
+Not Usable By:
+ Druid
+ Mage 
+ Thief~
+@53  = ~The Sleeper~
+@54  = ~Mace +2: The Sleeper
+This belonged to Ssitalc, an uncharacteristically evil elf known as the Slaver of the Sword Coast.  Until his sudden death several years ago, Ssitalc commanded a large force of human, dwarf and gnomish brigands, using the Sleeper to keep them in line.  It has a chance to incapacitate any creature inducing deep slumber.
+
+STATISTICS:
+
+Damage:  1D6 + 3
+THACO:  +2
+Special: Any target hit by The Sleeper must make a Save vs. Poison with a +2 bonus or fall asleep for 12 seconds
+Damage type:  crushing
+Weight: 6
+Speed Factor: 4
+Proficiency Type: Mace
+Type:  1-handed
+Not Usable By:
+ Druid
+ Mage
+ Thief~
+@55  = ~Book of Ancient Knowledge~
+@56  = ~This book was traded to <CHARNAME> by a scholar for the History of the Nether Scrolls. 
+The writing in this text is completely indecipherable and resists any such attempts at comprehension through normal magic or any other means.~
+@57  = ~This book was traded to <CHARNAME> by a scholar for the History of the Nether Scrolls. Its value is allegedly at 10,000 gold pieces or even more.
+The writing in this text is completely indecipherable and resists any such attempts at comprehension through normal magic or any other means.~
+@58  = ~Worn Out Boots~
+@59  = ~Boots of the Fox~
+@60  = ~Boots are normally hand-made by cobblers.  Common boots are made by using a form, but good boots are designed for the foot of an individual. 
+
+STATISTICS:
+
+Weight:  4~
+@61  = ~Not much is known of these magical boots except that they came from the northern region of Faerun known as the Spine of the World. It is said that these were acquired by a brave band of adventurers who travelled through the treacherous and windswept mountains in a quest to destroy an ultimate evil.
+
+STATISTICS:
+
+Armor Class: +1 bonus
+Special: +40% movement rate
+Weight:  3~
+@62  = ~Short Bow~
+@63  = ~Phantom Bow~
+@64  = ~Short bows were the first to be developed, although they were not called such.  This is more of a default term that refers to anything which is not a long bow.  Short bow staves are about 5 ' feet long on the average.  As the years passed, attempts were made to increase bow ranges.  Bows were either given longer staves or flexibility was increased with no change to the length.  The former resulted in what is now called the long bow.  
+
+STATISTICS:
+
+Weight: 2
+Speed Factor: 6
+Proficiency Type: Short Bow
+Type:  2-handed
+Not Usable By:
+ Druid
+ Cleric
+ Mage~
+@65  = ~Short Bow +1: Phantom
+Long thought to be an item only existing in myth or conceived by old adventurers in their amusing but tall tales, the Phantom is said to have been forged in the very bowels of a mystical realm apart from our own and awarded to watchers tasked with guarding the gateways between the planes. As such, it was used in preventing the unwarranted travels of evil and mischievous creatures who sought to threaten the delicate balance of order and chaos.
+
+The bow is said to open a portal through the planes and through it craft an elemental arrow each time that its fine ethereal string is pulled, making it a source of limitless arrows for those who wield it. It also provides the user an uncanny sense of mastery over the weapon, momentarily increasing his or her accuracy when firing. However, it also diminishes its user's strength each time the bow's mysterious power is used, as it channels his or her energies to the plane of its unearthly creation.
+
+STATISTICS:
+
+Damage:  1D3 +1
+THACO:  +1 bonus
+Special: -1 to Strength and +1 to Dexterity when equipped
+	 Needs no arrows
+Damage Type: Piercing
+Weight: 3
+Speed Factor: 4
+Proficiency Type: Short Bow
+Type:  2-handed
+Not Usable By:
+ Druid
+ Cleric
+ Mage~
+@66  = ~Bullet~
+@67  = ~Bullet of Fire~
+@68  = ~A bullet is simply a rounded, well-balanced stone. 
+
+STATISTICS:
+
+Damage:  1D4 + 1
+Damage type:  missile (piercing)
+Weight: 0
+Launcher:  Sling~
+@69  = ~This rare, well-balanced stone has been imbued with magical properties which allow it to be more accurate and lethal. It has also been imbued with the power to burst into a small flame upon impact, making it a potentially dangerous missle when placed in skilled hands.
+
+STATISTICS:
+
+Damage:  1D4 + 3
+Special: 1D4 fire damage (Save vs. Spell for none) 
+THACO:  +2
+Damage type:  missile (piercing)
+Weight: 0
+Launcher:  Sling~
+@70  = ~Chainmail Armor~
+@71  = ~Drow Chainmail +2~
+@72  = ~Chain mail is made of interlocking metal rings.  It is always worn over a layer of padded fabric or soft leather to prevent chafing and lessen the impact of blows.  
+
+STATISTICS:
+
+Armor Class: 5
+Weight: 40
+Not Usable By:
+ Druid 
+ Mage 
+ Thief~
+@73  = ~Drow Chainmail +2
+Drow Chainmail is elven chainmail made from unique metals found only in the Underdark.  
+
+STATISICS:
+Armor Class: 3
+Weight: 10
+Not Usable By:
+ Druid~
+@74  = ~Mage Robe~
+@75  = ~The Steel Robe~
+@76  = ~Since the age of Netheril, mages have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a mage. Due to their magical heritage, however, only single-, dual-, and multi-class mages may wear these enchanted robes.
+
+STATISTICS:
+
+Weight:  9
+Only usable by:
+Mage (single, dual, & multi-class)~
+@77  = ~The Steel Robe
+The Steel Robe was especially crafted by Melicamp, the mage apprentice of Beregost, as gratitude to <CHARNAME> for saving him from the maw of a vicious wolf after he accidentally turned himself into a chicken. The extensive research the minor mage has done on the various robes he was provided has yielded a powerful cloak, worthy of even Thalantyr himself.
+
+These heavy robes bear some of the resiliency and durability of Drow steel without the flaw of crumbling to dust under the light of the sun. It also provides the wearer with resistance to many of the elemental magics used in the realms, making for a truly formidable mage to be reckoned with.
+
+STATISTICS:
+
+Armor Class:  6
+Saving Throw:  +1 bonus
+Magic Resistance:  20%
+Fire Resistance:  20% 
+Cold Resistance:  20% 
+Electricity Resistance:  20% 
+Weight:  9
+Only usable by:
+Mage (single, dual, & multi-class)~
+@78  = ~Lesser Robe of Resistance~
+@79  = ~The Lesser Robe of Resistance
+The Lesser Robe of Resistance was especially crafted by Melicamp, the mage apprentice of Beregost, as gratitude to <CHARNAME> for saving him from the maw of a vicious wolf after he accidentally turned himself into a chicken. The extensive research the minor mage has done on the various robes he was provided has yielded a cloak of extraordinary power.
+
+These heavy robes bear some of the resiliency and durability of Drow steel without the flaw of crumbling to dust under the light of the sun. It also provides the wearer with resistance to some of the elemental magics used in the realms.
+
+STATISTICS:
+
+Armor Class:  7
+Magic Resistance:  5%
+Fire Resistance:  20% 
+Cold Resistance:  20% 
+Electricity Resistance:  20% 
+Weight:  9
+Only usable by:
+Mage (single, dual, & multi-class)~
+@80  = ~Scholar's Robe~
+@81  = ~The Scholar's Robe
+The Scholar's Robe was especially crafted by Melicamp, the mage apprentice of Beregost, as gratitude to <CHARNAME> for saving him from the maw of a vicious wolf after he accidentally turned himself into a chicken. The extensive research the minor mage has done on the various robes he was provided has yielded a cloak of extraordinary power.
+
+These heavy robes bear some of the resiliency and durability of Drow steel without the flaw of crumbling to dust under the light of the sun. It also provides the wearer with resistance to some of the elemental magics used in the realms.
+
+STATISTICS:
+
+Armor Class:  7
+Saving Throw:  +1 bonus
+Magic Resistance:  5%
+Weight:  9
+Only usable by:
+Mage (single, dual, & multi-class)~
+@82  = ~Helmet~
+@83  = ~Crown of Fallen Kings~
+@84  = ~This class of open-face helmet, made of reinforced leather or metal, covers most of the head, save the face and neck. This looks to be a somewhat ornamental helm and will perhaps fetch a good price.
+
+STATISTICS:
+
+Armor Class Bonus:  None
+Special:  Protects Against Critical Hits
+Weight: 2
+Not Usable By:
+Mage
+Bard
+Thief~
+@85  = ~First uncovered in ancient ruins to the South of Amn, this crown has seen the rise and fall of countless empires. It was revered by many as both a ruler's symbol for keeping the peace and as well a means for declaring and waging wars. History indicates that the crown was last seen at the hands of a ruthless tyrant fleeing from his fallen kingdom to the Sea of Swords, only to be lost in its harsh waters. 
+
+STATISTICS:
+
+THAC0: +1 bonus
+Armor Class: +2 bonus
+Special:  
+ Protects against critical hits
+ +20% Magic resistance
+Weight: 2
+Not Usable By:
+ Thief~
+@86  = ~Undeciphered Note~
+@87  = ~z...it is As our employers have described... meet me at outskirts of the carNival north of the hill and we shall DIscuss the matter of compensatioN further.
+N~
+@88  = ~Elven Chainmail +2~
+@89  = ~Elven Chainmail +2
+It was during the Golden Age between the Elves of the Seldarine's Hand and the Dwarves of Dorn Deep that these illustrious elven armor were said to have been crafted. Made of fine interlocking metal rings, the light elven chain allows its wearer movement without hindrance and protection from lesser magics. 
+
+STATISICS:
+Armor Class: 3
+Magic Resistance: 10%
+Weight: 25
+Not Usable By:
+ Mage
+ Monk
+ Druid~
+@90  = ~Underdark Mail +1~
+@91  = ~Underdark Mail +1
+This finely crafted elven chain is made of illithium, a rare ore found only within the deepest recesses of Faerun, and as such radiates of a strong dweomer. The intricate designs and runes etched onto the armor's surface indicates that this was especially made for drow priestesses since it allows its wearer greater attunement with the deities and demigods of the realms, and although this might have been highly revered in the Underdark, it is repulsive to the eyes of surface-dwellers and any who wear it suffer this consequence. 
+
+STATISICS:
+
+Armor Class: 4
+Magic Resistance: 33%
+Special:
+ Wisdom: set to 18
+ Charisma: -2
+Weight: 25
+Not Usable By:
+ Mage
+ Thief
+ Monk
+ Druid~
+@92  = ~Warhammer~
+@93  = ~Lathander's Influence~
+@94  = ~Mounted knights cannot effectively use long pole weapons while on horseback, and as a result, many weapons have been fitted with shorter shafts so they may be wielded with just one hand.  Maces and flails are two previous examples of this - the war hammer is another.  The horseman's war hammer is the descendent of the Lucerne hammer.  It is made entirely of steel, with rondels protecting and strengthening the grip.  Rondels are small disks of metal, often shaped into decorative designs.  The shaft is about 18 inches long. 
+
+STATISTICS:
+Damage:  1D4 + 1
+Damage type:  crushing
+Weight: 6
+Speed Factor: 4
+Proficiency Type: Warhammer
+Type:  1-handed
+Not Usable By:
+ Druid
+ Mage 
+ Thief~
+@95  = ~Once a hammer with only minor enchantments, this holy weapon was granted the blessing of Lathander by Dawn Priest Bran for <CHARNAME>'s heroic prevention of the release of the lesser demon Lestraubimat into the Sword Coast. The hammer bestows upon its wielder an uncanny strength and even provides immunity against lesser magics. Only those of pure heart and stout faith are able to lift the hammer. 
+
+STATISTICS:
+Damage:  1D4 + 3
+THACO:  +2 bonus
+Special: +1 to strength while equipped
+	 +20% magic resistance while equipped
+Damage type:  crushing
+Weight: 5
+Speed Factor: 3
+Proficiency Type: Warhammer
+Type:  1-handed
+Not Usable By: 
+ Evil aligned characters
+ Druid 
+ Mage 
+ Thief~
+@96  = ~Hat~
+@97  = ~Rogue's Hat~
+@98  = ~The felt hat is a favorite of the bards and thieves alike, though they offer little in the way of protection.
+
+STATISICS:
+
+Weight: 2
+Usable By:
+ Bard
+ Thief~
+@99  = ~The felt hat is a favorite of the bards and thieves alike, though they offer little in the way of protection. This hat, however has been enchanted, though it appears as flimsy as the typical cloth or felt cap, it has the resiliance to withstand a good blow.
+
+STATISTICS:
+
+Armor Class Bonus:  None
+Special:  
+ Protects Against Critical Hits
+ +1 Saving Throws
+Weight: 2
+Usable By:
+ Bard
+ Thief~
+@100 = ~Helmet of Defense~
+@101 = ~Helm of Defense:  'Gift of Peace'
+Prized for its noble origin as much as for its benefits to the wearer, this helm was originally intended to be a simple gift.  There was no great crisis at hand, nor dangerous evil to be overthrown; just a wish for friend to give a gift to another.  It could just have easily been a good book or bottle of wine, but adventurers are eminently more practical in their gift giving.  The helm has seen many great battles since its creation, but the simple virtue at its core is what has always been remembered.
+Taerom "Thunderhammer" Fuiruim has enhanced the strength of this particular helm, providing better protection to the wearer.
+
+STATISTICS:
+
+Armor Class Bonus:  1
+Saving Throws:  +1 bonus
+Electrical resistance:  +20%
+Cold resistance:  +20%
+Fire resistance:  +20%
+Special:  Protects Against Critical Hits
+Weight: 3
+Not Usable By:
+Mage
+Bard
+Thief~
+@102 = ~Helmet of Infravision~
+@103 = ~Helm of Infravision:  'The Eyes of Truth'
+Being a scavenger of a sort, Babette Maelestrom had this helm created to aid her in her dungeon excursions.  She would later attributed her gathered wealth solely to its power, though likely it was as much her keen eyes as anything.  
+Taerom "Thunderhammer" Fuiruim has enhanced the strength of this particular helm, providing better protection to the wearer.
+
+STATISTICS:
+
+Armor Class Bonus:  1
+Special:
+  Protects Against Critical Hits
+  Grants wearer infravision up to 120 ft
+Weight: 3
+Not Usable By:
+Mage
+Bard
+Thief~
+@104 = ~Helmet of Charm Protection~
+@105 = ~Helm of Charm Protection:  'The Unbiased'
+As its name suggests, the Helm of Charm Protection protects its wearer from any magical attempts at emotional manipulation. As a precaution, some high-profile mercenary groups regularly equip their members with such helmets to ensure that they can perform their prescribed duties without external interference.
+Taerom "Thunderhammer" Fuiruim has enhanced the strength of this particular helm, providing better protection to the wearer.
+
+STATISTICS:
+
+Armor Class Bonus:  1
+Special:
+    Protects Against Critical Hits
+    Wearer is immune to charm
+Weight: 4
+Not Usable By:
+Mage
+Bard
+Thief~
+@106 = ~Hide Armor~
+@107 = ~Bala's Leather~
+@108 = ~Hide Armor is made from the thick hide of a very large animal (an elephant for example) or from many layers of normal leather from common animals, like cows.  Hide armor is far too bulky, inflexible and heavy to be used much in advanced human cultures.  Although, among the barbaric humanoid masses throughout the dark forests and misty jungles of the world, hide armor is common.  Even though it does offer more protection then leather armor, one must get by the offensive odour and shoddy appearance in order to wear it effectively.  Even though thieves can wear this armor, it has a negative effect on their abilities.
+
+STATISTICS:
+
+Armor Class: 6
+Stealth: -20%
+Lockpicking: -10%
+Find/Remove Traps: -10%
+Pick Pockets: -30%
+Weight: 40
+Not Usable By:
+ Mage~
+@109 = ~Bala's Leather +4
+Originally worn by the infamous foul-tempered prince of a gully dwarf clan, Bala, this hide armor was thought to have been crafted many years after his murder of the cruel elven mage in Thesk who had imprisoned him. It is of shoddy workmanship, quite resembling the way Bala's legendary axe itself was crafted but possess a strong aura, imbuing its wearer with the uncanny resistance to even the most powerful of magics. 
+
+STATISTICS:
+
+Armor Class: 2
+Magic Resistance: 30%
+Magic Damage Resistance: 30%
+Stealth: -10%
+Lockpicking: -5%
+Find/Remove Traps: -5%
+Pick Pockets: -10%
+Weight: 30
+Not Usable By:
+ Mage~
+@110 = ~Barbarian Hide~
+@111 = ~Barbarian Hide +1
+This particular hide armor is made from many layers of tanned and hardened leather obtained from mountain bears, thus providing greater protection to its wearer.  But being made of such bulky material, it is inflexible and cumbersome to be used 
+Even though it does offer more protection then leather armor, one must get by the offensive odor and shoddy appearance in order to wear it effectively.  Even though thieves can wear this armor, it has a negative effect on their abilities.
+
+STATISTICS:
+
+Armor Class: 5
+Stealth: -10%
+Lockpicking: -10%
+Find/Remove Traps: -10%
+Pick Pockets: -20%
+Weight: 35
+Not Usable By:
+ Mage~
+@112 = ~Drow Weapon~
+@113 = ~This is what seems to be the remains of a weapon crafted using dark elf steel. It has apparently been exposed to sunlight and has been rendered useless.~
+@114 = ~Drow Armor~
+@115 = ~These are remains of a magical armor made of Underdark metals. It has apparently been exposed to sunlight and has been rendered useless, although it may prove an interesting piece to an experienced miner or skilled artisan.~
+@116 = ~Bloody Robes~
+@117 = ~Zernan's Robe of Electrical Resistance~
+@118 = ~Since the age of Netheril, mages have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a mage. Due to their magical heritage, however, only single-, dual-, and multi-class mages may wear these enchanted robes. These look to be the garments of the scholar, Zernan, though one cannot be certain since it is tattered beyond total recognition and soaked in blood. Only the cloak's magical properties spared it from being completely destroyed.~
+@119 = ~While seen with less frequency than some other Mage Robes, those of Electrical Resistance can hardly be considered a rarity. Some are worn by paranoiacs seeking protection from a ragged mountain storm but many more are worn by mages seeking to protect themselves from the intrigues of others of their kind. As with all such robes, a Mage Robe of Electrical Resistance can only be worn by those of the wizardly profession.
+These look to be the garments of the scholar, Zernan, though one cannot be certain since it is tattered beyond total recognition and soaked in blood. Only the cloak's magical properties spared it from being completely destroyed.
+
+STATISTICS:
+
+Electricity Resistance:  +20% bonus
+Weight:  3
+Only usable by:
+Mage (single, dual, & multi-class)~
+@120 = ~Plate Mail Armor~
+@121 = ~Wyvern's Scale~
+@122 = ~Plate mail is a combination of chain armor with metal plates covering the vital areas such as the chest, abdomen and groin.  Similar in construction to bronze plate mail, true plate mail comprises of chain and leather. 
+
+STATISTICS:
+
+Armor Class: 3
+Weight: 50
+Not Usable By:
+ Bard 
+ Druid
+ Mage
+ Thief~
+@123 = ~This armor was crafted for <CHARNAME> by Taerom Fuiruim, reknowned blacksmith of Beregost. Fashioned from the hide of a dead wyvern, the armor is as cumbersome as scalemail but provides the protection of magical platemail and imbues the wearer with resistance against certain poisons. 
+
+STATISTICS:
+
+Armor Class: 2
+Saving Throws: +5 bonus vs. death
+Poison Resistance: +25%
+Weight: 20
+Not Usable By:
+ Bard
+ Monk 
+ Druid
+ Mage
+ Thief~
+@124 = ~Potion~
+@125 = ~Potion of Greater Healing~
+@126 = ~When wholly consumed, this potion restores 24 hit points to the person.  The effect is instantaneous and the potion is destroyed in the process.~
+@127 = ~Ring~
+@128 = ~Mystic Ring~
+@129 = ~A ring is a small band of precious metal that is used as jewelry.  Some rare rings have had enchantments placed upon them that confer various magical abilities.  These rings are highly sought after, especially by those of the adventuring profession.~
+@130 = ~The exact origins of this ring are unknown, however, it is believed that this ring was in the possesion of an older mage living in a small village and acting as their 'wise man' before he died.
+
+STATISTICS:
+
+Special:  adds one 2nd and 3rd level spells
+Usable By:
+Mage (Single, Multi, Dual Class)~
+@131 = ~Lesser Ring of Perception~
+@132 = ~Commissioned by the guild leaders of the Baldur's Gate underworld for their trusted allies, this ring heightens the sensory perception of its wearer, which allows for better performance of "delicate" and often grim tasks.
+
+STATISTICS:
+
+Find/Remove traps:  +10% bonus
+Pick pockets:  +10% bonus
+Pick locks:  +10% bonus
+Hide in shadows:  +10% bonus
+Usable by:
+ Thief (Single, Multi, Dual Class)~
+@133 = ~Quarter Staff~
+@134 = ~Staff of the Ram +3~
+@135 = ~The simplest and humblest of staff weapons, the quarterstaff is a length of wood ranging six to nine feet in length.  High quality quarterstaves are made of stout oak and are shod with metal at both ends.  The quarterstaff must be wielded with both hands.  
+
+STATISTICS:
+
+Damage:  1D6
+Damage type:  crushing
+Weight: 4
+Speed Factor: 4
+Proficiency Type: Quarterstaff
+Type:  2-handed
+Not Usable By:~
+@136 = ~This staff is the personal weapon of Cadderly. Enchanted by his friend, the great wizard Belisarius in his small dwelling on the outskirts of Caradoon, the staff has aided the Deneiran priest and scholar in his many efforts against the forces of Castle Trinity. The staff is said to have received the blessing of Deneir and Oghma, being in the faithful cleric's possession for such a long time, allowing for greater recall of prayers and magic.
+
+STATISTICS:
+
+Saving throws: +1 bonus
+THAC0: +3 bonus
+Damage:  1D6 +3
+Special: +1 extra 2nd and 3rd level priest spells
+Damage type:  crushing
+Weight: 3
+Speed Factor: 2
+Proficiency Type: Quarterstaff
+Type:  2-handed
+Usable By:
+ Cleric (Single, Multi, Dual Class)
+ Druid
+ Paladin
+ Good or Neutral aligned characters~
+@137 = ~Staff of Dark Oaks +2~
+@138 = ~Only the highest ranking of the Shadow Druids are said to possess these mythical staves which grant them skin as tough as the dark oaks, resilience against fire, and resistance against the most potent of poisons.
+
+STATISTICS:
+
+THAC0: +2 bonus 
+Damage:  1D6 +2
+Special:
+ +30% Fire resistance
+ +3 Saves vs Poison/ Death
+ Barkskin while equipped
+Damage type:  crushing
+Weight: 3
+Speed Factor: 1 
+Proficiency Type: Quarterstaff
+Type:  2-handed
+Usable By:
+ Druid~
+@139 = ~Staff of Withstanding~
+@140 = ~Markings on the edges of the staff indicate that it was crafted in ages of magic long forgotten and has seen its share of many power struggles for dominance in the material planes. Its last known owner was said to be a cruel tyrant-sorceror slain in a duel with a slave--- a mage of lesser experience who sought to escape the dark prisons of his captor. Tales and rumors indicate that the prisoner took the staff, escaped into a portal, and disappeared into the Sword Coast.
+
+STATISTICS:
+
+THAC0: +1 bonus
+Armor Class: +1 bonus
+Damage:  1D6+1
+Saving throws: +2 bonus
+Special: +10% Magic Resistance
+Damage type:  crushing
+Weight: 2
+Speed Factor: 1
+Proficiency Type: Quarterstaff
+Type:  2-handed
+Usable By:
+ Mage (Single, Multi, Dual Class)
+ Bard~
+@141 = ~Bastard Sword~
+@142 = ~Distance~
+@143 = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the two-handed sword and the long sword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred.  The overall length of the bastard sword ranges between four feet and four feet ten inches.   
+
+STATISTICS:
+
+Damage:  2D4
+Damage type:  slashing
+Weight:  9
+Speed Factor: 7
+Proficiency Type: Bastard Sword
+Type:  1-handed
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief~
+@144 = ~Bastard Sword +1: Distance
+This simple-looking bastard sword was said to belong to the infamous gladiator, Abdel the Skaven, whose cunning and guile was unmatched in his thirty-eight pit fights in the underground arenas. Records allege that the barbarian could literally strike an opponent and distance himself in an instant, avoiding any lethal counter maneuvers his enemies would have.
+
+The stories may not be at all far from the truth. The blade possesses the strange ability to temporarily cloak its wielder after landing a successful blow, allowing the user time to safely distance himself or herself from the enemy or even plan another preemptive strike. 
+
+STATISTICS:
+
+Damage:  2D4 + 1
+THACO:  +1 bonus
+Special: 50% of the time, on a successful hit, the wielder becomes invisible for 12 seconds 
+Damage type:  slashing
+Weight:  9
+Speed Factor: 7
+Proficiency Type: Bastard Sword
+Type:  1-handed
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief~
+@145 = ~Short Sword~
+@146 = ~Drow Short Sword of Backstabbing~
+@147 = ~The short sword is the first type of sword to come into existence.  In the simplest of terms, a short sword can be considered a dagger with a blade so long that it can no longer be called a dagger.  The term short sword does not exist in sword classifications.  However, it has come to be used to describe a double-edged blade about two feet in length.  The sword tip is usually pointed, ideal for thrusting. 
+
+STATISTICS:
+
+Damage:  1D6
+Damage type:  piercing
+Weight: 3
+Speed Factor: 3
+Proficiency Type: Short Sword
+Type:  1-handed
+Not Usable By:
+ Druid
+ Cleric 
+ Mage~
+@148 = ~Drow Short Sword of Backstabbing
+Fashioned by the Drow after the Shadow's Blade but made of Underdark metal, this short sword was created to be the perfect assassin's tool.
+
+STATISTICS:
+
+Special: Backstab multiplier +1
+
+Damage: 1D6 +3
+THACO: +3 bonus
+Damage type: piercing
+Weight: 3 
+Speed Factor: 0
+Proficiency Type: Short Sword
+Type: 1-handed
+Not Usable By:
+ Druid
+ Cleric 
+ Mage ~
+@149 = ~Two-Handed Sword ~
+@150 = ~Havok~
+@151 = ~The two-handed sword is a derivative of the long sword.  Weaponsmiths have always looked for ways to improve existing weapons.  In an effort to improve the long sword, the blade was lengthened.  Eventually, the handle had to be extended and two hands became necessary to properly swing the sword.  The primary function of two-handed swords is cleaving mounted knights and breaking up pike formations. 
+
+STATISTICS:
+
+Damage: 1D10
+Damage type: slashing
+Weight: 15
+Speed Factor: 10
+Proficiency Type: Two-Handed Sword
+Type: 2-handed
+Not Usable By:
+ Druid
+ Cleric
+ Mage 
+ Thief~
+@152 = ~Two-Handed Sword +2 : 'Havok' 
+Wrested from the clutches of the evil demon messenger Ranthis by a band of adventurer's led by <CHARNAME>, this two-handed blade still bears with it the mark of its original wielder and fills any who touches it with hate and rancor. It is a powerful weapon, able to paralyze all but the most resilient of foes in one swing, but can only be held by those who share Ranthis' evil desires.
+
+STATISTICS:
+Damage: 1D10  +2
+THACO: +2 bonus
+Special: 25% of the time, target hit by Havok must make a Save vs. Paralyzation with a -1 penalty or be paralyzed for 12 seconds.
++20 maximum hitpoints 
+Damage Type: slashing
+Weight:  8
+Speed Factor:  8
+Proficiency Type: Two-Handed Sword
+Type: 2-handed
+Not usable by:
+ Good aligned characters
+ Druid
+ Cleric
+ Mage 
+ Thief~
+@153 = ~Valiant~
+@154 = ~Two Handed Sword +1: Valiant
+Taken from the self-proclaimed "Greatest Ogre Mage" Kahrk, Valiant was originally given to Sir Gregory of the Pillar, leader of a band of crusaders on a quest to rid the Sword Coast of a vicious ogre horde. The crusaders failed in their task, massacred by an overwhelming monster force in the infamous Battle of Tyrad Pass. Valiant was taken by the ogres as a prize of the human defeat and have carried it around ever since as a reminder of the frightening power of ogres. The blade, however, has maintained its purity throughout the decades in the ogre's possession. Legends say that a hero will rise and reclaim the holy weapon and this will mark a series of changes on the face of the Sword Coast unlike anything that Faerun has ever witnessed.
+
+STATISTICS:
+Damage: 1D10 +1
+Armor Class: +1 bonus
+THACO: +2 bonus
+Special: +10 hitpoints
+Damage type: slashing
+Weight: 10
+Speed Factor: 4
+Proficiency Type: Two-Handed Sword
+Type: 2-handed
+Not Usable By:
+ Druid
+ Cleric
+ Mage 
+ Thief
+ Bard
+ Evil aligned characters~
+@155 = ~Light Crossbow~
+@156 = ~Drow Light Crossbow +1~
+@157 = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller.  The bow is usually made of ash or yew.  The crossbow fires a quarrel (also called a bolt). 
+
+STATISTICS:
+
+Weight: 7
+Speed Factor: 5
+Proficiency Type: Crossbow
+Type: 2-handed
+Not Usable By:
+ Druid
+ Cleric
+ Mage~
+@158 = ~Drow Light Crossbow +1
+This crossbow is made of unusual but light metal from the Underdark.  The crossbow fires a quarrel (also called a bolt).
+
+STATISTICS:
+
+Damage: +1 (missile)
+THAC0: +1 bonus
+Weight: 6
+Speed Factor: 4
+Proficiency Type: Crossbow
+Type: 2-handed
+Not Usable By:
+ Druid
+ Cleric
+ Mage~
+@159 = ~Amulet of Metaspell Influence: 'The Amplifier'~
+@160 = ~Amulet of Metaspell Influence: 'The Amplifier' 
+Known for its ability to enhance spellcasting, the Amulet of Metaspell Influence is highly sought after by magic practitioners.  It was created by Elairdrin Mellwith who resided in the Star Mountains.  His reasons for fabricating such an item stemmed from his womanizing habits, and to this extent the Amplifier served his purpose well.  It was later taken from him by a mage with a more destructive intent, but records detailing the change of hands vary widely.
+
+STATISTICS:
+
+Special: Memorize one extra first and second level spell
+Usable By:
+ Mage (Single, Multi, Dual Class)~
+@161 = ~The writing in this text is almost completely indecipherable and resists any such attempts at comprehension through normal magic or any other means. Perhaps a scholar or one more skilled in the ancient arts would be able to make sense of this archaic text~
+@162 = ~The words "Kozah" "Firewine Armor" and "Ulcaster" have been rendered understandable. All other writing in this text is completely indecipherable and resists any such attempts at comprehension through normal magic or any other means.~
+@163 = ~Holy Cloak~
+@164 = ~This cloak is a holy artifact of the inhabitants of the werewolf village.  An item with great symbolic value and enchantment, it is a remnant from when they first arrived on the island.
+
+STATISTICS: 
+ 
+ Unknown
+Not Usable by:
+ Thief
+ Bard~
+@165 = ~This cloak is a holy artifact of the inhabitants of the werewolf village.  An item with great symbolic value and enchantment, it is a remnant from when they first arrived on the island.
+
+STATISTICS: 
+
+Armor Class: +1 Bonus 
+Special: Bless while equipped
+Not Usable by:
+ Thief
+ Bard~
+@166 = ~Cloak~
+@167 = ~Shandalar's Cloak~
+@168 = ~This cloak was originally stolen from Shandalar by the powerful mage Semia, presumably for the powerful magics woven into the fabric. Although, how it has come to be in your possession and the fate of Semia are complete mysteries, and ones not likely to be solved.  Much like the exact workings of the cloak which would remain a mystery even to a powerful mage.
+
+STATISTICS:
+ 
+ Unknown
+Usable by:
+ Mage (Single, Multi, Dual Class)~
+@169 = ~This cloak was originally stolen from Shandalar by the powerful mage Semia, presumably for the powerful magics woven into the fabric. Although, how it has come to be in your possession and the fate of Semia are complete mysteries, and ones not likely to be solved.  Much like the exact workings of the cloak which would remain a mystery even to a powerful mage.
+
+STATISTICS:
+
+Armor Class: +1 Bonus
+Special:
+ +2 to Intelligence
+ +15 to Lore
+ One extra 4th level spell
+Usable by:
+ Mage (Single, Multi, Dual Class)~
+@170 = ~Vampiric Sword~
+@171 = ~The Vampire's Revenge +1~
+@172 = ~This ornate weapon has "Vampiric Sword" written in bold common text along the entire  length of its blade and possesses a strange dweomer that one cannot truly fathom.
+
+STATISTICS:
+
+Damage: 1D8
+Damage type: slashing
+Weight: 4
+Speed Factor: 5
+Proficiency Type: Long Sword
+Type: 1-handed
+Not Usable By:
+ Druid
+ Cleric
+ Mage~
+@173 = ~It would seem that the very speculation of this weapon's existence has conspired to pull it from the  realm of fantasy and into the everyday, though, as with all things that come from dreams, it is not as it truly  seems. The blade is indeed vampiric, as the name would suggest; though not in the manner the finder might have  hoped. It is rumored that the blade, instead of performing as one might think a vampiric blade would, was actually  constructed by vampires as a trap for those that could eventually oppose them. These incredibly clever fiends have  apparently fashioned numerous versions of these unfortunate blades over time, and they are the bane of all  right-thinking adventurers. Each swing actually inflicts damage upon the wielder, as his life energies are drained  in order to heal his intended victim. Were this not enough, the weapon is cursed so as to prevent it's removal, and  the user is smitten with a wasting of the mind, that he might not even think of trying to rid himself of it. This  may be among the few magical treasures that are simply not worth the trouble of seeking, and one might better spend  ones time having a lovely beverage, rather than gallivanting about the wilderness with a pack full of rubbish  chasing phantoms. Still, the wretched blade possesses a strange dweomer that one cannot truly fathom.
+
+STATISTICS:
+
+Damage: 1D8 +1
+THACO: +1 bonus
+Special: Inflicts damage upon the wielder and heals the target. 
+Unknown Special 
+Damage type: slashing
+Weight: 4
+Speed Factor: 4
+Proficiency Type: Long Sword
+Type: 1-handed
+Not Usable By:
+ Druid
+ Cleric
+ Mage~
+@174 = ~This mod requires BGT~
+@175 = ~The Vault's item upgrades - Compatibility with Item Revisions. Recommended for consistency if you plan to install IR main component later~
+@176 = ~Helm of Defense~
+@177 = ~Gift of Peace
+Prized for its noble origin as much as for its benefits to the wearer, the first of these helms was originally intended to be a simple gift. There was no great crisis at hand, nor dangerous evil to be overthrown; just a wish for a friend to give a gift to another. It could just as easily have been a good book or a bottle of wine, but adventurers are eminently more practical in their gift giving. Subsequently, because of its effectiveness in any situation, countless variants of this helm were created. These helms have seen many great battles since theirs creation, but the simple virtue at theirs core is what has always been remembered.
+
+STATISTICS:
+
+Equipped Abilities:
+ Saving Throws: +1 bonus
+
+Armor Class Bonus: 1
+Protects Against Critical Hits
+Weight: 3
+Not Usable By:
+ Bard
+ Mage
+ Monk
+ Thief
+ Kensai~
+@178 = ~Watcher's Helm~
+@179 = ~It is unclear if these magic headpieces were created by clerics of Helm, god of guardians, or if they acquired their name by a more convenient circumstance. Whatever the case, they are highly prized by guards and sentries. Needless to say, bandits have also taken to wearing them, proving the old proverb that 'what's good for the goose is good for the gander'.
+
+STATISTICS:
+
+Equipped Abilities:
+ Immunity to blindness & deafness
+ 
+
+Armor Class Bonus: 1
+Protects Against Critical Hits
+Weight: 3
+Not Usable By:
+ Bard
+ Mage
+ Monk
+ Thief
+ Kensai~
+@180 = ~Helm of Charm Protection~
+@181 = ~As its name suggests, the Helm of Charm Protection protects its wearer from any magical attempts at emotional manipulation. As a precaution, some high-profile mercenary groups regularly equip their members with such helmets to ensure that they can perform their prescribed duties without external interference.
+
+STATISTICS:
+
+Equipped Abilities:
+ Immunity to charm effects
+
+Armor Class Bonus: 1
+Protects Against Critical Hits
+Weight: 3
+Not Usable By:
+ Bard
+ Mage
+ Monk
+ Thief
+ Kensai~
+@182 = ~Helm of Defense~
+@183 = ~Gift of Peace
+Prized for its noble origin as much as for its benefits to the wearer, the first of these helms was originally intended to be a simple gift. There was no great crisis at hand, nor dangerous evil to be overthrown; just a wish for a friend to give a gift to another. It could just as easily have been a good book or a bottle of wine, but adventurers are eminently more practical in their gift giving. Subsequently, because of its effectiveness in any situation, countless variants of this helm were created. These helms have seen many great battles since theirs creation, but the simple virtue at theirs core is what has always been remembered.
+
+This helmet has been enhanced by the blacksmith of Beregost, Taerom Thunderhammer.
+
+STATISTICS:
+
+Equipped Abilities:
+ Saving Throws: +1 bonus
+ Magic Resistance: +10%
+
+Armor Class Bonus: 1
+Protects Against Critical Hits
+Weight: 3
+Not Usable By:
+ Bard
+ Mage
+ Monk
+ Thief
+ Kensai~
+@184 = ~Watcher's Helm~
+@185 = ~It is unclear if these magic headpieces were created by clerics of Helm, god of guardians, or if they acquired their name by a more convenient circumstance. Whatever the case, they are highly prized by guards and sentries. Needless to say, bandits have also taken to wearing them, proving the old proverb that 'what's good for the goose is good for the gander'.
+
+This helmet has been enhanced by the blacksmith of Beregost, Taerom Thunderhammer.
+
+STATISTICS:
+
+Equipped Abilities:
+ Immunity to blindness & deafness
+ THAC0: +1 bonus
+
+Armor Class Bonus: 1
+Protects Against Critical Hits
+Weight: 3
+Not Usable By:
+ Bard
+ Mage
+ Monk
+ Thief
+ Kensai~
+@186 = ~Helm of Charm Protection~
+@187 = ~As its name suggests, the Helm of Charm Protection protects its wearer from any magical attempts at emotional manipulation. As a precaution, some high-profile mercenary groups regularly equip their members with such helmets to ensure that they can perform their prescribed duties without external interference.
+
+This helmet has been enhanced by the blacksmith of Beregost, Taerom Thunderhammer.
+
+STATISTICS:
+
+Equipped Abilities:
+ Immunity to charm effects
+ Wisdom: +1 bonus
+
+Armor Class Bonus: 1
+Protects Against Critical Hits
+Weight: 3
+Not Usable By:
+ Bard
+ Mage
+ Monk
+ Thief
+ Kensai~
+@188 = ~Robe of Cold Resistance~
+@189 = ~Robes of Cold Resistance are a common sight in the Sword Coast region, especially as one travels north towards Neverwinter and the Icewind Dales. Many young mages receive it as a gift from their instructors upon successfully completing their first five years of study.
+
+STATISTICS:
+
+Equipped Abilities:
+ Cold Resistance: +40% bonus
+
+Weight: 3
+Usable By:
+ Mage~
+@190 = ~Robe of Fire Resistance~
+@191 = ~Due to the extremely volatile nature of most magics, Robes of Fire Resistance are not uncommon among young acolytes and their wizardly tutors, especially in Thay's circles and enclaves where worship of the Firelord Kossuth is widespread.
+
+STATISTICS:
+
+Equipped Abilities:
+ Fire Resistance: +40% bonus
+
+Weight: 3
+Usable By:
+ Mage~
+@192 = ~Robe of Electric Resistance~
+@193 = ~While seen with less frequency than some other Mage Robes, those of Electrical Resistance can hardly be considered a rarity. Some are worn by paranoiacs seeking protection from a ragged mountain storm but many more are worn by mages seeking to protect themselves from the intrigues of others of their kind.
+
+STATISTICS:
+
+Equipped Abilities:
+ Electricity Resistance: +40% bonus
+
+Weight: 3
+Usable By:
+ Mage~
+@194 = ~Knave's Robe~
+@195 = ~This robe has been specially enchanted to meet the eclectic needs of the multiclass mage. A favorite among thief-mages, the Knave's Robe has been enchanted to shield its wearer from the blades and poisons of any darkened alley. As with others of its type, however, its use is restricted to students of the arcane.
+
+STATISTICS:
+
+Equipped Abilities:
+ Immunity to backstab
+ Saving Throws: +2 bonus vs. poison
+
+Weight: 4
+Usable By:
+ Mage~
+@196 = ~Traveler's Robe~
+@197 = ~This mage robe has been designed for use by rambling, itinerant mages that travel from town to town. Its enchantments not only provide protection from the bandit's arrows but also allow the wearer to move with extraordinary speed without effort. As with other robes of its kind, the Traveler's Robe can only be worn by mages.
+
+STATISTICS:
+
+Equipped Abilities:
+ Movement Rate: +2 bonus
+ Armor Class: +2 bonus vs. missiles
+ Saving Throws: +2 bonus vs. breath
+
+Weight: 4
+Usable By:
+ Mage~
+@198 = ~Adventurer's Robe~
+@199 = ~Former Royal Magician Vangerdahast to King Azoun IV of Cormyr was once an accomplished adventurer of high fame. One reason he became popular in wizardly circles was his creation of the Adventurer's Robe. Mages have always struggled with the limitations placed on them by the ability to cast arcane magics. These robes give the mage an edge in surviving encounters with melee fighters by being able to absorb some damage from hits.
+
+STATISTICS:
+
+Equipped Abilities:
+ Physical Damage Resistance: +10% bonus
+
+Weight: 4
+Usable By:
+ Mage~
+@200 = ~The Steel Robe
+The Steel Robe was especially crafted by Melicamp, the mage apprentice of Beregost, as gratitude to <CHARNAME> for saving him from the maw of a vicious wolf after he accidentally turned himself into a chicken. The extensive research the minor mage has done on the various robes he was provided has yielded a powerful cloak, worthy of even Thalantyr himself.
+
+These heavy robes bear some of the resiliency and durability of Drow steel without the flaw of crumbling to dust under the light of the sun. It also provides the wearer with resistance to many of the elemental magics used in the realms, making for a truly formidable mage to be reckoned with.
+
+STATISTICS:
+
+Armor Class:  6
+Saving Throws: +1 bonus
+Magic Resistance: +20%
+Fire Resistance: +30% 
+Cold Resistance: +30% 
+Electricity Resistance: +30% 
+Weight:  9
+Only usable by:
+Mage (single, dual, & multi-class)~
+@201 = ~The Lesser Robe of Resistance
+The Lesser Robe of Resistance was especially crafted by Melicamp, the mage apprentice of Beregost, as gratitude to <CHARNAME> for saving him from the maw of a vicious wolf after he accidentally turned himself into a chicken. The extensive research the minor mage has done on the various robes he was provided has yielded a cloak of extraordinary power.
+
+These heavy robes bear some of the resiliency and durability of Drow steel without the flaw of crumbling to dust under the light of the sun. It also provides the wearer with resistance to some of the elemental magics used in the realms.
+
+STATISTICS:
+
+Armor Class:  7
+Fire Resistance:  30% 
+Cold Resistance:  30% 
+Electricity Resistance:  30% 
+Weight:  9
+Only usable by:
+Mage (single, dual, & multi-class)~
+@202 = ~The Scholar's Robe
+The Scholar's Robe was especially crafted by Melicamp, the mage apprentice of Beregost, as gratitude to <CHARNAME> for saving him from the maw of a vicious wolf after he accidentally turned himself into a chicken. The extensive research the minor mage has done on the various robes he was provided has yielded a cloak of extraordinary power.
+
+These heavy robes bear some of the resiliency and durability of Drow steel without the flaw of crumbling to dust under the light of the sun. It also provides the wearer with resistance to some of the elemental magics used in the realms.
+
+STATISTICS:
+
+Armor Class:  7
+Saving Throw:  +1 bonus
+Magic Resistance:  10%
+Movement Rate: +2 bonus
+Weight:  9
+Only usable by:
+Mage (single, dual, & multi-class)~
+@203 = ~Requires the main component~
+@204 = ~Your drow items have disintegrated.~

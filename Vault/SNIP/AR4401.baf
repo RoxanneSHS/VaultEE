@@ -1,0 +1,50 @@
+IF
+	OR(2)
+		GlobalLT("ReturnNashQuest","GLOBAL",7)
+		GlobalGT("ReturnNashQuest","GLOBAL",7)
+THEN
+	RESPONSE #100
+		TriggerActivation("ReturnNashTrap 1",FALSE)
+		TriggerActivation("ReturnNashTrap 2",FALSE)
+		TriggerActivation("ReturnNashTrap 3",FALSE)
+		TriggerActivation("ReturnNashTrap 4",FALSE)
+		Continue()
+END
+
+IF
+	Global("ReturnNashQuest","GLOBAL",7)
+	Global("ReturnNashLevel1","GLOBAL",0)
+THEN
+	RESPONSE #100
+		TriggerActivation("ReturnNashTrap 1",TRUE)
+		TriggerActivation("ReturnNashTrap 2",TRUE)
+		TriggerActivation("ReturnNashTrap 3",TRUE)
+		TriggerActivation("ReturnNashTrap 4",TRUE)
+		CreateCreature("SPIDSW",[1145.1375],0) // Sword Spider
+		CreateCreature("SPIDSW",[1145.1375],0) // Sword Spider
+		CreateCreature("SPIDSW",[1145.1375],0) // Sword Spider
+		CreateCreature("SPIDPH",[1145.1375],0) // Phase Spider
+		CreateCreature("SPIDPH",[1145.1375],0) // Phase Spider
+		CreateCreature("SPIDPHAS",[1445.1375],0) // Astral Phase Spider
+		CreateCreature("SPIDSW",[1445.775],0) // Sword Spider
+		CreateCreature("SPIDSW",[1445.775],0) // Sword Spider
+		CreateCreature("SPIDSW",[1445.775],0) // Sword Spider
+		CreateCreature("SPIDPH",[1445.775],0) // Phase Spider
+		CreateCreature("SPIDPH",[1445.775],0) // Phase Spider
+		CreateCreature("SPIDPHAS",[1445.775],0) // Astral Phase Spider
+		CreateCreature("SPIDSW",[1525.1250],0) // Sword Spider
+		CreateCreature("SPIDWR",[1525.1250],0) // Wraith Spider
+		CreateCreature("SPIDSW",[1880.1390],0) // Sword Spider
+		CreateCreature("SPIDWR",[1880.1390],0) // Wraith Spider
+		CreateCreature("SPIDSW",[2045.1940],0) // Sword Spider
+		CreateCreature("SPIDWR",[2045.1940],0) // Wraith Spider
+		CreateCreature("SPIDSW",[745.1335],0) // Sword Spider
+		CreateCreature("SPIDWR",[745.1335],0) // Wraith Spider
+		CreateCreature("SPIDPHAS",[1140.1575],0) // Astral Phase Spider
+		CreateCreature("SPIDPHAS",[1140.1575],0) // Astral Phase Spider
+		CreateCreature("JC_DRW04",[1140.1575],0)
+		SetGlobal("ReturnNashLevel1","GLOBAL",1)
+		Continue()
+END
+
+
