@@ -5,14 +5,14 @@
  	*************************************************************************/
 
 	// where should we put backup files?
-BACKUP ~vault/backup~  
+BACKUP ~vaulteet/backup~  
 
 	// where should tell the user to send email if something goes wrong? 
 AUTHOR ~http://www.shsforums.net/user/29731-beleg33/~
 
 VERSION	~v7.3~
 
-AUTO_TRA ~Vault/Language/%s/D~ //%~
+AUTO_TRA ~vaulteet/Language/%s/D~ //%~
 
 ALWAYS
   ACTION_IF ENGINE_IS ~bgee bg2ee eet~ BEGIN
@@ -29,55 +29,55 @@ ALWAYS
       INT_VAR
       infer_charsets = 0
       STR_VAR
-      tra_path = "Vault/Language"
-      iconv_path = "Vault/Language/iconv" //available as part of the base system on OS X and GNU/Linux
+      tra_path = "vaulteet/Language"
+      iconv_path = "vaulteet/Language/iconv" //available as part of the base system on OS X and GNU/Linux
       charset_table = charsetsTable
       reload_array = charsetsReloadArray
     END
-    LOAD_TRA ~Vault/Language/%LANGUAGE%/Setup-ee.tra~
+    LOAD_TRA ~vaulteet/Language/%LANGUAGE%/Setup-ee.tra~
   END
   ACTION_IF GAME_IS ~bgee~ BEGIN
-    INCLUDE ~Vault/lib/liam_bgee_vars.tpa~
+    INCLUDE ~vaulteet/lib/liam_bgee_vars.tpa~
   END ELSE ACTION_IF GAME_IS ~bgt~ BEGIN
-    INCLUDE ~Vault/lib/g3_bgt_cpmvars.tpa~
+    INCLUDE ~vaulteet/lib/g3_bgt_cpmvars.tpa~
   END ELSE ACTION_IF GAME_IS ~eet~ BEGIN
-    INCLUDE ~Vault/lib/eet_cpmvars.tpa~
+    INCLUDE ~vaulteet/lib/eet_cpmvars.tpa~
   END ELSE ACTION_IF GAME_IS ~tutu~ BEGIN
-    INCLUDE ~Vault/lib/g3_tutu_cpmvars.tpa~
+    INCLUDE ~vaulteet/lib/g3_tutu_cpmvars.tpa~
   END
 END
 
 LANGUAGE ~English~
 	~english~
-	~Vault/Language/english/setup.tra~
+	~vaulteet/Language/english/setup.tra~
 LANGUAGE ~Francais (Traduit par les d'Oghmatiques))~
 	~french~
-	~Vault/Language/french/setup.tra~
+	~vaulteet/Language/french/setup.tra~
 LANGUAGE ~Italian (translated by Ilot)~
 	~italian~
-	~Vault/Language/italian/setup.tra~
+	~vaulteet/Language/italian/setup.tra~
 LANGUAGE ~Espa¤ol (Traducido por Saemon de ClanDLAN.net, actualizado por Lisandro)~
 	~spanish~
-	~Vault/Language/spanish/setup.tra~
+	~vaulteet/Language/spanish/setup.tra~
 LANGUAGE ~Russian (translated by Silent and Aldark of arcanecoast.ru)~
 	~russian~
-	~Vault/Language/russian/setup.tra~ 
+	~vaulteet/Language/russian/setup.tra~ 
 LANGUAGE ~Polski (Aristo)~
 	~polish~
-	~Vault/Language/polish/setup.tra~
+	~vaulteet/Language/polish/setup.tra~
 
 BEGIN @0 DESIGNATED 0
-REQUIRE_PREDICATE GAME_IS ~bgt bgee eet~ ~This mod is not compatible with your game~
+REQUIRE_PREDICATE GAME_IS ~eet~ ~This mod is not compatible with your game~
 
 
 ///////////////////////////////////////////////////////////////////////////////
 //	D folder 				// compile new dialogs and extensions
 ///////////////////////////////////////////////////////////////////////////////
 
-		COMPILE EVAL ~vault/D~
+		COMPILE EVAL ~vaulteet/D~
 /* ACTION_IF FILE_EXISTS_IN_GAME ~X#BG1NPCCore.G3~
 	THEN BEGIN
-		COMPILE EVAL ~vault/D/BG1NPC~
+		COMPILE EVAL ~vaulteet/D/BG1NPC~
 END */
 
 ///////////////////////////////////////////////////////////////
@@ -87,7 +87,7 @@ END */
 
 ACTION_IF NOT FILE_EXISTS ~data/tdd-rule.bif~ THEN BEGIN 
 ACTION_IF NOT FILE_EXISTS ~data/rot-rule.bif~ THEN BEGIN
-COPY  ~vault/2da~		~override~					// 2DA folder, rules 50 pack (These are OK for BGT)
+COPY  ~vaulteet/2da~		~override~					// 2DA folder, rules 50 pack (These are OK for BGT)
   END
 END */
 
@@ -1323,63 +1323,63 @@ BUT_ONLY_IF_IT_CHANGES  // ~%NashkelMines_L3%.are~
 
 //      BAM folder, bam files for custom items
 
-COPY	~vault/bam~		~override~			
+COPY	~vaulteet/bam~		~override~			
 
 //      Scripts changes
 
 COPY_EXISTING ~CENTEOL.BCS~          ~override~
   PATCH_IF ENGINE_IS ~bgee bg2ee~ BEGIN
-    REPLACE_BCS_BLOCK ~vault/snip/ocenteol-ee.baf~  ~vault/snip/ncenteol.baf~
+    REPLACE_BCS_BLOCK ~vaulteet/snip/ocenteol-ee.baf~  ~vaulteet/snip/ncenteol.baf~
   END ELSE BEGIN
-    REPLACE_BCS_BLOCK ~vault/snip/ocenteol.baf~  ~vault/snip/ncenteol.baf~
+    REPLACE_BCS_BLOCK ~vaulteet/snip/ocenteol.baf~  ~vaulteet/snip/ncenteol.baf~
   END
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~denak.BCS~          ~override~
-  REPLACE_BCS_BLOCK ~vault/snip/odenak.baf~  ~vault/snip/ndenak.baf~
+  REPLACE_BCS_BLOCK ~vaulteet/snip/odenak.baf~  ~vaulteet/snip/ndenak.baf~
 BUT_ONLY_IF_IT_CHANGES
 
 //	Scripts extend
-EXTEND_BOTTOM ~wtarsgt.bcs~ ~vault/snip/jc_wt.baf~
-EXTEND_BOTTOM ~wtasight.bcs~ ~vault/snip/jc_wt.baf~
-EXTEND_BOTTOM ~wtattkbe.bcs~ ~vault/snip/jc_wt.baf~
-EXTEND_BOTTOM ~wtattwat.bcs~ ~vault/snip/jc_wt.baf~
-EXTEND_BOTTOM ~wtholdbe.bcs~ ~vault/snip/jc_wt.baf~
-EXTEND_BOTTOM ~%NBaldursGate_BCS%.bcs~ ~vault/snip/jc7300.baf~
-EXTEND_BOTTOM ~%DurlagsTower_BCS%.bcs~ ~vault/snip/jcd000.baf~
-EXTEND_BOTTOM ~%EBaldursGate_BCS%.bcs~ ~vault/snip/jc7800.baf~
-EXTEND_BOTTOM ~%WyrmsCrossing_BCS%.bcs~ ~vault/snip/jc7900.baf~
-EXTEND_BOTTOM ~%IceIsland_BCS%.bcs~ ~vault/snip/jcu008.baf~
-EXTEND_BOTTOM ~%CloakwoodMines_BCS%.bcs~ ~vault/snip/jc8600.baf~
-EXTEND_BOTTOM ~%BanditCamp_BCS%.bcs~ ~vault/snip/jc8700.baf~
-EXTEND_BOTTOM ~%IsleofBalduranS_BCS%.bcs~ ~vault/snip/jcw000.baf~
-EXTEND_BOTTOM ~%FriendlyArmInn_BCS%.bcs~ ~vault/snip/jc6800.baf~
-EXTEND_BOTTOM ~%Candlekeep_Ch6_BCS%.bcs~ ~vault/snip/jc6526.baf~ EVALUATE_BUFFER
-EXTEND_BOTTOM ~%Beregost_BCS%.bcs~ ~vault/snip/jc6700.baf~
-EXTEND_BOTTOM ~%Nashkel_BCS%.bcs~ ~vault/snip/jc3700.baf~
-EXTEND_BOTTOM ~%NashkelCarnival_BCS%.bcs~ ~vault/snip/jc3800.baf~
-EXTEND_BOTTOM ~%NashkelMines_BCS%.bcs~ ~vault/snip/jc4400.baf~
-EXTEND_TOP ~%BearRiver_BCS%.BCS~ ~vault/snip/AR3499.BAF~
-EXTEND_TOP ~%NashkelMines_L1_BCS%.BCS~ ~vault/snip/AR4401.BAF~
-EXTEND_TOP ~%NashkelMines_L2_BCS%.BCS~ ~vault/snip/AR4402.BAF~
-EXTEND_TOP ~%NashkelMines_L3_BCS%.BCS~ ~vault/snip/AR4403.BAF~
-EXTEND_TOP ~%Candlekeep_Catacombs_L1Antechamber_BCS%.BCS~ ~vault/snip/AR6513.BAF~
-EXTEND_TOP ~%SpiderWood_BCS%.BCS~ ~vault/snip/AR9100.BAF~
-EXTEND_TOP ~%Temple_Vestibule_BCS%.BCS~ ~vault/snip/AR9301.BAF~ EVALUATE_BUFFER
-EXTEND_TOP ~%UlcasterRuins_BCS%.BCS~ ~vault/snip/AR9798.BAF~
-EXTEND_TOP ~%Gullykin_BCS%.BCS~ ~vault/snip/AR9900.BAF~
-EXTEND_BOTTOM ~baldur.bcs~ ~vault/snip/drowdisint.baf~
+EXTEND_BOTTOM ~wtarsgt.bcs~ ~vaulteet/snip/jc_wt.baf~
+EXTEND_BOTTOM ~wtasight.bcs~ ~vaulteet/snip/jc_wt.baf~
+EXTEND_BOTTOM ~wtattkbe.bcs~ ~vaulteet/snip/jc_wt.baf~
+EXTEND_BOTTOM ~wtattwat.bcs~ ~vaulteet/snip/jc_wt.baf~
+EXTEND_BOTTOM ~wtholdbe.bcs~ ~vaulteet/snip/jc_wt.baf~
+EXTEND_BOTTOM ~%NBaldursGate_BCS%.bcs~ ~vaulteet/snip/jc7300.baf~
+EXTEND_BOTTOM ~%DurlagsTower_BCS%.bcs~ ~vaulteet/snip/jcd000.baf~
+EXTEND_BOTTOM ~%EBaldursGate_BCS%.bcs~ ~vaulteet/snip/jc7800.baf~
+EXTEND_BOTTOM ~%WyrmsCrossing_BCS%.bcs~ ~vaulteet/snip/jc7900.baf~
+EXTEND_BOTTOM ~%IceIsland_BCS%.bcs~ ~vaulteet/snip/jcu008.baf~
+EXTEND_BOTTOM ~%CloakwoodMines_BCS%.bcs~ ~vaulteet/snip/jc8600.baf~
+EXTEND_BOTTOM ~%BanditCamp_BCS%.bcs~ ~vaulteet/snip/jc8700.baf~
+EXTEND_BOTTOM ~%IsleofBalduranS_BCS%.bcs~ ~vaulteet/snip/jcw000.baf~
+EXTEND_BOTTOM ~%FriendlyArmInn_BCS%.bcs~ ~vaulteet/snip/jc6800.baf~
+EXTEND_BOTTOM ~%Candlekeep_Ch6_BCS%.bcs~ ~vaulteet/snip/jc6526.baf~ EVALUATE_BUFFER
+EXTEND_BOTTOM ~%Beregost_BCS%.bcs~ ~vaulteet/snip/jc6700.baf~
+EXTEND_BOTTOM ~%Nashkel_BCS%.bcs~ ~vaulteet/snip/jc3700.baf~
+EXTEND_BOTTOM ~%NashkelCarnival_BCS%.bcs~ ~vaulteet/snip/jc3800.baf~
+EXTEND_BOTTOM ~%NashkelMines_BCS%.bcs~ ~vaulteet/snip/jc4400.baf~
+EXTEND_TOP ~%BearRiver_BCS%.BCS~ ~vaulteet/snip/AR3499.BAF~
+EXTEND_TOP ~%NashkelMines_L1_BCS%.BCS~ ~vaulteet/snip/AR4401.BAF~
+EXTEND_TOP ~%NashkelMines_L2_BCS%.BCS~ ~vaulteet/snip/AR4402.BAF~
+EXTEND_TOP ~%NashkelMines_L3_BCS%.BCS~ ~vaulteet/snip/AR4403.BAF~
+EXTEND_TOP ~%Candlekeep_Catacombs_L1Antechamber_BCS%.BCS~ ~vaulteet/snip/AR6513.BAF~
+EXTEND_TOP ~%SpiderWood_BCS%.BCS~ ~vaulteet/snip/AR9100.BAF~
+EXTEND_TOP ~%Temple_Vestibule_BCS%.BCS~ ~vaulteet/snip/AR9301.BAF~ EVALUATE_BUFFER
+EXTEND_TOP ~%UlcasterRuins_BCS%.BCS~ ~vaulteet/snip/AR9798.BAF~
+EXTEND_TOP ~%Gullykin_BCS%.BCS~ ~vaulteet/snip/AR9900.BAF~
+EXTEND_BOTTOM ~baldur.bcs~ ~vaulteet/snip/drowdisint.baf~
 
 //      New Area
 
-COPY ~vault/ARE~ ~override~
-COPY_EXISTING ~Vault/ARE/VT0001.WED~ ~override~
+COPY ~vaulteet/ARE~ ~override~
+COPY_EXISTING ~vaulteet/ARE/VT0001.WED~ ~override~
 	WRITE_ASCIIE 0x24 ~%ArchaeologicalSite_Tomb%~ #8
 BUT_ONLY
 
 //      New scripts
 
-COMPILE EVAL ~vault/BAF~
+COMPILE EVAL ~vaulteet/BAF~
 
 
 //	Patching/adding creatures
@@ -2347,109 +2347,109 @@ COPY_EXISTING ~zhalim.cre~  ~override~
 BUT_ONLY_IF_IT_CHANGES
 
 //	CRE folder - New creatures
-COPY ~vault/cre/jc.cre~ ~override/jc.cre~				
+COPY ~vaulteet/cre/jc.cre~ ~override/jc.cre~				
    	  SAY NAME1 @2
   	  SAY NAME2 @2
-COPY ~vault/cre/jc_dem01.cre~ ~override/jc_dem01.cre~
+COPY ~vaulteet/cre/jc_dem01.cre~ ~override/jc_dem01.cre~
   	  SAY NAME1 @3
   	  SAY NAME2 @3
-COPY ~vault/cre/jc_dem02.cre~ ~override/jc_dem02.cre~
+COPY ~vaulteet/cre/jc_dem02.cre~ ~override/jc_dem02.cre~
   	  SAY NAME1 @4
   	  SAY NAME2 @4
-COPY ~vault/cre/jc_drak.cre~ ~override/jc_drak.cre~
+COPY ~vaulteet/cre/jc_drak.cre~ ~override/jc_drak.cre~
   	  SAY NAME1 @5
   	  SAY NAME2 @5
-COPY ~vault/cre/jc_drw01.cre~ ~override/jc_drw01.cre~
+COPY ~vaulteet/cre/jc_drw01.cre~ ~override/jc_drw01.cre~
   	  SAY NAME1 @6
   	  SAY NAME2 @6
-COPY ~vault/cre/jc_drw02.cre~ ~override/jc_drw02.cre~
+COPY ~vaulteet/cre/jc_drw02.cre~ ~override/jc_drw02.cre~
   	  SAY NAME1 @7
   	  SAY NAME2 @7
-COPY ~vault/cre/jc_drw03.cre~ ~override/jc_drw03.cre~
+COPY ~vaulteet/cre/jc_drw03.cre~ ~override/jc_drw03.cre~
   	  SAY NAME1 @8
   	  SAY NAME2 @8
-COPY ~vault/cre/jc_drw04.cre~ ~override/jc_drw04.cre~
+COPY ~vaulteet/cre/jc_drw04.cre~ ~override/jc_drw04.cre~
   	  SAY NAME1 @9
   	  SAY NAME2 @9
-COPY ~vault/cre/jc_drw05.cre~ ~override/jc_drw05.cre~
+COPY ~vaulteet/cre/jc_drw05.cre~ ~override/jc_drw05.cre~
   	  SAY NAME1 @10
   	  SAY NAME2 @10
-COPY ~vault/cre/jc_drw06.cre~ ~override/jc_drw06.cre~
+COPY ~vaulteet/cre/jc_drw06.cre~ ~override/jc_drw06.cre~
   	  SAY NAME1 @11
   	  SAY NAME2 @11
-COPY ~vault/cre/jc_gol.cre~ ~override/jc_gol.cre~
+COPY ~vaulteet/cre/jc_gol.cre~ ~override/jc_gol.cre~
   	  SAY NAME1 @1
   	  SAY NAME2 @1
-COPY ~vault/cre/jc_mag01.cre~ ~override/jc_mag01.cre~
+COPY ~vaulteet/cre/jc_mag01.cre~ ~override/jc_mag01.cre~
    	  SAY NAME1 @12
   	  SAY NAME2 @12
-COPY ~vault/cre/jc_ogr01.cre~ ~override/jc_ogr01.cre~
+COPY ~vaulteet/cre/jc_ogr01.cre~ ~override/jc_ogr01.cre~
    	  SAY NAME1 @13
   	  SAY NAME2 @13
-COPY ~vault/cre/jc_ogr02.cre~ ~override/jc_ogr02.cre~
+COPY ~vaulteet/cre/jc_ogr02.cre~ ~override/jc_ogr02.cre~
    	  SAY NAME1 @14
   	  SAY NAME2 @14
-COPY ~vault/cre/jc_ogr03.cre~ ~override/jc_ogr03.cre~
+COPY ~vaulteet/cre/jc_ogr03.cre~ ~override/jc_ogr03.cre~
    	  SAY NAME1 @15
   	  SAY NAME2 @15
-COPY ~vault/cre/jc_ske01.cre~ ~override/jc_ske01.cre~
+COPY ~vaulteet/cre/jc_ske01.cre~ ~override/jc_ske01.cre~
    	  SAY NAME1 @16
   	  SAY NAME2 @16
-COPY ~vault/cre/jc_ske02.cre~ ~override/jc_ske02.cre~
+COPY ~vaulteet/cre/jc_ske02.cre~ ~override/jc_ske02.cre~
    	  SAY NAME1 @16
   	  SAY NAME2 @16
-COPY ~vault/cre/jc_thf01.cre~ ~override/jc_thf01.cre~
+COPY ~vaulteet/cre/jc_thf01.cre~ ~override/jc_thf01.cre~
   	  SAY NAME1 @17
   	  SAY NAME2 @17
-COPY ~vault/cre/jc_thf02.cre~ ~override/jc_thf02.cre~
+COPY ~vaulteet/cre/jc_thf02.cre~ ~override/jc_thf02.cre~
   	  SAY NAME1 @18
   	  SAY NAME2 @18
-COPY ~vault/cre/jc_thf03.cre~ ~override/jc_thf03.cre~
+COPY ~vaulteet/cre/jc_thf03.cre~ ~override/jc_thf03.cre~
   	  SAY NAME1 @19
   	  SAY NAME2 @19
-COPY ~vault/cre/jc_thf04.cre~ ~override/jc_thf04.cre~
+COPY ~vaulteet/cre/jc_thf04.cre~ ~override/jc_thf04.cre~
   	  SAY NAME1 @20
   	  SAY NAME2 @20
-COPY ~vault/cre/jc_tr01.cre~ ~override/jc_tr01.cre~
+COPY ~vaulteet/cre/jc_tr01.cre~ ~override/jc_tr01.cre~
   	  SAY NAME1 @21
   	  SAY NAME2 @21
-COPY ~vault/cre/jc_tr02.cre~ ~override/jc_tr02.cre~
+COPY ~vaulteet/cre/jc_tr02.cre~ ~override/jc_tr02.cre~
   	  SAY NAME1 @21
   	  SAY NAME2 @21
-COPY ~vault/cre/jc_tr03.cre~ ~override/jc_tr03.cre~
+COPY ~vaulteet/cre/jc_tr03.cre~ ~override/jc_tr03.cre~
   	  SAY NAME1 @21
   	  SAY NAME2 @21
-COPY ~vault/cre/jc_tr04.cre~ ~override/jc_tr04.cre~
+COPY ~vaulteet/cre/jc_tr04.cre~ ~override/jc_tr04.cre~
   	  SAY NAME1 @21
   	  SAY NAME2 @21
-COPY ~vault/cre/jc_tr05.cre~ ~override/jc_tr05.cre~
+COPY ~vaulteet/cre/jc_tr05.cre~ ~override/jc_tr05.cre~
   	  SAY NAME1 @21
   	  SAY NAME2 @21
-COPY ~vault/cre/jc_tr06.cre~ ~override/jc_tr06.cre~
+COPY ~vaulteet/cre/jc_tr06.cre~ ~override/jc_tr06.cre~
   	  SAY NAME1 @21
   	  SAY NAME2 @21
-COPY ~vault/cre/jc_tr07.cre~ ~override/jc_tr07.cre~
+COPY ~vaulteet/cre/jc_tr07.cre~ ~override/jc_tr07.cre~
   	  SAY NAME1 @21
   	  SAY NAME2 @21
-COPY ~vault/cre/jc_tr08.cre~ ~override/jc_tr08.cre~
+COPY ~vaulteet/cre/jc_tr08.cre~ ~override/jc_tr08.cre~
   	  SAY NAME1 @21
   	  SAY NAME2 @21
-COPY ~vault/cre/jc_tr09.cre~ ~override/jc_tr09.cre~
+COPY ~vaulteet/cre/jc_tr09.cre~ ~override/jc_tr09.cre~
   	  SAY NAME1 @21
   	  SAY NAME2 @21
-COPY ~vault/cre/jc_vam.cre~ ~override/jc_vam.cre~
+COPY ~vaulteet/cre/jc_vam.cre~ ~override/jc_vam.cre~
   	  SAY NAME1 @22
   	  SAY NAME2 @22
-COPY ~vault/cre/jc_vs1.cre~ ~override/jc_vs1.cre~
+COPY ~vaulteet/cre/jc_vs1.cre~ ~override/jc_vs1.cre~
   	  SAY NAME1 @23
   	  SAY NAME2 @23
-COPY ~vault/cre/jc_vs2.cre~ ~override/jc_vs2.cre~
+COPY ~vaulteet/cre/jc_vs2.cre~ ~override/jc_vs2.cre~
   	  SAY NAME1 @23
   	  SAY NAME2 @23
-COPY ~vault/cre/jc_wlfwe.cre~ ~override/jc_wlfwe.cre~
+COPY ~vaulteet/cre/jc_wlfwe.cre~ ~override/jc_wlfwe.cre~
    	  SAY NAME1 @24
   	  SAY NAME2 @24
-COPY ~vault/cre/jrnl.cre~ ~override/jrnl.cre~
+COPY ~vaulteet/cre/jrnl.cre~ ~override/jrnl.cre~
    	  SAY NAME1 @25
   	  SAY NAME2 @25
 
@@ -2468,9 +2468,9 @@ COPY_EXISTING ~highhedg.sto~ ~override~
 	ADD_STORE_ITEM ~echan01~ AFTER ~wand02~ #0 #0 #0 ~IDENTIFIED~ #1
 	ADD_STORE_ITEM ~potn52~ AFTER ~echan01~ #1 #0 #0 ~IDENTIFIED~ #20
 
-COPY	~vault/sto/jc_tem01.sto~	~override/jc_tem01.sto~
+COPY	~vaulteet/sto/jc_tem01.sto~	~override/jc_tem01.sto~
   	  SAY NAME2 @26
-COPY	~vault/sto/jc_vs2.sto~	~override/jc_vs2.sto~
+COPY	~vaulteet/sto/jc_vs2.sto~	~override/jc_vs2.sto~
   	  SAY NAME2 @27
 
 COPY_EXISTING ~sto0703.sto~ ~override~
@@ -2539,119 +2539,119 @@ COPY_EXISTING ~ulgoth.sto~ ~override~
 	ADD_STORE_ITEM ~potn52~ AFTER ~potn38~ #1 #0 #0 ~IDENTIFIED~ #15
 	
 //      New stores
-COPY	~vault/sto/tem0149.sto~		~override/tem0149.sto~
+COPY	~vaulteet/sto/tem0149.sto~		~override/tem0149.sto~
 	 SAY NAME2 @29
-COPY	~vault/sto/tem0609.sto~		~override/tem0609.sto~
+COPY	~vaulteet/sto/tem0609.sto~		~override/tem0609.sto~
 	 SAY NAME2 @30
 
 
 //     Items
 
-COPY ~vault/itm/amultf.itm~		~override/amultf.itm~	
+COPY ~vaulteet/itm/amultf.itm~		~override/amultf.itm~	
    SAY NAME1 @31
    SAY NAME2 @32
    SAY UNIDENTIFIED_DESC @33
    SAY DESC @34
 
-COPY ~vault/itm/blundag.itm~ ~override/blundag.itm~
+COPY ~vaulteet/itm/blundag.itm~ ~override/blundag.itm~
    SAY NAME1 @39
    SAY NAME2 @40
    SAY UNIDENTIFIED_DESC @41
    SAY DESC @42
 
-COPY ~vault/itm/blundth.itm~ ~override/blundth.itm~
+COPY ~vaulteet/itm/blundth.itm~ ~override/blundth.itm~
    SAY NAME1 @43
    SAY NAME2 @44
    SAY UNIDENTIFIED_DESC @45
    SAY DESC @46
 
-COPY ~vault/itm/blunpoi.itm~ ~override/blunpoi.itm~
+COPY ~vaulteet/itm/blunpoi.itm~ ~override/blunpoi.itm~
    SAY NAME1 @39
    SAY NAME2 @47
    SAY UNIDENTIFIED_DESC @41
    SAY DESC @48
 
-COPY ~vault/itm/blunrag.itm~ ~override/blunrag.itm~
+COPY ~vaulteet/itm/blunrag.itm~ ~override/blunrag.itm~
    SAY NAME1 @49
    SAY NAME2 @50
    SAY UNIDENTIFIED_DESC @51
    SAY DESC @52
 
-COPY ~vault/itm/bookdrw.itm~ ~override/bookdrw.itm~
+COPY ~vaulteet/itm/bookdrw.itm~ ~override/bookdrw.itm~
    SAY NAME1 @55
    SAY NAME2 @55
    SAY UNIDENTIFIED_DESC @56
    SAY DESC @57
 
-COPY ~vault/itm/bootfox.itm~ ~override/bootfox.itm~
+COPY ~vaulteet/itm/bootfox.itm~ ~override/bootfox.itm~
    SAY NAME1 @58
    SAY NAME2 @59
    SAY UNIDENTIFIED_DESC @60
    SAY DESC @61
 
-COPY ~vault/itm/bowpha.itm~ ~override/bowpha.itm~
+COPY ~vaulteet/itm/bowpha.itm~ ~override/bowpha.itm~
    SAY NAME1 @62
    SAY NAME2 @63
    SAY UNIDENTIFIED_DESC @64
    SAY DESC @65
 
-COPY ~vault/itm/chandrw.itm~ ~override/chandrw.itm~
+COPY ~vaulteet/itm/chandrw.itm~ ~override/chandrw.itm~
    SAY NAME1 @70
    SAY NAME2 @71
    SAY UNIDENTIFIED_DESC @72
    SAY DESC @73
 
-COPY ~vault/itm/clckst1.itm~ ~override/clckst1.itm~
+COPY ~vaulteet/itm/clckst1.itm~ ~override/clckst1.itm~
    SAY NAME1 @74
    SAY NAME2 @75
    SAY UNIDENTIFIED_DESC @76
    SAY DESC @77
 
-COPY ~vault/itm/clckst2.itm~ ~override/clckst2.itm~
+COPY ~vaulteet/itm/clckst2.itm~ ~override/clckst2.itm~
    SAY NAME1 @74
    SAY NAME2 @78
    SAY UNIDENTIFIED_DESC @76
    SAY DESC @79
 
-COPY ~vault/itm/clckst3.itm~ ~override/clckst3.itm~
+COPY ~vaulteet/itm/clckst3.itm~ ~override/clckst3.itm~
    SAY NAME1 @74
    SAY NAME2 @80
    SAY UNIDENTIFIED_DESC @76
    SAY DESC @81
 
-COPY ~vault/itm/crown.itm~ ~override/crown.itm~
+COPY ~vaulteet/itm/crown.itm~ ~override/crown.itm~
    SAY NAME1 @82
    SAY NAME2 @83
    SAY UNIDENTIFIED_DESC @84
    SAY DESC @85
 
-COPY ~vault/itm/doc1.itm~ ~override/doc1.itm~
+COPY ~vaulteet/itm/doc1.itm~ ~override/doc1.itm~
    SAY NAME1 @86
    SAY NAME2 @86
    SAY UNIDENTIFIED_DESC @87
    SAY DESC @87
 
-COPY ~vault/itm/echan01.itm~ ~override/echan01.itm~
+COPY ~vaulteet/itm/echan01.itm~ ~override/echan01.itm~
    SAY NAME1 @70
    SAY NAME2 @88
    SAY UNIDENTIFIED_DESC @72
    SAY DESC @89
 
-COPY ~vault/itm/echan02.itm~ ~override/echan02.itm~
+COPY ~vaulteet/itm/echan02.itm~ ~override/echan02.itm~
    SAY NAME1 @70
    SAY NAME2 @90
    SAY UNIDENTIFIED_DESC @72
    SAY DESC @91
 
-COPY ~vault/itm/golems.itm~ ~override/golems.itm~
+COPY ~vaulteet/itm/golems.itm~ ~override/golems.itm~
 
-COPY ~vault/itm/hammlat.itm~ ~override/hammlat.itm~
+COPY ~vaulteet/itm/hammlat.itm~ ~override/hammlat.itm~
    SAY NAME1 @92
    SAY NAME2 @93
    SAY UNIDENTIFIED_DESC @94
    SAY DESC @95
 
-COPY ~vault/itm/hat01.itm~ ~override/hat01.itm~
+COPY ~vaulteet/itm/hat01.itm~ ~override/hat01.itm~
    SAY NAME1 @96
    SAY NAME2 @97
    SAY UNIDENTIFIED_DESC @98
@@ -2699,100 +2699,100 @@ COPY_EXISTING ~helm06.itm~ ~override/helm06a.itm~
          parameter2 = 0
    END
 
-COPY ~vault/itm/helmdem.itm~ ~override/helmdem.itm~
-COPY ~vault/itm/jc_poof.itm~ ~override/jc_poof.itm~
+COPY ~vaulteet/itm/helmdem.itm~ ~override/helmdem.itm~
+COPY ~vaulteet/itm/jc_poof.itm~ ~override/jc_poof.itm~
 
-COPY ~vault/itm/leatbal.itm~ ~override/leatbal.itm~
+COPY ~vaulteet/itm/leatbal.itm~ ~override/leatbal.itm~
    SAY NAME1 @106
    SAY NAME2 @107
    SAY UNIDENTIFIED_DESC @108
    SAY DESC @109
 
-COPY ~vault/itm/leatbar.itm~ ~override/leatbar.itm~
+COPY ~vaulteet/itm/leatbar.itm~ ~override/leatbar.itm~
    SAY NAME1 @106
    SAY NAME2 @110
    SAY UNIDENTIFIED_DESC @108
    SAY DESC @111
 
-COPY ~vault/itm/miscdrw1.itm~ ~override/miscdrw1.itm~
+COPY ~vaulteet/itm/miscdrw1.itm~ ~override/miscdrw1.itm~
    SAY NAME1 @112
    SAY NAME2 @112
    SAY UNIDENTIFIED_DESC @113
    SAY DESC @113
 
-COPY ~vault/itm/miscdrw2.itm~ ~override/miscdrw2.itm~
+COPY ~vaulteet/itm/miscdrw2.itm~ ~override/miscdrw2.itm~
    SAY NAME1 @114
    SAY NAME2 @114
    SAY UNIDENTIFIED_DESC @115
    SAY DESC @115
 
-COPY ~vault/itm/miscdrw3.itm~ ~override/miscdrw3.itm~
+COPY ~vaulteet/itm/miscdrw3.itm~ ~override/miscdrw3.itm~
    SAY NAME1 @116
    SAY NAME2 @117
    SAY UNIDENTIFIED_DESC @118
    SAY DESC @119
 
-COPY ~vault/itm/platwy.itm~ ~override/platwy.itm~	// vestibule MOD item
+COPY ~vaulteet/itm/platwy.itm~ ~override/platwy.itm~	// vestibule MOD item
    SAY NAME1 @120
    SAY NAME2 @121
    SAY UNIDENTIFIED_DESC @122
    SAY DESC @123
    
-COPY ~vault/itm/ringmyst.itm~ ~override/ringmyst.itm~
+COPY ~vaulteet/itm/ringmyst.itm~ ~override/ringmyst.itm~
    SAY NAME1 @127
    SAY NAME2 @128
    SAY UNIDENTIFIED_DESC @129
    SAY DESC @130
 
-COPY ~vault/itm/ringperc.itm~ ~override/ringperc.itm~
+COPY ~vaulteet/itm/ringperc.itm~ ~override/ringperc.itm~
    SAY NAME1 @127
    SAY NAME2 @131
    SAY UNIDENTIFIED_DESC @129
    SAY DESC @132
 
-COPY ~vault/itm/stafcad.itm~ ~override/stafcad.itm~
+COPY ~vaulteet/itm/stafcad.itm~ ~override/stafcad.itm~
    SAY NAME1 @133
    SAY NAME2 @134
    SAY UNIDENTIFIED_DESC @135
    SAY DESC @136
 
-COPY ~vault/itm/stafoak.itm~ ~override/stafoak.itm~
+COPY ~vaulteet/itm/stafoak.itm~ ~override/stafoak.itm~
    SAY NAME1 @133
    SAY NAME2 @137
    SAY UNIDENTIFIED_DESC @135
    SAY DESC @138
 
-COPY ~vault/itm/staftha.itm~ ~override/staftha.itm~
+COPY ~vaulteet/itm/staftha.itm~ ~override/staftha.itm~
    SAY NAME1 @133
    SAY NAME2 @139
    SAY UNIDENTIFIED_DESC @135
    SAY DESC @140
 
-COPY ~vault/itm/sw1dis.itm~ ~override/sw1dis.itm~
+COPY ~vaulteet/itm/sw1dis.itm~ ~override/sw1dis.itm~
    SAY NAME1 @141
    SAY NAME2 @142
    SAY UNIDENTIFIED_DESC @143
    SAY DESC @144
 
-COPY ~vault/itm/sw1drw.itm~ ~override/sw1drw.itm~
+COPY ~vaulteet/itm/sw1drw.itm~ ~override/sw1drw.itm~
    SAY NAME1 @145
    SAY NAME2 @146
    SAY UNIDENTIFIED_DESC @147
    SAY DESC @148
 
-COPY ~vault/itm/sw2hav.itm~ ~override/sw2hav.itm~
+COPY ~vaulteet/itm/sw2hav.itm~ ~override/sw2hav.itm~
    SAY NAME1 @149
    SAY NAME2 @150
    SAY UNIDENTIFIED_DESC @151
    SAY DESC @152
 
-COPY ~vault/itm/sw2val.itm~ ~override/sw2val.itm~
+COPY ~vaulteet/itm/sw2val.itm~ ~override/sw2val.itm~
    SAY NAME1 @149
    SAY NAME2 @153
    SAY UNIDENTIFIED_DESC @151
    SAY DESC @154
 
-COPY ~vault/itm/xbowdrw.itm~ ~override/xbowdrw.itm~
+COPY ~vaulteet/itm/xbowdrw.itm~ ~override/xbowdrw.itm~
    SAY NAME1 @155
    SAY NAME2 @156
    SAY UNIDENTIFIED_DESC @157
@@ -2802,19 +2802,19 @@ COPY_EXISTING ~book68.itm~ ~override/book68.itm~
    SAY UNIDENTIFIED_DESC @161
    SAY DESC @162
 
-COPY ~vault/itm/clck21.itm~ ~override/clck21.itm~
+COPY ~vaulteet/itm/clck21.itm~ ~override/clck21.itm~
    SAY NAME1 @163
    SAY NAME2 @163
    SAY UNIDENTIFIED_DESC @164
    SAY DESC @165
 
-COPY ~vault/itm/clck22.itm~ ~override/clck22.itm~
+COPY ~vaulteet/itm/clck22.itm~ ~override/clck22.itm~
    SAY NAME1 @166
    SAY NAME2 @167
    SAY UNIDENTIFIED_DESC @168
    SAY DESC @169
 
-COPY ~vault/itm/sw1hvam.itm~ ~override/sw1hvam.itm~
+COPY ~vaulteet/itm/sw1hvam.itm~ ~override/sw1hvam.itm~
    SAY NAME1 @170
    SAY NAME2 @171
    SAY UNIDENTIFIED_DESC @172
@@ -2828,95 +2828,95 @@ COPY ~vault/itm/sw1hvam.itm~ ~override/sw1hvam.itm~
    
    
 BEGIN @175 DESIGNATED 1
-REQUIRE_COMPONENT ~setup-vault.tp2~ ~0~ @203
+REQUIRE_COMPONENT ~setup-vaulteet.tp2~ ~0~ @203
 
-COPY ~vault/bam/IR~ ~override~
+COPY ~vaulteet/bam/IR~ ~override~
 
-COPY ~vault/itm/IR/helm04.itm~ ~override/helm04.itm~
+COPY ~vaulteet/itm/IR/helm04.itm~ ~override/helm04.itm~
    SAY NAME1 @82
    SAY NAME2 @176
    SAY UNIDENTIFIED_DESC @84
    SAY DESC @177
 
-COPY ~vault/itm/IR/helm05.itm~ ~override/helm05.itm~
+COPY ~vaulteet/itm/IR/helm05.itm~ ~override/helm05.itm~
    SAY NAME1 @82
    SAY NAME2 @178
    SAY UNIDENTIFIED_DESC @84
    SAY DESC @179
 
-COPY ~vault/itm/IR/helm06.itm~ ~override/helm06.itm~
+COPY ~vaulteet/itm/IR/helm06.itm~ ~override/helm06.itm~
    SAY NAME1 @82
    SAY NAME2 @180
    SAY UNIDENTIFIED_DESC @84
    SAY DESC @181
 
-COPY ~vault/itm/IR/helm04a.itm~ ~override/helm04a.itm~
+COPY ~vaulteet/itm/IR/helm04a.itm~ ~override/helm04a.itm~
    SAY NAME1 @82
    SAY NAME2 @182
    SAY UNIDENTIFIED_DESC @84
    SAY DESC @183
 
-COPY ~vault/itm/IR/helm05a.itm~ ~override/helm05a.itm~
+COPY ~vaulteet/itm/IR/helm05a.itm~ ~override/helm05a.itm~
    SAY NAME1 @82
    SAY NAME2 @184
    SAY UNIDENTIFIED_DESC @84
    SAY DESC @185
 
-COPY ~vault/itm/IR/helm06a.itm~ ~override/helm06a.itm~
+COPY ~vaulteet/itm/IR/helm06a.itm~ ~override/helm06a.itm~
    SAY NAME1 @82
    SAY NAME2 @186
    SAY UNIDENTIFIED_DESC @84
    SAY DESC @187
 
-COPY ~vault/itm/IR/clck09.itm~ ~override/clck09.itm~
+COPY ~vaulteet/itm/IR/clck09.itm~ ~override/clck09.itm~
    SAY NAME1 @74
    SAY NAME2 @188
    SAY UNIDENTIFIED_DESC @76
    SAY DESC @189
    
-COPY ~vault/itm/IR/clck10.itm~ ~override/clck10.itm~
+COPY ~vaulteet/itm/IR/clck10.itm~ ~override/clck10.itm~
    SAY NAME1 @74
    SAY NAME2 @190
    SAY UNIDENTIFIED_DESC @76
    SAY DESC @191
    
-COPY ~vault/itm/IR/clck11.itm~ ~override/clck11.itm~
+COPY ~vaulteet/itm/IR/clck11.itm~ ~override/clck11.itm~
    SAY NAME1 @74
    SAY NAME2 @192
    SAY UNIDENTIFIED_DESC @76
    SAY DESC @193
    
-COPY ~vault/itm/IR/clck12.itm~ ~override/clck12.itm~
+COPY ~vaulteet/itm/IR/clck12.itm~ ~override/clck12.itm~
    SAY NAME1 @74
    SAY NAME2 @194
    SAY UNIDENTIFIED_DESC @76
    SAY DESC @195
    
-COPY ~vault/itm/IR/clck13.itm~ ~override/clck13.itm~
+COPY ~vaulteet/itm/IR/clck13.itm~ ~override/clck13.itm~
    SAY NAME1 @74
    SAY NAME2 @196
    SAY UNIDENTIFIED_DESC @76
    SAY DESC @197
    
-COPY ~vault/itm/IR/clck14.itm~ ~override/clck14.itm~
+COPY ~vaulteet/itm/IR/clck14.itm~ ~override/clck14.itm~
    SAY NAME1 @74
    SAY NAME2 @198
    SAY UNIDENTIFIED_DESC @76
    SAY DESC @199
    
-COPY ~vault/itm/IR/clckst1.itm~ ~override/clckst1.itm~
+COPY ~vaulteet/itm/IR/clckst1.itm~ ~override/clckst1.itm~
    SAY NAME1 @74
    SAY NAME2 @75
    SAY UNIDENTIFIED_DESC @76
    SAY DESC @200
    
-COPY ~vault/itm/IR/clckst2.itm~ ~override/clckst2.itm~
+COPY ~vaulteet/itm/IR/clckst2.itm~ ~override/clckst2.itm~
    SAY NAME1 @74
    SAY NAME2 @78
    SAY UNIDENTIFIED_DESC @76
    SAY DESC @201
 
-COPY ~vault/itm/IR/clckst3.itm~ ~override/clckst3.itm~
+COPY ~vaulteet/itm/IR/clckst3.itm~ ~override/clckst3.itm~
    SAY NAME1 @74
    SAY NAME2 @80
    SAY UNIDENTIFIED_DESC @76
