@@ -1,6 +1,6 @@
 BEGIN ~JC_THF04~
 
-IF ~Global("ReturnNashQuest","GLOBAL",5) Global("Chapter","GLOBAL",%tutu_chapter_6%)~ THEN BEGIN 4THF00
+IF ~Global("ReturnNashQuest","GLOBAL",5) Global("Chapter","GLOBAL",6)~ THEN BEGIN 4THF00
   SAY @0
   IF ~~ THEN REPLY @1 GOTO 4THF01
   IF ~~ THEN REPLY @2 GOTO 4THF01

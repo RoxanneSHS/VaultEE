@@ -138,7 +138,7 @@ IF ~Global("VestibuleQuest","GLOBAL",5) Global("VestibuleBran","GLOBAL",3)~ THEN
 END
 
 
-ALTER_TRANS DELTAN BEGIN 10 11 END BEGIN 0 END BEGIN ~ACTION~ ~GiveGoldForce(2000) SetGlobal("HelpEltan","GLOBAL",2) GiveItem("BOOK68",LastTalkedToBy) AddexperienceParty(4000) IncrementChapter("%CHPTXT6%") AddJournalEntry(@38,INFO) ActionOverride(Player1,LeaveAreaLUAPanic("%WyrmsCrossing%","",[4295.3415],0)) ActionOverride(Player1,LeaveAreaLUA("%WyrmsCrossing%","",[4295.3415],0)) ActionOverride(Player2,LeaveAreaLUA("%WyrmsCrossing%","",[4295.3415],0)) ActionOverride(Player3,LeaveAreaLUA("%WyrmsCrossing%","",[4295.3415],0)) ActionOverride(Player4,LeaveAreaLUA("%WyrmsCrossing%","",[4295.3415],0)) ActionOverride(Player5,LeaveAreaLUA("%WyrmsCrossing%","",[4295.3415],0)) ActionOverride(Player6,LeaveAreaLUA("%WyrmsCrossing%","",[4295.3415],0)) DestroySelf()~ END
+ALTER_TRANS DELTAN BEGIN 10 11 END BEGIN 0 END BEGIN ~ACTION~ ~GiveGoldForce(2000) SetGlobal("HelpEltan","GLOBAL",2) GiveItem("BOOK68",LastTalkedToBy) AddexperienceParty(4000) IncrementChapter("CHPTXT6") AddJournalEntry(@38,INFO) ActionOverride(Player1,LeaveAreaLUAPanic("%WyrmsCrossing%","",[4295.3415],0)) ActionOverride(Player1,LeaveAreaLUA("%WyrmsCrossing%","",[4295.3415],0)) ActionOverride(Player2,LeaveAreaLUA("%WyrmsCrossing%","",[4295.3415],0)) ActionOverride(Player3,LeaveAreaLUA("%WyrmsCrossing%","",[4295.3415],0)) ActionOverride(Player4,LeaveAreaLUA("%WyrmsCrossing%","",[4295.3415],0)) ActionOverride(Player5,LeaveAreaLUA("%WyrmsCrossing%","",[4295.3415],0)) ActionOverride(Player6,LeaveAreaLUA("%WyrmsCrossing%","",[4295.3415],0)) DestroySelf()~ END
 
 
 APPEND ~GANDOL~
