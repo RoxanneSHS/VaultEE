@@ -486,8 +486,7 @@ ADD_TRANS_ACTION DOOMSAY BEGIN 1 2 3 END BEGIN 0 END ~CreateCreature("DOOMGU",[2
 
 
 EXTEND_BOTTOM KEEPER 1
-  IF ~Global("Chapter","GLOBAL",%tutu_chapter_6%) PartyHasItem("BOOKDRW")~ THEN REPLY @154 DO ~TakePartyItem("BOOKDRW")~ GOTO 4 END
-ALTER_TRANS KEEPER BEGIN 1 END BEGIN 2 END BEGIN ~TRIGGER~ ~!PartyHasItem("BOOK68") !PartyHasItem("BOOKDRW")~ END
+  IF ~Global("Chapter","GLOBAL",6) PartyHasItem("BOOKDRW")~ THEN REPLY @154 DO ~TakePartyItem("BOOKDRW")~ GOTO 4 END
 
 
 ALTER_TRANS LIIA BEGIN 8 END BEGIN 0 1 END BEGIN ~TRIGGER~ ~GlobalLT("DukeThanks","GLOBAL",1) GlobalLT("LiiaGivesExperience","Global",1)~ END
