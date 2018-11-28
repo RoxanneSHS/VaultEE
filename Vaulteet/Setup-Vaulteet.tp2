@@ -8,9 +8,10 @@
 BACKUP ~vaulteet/backup~  
 
 	// where should tell the user to send email if something goes wrong? 
-AUTHOR ~http://www.shsforums.net/user/29731-beleg33/~
+//AUTHOR ~http://www.shsforums.net/user/29731-beleg33/~
+SUPPORT ~https://baldursextendedworld.com/Collaborations/ or roxanne@baldursextendedworld.com~
 
-VERSION	~v7.3~
+VERSION	~v8.0~
 
 AUTO_TRA ~vaulteet/Language/%s/D~ //%~
 
