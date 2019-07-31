@@ -4,7 +4,7 @@
 	*
  	*************************************************************************/
 
-	// where should we put backup files?
+	
 BACKUP ~vaulteet/backup~  
 
 	// where should tell the user to send email if something goes wrong? 

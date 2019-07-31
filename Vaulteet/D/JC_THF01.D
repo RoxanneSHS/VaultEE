@@ -31,7 +31,7 @@ END
 
 IF ~~ THEN BEGIN 1THF04
   SAY @15
-  IF ~~ THEN JOURNAL @16 DO ~TakePartyItem("BOOK68") DestroyItem("BOOK68") ForceSpell(Myself,DRYAD_TELEPORT) CreateCreature("JC_THF03",[4445.3505],0) CreateCreature("JC_THF03",[4445.3505],0) CreateCreature("JC_THF03",[4445.3505],0) CreateCreature("JC_THF03",[-1.-1],0) SetGlobal("ReturnNashQuest","GLOBAL",1) DestroySelf()~ EXIT
+  IF ~~ THEN JOURNAL @16 DO ~SetGlobal("ReturnNashQuest","GLOBAL",1)TakePartyItem("BOOK68") DestroyItem("BOOK68") ForceSpell(Myself,DRYAD_TELEPORT) CreateCreature("JC_THF03",[4445.3505],0) CreateCreature("JC_THF03",[4445.3505],0) CreateCreature("JC_THF03",[4445.3505],0) CreateCreature("JC_THF03",[-1.-1],0) DestroySelf()~ EXIT
 END
 
 IF ~~ THEN BEGIN 1THF05
@@ -73,9 +73,9 @@ END
 
 IF ~~ THEN BEGIN 1THF11
   SAY @36
-  IF ~~ THEN REPLY @37 JOURNAL @38 DO ~AddexperienceParty(1500) TakePartyItem("BOOK68") DestroyItem("BOOK68") GiveItemCreate("BOOKDRW",LastTalkedToBy,0,0,0) SetGlobal("ReturnNashQuest","GLOBAL",5) EscapeArea()~ EXIT
-  IF ~~ THEN REPLY @39 JOURNAL @38 DO ~AddexperienceParty(1500) TakePartyItem("BOOK68") DestroyItem("BOOK68") GiveItemCreate("BOOKDRW",LastTalkedToBy,0,0,0) SetGlobal("ReturnNashQuest","GLOBAL",5) EscapeArea()~ EXIT
-  IF ~~ THEN REPLY @40 JOURNAL @38 DO ~AddexperienceParty(1500) TakePartyItem("BOOK68") DestroyItem("BOOK68") GiveItemCreate("BOOKDRW",LastTalkedToBy,0,0,0) SetGlobal("ReturnNashQuest","GLOBAL",5) EscapeArea()~ EXIT
+  IF ~~ THEN REPLY @37 JOURNAL @38 DO ~SetGlobal("ReturnNashQuest","GLOBAL",5)AddexperienceParty(1500) TakePartyItem("BOOK68") DestroyItem("BOOK68") GiveItemCreate("BOOKDRW",LastTalkedToBy,0,0,0)  EscapeArea()~ EXIT
+  IF ~~ THEN REPLY @39 JOURNAL @38 DO ~SetGlobal("ReturnNashQuest","GLOBAL",5)AddexperienceParty(1500) TakePartyItem("BOOK68") DestroyItem("BOOK68") GiveItemCreate("BOOKDRW",LastTalkedToBy,0,0,0)  EscapeArea()~ EXIT
+  IF ~~ THEN REPLY @40 JOURNAL @38 DO ~SetGlobal("ReturnNashQuest","GLOBAL",5)AddexperienceParty(1500) TakePartyItem("BOOK68") DestroyItem("BOOK68") GiveItemCreate("BOOKDRW",LastTalkedToBy,0,0,0)  EscapeArea()~ EXIT
 END
 
 IF ~~ THEN BEGIN 1THF12
@@ -86,7 +86,7 @@ END
 
 IF ~~ THEN BEGIN 1THF13
   SAY @44
-IF ~~ THEN JOURNAL @45 DO ~AddexperienceParty(2000) TakePartyItem("BOOK68") DestroyItem("BOOK68") ForceSpell(Myself,DRYAD_TELEPORT) CreateCreature("JC_THF03",[4445.3505],0) CreateCreature("JC_THF03",[4445.3505],0) CreateCreature("JC_THF03",[4445.3505],0) CreateCreature("JC_THF03",[-1.-1],0) SetGlobal("ReturnNashQuest","GLOBAL",1) DestroySelf()~ EXIT
+IF ~~ THEN JOURNAL @45 DO ~SetGlobal("ReturnNashQuest","GLOBAL",1)AddexperienceParty(2000) TakePartyItem("BOOK68") DestroyItem("BOOK68") ForceSpell(Myself,DRYAD_TELEPORT) CreateCreature("JC_THF03",[4445.3505],0) CreateCreature("JC_THF03",[4445.3505],0) CreateCreature("JC_THF03",[4445.3505],0) CreateCreature("JC_THF03",[-1.-1],0) DestroySelf()~ EXIT
 END
 
 IF ~~ THEN BEGIN 1THF14
@@ -97,11 +97,11 @@ END
 
 IF ~Global("ReturnNashQuest","GLOBAL",2)~ THEN BEGIN 1THF15
   SAY @49
-  IF ~~ THEN REPLY @50 JOURNAL @51 DO ~ForceSpell(Myself,DRYAD_TELEPORT) CreateCreature("JC_THF03",[-1.-1],0) CreateCreature("JC_THF03",[-1.-1],0) CreateCreature("JC_THF03",[-1.-1],0) CreateCreature("%tutu_scriptbg%STALKE%eet_var%",[-1.-1],0) CreateCreature("%tutu_scriptbg%STALKE%eet_var%",[-1.-1],0) CreateCreature("%tutu_scriptbg%STALKE%eet_var%",[-1.-1],0) SetGlobal("ReturnNashQuest","GLOBAL",3) DestroySelf()~ EXIT
+  IF ~~ THEN REPLY @50 JOURNAL @51 DO ~SetGlobal("ReturnNashQuest","GLOBAL",3)ForceSpell(Myself,DRYAD_TELEPORT) CreateCreature("JC_THF03",[-1.-1],0) CreateCreature("JC_THF03",[-1.-1],0) CreateCreature("JC_THF03",[-1.-1],0) CreateCreature("%tutu_scriptbg%STALKE%eet_var%",[-1.-1],0) CreateCreature("%tutu_scriptbg%STALKE%eet_var%",[-1.-1],0) CreateCreature("%tutu_scriptbg%STALKE%eet_var%",[-1.-1],0)  DestroySelf()~ EXIT
 END
 
 IF ~Global("ReturnNashQuest","GLOBAL",3) Global("ReturnNashQuestZernan","GLOBAL",2)~ THEN BEGIN 1THF16
   SAY @52
-  IF ~~ THEN REPLY @53 JOURNAL @54 DO ~ForceSpell(Myself,WIZARD_IMPROVED_INVISIBILITY) ChangeEnemyAlly(Myself,EVILCUTOFF) Enemy() CreateCreature("JC_THF03",[820.630],0) CreateCreature("JC_THF03",[820.630],0) CreateCreature("JC_THF03",[820.630],0) CreateCreature("JC_THF03",[-1.-1],0) ForceSpell(Myself,WIZARD_HASTE) CreateCreature("%tutu_scriptbg%STALKE%eet_var%",[-1.-1],0) CreateCreature("%tutu_scriptbg%STALKE%eet_var%",[-1.-1],0) CreateCreature("%tutu_scriptbg%STALKE%eet_var%",[-1.-1],0) SetGlobal("ReturnNashQuest","GLOBAL",4)~ EXIT
+  IF ~~ THEN REPLY @53 JOURNAL @54 DO ~SetGlobal("ReturnNashQuest","GLOBAL",4)ForceSpell(Myself,WIZARD_IMPROVED_INVISIBILITY) ChangeEnemyAlly(Myself,EVILCUTOFF) Enemy() CreateCreature("JC_THF03",[820.630],0) CreateCreature("JC_THF03",[820.630],0) CreateCreature("JC_THF03",[820.630],0) CreateCreature("JC_THF03",[-1.-1],0) ForceSpell(Myself,WIZARD_HASTE) CreateCreature("%tutu_scriptbg%STALKE%eet_var%",[-1.-1],0) CreateCreature("%tutu_scriptbg%STALKE%eet_var%",[-1.-1],0) CreateCreature("%tutu_scriptbg%STALKE%eet_var%",[-1.-1],0) ~ EXIT
 END
 
