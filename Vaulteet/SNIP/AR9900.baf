@@ -32,36 +32,18 @@ THEN
 	RESPONSE #100
 		CreateCreature("JC_OGR01",[2405.1550],0)
 		CreateCreature("OGREMA",[2280.1565],0) // Ogre Mage
-		CreateCreature("OGREMA",[2280.1565],0) // Ogre Mage
-		CreateCreature("OGREMA",[2390.1615],0) // Ogre Mage
 		CreateCreature("OGREMA",[2390.1615],0) // Ogre Mage
 		CreateCreature("JC_OGR03",[2265.1675],0)
-		CreateCreature("JC_OGR03",[2265.1675],0)
-		CreateCreature("JC_OGR03",[2260.1675],0)
 		CreateCreature("JC_OGR03",[2260.1675],0)
 		CreateCreature("JC_OGR02",[495.1665],0)
-		CreateCreature("JC_OGR02",[495.1665],0)
-		CreateCreature("JC_OGR02",[495.1665],0)
-		CreateCreature("JC_OGR02",[495.1665],0)
-		CreateCreature("OGREBERZ",[495.1665],0) // Ogre Berserker
 		CreateCreature("OGREBERZ",[495.1665],0) // Ogre Berserker
 		CreateCreature("JC_OGR02",[360.1815],0)
-		CreateCreature("JC_OGR02",[360.1815],0)
-		CreateCreature("OGREBERZ",[360.1815],0) // Ogre Berserker
 		CreateCreature("OGREBERZ",[360.1815],0) // Ogre Berserker
 		CreateCreature("JC_OGR03",[360.1815],0)
-		CreateCreature("JC_OGR03",[360.1815],0)
-		CreateCreature("JC_OGR02",[430.1200],0)
-		CreateCreature("JC_OGR02",[430.1200],0)
-		CreateCreature("JC_OGR02",[430.1200],0)
 		CreateCreature("JC_OGR02",[430.1200],0)
 		CreateCreature("JC_OGR02",[815.1180],0)
-		CreateCreature("JC_OGR02",[815.1180],0)
-		CreateCreature("JC_OGR03",[815.1180],0)
 		CreateCreature("JC_OGR03",[815.1180],0)
 		CreateCreature("OGREBERZ",[1205.1145],0) // Ogre Berserker
-		CreateCreature("OGREBERZ",[1205.1145],0) // Ogre Berserker
-		CreateCreature("JC_OGR03",[1205.1145],0)
 		CreateCreature("JC_OGR03",[1205.1145],0)
 		CreateCreature("OGREBERZ",[955.795],0) // Ogre Berserker
 		CreateCreature("JC_OGR03",[955.795],0)
@@ -69,94 +51,21 @@ THEN
 		CreateCreature("OGREMA",[955.795],0) // Ogre Mage
 		CreateCreature("OGREBERZ",[1925.695],0) // Ogre Berserker
 		CreateCreature("JC_OGR02",[1925.695],0)
-		CreateCreature("JC_OGR02",[1925.695],0)
-		CreateCreature("JC_OGR02",[1925.695],0)
 		CreateCreature("JC_OGR03",[2445.2800],0)
-		CreateCreature("OGREMA",[2445.2800],0) // Ogre Mage
-		CreateCreature("OGREMA",[2445.2800],0) // Ogre Mage
-		CreateCreature("OGREMA",[2445.2800],0) // Ogre Mage
 		CreateCreature("OGREMA",[2445.2800],0) // Ogre Mage
 		CreateCreature("JC_OGR03",[2445.2800],0)
 		CreateCreature("JC_OGR03",[1655.2340],0)
-		CreateCreature("JC_OGR03",[1655.2340],0)
 		CreateCreature("OGREMA",[1655.2340],0) // Ogre Mage
-		CreateCreature("OGREMA",[1655.2340],0) // Ogre Mage
-		CreateCreature("JC_OGR03",[1655.2340],0)
-		CreateCreature("JC_OGR03",[1655.2340],0)
 		CreateCreature("JC_OGR03",[1695.2740],0)
 		CreateCreature("JC_OGR02",[1695.2740],0)
-		CreateCreature("OGREMA",[1695.2740],0) // Ogre Mage
 		CreateCreature("OGREMA",[1695.2740],0) // Ogre Mage
 		CreateCreature("JC_OGR02",[1695.2740],0)
 		CreateCreature("JC_OGR03",[1695.2740],0)
 		CreateCreature("JC_OGR03",[2205.2345],0)
-		CreateCreature("JC_OGR03",[2205.2345],0)
-		CreateCreature("OGREMA",[2205.2345],0) // Ogre Mage
-		CreateCreature("JC_OGR03",[2205.2345],0)
-		CreateCreature("JC_OGR03",[2205.2345],0)
-		CreateCreature("JC_OGR03",[2355.2385],0)
 		CreateCreature("JC_OGR03",[2355.2385],0)
 		CreateCreature("OGREMA",[2355.2385],0) // Ogre Mage
-		CreateCreature("OGREMA",[2355.2385],0) // Ogre Mage
-		CreateCreature("JC_OGR03",[2200.2055],0)
-		CreateCreature("JC_OGR03",[2200.2055],0)
 		CreateCreature("JC_OGR03",[2200.2055],0)
 		CreateCreature("OGREMA",[2200.2055],0) // Ogre Mage
-		CreateCreature("JC_OGR03",[2200.2055],0)
-		CreateCreature("JC_OGR03",[2200.2055],0)
-		SetGlobal("GullyOgre","GLOBAL",2)
-END
-
-IF
-	!Dead("JC_OGR01")
-	Global("GullyOgre","GLOBAL",2)
-THEN
-	RESPONSE #100
-		Wait(240)
-		CreateCreature("JC_OGR02",[495.1665],0)
-		CreateCreature("JC_OGR02",[495.1665],0)
-		CreateCreature("JC_OGR02",[495.1665],0)
-		CreateCreature("JC_OGR02",[495.1665],0)
-		CreateCreature("JC_OGR03",[495.1665],0)
-		CreateCreature("JC_OGR03",[495.1665],0)
-		CreateCreature("JC_OGR02",[360.1815],0)
-		CreateCreature("JC_OGR02",[360.1815],0)
-		CreateCreature("JC_OGR03",[360.1815],0)
-		CreateCreature("JC_OGR03",[360.1815],0)
-		CreateCreature("JC_OGR03",[360.1815],0)
-		CreateCreature("JC_OGR03",[360.1815],0)
-		Wait(120)
-		CreateCreature("JC_OGR02",[430.1200],0)
-		CreateCreature("JC_OGR02",[430.1200],0)
-		CreateCreature("JC_OGR02",[430.1200],0)
-		CreateCreature("JC_OGR02",[430.1200],0)
-		CreateCreature("OGREMA",[815.1180],0) // Ogre Mage
-		CreateCreature("JC_OGR02",[815.1180],0)
-		CreateCreature("JC_OGR03",[815.1180],0)
-		CreateCreature("JC_OGR03",[815.1180],0)
-		Wait(120)
-		SetGlobal("GullyOgre","GLOBAL",3)
-END
-
-IF
-	!Dead("JC_OGR01")
-	Global("GullyOgre","GLOBAL",3)
-THEN
-	RESPONSE #100
-		Wait(120)
-		CreateCreature("JC_OGR03",[1205.1145],0)
-		CreateCreature("JC_OGR03",[1205.1145],0)
-		CreateCreature("JC_OGR03",[1205.1145],0)
-		CreateCreature("JC_OGR03",[1205.1145],0)
-		CreateCreature("JC_OGR03",[955.795],0)
-		CreateCreature("JC_OGR03",[955.795],0)
-		CreateCreature("JC_OGR02",[955.795],0)
-		CreateCreature("OGREMA",[955.795],0) // Ogre Mage
-		Wait(120)
-		CreateCreature("JC_OGR03",[1925.695],0)
-		CreateCreature("JC_OGR02",[1925.695],0)
-		CreateCreature("JC_OGR02",[1925.695],0)
-		CreateCreature("JC_OGR02",[1925.695],0)
 		SetGlobal("GullyOgre","GLOBAL",2)
 END
 
