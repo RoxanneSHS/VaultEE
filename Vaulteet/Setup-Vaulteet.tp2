@@ -11,7 +11,7 @@ BACKUP ~vaulteet/backup~
 //AUTHOR ~http://www.shsforums.net/user/29731-beleg33/~
 SUPPORT ~https://baldursextendedworld.com/Collaborations/ or roxanne@baldursextendedworld.com~
 
-VERSION	~v8.0~
+VERSION	~v8.1~
 
 AUTO_TRA ~vaulteet/Language/%s/D~ //%~
 
@@ -71,258 +71,7 @@ BEGIN @0 DESIGNATED 0
 REQUIRE_PREDICATE GAME_IS ~eet~ ~This mod is not compatible with your game~
 
 
-///////////////////////////////////////////////////////////////////////////////
-//	D folder 				// compile new dialogs and extensions
-///////////////////////////////////////////////////////////////////////////////
-
-		COMPILE EVAL ~vaulteet/D~
-/* ACTION_IF FILE_EXISTS_IN_GAME ~X#BG1NPCCore.G3~
-	THEN BEGIN
-		COMPILE EVAL ~vaulteet/D/BG1NPC~
-END */
-
-///////////////////////////////////////////////////////////////
-/////////////Level 50 Rulesets/////////////////////////////////
-///////////////////////////////////////////////////////////////
-/* // Deprecated broken ruleset
-
-ACTION_IF NOT FILE_EXISTS ~data/tdd-rule.bif~ THEN BEGIN 
-ACTION_IF NOT FILE_EXISTS ~data/rot-rule.bif~ THEN BEGIN
-COPY  ~vaulteet/2da~		~override~					// 2DA folder, rules 50 pack (These are OK for BGT)
-  END
-END */
-
-///////////////////////////////////////////////////////////////
-////////////Area Patching//////////////////////////////////////
-///////////////////////////////////////////////////////////////
-/* 
-// Deprecated - Area replaced with a new one already patched
-
-//adding 2 new proximity triggers and 8 new vertices for them to %ArchaeologicalSite_Tomb%.ARE
-COPY_EXISTING ~%ArchaeologicalSite_Tomb%.ARE~  ~override~
- READ_LONG  0x54  "actors_offset"
- READ_SHORT 0x58  "actors_num"
- READ_SHORT 0x5a  "infotrig_num"
- READ_LONG  0x5c  "infotrig_offset"
- READ_LONG  0x60  "spawns_offset"
- READ_LONG  0x64  "spawns_num"
- READ_LONG  0x68  "entrances_offset"
- READ_LONG  0x6c  "entrances_num"
- READ_LONG  0x70  "cont_offset"
- READ_SHORT 0x74  "cont_num"
- READ_SHORT 0x76  "items_num"
- READ_LONG  0x78  "items_offset"
- READ_LONG  0x7c  "vert_offset"
- READ_SHORT 0x80  "vert_num"
- READ_SHORT 0x82  "amb_num"
- READ_LONG  0x84  "amb_offset"
- READ_LONG  0x88  "vars_offset"
- READ_LONG  0x8c  "vars_num"
- READ_LONG  0xa0  "expbmp_offset"
- READ_LONG  0xa4  "doors_num"
- READ_LONG  0xa8  "doors_offset"
- READ_LONG  0xac  "anim_num"
- READ_LONG  0xb0  "anim_offset"
- READ_LONG  0xb4  "tiled_num"
- READ_LONG  0xb8  "tiled_offset"
- READ_LONG  0xbc  "songs_offset"
- READ_LONG  0xc0  "rest_spawns_offset"
- READ_LONG  0xc4  "automap_offset"
- READ_LONG  0xc8  "automap_num"
-
-//adding 2 new proximity triggers ************************************************
-   SET offset = ("%infotrig_offset%"+0xc4*"%infotrig_num%")
-   INSERT_BYTES offset 0xc4
-   WRITE_ASCII offset ~VTrap1~
-   WRITE_SHORT (offset+0x20) 0              //proximity trigger
-   WRITE_SHORT (offset+0x22) 940            //bounding box
-   WRITE_SHORT (offset+0x24) 530            //bounding box
-   WRITE_SHORT (offset+0x26) 980            //bounding box
-   WRITE_SHORT (offset+0x28) 650            //bounding box
-   WRITE_SHORT (offset+0x2a) 4              //vertices number
-   WRITE_LONG  (offset+0x2c) "%vert_num%"   //first vertex index
-   WRITE_LONG  (offset+0x34) 0              //cursor frame number
-   WRITE_LONG  (offset+0x60) 10             //flags
-   WRITE_SHORT (offset+0x68) 80             //Trap Detection
-   WRITE_SHORT (offset+0x6a) 90             //Trap Removal
-   WRITE_SHORT (offset+0x6c) 1              //Yup, it's trapped alrighty
-   WRITE_SHORT (offset+0x6e) 0              //And not detected
-   WRITE_SHORT (offset+0x70) 1180           //Trap location X
-   WRITE_SHORT (offset+0x72) 520            //Trap location Y
-   WRITE_ASCII (offset+0x7c) ~JC_GT06~      //Trap script
-   SET offset = offset+0xc4
-   INSERT_BYTES offset 0xc4
-   WRITE_ASCII offset ~VTrap2~
-   WRITE_SHORT (offset+0x20) 0              //proximity trigger
-   WRITE_SHORT (offset+0x22) 1070           //bounding box
-   WRITE_SHORT (offset+0x24) 540            //bounding box
-   WRITE_SHORT (offset+0x26) 1190           //bounding box
-   WRITE_SHORT (offset+0x28) 560            //bounding box
-   WRITE_SHORT (offset+0x2a) 4              //vertices number
-   WRITE_LONG  (offset+0x2c) "%vert_num%"+4 //first vertex index
-   WRITE_LONG  (offset+0x34) 0              //cursor frame number
-   WRITE_LONG  (offset+0x60) 10             //flags
-   WRITE_SHORT (offset+0x68) 70             //Trap Detection
-   WRITE_SHORT (offset+0x6a) 85             //Trap Removal
-   WRITE_SHORT (offset+0x6c) 1              //Yup, it's trapped alrighty
-   WRITE_SHORT (offset+0x6e) 0              //And not detected
-   WRITE_SHORT (offset+0x70) 2615           //Trap location X
-   WRITE_SHORT (offset+0x72) 1515           //Trap location Y
-   WRITE_ASCII (offset+0x7c) ~JC_GT07~      //Trap script
-   SET offset = offset+0xc4
-   SET "infotrig_num"="%infotrig_num%"+2
-   WRITE_SHORT 0x5a  "%infotrig_num%"
-
-   SET "info_ext"=0xc4*2
-   PATCH_IF ("%actors_offset%">="%infotrig_offset%") BEGIN
-     "actors_offset"="%actors_offset%"+"%info_ext%"
-     WRITE_LONG  0x54 "%actors_offset%"
-   END
-   PATCH_IF ("%spawns_offset%">="%infotrig_offset%") BEGIN
-     "spawns_offset"="%spawns_offset%"+"%info_ext%"
-     WRITE_LONG  0x60  "%spawns_offset%"
-   END
-   PATCH_IF ("%entrances_offset%">="%infotrig_offset%") BEGIN
-     "entrances_offset"="%entrances_offset%"+"%info_ext%"
-     WRITE_LONG  0x68  "%entrances_offset%"
-   END
-   PATCH_IF ("%cont_offset%">="%infotrig_offset%") BEGIN
-     "cont_offset"="%cont_offset%"+"%info_ext%"
-     WRITE_LONG  0x70  "%cont_offset%"
-   END
-   PATCH_IF ("%items_offset%">="%infotrig_offset%") BEGIN
-     "items_offset"="%items_offset%"+"%info_ext%"
-     WRITE_LONG  0x78  "%items_offset%"
-   END
-   PATCH_IF ("%vert_offset%">="%infotrig_offset%") BEGIN
-     "vert_offset"="%vert_offset%"+"%info_ext%"
-     WRITE_LONG  0x7c  "%vert_offset%"
-   END
-   PATCH_IF ("%amb_offset%">="%infotrig_offset%") BEGIN
-     "amb_offset"="%amb_offset%"+"%info_ext%"
-     WRITE_LONG  0x84  "%amb_offset%"
-   END
-   PATCH_IF ("%vars_offset%">="%infotrig_offset%") BEGIN
-     "vars_offset"="%vars_offset%"+"%info_ext%"
-     WRITE_LONG  0x88  "%vars_offset%"
-   END
-   PATCH_IF ("%expbmp_offset%">="%infotrig_offset%") BEGIN
-     "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
-     WRITE_LONG  0xa0  "%expbmp_offset%"
-   END
-   PATCH_IF ("%doors_offset%">="%infotrig_offset%") BEGIN
-     "doors_offset"="%doors_offset%"+"%info_ext%"
-     WRITE_LONG  0xa8  "%doors_offset%"
-   END
-   PATCH_IF ("%anim_offset%">="%infotrig_offset%") BEGIN
-     "anim_offset"="%anim_offset%"+"%info_ext%"
-     WRITE_LONG  0xb0  "%anim_offset%"
-   END
-   PATCH_IF ("%tiled_offset%">="%infotrig_offset%") BEGIN
-     "tiled_offset"="%tiled_offset%"+"%info_ext%"
-     WRITE_LONG  0xb8  "%tiled_offset%"
-   END
-   PATCH_IF ("%songs_offset%">="%infotrig_offset%") BEGIN
-     "songs_offset"="%songs_offset%"+"%info_ext%"
-     WRITE_LONG  0xbc  "%songs_offset%"
-   END
-   PATCH_IF ("%rest_spawns_offset%">="%infotrig_offset%") BEGIN
-     "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
-     WRITE_LONG  0xc0  "%rest_spawns_offset%"
-   END
-   PATCH_IF ("%automap_offset%">="%infotrig_offset%") BEGIN
-     "automap_offset"="%automap_offset%"+"%info_ext%"
-     WRITE_LONG  0xc4  "%automap_offset%"
-   END
-
-  //adding 8 new vertices for triggers
-   SET offset = ("%vert_offset%"+0x04*"%vert_num%")
-   INSERT_BYTES offset (0x04*4)
-   WRITE_SHORT  offset      965
-   WRITE_SHORT  (offset+2)  530
-   WRITE_SHORT  (offset+4)  980
-   WRITE_SHORT  (offset+6)  640
-   WRITE_SHORT  (offset+8)  950
-   WRITE_SHORT  (offset+10) 650
-   WRITE_SHORT  (offset+12) 940
-   WRITE_SHORT  (offset+14) 540
-   SET offset = offset + 4*4
-   INSERT_BYTES offset (0x04*4)
-   WRITE_SHORT  offset      1190
-   WRITE_SHORT  (offset+2)  540
-   WRITE_SHORT  (offset+4)  1180
-   WRITE_SHORT  (offset+6)  550
-   WRITE_SHORT  (offset+8)  1080
-   WRITE_SHORT  (offset+10) 560
-   WRITE_SHORT  (offset+12) 1070
-   WRITE_SHORT  (offset+14) 545
-   SET offset = offset + 4*4
-   SET "vert_num"="%vert_num%"+8
-   WRITE_SHORT 0x80  "%vert_num%"
-
-   SET "info_ext"=0x04*8
-   PATCH_IF ("%actors_offset%">="%vert_offset%") BEGIN
-     "actors_offset"="%actors_offset%"+"%info_ext%"
-     WRITE_LONG  0x54 "%actors_offset%"
-   END
-   PATCH_IF ("%spawns_offset%">="%vert_offset%") BEGIN
-     "spawns_offset"="%spawns_offset%"+"%info_ext%"
-     WRITE_LONG  0x60  "%spawns_offset%"
-   END
-   PATCH_IF ("%entrances_offset%">="%vert_offset%") BEGIN
-     "entrances_offset"="%entrances_offset%"+"%info_ext%"
-     WRITE_LONG  0x68  "%entrances_offset%"
-   END
-   PATCH_IF ("%cont_offset%">="%vert_offset%") BEGIN
-     "cont_offset"="%cont_offset%"+"%info_ext%"
-     WRITE_LONG  0x70  "%cont_offset%"
-   END
-   PATCH_IF ("%items_offset%">="%vert_offset%") BEGIN
-     "items_offset"="%items_offset%"+"%info_ext%"
-     WRITE_LONG  0x78  "%items_offset%"
-   END
-   PATCH_IF ("%infotrig_offset%">="%vert_offset%") BEGIN
-     "infotrig_offset"="%infotrig_offset%"+"%info_ext%"
-     WRITE_LONG  0x5c  "%infotrig_offset%"
-   END
-   PATCH_IF ("%amb_offset%">="%vert_offset%") BEGIN
-     "amb_offset"="%amb_offset%"+"%info_ext%"
-     WRITE_LONG  0x84  "%amb_offset%"
-   END
-   PATCH_IF ("%vars_offset%">="%vert_offset%") BEGIN
-     "vars_offset"="%vars_offset%"+"%info_ext%"
-     WRITE_LONG  0x88  "%vars_offset%"
-   END
-   PATCH_IF ("%expbmp_offset%">="%vert_offset%") BEGIN
-     "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
-     WRITE_LONG  0xa0  "%expbmp_offset%"
-   END
-   PATCH_IF ("%doors_offset%">="%vert_offset%") BEGIN
-     "doors_offset"="%doors_offset%"+"%info_ext%"
-     WRITE_LONG  0xa8  "%doors_offset%"
-   END
-   PATCH_IF ("%anim_offset%">="%vert_offset%") BEGIN
-     "anim_offset"="%anim_offset%"+"%info_ext%"
-     WRITE_LONG  0xb0  "%anim_offset%"
-   END
-   PATCH_IF ("%tiled_offset%">="%vert_offset%") BEGIN
-     "tiled_offset"="%tiled_offset%"+"%info_ext%"
-     WRITE_LONG  0xb8  "%tiled_offset%"
-   END
-   PATCH_IF ("%songs_offset%">="%vert_offset%") BEGIN
-     "songs_offset"="%songs_offset%"+"%info_ext%"
-     WRITE_LONG  0xbc  "%songs_offset%"
-   END
-   PATCH_IF ("%rest_spawns_offset%">="%vert_offset%") BEGIN
-     "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
-     WRITE_LONG  0xc0  "%rest_spawns_offset%"
-   END
-   PATCH_IF ("%automap_offset%">="%vert_offset%") BEGIN
-     "automap_offset"="%automap_offset%"+"%info_ext%"
-     WRITE_LONG  0xc4  "%automap_offset%"
-   END
-
-BUT_ONLY_IF_IT_CHANGES  // ~%ArchaeologicalSite_Tomb%.are~ */
+COMPILE EVAL ~vaulteet/D~
 
 //Add 4 new proximity triggers and 16 new vertices for those triggers to %NashkelMines_L1%.ARE
 COPY_EXISTING ~%NashkelMines_L1%.ARE~  ~override~
@@ -1321,12 +1070,7 @@ COPY_EXISTING ~%NashkelMines_L3%.ARE~  ~override~
 
 BUT_ONLY_IF_IT_CHANGES  // ~%NashkelMines_L3%.are~
 
-
-//      BAM folder, bam files for custom items
-
-COPY	~vaulteet/bam~		~override~			
-
-//      Scripts changes
+COPY	~vaulteet/bam~		~override~
 
 COPY_EXISTING ~CENTEOL.BCS~          ~override~
   PATCH_IF ENGINE_IS ~bgee bg2ee~ BEGIN
@@ -1371,19 +1115,13 @@ EXTEND_TOP ~%UlcasterRuins_BCS%.BCS~ ~vaulteet/snip/AR9798.BAF~
 EXTEND_TOP ~%Gullykin_BCS%.BCS~ ~vaulteet/snip/AR9900.BAF~
 EXTEND_BOTTOM ~baldur.bcs~ ~vaulteet/snip/drowdisint.baf~
 
-//      New Area
-
 COPY ~vaulteet/ARE~ ~override~
 COPY_EXISTING ~vaulteet/ARE/VT0001.WED~ ~override~
 	WRITE_ASCIIE 0x24 ~%ArchaeologicalSite_Tomb%~ #8
 BUT_ONLY
 
-//      New scripts
-
 COMPILE EVAL ~vaulteet/BAF~
 
-
-//	Patching/adding creatures
 
   COPY_EXISTING ~basilg.cre~  ~override~
     PATCH_IF (SOURCE_SIZE > 0x2d3) THEN BEGIN // protects against invalid files
