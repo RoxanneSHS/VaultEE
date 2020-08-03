@@ -97,7 +97,7 @@ END
 
 IF ~Global("ReturnNashQuest","GLOBAL",2)~ THEN BEGIN 1THF15
   SAY @49
-  IF ~~ THEN REPLY @50 JOURNAL @51 DO ~SetGlobal("ReturnNashQuest","GLOBAL",3)ForceSpell(Myself,DRYAD_TELEPORT) CreateCreature("JC_THF03",[-1.-1],0) CreateCreature("JC_THF03",[-1.-1],0) CreateCreature("JC_THF03",[-1.-1],0) CreateCreature("%tutu_scriptbg%STALKE%eet_var%",[-1.-1],0) CreateCreature("%tutu_scriptbg%STALKE%eet_var%",[-1.-1],0) CreateCreature("%tutu_scriptbg%STALKE%eet_var%",[-1.-1],0)  DestroySelf()~ EXIT
+  IF ~~ THEN REPLY @50 JOURNAL @51 DO ~SetGlobal("ReturnNashQuest","GLOBAL",3) CreateCreature("JC_THF03",[-1.-1],0) CreateCreature("JC_THF03",[-1.-1],0) CreateCreature("JC_THF03",[-1.-1],0) CreateCreature("%tutu_scriptbg%STALKE%eet_var%",[-1.-1],0) CreateCreature("%tutu_scriptbg%STALKE%eet_var%",[-1.-1],0) CreateCreature("%tutu_scriptbg%STALKE%eet_var%",[-1.-1],0) ForceSpell(Myself,DRYAD_TELEPORT)~ EXIT
 END
 
 IF ~Global("ReturnNashQuest","GLOBAL",3) Global("ReturnNashQuestZernan","GLOBAL",2)~ THEN BEGIN 1THF16
