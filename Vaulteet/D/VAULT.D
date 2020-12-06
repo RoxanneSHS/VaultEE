@@ -550,4 +550,9 @@ APPEND ~ZHURLO~
 IF ~~ THEN BEGIN VLT70
 SAY @169
 IF ~~ THEN DO ~TakePartyGold(20) SetGlobal("ReturnNashQuestZhurlo","GLOBAL",1)~ JOURNAL @170 EXIT END
+
+IF WEIGHT #-3 ~ Global("ReturnNashQuest","GLOBAL",6) Global("ReturnNashQuestZhurlo","GLOBAL",0)~THEN BEGIN VLT80
+SAY @76
+IF ~~ THEN REPLY @168 DO~SetGlobal("HelpZhurlong","GLOBAL",1)~ GOTO VLT70
+END
 END
