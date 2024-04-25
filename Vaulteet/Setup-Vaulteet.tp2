@@ -9,9 +9,9 @@ BACKUP ~vaulteet/backup~
 
 	// where should tell the user to send email if something goes wrong? 
 //AUTHOR ~http://www.shsforums.net/user/29731-beleg33/~
-SUPPORT ~https://baldursextendedworld.com/Collaborations/ or roxanne@baldursextendedworld.com~
+SUPPORT ~https://github.com/RoxanneSHS/VaultEE/issues~
 
-VERSION	~v8.1~
+VERSION	~v8.2~
 
 AUTO_TRA ~vaulteet/Language/%s/D~ //%~
 
@@ -32,7 +32,7 @@ ALWAYS
       infer_charsets = 0
       STR_VAR
       tra_path = "vaulteet/Language"
-      iconv_path = "vaulteet/Language/iconv" //available as part of the base system on OS X and GNU/Linux
+      iconv_path = "vaulteet/Language/iconv" 
       charset_table = charsetsTable
       reload_array = charsetsReloadArray
     END
