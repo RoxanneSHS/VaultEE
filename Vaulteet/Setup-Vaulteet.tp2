@@ -22,11 +22,12 @@ ALWAYS
       "french" => "CP1252"
       "italian" => "CP1252"
       "russian" => "CP1251"
-	  "polish" => "CP1250"
+      "polish" => "CP1250"
       "spanish" => "CP1252"
       "schinese" => "CP936"
     END
     ACTION_DEFINE_ARRAY charsetsReloadArray BEGIN Setup END
+    ACTION_DEFINE_ARRAY fl#noconvert BEGIN Setup-osx Setup-unix Setup-win32 Setup-ee END
     LAF ~HANDLE_CHARSETS~
       INT_VAR
       infer_charsets = 0
@@ -34,6 +35,7 @@ ALWAYS
       tra_path = "vaulteet/Language"
       iconv_path = "vaulteet/Language/iconv" 
       charset_table = charsetsTable
+      noconvert_array = fl#noconvert
       reload_array = charsetsReloadArray
     END
     LOAD_TRA ~vaulteet/Language/%LANGUAGE%/Setup-ee.tra~
@@ -58,7 +60,7 @@ LANGUAGE ~Francais (Traduit par les d'Oghmatiques))~
 LANGUAGE ~Italian (translated by Ilot)~
 	~italian~
 	~vaulteet/Language/italian/setup.tra~
-LANGUAGE ~Espa¤ol (Traducido por Saemon de ClanDLAN.net, actualizado por Lisandro)~
+LANGUAGE ~EspaÂ¤ol (Traducido por Saemon de ClanDLAN.net, actualizado por Lisandro)~
 	~spanish~
 	~vaulteet/Language/spanish/setup.tra~
 LANGUAGE ~Russian (translated by Silent and Aldark of arcanecoast.ru)~
@@ -67,9 +69,10 @@ LANGUAGE ~Russian (translated by Silent and Aldark of arcanecoast.ru)~
 LANGUAGE ~Polski (Aristo)~
 	~polish~
 	~vaulteet/Language/polish/setup.tra~
-LANGUAGE ~Chinese~
+LANGUAGE ~Simplified Chinese~
 	~schinese~
-	~vaulteet/Language/schinese/setup.tra~
+	~vaulteet/Language/english/setup.tra~
+	~vaulteet/Language/schinese/setup-%WEIDU_OS%.tra~
 
 BEGIN @0 DESIGNATED 0
 REQUIRE_PREDICATE GAME_IS ~eet~ ~This mod is not compatible with your game~
