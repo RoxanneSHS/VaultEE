@@ -69,7 +69,7 @@ LANGUAGE ~Russian (translated by Silent and Aldark of arcanecoast.ru)~
 LANGUAGE ~Polski (Aristo)~
 	~polish~
 	~vaulteet/Language/polish/setup.tra~
-LANGUAGE ~Chinese~
+LANGUAGE ~Simplified Chinese~
 	~schinese~
 	~vaulteet/Language/english/setup.tra~
 	~vaulteet/Language/schinese/setup-%WEIDU_OS%.tra~
