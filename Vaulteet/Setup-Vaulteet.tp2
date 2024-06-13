@@ -7,11 +7,10 @@
 	
 BACKUP ~vaulteet/backup~  
 
-	// where should tell the user to send email if something goes wrong? 
 //AUTHOR ~http://www.shsforums.net/user/29731-beleg33/~
 SUPPORT ~https://github.com/RoxanneSHS/VaultEE/issues~
 
-VERSION	~v8.2~
+VERSION	~v8.3~
 
 AUTO_TRA ~vaulteet/Language/%s/D~ //%~
 
@@ -63,7 +62,7 @@ LANGUAGE ~Italian (translated by Ilot)~
 LANGUAGE ~Espa¤ol (Traducido por Saemon de ClanDLAN.net, actualizado por Lisandro)~
 	~spanish~
 	~vaulteet/Language/spanish/setup.tra~
-LANGUAGE ~Russian (translated by Silent and Aldark of arcanecoast.ru)~
+LANGUAGE ~Russian (translated by Silent, Aldark, p_zombie)~
 	~russian~
 	~vaulteet/Language/russian/setup.tra~ 
 LANGUAGE ~Polski (Aristo)~
